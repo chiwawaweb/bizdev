@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BizDev.DTO;
-
+using BizDev.Migrations;
 
 namespace BizDev.DAL
 {
@@ -26,6 +26,9 @@ namespace BizDev.DAL
             }
         }
 
-       
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<Context, Configuration>());
+        }
     }
 }
