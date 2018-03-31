@@ -10,7 +10,7 @@ namespace BizDev.DTO
     {
         public int Id { get; set; }
         public string Nom { get; set; }
-        public string Famille { get; set; }
+        public string Categorie { get; set; }
         /*
          * Commerçant
          * 
