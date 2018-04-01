@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BizDev.DTO
 {
-    public class PropectLog
+    public class ProspectLog
     {
         public int Id { get; set; }
         public DateTime Date { get; set; }

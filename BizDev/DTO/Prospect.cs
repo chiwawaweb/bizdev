@@ -33,5 +33,7 @@ namespace BizDev.DTO
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
 
+        public ICollection<ProspectLog> prospectLog { get; set; }
+
     }
 }
