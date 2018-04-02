@@ -32,7 +32,12 @@ namespace BizDev.Forms
 
         private void AjouterCategorie()
         {
+            LsbCategories.Items.Add(CbxCategorie.Text);
+        }
 
+        private void SupprimerCategorie()
+        {
+            LsbCategories.Items.Remove(LsbCategories.SelectedItem);
         }
 
         #region Gestion des événements
@@ -43,5 +48,10 @@ namespace BizDev.Forms
         }
 
         #endregion
+
+        private void BtnDelCategorie_Click(object sender, EventArgs e)
+        {
+            SupprimerCategorie();
+        }
     }
 }

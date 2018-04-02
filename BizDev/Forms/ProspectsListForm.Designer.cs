@@ -29,20 +29,22 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProspectsListForm));
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.ToolStrip = new System.Windows.Forms.ToolStrip();
             this.TbnNew = new System.Windows.Forms.ToolStripButton();
-            this.toolStrip1.SuspendLayout();
+            this.DgvProspects = new System.Windows.Forms.DataGridView();
+            this.ToolStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvProspects)).BeginInit();
             this.SuspendLayout();
             // 
-            // toolStrip1
+            // ToolStrip
             // 
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TbnNew});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(800, 25);
-            this.toolStrip1.TabIndex = 0;
-            this.toolStrip1.Text = "toolStrip1";
+            this.ToolStrip.Location = new System.Drawing.Point(0, 0);
+            this.ToolStrip.Name = "ToolStrip";
+            this.ToolStrip.Size = new System.Drawing.Size(800, 25);
+            this.ToolStrip.TabIndex = 0;
+            this.ToolStrip.Text = "toolStrip1";
             // 
             // TbnNew
             // 
@@ -53,18 +55,31 @@
             this.TbnNew.Text = "Nouveau prospect";
             this.TbnNew.Click += new System.EventHandler(this.TbnNew_Click);
             // 
+            // DgvProspects
+            // 
+            this.DgvProspects.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DgvProspects.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvProspects.Location = new System.Drawing.Point(0, 28);
+            this.DgvProspects.Name = "DgvProspects";
+            this.DgvProspects.Size = new System.Drawing.Size(800, 422);
+            this.DgvProspects.TabIndex = 1;
+            // 
             // ProspectsListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.toolStrip1);
+            this.Controls.Add(this.DgvProspects);
+            this.Controls.Add(this.ToolStrip);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "ProspectsListForm";
             this.ShowInTaskbar = false;
             this.Text = "Liste de prospects";
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
+            this.ToolStrip.ResumeLayout(false);
+            this.ToolStrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvProspects)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -72,7 +87,8 @@
 
         #endregion
 
-        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStrip ToolStrip;
         private System.Windows.Forms.ToolStripButton TbnNew;
+        private System.Windows.Forms.DataGridView DgvProspects;
     }
 }

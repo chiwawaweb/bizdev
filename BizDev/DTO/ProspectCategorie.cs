@@ -12,7 +12,7 @@ namespace BizDev.DTO
         public string Nom { get; set; }
         public string Abrv { get; set; }
 
-        public string Fullname => "[" + Abrv + "] " + Nom;
+        public string Fullname => Nom;
 
     }
 }
