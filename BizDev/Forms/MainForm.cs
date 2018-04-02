@@ -20,5 +20,28 @@ namespace BizDev.Forms
             ProspectProvider prospectProvider = new ProspectProvider();
             prospectProvider.CountAll();
         }
+
+        private void OuvreListeProspects()
+        {
+            ProspectsListForm prospectsListForm = new ProspectsListForm()
+            {
+                MdiParent = this
+            };
+            prospectsListForm.Show();
+        }
+
+        #region Gestion des événements
+
+        private void TooQuitter_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void TooListeProspects_Click(object sender, EventArgs e)
+        {
+            OuvreListeProspects();
+        }
+
+        #endregion
     }
 }

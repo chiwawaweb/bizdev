@@ -11,8 +11,8 @@ namespace BizDev.DTO
         public int Id { get; set; }
         public string Nom { get; set; }
         public string Abrv { get; set; }
-        
 
+        public string Fullname => "[" + Abrv + "] " + Nom;
 
     }
 }

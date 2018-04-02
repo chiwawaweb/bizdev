@@ -16,5 +16,19 @@ namespace BizDev.Forms
         {
             InitializeComponent();
         }
+
+        private void NewProspect()
+        {
+            new ProspectEditForm().ShowDialog();
+        }
+
+        #region Gestion des événements
+
+        private void TbnNew_Click(object sender, EventArgs e)
+        {
+            NewProspect();
+        }
+        
+        #endregion
     }
 }
