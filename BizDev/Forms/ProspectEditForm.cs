@@ -32,7 +32,23 @@ namespace BizDev.Forms
 
         private void AjouterCategorie()
         {
-            LsbCategories.Items.Add(CbxCategorie.Text);
+            
+            bool categorieExiste=false;
+            foreach (string categorie in LsbCategories.Items)
+            {
+                if (categorie == CbxCategorie.Text)
+                {
+                    categorieExiste = true;
+                }
+                
+            }
+
+            if (categorieExiste==false)
+            {
+                LsbCategories.Items.Add(CbxCategorie.Text);
+            }
+            LsbCategories.Sorted = true;
+
         }
 
         private void SupprimerCategorie()

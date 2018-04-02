@@ -9,7 +9,6 @@ namespace BizDev.DTO
     public class Prospect
     {
         public int Id { get; set; }
-        public ICollection<ProspectCategorie> ProspectsCategories { get; set; }
         public string Nom { get; set; }
         public string Adresse { get; set; }
         public string Complement { get; set; }

@@ -4,15 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BizDev.DTO
+namespace BizDev.Library
 {
-    public class ProspectCategorie
+    public class Pays
     {
         public int Id { get; set; }
         public string Nom { get; set; }
         public string Abrv { get; set; }
-
-        public string Fullname => Nom;
-
     }
 }

@@ -62,7 +62,6 @@
     <Compile Include="DAL\ProspectProvider.cs" />
     <Compile Include="DTO\ProspectLog.cs" />
     <Compile Include="DTO\Prospect.cs" />
-    <Compile Include="DTO\ProspectCategorie.cs" />
     <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +80,8 @@
     <Compile Include="Forms\ProspectsListForm.Designer.cs">
       <DependentUpon>ProspectsListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Library\Pays.cs" />
+    <Compile Include="Library\ProspectCategorie.cs" />
     <Compile Include="Library\Utils.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
