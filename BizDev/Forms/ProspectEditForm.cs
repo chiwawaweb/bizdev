@@ -69,5 +69,6 @@ namespace BizDev.Forms
         {
             SupprimerCategorie();
         }
+
     }
 }
