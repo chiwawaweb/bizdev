@@ -104,8 +104,8 @@ namespace BizDev.Forms
 
         private void Save()
         {
-            /* Recuperation des donnees */
-
+            /* Récuperation des données */
+            nom = TxtNom.Text.ToUpper().Trim();
         }
 
         private void BtnCancel_Click(object sender, EventArgs e)
