@@ -14,8 +14,8 @@ namespace BizDev.Forms
 {
     public partial class ProspectEditForm : Form
     {
-        int idProspect, nbEmployes;
-        string nom, adresse, complement, codePostal, ville, pays, tel, gsm, fax, email, web, notes;
+        int idProspect;
+        string nom, adresse, complement, codePostal, ville, pays, tel, gsm, fax, email, web, nbEmployes, notes;
         bool view;
         DateTime dateConversion;
 
@@ -118,7 +118,7 @@ namespace BizDev.Forms
             fax = utils.RemoveDiacritics(TxtFax.Text.ToUpper().Trim());
             email = utils.RemoveDiacritics(TxtEmail.Text.ToLower().Trim());
             web = utils.RemoveDiacritics(TxtWeb.Text.ToLower().Trim());
-            nbEmployes = int.Parse(TxtNbEmployes.Text);
+            nbEmployes = utils.RemoveDiacritics(TxtNbEmployes.Text.ToLower().Trim());
         }
 
         private void BtnCancel_Click(object sender, EventArgs e)
