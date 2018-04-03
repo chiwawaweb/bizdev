@@ -64,22 +64,24 @@
             this.BtnAddCategorie = new System.Windows.Forms.Button();
             this.LsbCategories = new System.Windows.Forms.ListBox();
             this.CbxCategorie = new System.Windows.Forms.ComboBox();
-            this.TabCommunication = new System.Windows.Forms.TabPage();
             this.TabJournal = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DgvLog = new System.Windows.Forms.DataGridView();
             this.ChkConverti = new System.Windows.Forms.CheckBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.DtpConverti = new System.Windows.Forms.DateTimePicker();
             this.ChkAbandon = new System.Windows.Forms.CheckBox();
             this.DtpAbandon = new System.Windows.Forms.DateTimePicker();
             this.BtnSave = new System.Windows.Forms.Button();
             this.BtnCancel = new System.Windows.Forms.Button();
             this.BtnClose = new System.Windows.Forms.Button();
             this.BtnEdit = new System.Windows.Forms.Button();
+            this.BtnAddLog = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             this.TabControl.SuspendLayout();
             this.TabCoordonnees.SuspendLayout();
             this.TabJournal.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvLog)).BeginInit();
             this.SuspendLayout();
             // 
             // ErrorProvider
@@ -127,7 +129,7 @@
             // DtpPremierContact
             // 
             this.DtpPremierContact.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DtpPremierContact.Location = new System.Drawing.Point(27, 23);
+            this.DtpPremierContact.Location = new System.Drawing.Point(26, 28);
             this.DtpPremierContact.Name = "DtpPremierContact";
             this.DtpPremierContact.Size = new System.Drawing.Size(95, 20);
             this.DtpPremierContact.TabIndex = 34;
@@ -135,7 +137,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(24, 7);
+            this.label14.Location = new System.Drawing.Point(24, 13);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(81, 13);
             this.label14.TabIndex = 35;
@@ -144,7 +146,6 @@
             // TabControl
             // 
             this.TabControl.Controls.Add(this.TabCoordonnees);
-            this.TabControl.Controls.Add(this.TabCommunication);
             this.TabControl.Controls.Add(this.TabJournal);
             this.TabControl.Location = new System.Drawing.Point(12, 12);
             this.TabControl.Name = "TabControl";
@@ -421,22 +422,16 @@
             this.CbxCategorie.Size = new System.Drawing.Size(292, 21);
             this.CbxCategorie.TabIndex = 7;
             // 
-            // TabCommunication
-            // 
-            this.TabCommunication.Location = new System.Drawing.Point(4, 22);
-            this.TabCommunication.Name = "TabCommunication";
-            this.TabCommunication.Size = new System.Drawing.Size(697, 350);
-            this.TabCommunication.TabIndex = 2;
-            this.TabCommunication.Text = "Communication";
-            this.TabCommunication.UseVisualStyleBackColor = true;
-            // 
             // TabJournal
             // 
-            this.TabJournal.Controls.Add(this.dataGridView1);
+            this.TabJournal.Controls.Add(this.label2);
+            this.TabJournal.Controls.Add(this.label1);
+            this.TabJournal.Controls.Add(this.BtnAddLog);
+            this.TabJournal.Controls.Add(this.DgvLog);
             this.TabJournal.Controls.Add(this.label14);
             this.TabJournal.Controls.Add(this.ChkConverti);
             this.TabJournal.Controls.Add(this.DtpPremierContact);
-            this.TabJournal.Controls.Add(this.dateTimePicker1);
+            this.TabJournal.Controls.Add(this.DtpConverti);
             this.TabJournal.Controls.Add(this.ChkAbandon);
             this.TabJournal.Controls.Add(this.DtpAbandon);
             this.TabJournal.Location = new System.Drawing.Point(4, 22);
@@ -447,13 +442,13 @@
             this.TabJournal.Text = "Journal";
             this.TabJournal.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // DgvLog
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(15, 66);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(667, 278);
-            this.dataGridView1.TabIndex = 34;
+            this.DgvLog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvLog.Location = new System.Drawing.Point(15, 85);
+            this.DgvLog.Name = "DgvLog";
+            this.DgvLog.Size = new System.Drawing.Size(667, 259);
+            this.DgvLog.TabIndex = 34;
             // 
             // ChkConverti
             // 
@@ -467,20 +462,20 @@
             this.ChkConverti.Text = "Converti";
             this.ChkConverti.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker1
+            // DtpConverti
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(153, 24);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(95, 20);
-            this.dateTimePicker1.TabIndex = 31;
-            this.dateTimePicker1.Visible = false;
+            this.DtpConverti.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DtpConverti.Location = new System.Drawing.Point(321, 5);
+            this.DtpConverti.Name = "DtpConverti";
+            this.DtpConverti.Size = new System.Drawing.Size(95, 20);
+            this.DtpConverti.TabIndex = 31;
+            this.DtpConverti.Visible = false;
             // 
             // ChkAbandon
             // 
             this.ChkAbandon.AutoSize = true;
             this.ChkAbandon.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ChkAbandon.Location = new System.Drawing.Point(285, 6);
+            this.ChkAbandon.Location = new System.Drawing.Point(149, 30);
             this.ChkAbandon.Name = "ChkAbandon";
             this.ChkAbandon.Size = new System.Drawing.Size(69, 17);
             this.ChkAbandon.TabIndex = 32;
@@ -491,7 +486,7 @@
             // DtpAbandon
             // 
             this.DtpAbandon.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DtpAbandon.Location = new System.Drawing.Point(285, 24);
+            this.DtpAbandon.Location = new System.Drawing.Point(321, 28);
             this.DtpAbandon.Name = "DtpAbandon";
             this.DtpAbandon.Size = new System.Drawing.Size(95, 20);
             this.DtpAbandon.TabIndex = 33;
@@ -531,9 +526,38 @@
             // 
             this.BtnEdit.Location = new System.Drawing.Point(498, 392);
             this.BtnEdit.Name = "BtnEdit";
-            this.BtnEdit.Size = new System.Drawing.Size(26, 26);
+            this.BtnEdit.Size = new System.Drawing.Size(23, 23);
             this.BtnEdit.TabIndex = 39;
             this.BtnEdit.UseVisualStyleBackColor = true;
+            // 
+            // BtnAddLog
+            // 
+            this.BtnAddLog.Location = new System.Drawing.Point(15, 56);
+            this.BtnAddLog.Name = "BtnAddLog";
+            this.BtnAddLog.Size = new System.Drawing.Size(132, 23);
+            this.BtnAddLog.TabIndex = 36;
+            this.BtnAddLog.Text = "Ajouter un suivi";
+            this.BtnAddLog.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(224, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(91, 13);
+            this.label1.TabIndex = 37;
+            this.label1.Text = "Date conversion :";
+            this.label1.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(234, 31);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(81, 13);
+            this.label2.TabIndex = 38;
+            this.label2.Text = "Date abandon :";
+            this.label2.Visible = false;
             // 
             // ProspectEditForm
             // 
@@ -557,7 +581,7 @@
             this.TabCoordonnees.PerformLayout();
             this.TabJournal.ResumeLayout(false);
             this.TabJournal.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvLog)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -588,11 +612,10 @@
         private System.Windows.Forms.Button BtnAddCategorie;
         private System.Windows.Forms.ListBox LsbCategories;
         private System.Windows.Forms.ComboBox CbxCategorie;
-        private System.Windows.Forms.TabPage TabCommunication;
         private System.Windows.Forms.TabPage TabJournal;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView DgvLog;
         private System.Windows.Forms.CheckBox ChkConverti;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker DtpConverti;
         private System.Windows.Forms.CheckBox ChkAbandon;
         private System.Windows.Forms.DateTimePicker DtpAbandon;
         private System.Windows.Forms.Button BtnEdit;
@@ -609,5 +632,8 @@
         private System.Windows.Forms.TextBox TxtTel;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox TxtFax;
+        private System.Windows.Forms.Button BtnAddLog;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }

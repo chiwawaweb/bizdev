@@ -14,15 +14,16 @@ namespace BizDev.Forms
 {
     public partial class ProspectEditForm : Form
     {
-        Utils utils = new Utils();
+        
 
         public ProspectEditForm()
         {
             InitializeComponent();
 
             /* Combobox catégories */
+            ProspectCategorie prospectCategorie = new ProspectCategorie();
             var dsCat = new List<ProspectCategorie>();
-            foreach (ProspectCategorie categorie in utils.GetAllProspectCategories().OrderBy(o => o.Nom))
+            foreach (ProspectCategorie categorie in prospectCategorie.GetAllProspectCategories().OrderBy(o => o.Nom))
             {
                 dsCat.Add(categorie);
             }
