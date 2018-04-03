@@ -39,8 +39,6 @@ namespace BizDev.Forms
             }
             CbxPays.DataSource = dsPays;
             CbxPays.DisplayMember = "Fullname";
-
-            DtpPremierContact.Text = string.Empty;
         }
 
         private void AjouterCategorie()
@@ -92,9 +90,7 @@ namespace BizDev.Forms
             AjouterCategorie();
         }
 
-
         #endregion
-
 
     }
 }
