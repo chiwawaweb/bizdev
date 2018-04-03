@@ -11,5 +11,21 @@ namespace BizDev.Library
         public int Id { get; set; }
         public string Nom { get; set; }
         public string Abrv { get; set; }
+
+        public string Fullname => Nom;
+
+        public List<Pays> GetAllPays()
+        {
+            List<Pays> pays = new List<Pays>()
+            {
+                new Pays { Abrv="fr", Nom="France" },
+                new Pays { Abrv="lu", Nom="Luxembourg"},
+                new Pays { Abrv="de", Nom="Allemagne"},
+                new Pays { Abrv="be", Nom="Belgique"},
+
+            };
+
+            return pays.ToList();
+        }
     }
 }

@@ -38,12 +38,16 @@
             this.label14 = new System.Windows.Forms.Label();
             this.TabControl = new System.Windows.Forms.TabControl();
             this.TabCoordonnees = new System.Windows.Forms.TabPage();
-            this.TabJournal = new System.Windows.Forms.TabPage();
-            this.BtnDelCategorie = new System.Windows.Forms.Button();
-            this.LblCategorie = new System.Windows.Forms.Label();
-            this.BtnAddCategorie = new System.Windows.Forms.Button();
-            this.LsbCategories = new System.Windows.Forms.ListBox();
-            this.CbxCategorie = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.TxtFax = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.TxtWeb = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.TxtEmail = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.TxtGsm = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.TxtTel = new System.Windows.Forms.TextBox();
             this.LblPays = new System.Windows.Forms.Label();
             this.CbxPays = new System.Windows.Forms.ComboBox();
             this.LblVille = new System.Windows.Forms.Label();
@@ -55,22 +59,18 @@
             this.TxtAdresse = new System.Windows.Forms.TextBox();
             this.LblNom = new System.Windows.Forms.Label();
             this.TxtNom = new System.Windows.Forms.TextBox();
+            this.BtnDelCategorie = new System.Windows.Forms.Button();
+            this.LblCategorie = new System.Windows.Forms.Label();
+            this.BtnAddCategorie = new System.Windows.Forms.Button();
+            this.LsbCategories = new System.Windows.Forms.ListBox();
+            this.CbxCategorie = new System.Windows.Forms.ComboBox();
             this.TabCommunication = new System.Windows.Forms.TabPage();
-            this.label11 = new System.Windows.Forms.Label();
-            this.TxtWeb = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.TxtEmail = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.TxtFax = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.TxtGsm = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.TxtTel = new System.Windows.Forms.TextBox();
+            this.TabJournal = new System.Windows.Forms.TabPage();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.ChkConverti = new System.Windows.Forms.CheckBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.ChkAbandon = new System.Windows.Forms.CheckBox();
             this.DtpAbandon = new System.Windows.Forms.DateTimePicker();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.BtnSave = new System.Windows.Forms.Button();
             this.BtnCancel = new System.Windows.Forms.Button();
             this.BtnClose = new System.Windows.Forms.Button();
@@ -79,7 +79,6 @@
             this.TabControl.SuspendLayout();
             this.TabCoordonnees.SuspendLayout();
             this.TabJournal.SuspendLayout();
-            this.TabCommunication.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -90,7 +89,7 @@
             // LblNbEmployes
             // 
             this.LblNbEmployes.AutoSize = true;
-            this.LblNbEmployes.Location = new System.Drawing.Point(368, 17);
+            this.LblNbEmployes.Location = new System.Drawing.Point(368, 160);
             this.LblNbEmployes.Name = "LblNbEmployes";
             this.LblNbEmployes.Size = new System.Drawing.Size(52, 13);
             this.LblNbEmployes.TabIndex = 27;
@@ -99,7 +98,7 @@
             // TxtNbEmployes
             // 
             this.TxtNbEmployes.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.TxtNbEmployes.Location = new System.Drawing.Point(371, 33);
+            this.TxtNbEmployes.Location = new System.Drawing.Point(371, 176);
             this.TxtNbEmployes.MaxLength = 5;
             this.TxtNbEmployes.Name = "TxtNbEmployes";
             this.TxtNbEmployes.Size = new System.Drawing.Size(46, 20);
@@ -108,7 +107,7 @@
             // LblCommentaires
             // 
             this.LblCommentaires.AutoSize = true;
-            this.LblCommentaires.Location = new System.Drawing.Point(368, 78);
+            this.LblCommentaires.Location = new System.Drawing.Point(368, 207);
             this.LblCommentaires.Name = "LblCommentaires";
             this.LblCommentaires.Size = new System.Drawing.Size(73, 13);
             this.LblCommentaires.TabIndex = 29;
@@ -116,12 +115,13 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(371, 94);
+            this.textBox1.AcceptsReturn = true;
+            this.textBox1.Location = new System.Drawing.Point(371, 223);
             this.textBox1.MaxLength = 5;
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(314, 219);
+            this.textBox1.Size = new System.Drawing.Size(314, 90);
             this.textBox1.TabIndex = 28;
             // 
             // DtpPremierContact
@@ -154,6 +154,16 @@
             // 
             // TabCoordonnees
             // 
+            this.TabCoordonnees.Controls.Add(this.label9);
+            this.TabCoordonnees.Controls.Add(this.TxtFax);
+            this.TabCoordonnees.Controls.Add(this.label11);
+            this.TabCoordonnees.Controls.Add(this.TxtWeb);
+            this.TabCoordonnees.Controls.Add(this.label10);
+            this.TabCoordonnees.Controls.Add(this.TxtEmail);
+            this.TabCoordonnees.Controls.Add(this.label8);
+            this.TabCoordonnees.Controls.Add(this.TxtGsm);
+            this.TabCoordonnees.Controls.Add(this.label7);
+            this.TabCoordonnees.Controls.Add(this.TxtTel);
             this.TabCoordonnees.Controls.Add(this.LblPays);
             this.TabCoordonnees.Controls.Add(this.LblCommentaires);
             this.TabCoordonnees.Controls.Add(this.CbxPays);
@@ -182,71 +192,90 @@
             this.TabCoordonnees.Text = "Coordonnées";
             this.TabCoordonnees.UseVisualStyleBackColor = true;
             // 
-            // TabJournal
+            // label9
             // 
-            this.TabJournal.Controls.Add(this.dataGridView1);
-            this.TabJournal.Controls.Add(this.label14);
-            this.TabJournal.Controls.Add(this.ChkConverti);
-            this.TabJournal.Controls.Add(this.DtpPremierContact);
-            this.TabJournal.Controls.Add(this.dateTimePicker1);
-            this.TabJournal.Controls.Add(this.ChkAbandon);
-            this.TabJournal.Controls.Add(this.DtpAbandon);
-            this.TabJournal.Location = new System.Drawing.Point(4, 22);
-            this.TabJournal.Name = "TabJournal";
-            this.TabJournal.Padding = new System.Windows.Forms.Padding(3);
-            this.TabJournal.Size = new System.Drawing.Size(697, 350);
-            this.TabJournal.TabIndex = 1;
-            this.TabJournal.Text = "Journal";
-            this.TabJournal.UseVisualStyleBackColor = true;
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(580, 16);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(24, 13);
+            this.label9.TabIndex = 41;
+            this.label9.Text = "Fax";
             // 
-            // BtnDelCategorie
+            // TxtFax
             // 
-            this.BtnDelCategorie.Location = new System.Drawing.Point(320, 60);
-            this.BtnDelCategorie.Name = "BtnDelCategorie";
-            this.BtnDelCategorie.Size = new System.Drawing.Size(23, 23);
-            this.BtnDelCategorie.TabIndex = 11;
-            this.BtnDelCategorie.TabStop = false;
-            this.BtnDelCategorie.Text = "-";
-            this.BtnDelCategorie.UseVisualStyleBackColor = true;
+            this.TxtFax.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.TxtFax.Location = new System.Drawing.Point(583, 32);
+            this.TxtFax.Name = "TxtFax";
+            this.TxtFax.Size = new System.Drawing.Size(100, 20);
+            this.TxtFax.TabIndex = 40;
             // 
-            // LblCategorie
+            // label11
             // 
-            this.LblCategorie.AutoSize = true;
-            this.LblCategorie.Location = new System.Drawing.Point(19, 16);
-            this.LblCategorie.Name = "LblCategorie";
-            this.LblCategorie.Size = new System.Drawing.Size(52, 13);
-            this.LblCategorie.TabIndex = 10;
-            this.LblCategorie.Text = "Catégorie";
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(370, 108);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(30, 13);
+            this.label11.TabIndex = 39;
+            this.label11.Text = "Web";
             // 
-            // BtnAddCategorie
+            // TxtWeb
             // 
-            this.BtnAddCategorie.Location = new System.Drawing.Point(320, 31);
-            this.BtnAddCategorie.Name = "BtnAddCategorie";
-            this.BtnAddCategorie.Size = new System.Drawing.Size(23, 23);
-            this.BtnAddCategorie.TabIndex = 9;
-            this.BtnAddCategorie.TabStop = false;
-            this.BtnAddCategorie.Text = "+";
-            this.BtnAddCategorie.UseVisualStyleBackColor = true;
+            this.TxtWeb.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.TxtWeb.Location = new System.Drawing.Point(373, 124);
+            this.TxtWeb.Name = "TxtWeb";
+            this.TxtWeb.Size = new System.Drawing.Size(309, 20);
+            this.TxtWeb.TabIndex = 38;
             // 
-            // LsbCategories
+            // label10
             // 
-            this.LsbCategories.BackColor = System.Drawing.SystemColors.Control;
-            this.LsbCategories.FormattingEnabled = true;
-            this.LsbCategories.Location = new System.Drawing.Point(22, 61);
-            this.LsbCategories.Name = "LsbCategories";
-            this.LsbCategories.ScrollAlwaysVisible = true;
-            this.LsbCategories.Size = new System.Drawing.Size(292, 43);
-            this.LsbCategories.TabIndex = 8;
-            this.LsbCategories.TabStop = false;
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(368, 63);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(32, 13);
+            this.label10.TabIndex = 37;
+            this.label10.Text = "Email";
             // 
-            // CbxCategorie
+            // TxtEmail
             // 
-            this.CbxCategorie.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CbxCategorie.FormattingEnabled = true;
-            this.CbxCategorie.Location = new System.Drawing.Point(22, 32);
-            this.CbxCategorie.Name = "CbxCategorie";
-            this.CbxCategorie.Size = new System.Drawing.Size(292, 21);
-            this.CbxCategorie.TabIndex = 7;
+            this.TxtEmail.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.TxtEmail.Location = new System.Drawing.Point(371, 79);
+            this.TxtEmail.Name = "TxtEmail";
+            this.TxtEmail.Size = new System.Drawing.Size(311, 20);
+            this.TxtEmail.TabIndex = 36;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(474, 16);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(46, 13);
+            this.label8.TabIndex = 33;
+            this.label8.Text = "Portable";
+            // 
+            // TxtGsm
+            // 
+            this.TxtGsm.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.TxtGsm.Location = new System.Drawing.Point(477, 32);
+            this.TxtGsm.Name = "TxtGsm";
+            this.TxtGsm.Size = new System.Drawing.Size(100, 20);
+            this.TxtGsm.TabIndex = 32;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(368, 16);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(58, 13);
+            this.label7.TabIndex = 31;
+            this.label7.Text = "Téléphone";
+            // 
+            // TxtTel
+            // 
+            this.TxtTel.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.TxtTel.Location = new System.Drawing.Point(371, 32);
+            this.TxtTel.Name = "TxtTel";
+            this.TxtTel.Size = new System.Drawing.Size(100, 20);
+            this.TxtTel.TabIndex = 30;
             // 
             // LblPays
             // 
@@ -342,18 +371,58 @@
             this.TxtNom.Size = new System.Drawing.Size(292, 20);
             this.TxtNom.TabIndex = 16;
             // 
+            // BtnDelCategorie
+            // 
+            this.BtnDelCategorie.Location = new System.Drawing.Point(320, 60);
+            this.BtnDelCategorie.Name = "BtnDelCategorie";
+            this.BtnDelCategorie.Size = new System.Drawing.Size(23, 23);
+            this.BtnDelCategorie.TabIndex = 11;
+            this.BtnDelCategorie.TabStop = false;
+            this.BtnDelCategorie.Text = "-";
+            this.BtnDelCategorie.UseVisualStyleBackColor = true;
+            // 
+            // LblCategorie
+            // 
+            this.LblCategorie.AutoSize = true;
+            this.LblCategorie.Location = new System.Drawing.Point(19, 16);
+            this.LblCategorie.Name = "LblCategorie";
+            this.LblCategorie.Size = new System.Drawing.Size(52, 13);
+            this.LblCategorie.TabIndex = 10;
+            this.LblCategorie.Text = "Catégorie";
+            // 
+            // BtnAddCategorie
+            // 
+            this.BtnAddCategorie.Location = new System.Drawing.Point(320, 31);
+            this.BtnAddCategorie.Name = "BtnAddCategorie";
+            this.BtnAddCategorie.Size = new System.Drawing.Size(23, 23);
+            this.BtnAddCategorie.TabIndex = 9;
+            this.BtnAddCategorie.TabStop = false;
+            this.BtnAddCategorie.Text = "+";
+            this.BtnAddCategorie.UseVisualStyleBackColor = true;
+            this.BtnAddCategorie.Click += new System.EventHandler(this.BtnAddCategorie_Click);
+            // 
+            // LsbCategories
+            // 
+            this.LsbCategories.BackColor = System.Drawing.SystemColors.Control;
+            this.LsbCategories.FormattingEnabled = true;
+            this.LsbCategories.Location = new System.Drawing.Point(22, 61);
+            this.LsbCategories.Name = "LsbCategories";
+            this.LsbCategories.ScrollAlwaysVisible = true;
+            this.LsbCategories.Size = new System.Drawing.Size(292, 43);
+            this.LsbCategories.TabIndex = 8;
+            this.LsbCategories.TabStop = false;
+            // 
+            // CbxCategorie
+            // 
+            this.CbxCategorie.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CbxCategorie.FormattingEnabled = true;
+            this.CbxCategorie.Location = new System.Drawing.Point(22, 32);
+            this.CbxCategorie.Name = "CbxCategorie";
+            this.CbxCategorie.Size = new System.Drawing.Size(292, 21);
+            this.CbxCategorie.TabIndex = 7;
+            // 
             // TabCommunication
             // 
-            this.TabCommunication.Controls.Add(this.label11);
-            this.TabCommunication.Controls.Add(this.TxtWeb);
-            this.TabCommunication.Controls.Add(this.label10);
-            this.TabCommunication.Controls.Add(this.TxtEmail);
-            this.TabCommunication.Controls.Add(this.label9);
-            this.TabCommunication.Controls.Add(this.TxtFax);
-            this.TabCommunication.Controls.Add(this.label8);
-            this.TabCommunication.Controls.Add(this.TxtGsm);
-            this.TabCommunication.Controls.Add(this.label7);
-            this.TabCommunication.Controls.Add(this.TxtTel);
             this.TabCommunication.Location = new System.Drawing.Point(4, 22);
             this.TabCommunication.Name = "TabCommunication";
             this.TabCommunication.Size = new System.Drawing.Size(697, 350);
@@ -361,90 +430,30 @@
             this.TabCommunication.Text = "Communication";
             this.TabCommunication.UseVisualStyleBackColor = true;
             // 
-            // label11
+            // TabJournal
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(288, 247);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(30, 13);
-            this.label11.TabIndex = 35;
-            this.label11.Text = "Web";
+            this.TabJournal.Controls.Add(this.dataGridView1);
+            this.TabJournal.Controls.Add(this.label14);
+            this.TabJournal.Controls.Add(this.ChkConverti);
+            this.TabJournal.Controls.Add(this.DtpPremierContact);
+            this.TabJournal.Controls.Add(this.dateTimePicker1);
+            this.TabJournal.Controls.Add(this.ChkAbandon);
+            this.TabJournal.Controls.Add(this.DtpAbandon);
+            this.TabJournal.Location = new System.Drawing.Point(4, 22);
+            this.TabJournal.Name = "TabJournal";
+            this.TabJournal.Padding = new System.Windows.Forms.Padding(3);
+            this.TabJournal.Size = new System.Drawing.Size(697, 350);
+            this.TabJournal.TabIndex = 1;
+            this.TabJournal.Text = "Journal";
+            this.TabJournal.UseVisualStyleBackColor = true;
             // 
-            // TxtWeb
+            // dataGridView1
             // 
-            this.TxtWeb.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.TxtWeb.Location = new System.Drawing.Point(291, 263);
-            this.TxtWeb.Name = "TxtWeb";
-            this.TxtWeb.Size = new System.Drawing.Size(118, 20);
-            this.TxtWeb.TabIndex = 34;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(288, 206);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(32, 13);
-            this.label10.TabIndex = 33;
-            this.label10.Text = "Email";
-            // 
-            // TxtEmail
-            // 
-            this.TxtEmail.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.TxtEmail.Location = new System.Drawing.Point(291, 222);
-            this.TxtEmail.Name = "TxtEmail";
-            this.TxtEmail.Size = new System.Drawing.Size(118, 20);
-            this.TxtEmail.TabIndex = 32;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(288, 162);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(24, 13);
-            this.label9.TabIndex = 31;
-            this.label9.Text = "Fax";
-            // 
-            // TxtFax
-            // 
-            this.TxtFax.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.TxtFax.Location = new System.Drawing.Point(291, 178);
-            this.TxtFax.Name = "TxtFax";
-            this.TxtFax.Size = new System.Drawing.Size(118, 20);
-            this.TxtFax.TabIndex = 30;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(288, 113);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(46, 13);
-            this.label8.TabIndex = 29;
-            this.label8.Text = "Portable";
-            // 
-            // TxtGsm
-            // 
-            this.TxtGsm.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.TxtGsm.Location = new System.Drawing.Point(291, 129);
-            this.TxtGsm.Name = "TxtGsm";
-            this.TxtGsm.Size = new System.Drawing.Size(118, 20);
-            this.TxtGsm.TabIndex = 28;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(288, 68);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(58, 13);
-            this.label7.TabIndex = 27;
-            this.label7.Text = "Téléphone";
-            // 
-            // TxtTel
-            // 
-            this.TxtTel.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.TxtTel.Location = new System.Drawing.Point(291, 84);
-            this.TxtTel.Name = "TxtTel";
-            this.TxtTel.Size = new System.Drawing.Size(118, 20);
-            this.TxtTel.TabIndex = 26;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(15, 66);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(667, 278);
+            this.dataGridView1.TabIndex = 34;
             // 
             // ChkConverti
             // 
@@ -488,14 +497,6 @@
             this.DtpAbandon.TabIndex = 33;
             this.DtpAbandon.Visible = false;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(15, 66);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(667, 278);
-            this.dataGridView1.TabIndex = 34;
-            // 
             // BtnSave
             // 
             this.BtnSave.Location = new System.Drawing.Point(623, 394);
@@ -513,6 +514,7 @@
             this.BtnCancel.TabIndex = 37;
             this.BtnCancel.Text = "Annuler";
             this.BtnCancel.UseVisualStyleBackColor = true;
+            this.BtnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
             // BtnClose
             // 
@@ -522,6 +524,8 @@
             this.BtnClose.TabIndex = 38;
             this.BtnClose.Text = "Fermer";
             this.BtnClose.UseVisualStyleBackColor = true;
+            this.BtnClose.Visible = false;
+            this.BtnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
             // BtnEdit
             // 
@@ -553,8 +557,6 @@
             this.TabCoordonnees.PerformLayout();
             this.TabJournal.ResumeLayout(false);
             this.TabJournal.PerformLayout();
-            this.TabCommunication.ResumeLayout(false);
-            this.TabCommunication.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
@@ -587,16 +589,6 @@
         private System.Windows.Forms.ListBox LsbCategories;
         private System.Windows.Forms.ComboBox CbxCategorie;
         private System.Windows.Forms.TabPage TabCommunication;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox TxtWeb;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox TxtEmail;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox TxtFax;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox TxtGsm;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox TxtTel;
         private System.Windows.Forms.TabPage TabJournal;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.CheckBox ChkConverti;
@@ -607,5 +599,15 @@
         private System.Windows.Forms.Button BtnClose;
         private System.Windows.Forms.Button BtnCancel;
         private System.Windows.Forms.Button BtnSave;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox TxtWeb;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox TxtEmail;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox TxtGsm;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox TxtTel;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox TxtFax;
     }
 }

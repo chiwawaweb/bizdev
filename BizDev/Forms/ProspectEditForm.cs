@@ -22,12 +22,22 @@ namespace BizDev.Forms
 
             /* Combobox catégories */
             var dsCat = new List<ProspectCategorie>();
-            foreach (ProspectCategorie pays in utils.GetAllProspectCategories().OrderBy(o => o.Nom))
+            foreach (ProspectCategorie categorie in utils.GetAllProspectCategories().OrderBy(o => o.Nom))
             {
-                dsCat.Add(pays);
+                dsCat.Add(categorie);
             }
             CbxCategorie.DataSource = dsCat;
             CbxCategorie.DisplayMember = "Fullname";
+
+            /* Combobos pays */
+            Pays country = new Pays();
+            var dsPays = new List<Pays>();
+            foreach (Pays pays in country.GetAllPays().OrderBy(o => o.Nom))
+            {
+                dsPays.Add(pays);
+            }
+            CbxPays.DataSource = dsPays;
+            CbxPays.DisplayMember = "Fullname";
         }
 
         private void AjouterCategorie()
@@ -58,17 +68,31 @@ namespace BizDev.Forms
 
         #region Gestion des événements
 
-        private void BtnAddCategorie_Click(object sender, EventArgs e)
-        {
-            AjouterCategorie();
-        }
 
-        #endregion
 
         private void BtnDelCategorie_Click(object sender, EventArgs e)
         {
             SupprimerCategorie();
         }
+
+        private void BtnClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void BtnCancel_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void BtnAddCategorie_Click(object sender, EventArgs e)
+        {
+            AjouterCategorie();
+        }
+
+
+        #endregion
+
 
     }
 }
