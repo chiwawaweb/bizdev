@@ -34,8 +34,6 @@
             this.TxtNbEmployes = new System.Windows.Forms.TextBox();
             this.LblCommentaires = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.DtpPremierContact = new System.Windows.Forms.DateTimePicker();
-            this.label14 = new System.Windows.Forms.Label();
             this.TabControl = new System.Windows.Forms.TabControl();
             this.TabCoordonnees = new System.Windows.Forms.TabPage();
             this.label9 = new System.Windows.Forms.Label();
@@ -77,6 +75,9 @@
             this.BtnAddLog = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.DtpPremierContact = new System.Windows.Forms.DateTimePicker();
+            this.label14 = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             this.TabControl.SuspendLayout();
             this.TabCoordonnees.SuspendLayout();
@@ -125,23 +126,6 @@
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox1.Size = new System.Drawing.Size(314, 90);
             this.textBox1.TabIndex = 28;
-            // 
-            // DtpPremierContact
-            // 
-            this.DtpPremierContact.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DtpPremierContact.Location = new System.Drawing.Point(26, 28);
-            this.DtpPremierContact.Name = "DtpPremierContact";
-            this.DtpPremierContact.Size = new System.Drawing.Size(95, 20);
-            this.DtpPremierContact.TabIndex = 34;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(24, 13);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(81, 13);
-            this.label14.TabIndex = 35;
-            this.label14.Text = "Premier contact";
             // 
             // TabControl
             // 
@@ -424,11 +408,12 @@
             // 
             // TabJournal
             // 
+            this.TabJournal.Controls.Add(this.checkBox1);
+            this.TabJournal.Controls.Add(this.label14);
             this.TabJournal.Controls.Add(this.label2);
             this.TabJournal.Controls.Add(this.label1);
             this.TabJournal.Controls.Add(this.BtnAddLog);
             this.TabJournal.Controls.Add(this.DgvLog);
-            this.TabJournal.Controls.Add(this.label14);
             this.TabJournal.Controls.Add(this.ChkConverti);
             this.TabJournal.Controls.Add(this.DtpPremierContact);
             this.TabJournal.Controls.Add(this.DtpConverti);
@@ -445,16 +430,16 @@
             // DgvLog
             // 
             this.DgvLog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvLog.Location = new System.Drawing.Point(15, 85);
+            this.DgvLog.Location = new System.Drawing.Point(15, 83);
             this.DgvLog.Name = "DgvLog";
-            this.DgvLog.Size = new System.Drawing.Size(667, 259);
+            this.DgvLog.Size = new System.Drawing.Size(667, 261);
             this.DgvLog.TabIndex = 34;
             // 
             // ChkConverti
             // 
             this.ChkConverti.AutoSize = true;
             this.ChkConverti.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ChkConverti.Location = new System.Drawing.Point(153, 7);
+            this.ChkConverti.Location = new System.Drawing.Point(53, 33);
             this.ChkConverti.Name = "ChkConverti";
             this.ChkConverti.Size = new System.Drawing.Size(65, 17);
             this.ChkConverti.TabIndex = 30;
@@ -465,7 +450,7 @@
             // DtpConverti
             // 
             this.DtpConverti.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DtpConverti.Location = new System.Drawing.Point(321, 5);
+            this.DtpConverti.Location = new System.Drawing.Point(217, 31);
             this.DtpConverti.Name = "DtpConverti";
             this.DtpConverti.Size = new System.Drawing.Size(95, 20);
             this.DtpConverti.TabIndex = 31;
@@ -475,7 +460,7 @@
             // 
             this.ChkAbandon.AutoSize = true;
             this.ChkAbandon.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ChkAbandon.Location = new System.Drawing.Point(149, 30);
+            this.ChkAbandon.Location = new System.Drawing.Point(49, 59);
             this.ChkAbandon.Name = "ChkAbandon";
             this.ChkAbandon.Size = new System.Drawing.Size(69, 17);
             this.ChkAbandon.TabIndex = 32;
@@ -486,7 +471,7 @@
             // DtpAbandon
             // 
             this.DtpAbandon.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DtpAbandon.Location = new System.Drawing.Point(321, 28);
+            this.DtpAbandon.Location = new System.Drawing.Point(217, 57);
             this.DtpAbandon.Name = "DtpAbandon";
             this.DtpAbandon.Size = new System.Drawing.Size(95, 20);
             this.DtpAbandon.TabIndex = 33;
@@ -532,7 +517,7 @@
             // 
             // BtnAddLog
             // 
-            this.BtnAddLog.Location = new System.Drawing.Point(15, 56);
+            this.BtnAddLog.Location = new System.Drawing.Point(550, 55);
             this.BtnAddLog.Name = "BtnAddLog";
             this.BtnAddLog.Size = new System.Drawing.Size(132, 23);
             this.BtnAddLog.TabIndex = 36;
@@ -542,7 +527,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(224, 8);
+            this.label1.Location = new System.Drawing.Point(123, 34);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(91, 13);
             this.label1.TabIndex = 37;
@@ -552,12 +537,43 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(234, 31);
+            this.label2.Location = new System.Drawing.Point(133, 60);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(81, 13);
             this.label2.TabIndex = 38;
             this.label2.Text = "Date abandon :";
             this.label2.Visible = false;
+            // 
+            // DtpPremierContact
+            // 
+            this.DtpPremierContact.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DtpPremierContact.Location = new System.Drawing.Point(217, 5);
+            this.DtpPremierContact.Name = "DtpPremierContact";
+            this.DtpPremierContact.Size = new System.Drawing.Size(95, 20);
+            this.DtpPremierContact.TabIndex = 34;
+            this.DtpPremierContact.Visible = false;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(124, 8);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(90, 13);
+            this.label14.TabIndex = 35;
+            this.label14.Text = "Date de contact :";
+            this.label14.Visible = false;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.checkBox1.Location = new System.Drawing.Point(15, 7);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(103, 17);
+            this.checkBox1.TabIndex = 39;
+            this.checkBox1.TabStop = false;
+            this.checkBox1.Text = "Prise de contact";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // ProspectEditForm
             // 
@@ -592,8 +608,6 @@
         private System.Windows.Forms.TextBox TxtNbEmployes;
         private System.Windows.Forms.Label LblCommentaires;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DateTimePicker DtpPremierContact;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TabControl TabControl;
         private System.Windows.Forms.TabPage TabCoordonnees;
         private System.Windows.Forms.Label LblPays;
@@ -635,5 +649,8 @@
         private System.Windows.Forms.Button BtnAddLog;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.DateTimePicker DtpPremierContact;
     }
 }
