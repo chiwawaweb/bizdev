@@ -15,11 +15,13 @@ namespace BizDev.Forms
     public partial class ProspectEditForm : Form
     {
         int idProspect, nbEmployes;
-        string nom, adresse, complement, codePostal, ville, pays, tel, gsm, faw, email, web, notes;
+        string nom, adresse, complement, codePostal, ville, pays, tel, gsm, fax, email, web, notes;
         bool view;
         DateTime dateConversion;
 
         ProspectsListForm owner;
+
+        Utils utils = new Utils();
 
         public ProspectEditForm(ProspectsListForm _owner, bool _view, int _idProspect=0)
         {
@@ -105,7 +107,18 @@ namespace BizDev.Forms
         private void Save()
         {
             /* Récuperation des données */
-            nom = TxtNom.Text.ToUpper().Trim();
+            nom = utils.RemoveDiacritics(TxtNom.Text.ToUpper().Trim());
+            adresse = utils.RemoveDiacritics(TxtAdresse.Text.ToUpper().Trim());
+            complement = utils.RemoveDiacritics(TxtComplement.Text.ToUpper().Trim());
+            codePostal = utils.RemoveDiacritics(TxtCodePostal.Text.ToUpper().Trim());
+            ville = utils.RemoveDiacritics(TxtVille.Text.ToUpper().Trim());
+            pays = utils.RemoveDiacritics(CbxPays.Text.ToUpper().Trim());
+            tel = utils.RemoveDiacritics(TxtTel.Text.ToUpper().Trim());
+            gsm = utils.RemoveDiacritics(TxtGsm.Text.ToUpper().Trim());
+            fax = utils.RemoveDiacritics(TxtFax.Text.ToUpper().Trim());
+            email = utils.RemoveDiacritics(TxtEmail.Text.ToLower().Trim());
+            web = utils.RemoveDiacritics(TxtWeb.Text.ToLower().Trim());
+            nbEmployes = int.Parse(TxtNbEmployes.Text);
         }
 
         private void BtnCancel_Click(object sender, EventArgs e)
