@@ -19,7 +19,7 @@ namespace BizDev.Forms
 
         private void NewProspect()
         {
-            new ProspectEditForm().ShowDialog();
+            new ProspectEditForm(this, false).ShowDialog();
         }
 
         #region Gestion des événements

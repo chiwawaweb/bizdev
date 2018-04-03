@@ -22,7 +22,8 @@ namespace BizDev.DTO
         public string Web { get; set; }
         public string NbEmployes { get; set; }
 
-        public string Statut { get; set; } // non contacté, en cours, converti, abandonné
+        public bool PremierContact;
+        public DateTime DatePremierContact;
         public bool Converti { get; set; }
         public DateTime DateConversion { get; set; }
         public bool Abandon { get; set; }

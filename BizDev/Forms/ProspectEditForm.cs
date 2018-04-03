@@ -14,10 +14,19 @@ namespace BizDev.Forms
 {
     public partial class ProspectEditForm : Form
     {
-        
+        int idProspect, nbEmployes;
+        string nom, adresse, complement, codePostal, ville, pays, tel, gsm, faw, email, web, notes;
+        bool view;
+        DateTime dateConversion;
 
-        public ProspectEditForm()
+        ProspectsListForm owner;
+
+        public ProspectEditForm(ProspectsListForm _owner, bool _view, int _idProspect=0)
         {
+            idProspect = _idProspect;
+            view = _view;
+            owner = _owner;
+
             InitializeComponent();
 
             /* Combobox catégories */
@@ -30,7 +39,7 @@ namespace BizDev.Forms
             CbxCategorie.DataSource = dsCat;
             CbxCategorie.DisplayMember = "Fullname";
 
-            /* Combobos pays */
+            /* Combobox pays */
             Pays country = new Pays();
             var dsPays = new List<Pays>();
             foreach (Pays pays in country.GetAllPays().OrderBy(o => o.Nom))
@@ -39,6 +48,17 @@ namespace BizDev.Forms
             }
             CbxPays.DataSource = dsPays;
             CbxPays.DisplayMember = "Fullname";
+
+            switch (view)
+            {
+                case false:
+                    NewMode();
+                    break;
+
+                case true:
+                    ViewMode();
+                    break;
+            }
         }
 
         private void AjouterCategorie()
@@ -58,7 +78,6 @@ namespace BizDev.Forms
                 LsbCategories.Items.Add(CbxCategorie.Text);
             }
             LsbCategories.Sorted = true;
-
         }
 
         private void SupprimerCategorie()
@@ -68,16 +87,25 @@ namespace BizDev.Forms
 
         #region Gestion des événements
 
-
-
-        private void BtnDelCategorie_Click(object sender, EventArgs e)
-        {
-            SupprimerCategorie();
-        }
-
         private void BtnClose_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void NewMode()
+        {
+            Text = "Nouveau prospect";
+        }
+        
+        private void ViewMode()
+        {
+            Text = "Visualisation du prospect : ";
+        }
+
+        private void Save()
+        {
+            /* Recuperation des donnees */
+
         }
 
         private void BtnCancel_Click(object sender, EventArgs e)
@@ -90,7 +118,17 @@ namespace BizDev.Forms
             AjouterCategorie();
         }
 
+        private void BtnDelCategorie_Click(object sender, EventArgs e)
+        {
+            SupprimerCategorie();
+        }
+
+
         #endregion
 
+        private void BtnSave_Click(object sender, EventArgs e)
+        {
+            Save();
+        }
     }
 }
