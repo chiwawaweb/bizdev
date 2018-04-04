@@ -124,7 +124,15 @@ namespace BizDev.Forms
             bool erreurs = false;
             string errMsg = "Votre saisie comporte des erreurs : \n\n";
 
-            
+            if (nom.Length<2)
+            {
+                ErrorProvider.SetError(TxtNom, "Nom trop court");
+            }
+
+            if (utils.IsEmailValid(email)==true)
+            {
+                ErrorProvider.SetError(TxtEmail, "Email incorrect");
+            }
 
         }
 

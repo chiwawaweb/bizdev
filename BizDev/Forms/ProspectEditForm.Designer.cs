@@ -206,7 +206,7 @@
             // 
             // TxtWeb
             // 
-            this.TxtWeb.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.TxtWeb.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
             this.TxtWeb.Location = new System.Drawing.Point(371, 131);
             this.TxtWeb.Name = "TxtWeb";
             this.TxtWeb.Size = new System.Drawing.Size(309, 20);
@@ -223,7 +223,7 @@
             // 
             // TxtEmail
             // 
-            this.TxtEmail.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.TxtEmail.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
             this.TxtEmail.Location = new System.Drawing.Point(371, 79);
             this.TxtEmail.Name = "TxtEmail";
             this.TxtEmail.Size = new System.Drawing.Size(311, 20);
