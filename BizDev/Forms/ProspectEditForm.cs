@@ -123,17 +123,27 @@ namespace BizDev.Forms
             /* Vérification des données */
             bool erreurs = false;
             string errMsg = "Votre saisie comporte des erreurs : \n\n";
+            ErrorProvider.Clear();
 
-            if (nom.Length<2)
+            if (!IsNomValid())
             {
                 ErrorProvider.SetError(TxtNom, "Nom trop court");
             }
 
-            if (utils.IsEmailValid(email)==true)
+            if (utils.IsEmailValid(email)==false)
             {
                 ErrorProvider.SetError(TxtEmail, "Email incorrect");
             }
 
+            
+           
+            
+
+        }
+
+        private bool IsNomValid()
+        {
+            return (nom.Length > 1);
         }
 
         private void BtnCancel_Click(object sender, EventArgs e)
