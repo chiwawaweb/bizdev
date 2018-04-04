@@ -42,5 +42,37 @@ namespace BizDev.DAL
                 }
             }
         }
+
+        public void Update(Prospect prospect)
+        {
+            using (Context context = new Context())
+            {
+                try
+                {
+                    context.Prospects.Attach(prospect);
+                    context.Entry(prospect).State = EntityState.Modified;
+                    context.SaveChanges();
+                }
+                catch
+                {
+                    throw;
+                }
+            }
+        }
+
+        public Prospect GetProspectById(int id)
+        {
+            using (Context context = new Context())
+            {
+                try
+                {
+                    return context.Prospects.Find(id);
+                }
+                catch
+                {
+                    throw;
+                }
+            }
+        }
     }
 }

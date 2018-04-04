@@ -24,7 +24,7 @@ namespace BizDev.DTO
 
         public bool PremierContact;
         public DateTime DatePremierContact;
-        public bool Converti { get; set; }
+        public bool Conversion { get; set; }
         public DateTime DateConversion { get; set; }
         public bool Abandon { get; set; }
         public DateTime DateAbandon { get; set; }

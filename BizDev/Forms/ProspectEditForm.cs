@@ -17,7 +17,7 @@ namespace BizDev.Forms
     {
         int idProspect;
         string nom, adresse, complement, codePostal, ville, pays, tel, gsm, fax, email, web, nbEmployes, notes;
-        bool view;
+        bool view, premierContact, conversion, Abandon;
         DateTime dateConversion, datePremierContact, dateAbandon, createdAt, updatedAt;
 
         ProspectsListForm owner;
@@ -45,7 +45,11 @@ namespace BizDev.Forms
 
             /* Combobox pays */
             Pays country = new Pays();
+
+            country.Nom = string.Empty;
+
             var dsPays = new List<Pays>();
+            dsPays.Add(country);
             foreach (Pays pays in country.GetAllPays().OrderBy(o => o.Nom))
             {
                 dsPays.Add(pays);
@@ -119,6 +123,9 @@ namespace BizDev.Forms
             email = utils.RemoveDiacritics(TxtEmail.Text.ToLower().Trim());
             web = utils.RemoveDiacritics(TxtWeb.Text.ToLower().Trim());
             nbEmployes = utils.RemoveDiacritics(TxtNbEmployes.Text.ToLower().Trim());
+            premierContact = ChkPremierContact.Checked;
+            datePremierContact = DtpPremierContact.Value;
+            conversion = ChkConversion.Checked;
 
             /* Vérification des données */
             bool erreurs = false;
@@ -186,7 +193,28 @@ namespace BizDev.Forms
 
         private void UpdateDatabase()
         {
-            MessageBox.Show("upd");
+            Prospect prospect = prospectProvider.GetProspectById(idProspect);
+
+            prospect.Nom = nom;
+            prospect.Adresse = adresse;
+            prospect.Complement = complement;
+            prospect.CodePostal = codePostal;
+            prospect.Ville = ville;
+            prospect.Pays = pays;
+            prospect.Tel = tel;
+            prospect.Gsm = gsm;
+            prospect.Fax = fax;
+            prospect.Email = email;
+            prospect.Web = web;
+            prospect.NbEmployes = nbEmployes;
+            prospect.Notes = notes;
+            prospect.PremierContact = premierContact;
+            prospect.DateConversion = dateConversion;
+            prospect.Conversion = conversion;
+
+            prospect.UpdatedAt = DateTime.Now;
+
+            prospectProvider.Update(prospect);
         }
 
         #region Gestion des événements
@@ -213,12 +241,7 @@ namespace BizDev.Forms
 
         private void TxtNom_Validating(object sender, CancelEventArgs e)
         {
-            nom = utils.RemoveDiacritics(TxtNom.Text.Trim().ToUpper());
-
-            if (nom.Length < 2)
-                ErrorProvider.SetError(TxtNom, "Nom trop court");
-            else
-                ErrorProvider.Clear();
+           
         }
 
         private void BtnSave_Click(object sender, EventArgs e)

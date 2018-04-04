@@ -63,13 +63,13 @@
             this.LsbCategories = new System.Windows.Forms.ListBox();
             this.CbxCategorie = new System.Windows.Forms.ComboBox();
             this.TabJournal = new System.Windows.Forms.TabPage();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.ChkPremierContact = new System.Windows.Forms.CheckBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.BtnAddLog = new System.Windows.Forms.Button();
             this.DgvLog = new System.Windows.Forms.DataGridView();
-            this.ChkConverti = new System.Windows.Forms.CheckBox();
+            this.ChkConversion = new System.Windows.Forms.CheckBox();
             this.DtpPremierContact = new System.Windows.Forms.DateTimePicker();
             this.DtpConverti = new System.Windows.Forms.DateTimePicker();
             this.ChkAbandon = new System.Windows.Forms.CheckBox();
@@ -87,6 +87,7 @@
             // 
             // ErrorProvider
             // 
+            this.ErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.ErrorProvider.ContainerControl = this;
             // 
             // LblNbEmployes
@@ -412,13 +413,13 @@
             // 
             // TabJournal
             // 
-            this.TabJournal.Controls.Add(this.checkBox1);
+            this.TabJournal.Controls.Add(this.ChkPremierContact);
             this.TabJournal.Controls.Add(this.label14);
             this.TabJournal.Controls.Add(this.label2);
             this.TabJournal.Controls.Add(this.label1);
             this.TabJournal.Controls.Add(this.BtnAddLog);
             this.TabJournal.Controls.Add(this.DgvLog);
-            this.TabJournal.Controls.Add(this.ChkConverti);
+            this.TabJournal.Controls.Add(this.ChkConversion);
             this.TabJournal.Controls.Add(this.DtpPremierContact);
             this.TabJournal.Controls.Add(this.DtpConverti);
             this.TabJournal.Controls.Add(this.ChkAbandon);
@@ -431,17 +432,17 @@
             this.TabJournal.Text = "Historique";
             this.TabJournal.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // ChkPremierContact
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.checkBox1.Location = new System.Drawing.Point(15, 7);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(103, 17);
-            this.checkBox1.TabIndex = 39;
-            this.checkBox1.TabStop = false;
-            this.checkBox1.Text = "Prise de contact";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.ChkPremierContact.AutoSize = true;
+            this.ChkPremierContact.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ChkPremierContact.Location = new System.Drawing.Point(15, 7);
+            this.ChkPremierContact.Name = "ChkPremierContact";
+            this.ChkPremierContact.Size = new System.Drawing.Size(103, 17);
+            this.ChkPremierContact.TabIndex = 39;
+            this.ChkPremierContact.TabStop = false;
+            this.ChkPremierContact.Text = "Prise de contact";
+            this.ChkPremierContact.UseVisualStyleBackColor = true;
             // 
             // label14
             // 
@@ -492,17 +493,17 @@
             this.DgvLog.TabIndex = 34;
             this.DgvLog.TabStop = false;
             // 
-            // ChkConverti
+            // ChkConversion
             // 
-            this.ChkConverti.AutoSize = true;
-            this.ChkConverti.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ChkConverti.Location = new System.Drawing.Point(53, 33);
-            this.ChkConverti.Name = "ChkConverti";
-            this.ChkConverti.Size = new System.Drawing.Size(65, 17);
-            this.ChkConverti.TabIndex = 30;
-            this.ChkConverti.TabStop = false;
-            this.ChkConverti.Text = "Converti";
-            this.ChkConverti.UseVisualStyleBackColor = true;
+            this.ChkConversion.AutoSize = true;
+            this.ChkConversion.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ChkConversion.Location = new System.Drawing.Point(53, 33);
+            this.ChkConversion.Name = "ChkConversion";
+            this.ChkConversion.Size = new System.Drawing.Size(65, 17);
+            this.ChkConversion.TabIndex = 30;
+            this.ChkConversion.TabStop = false;
+            this.ChkConversion.Text = "Converti";
+            this.ChkConversion.UseVisualStyleBackColor = true;
             // 
             // DtpPremierContact
             // 
@@ -642,7 +643,7 @@
         private System.Windows.Forms.ComboBox CbxCategorie;
         private System.Windows.Forms.TabPage TabJournal;
         private System.Windows.Forms.DataGridView DgvLog;
-        private System.Windows.Forms.CheckBox ChkConverti;
+        private System.Windows.Forms.CheckBox ChkConversion;
         private System.Windows.Forms.DateTimePicker DtpConverti;
         private System.Windows.Forms.CheckBox ChkAbandon;
         private System.Windows.Forms.DateTimePicker DtpAbandon;
@@ -663,7 +664,7 @@
         private System.Windows.Forms.Button BtnAddLog;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox ChkPremierContact;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.DateTimePicker DtpPremierContact;
     }
