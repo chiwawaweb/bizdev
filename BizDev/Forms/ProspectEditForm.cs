@@ -17,7 +17,7 @@ namespace BizDev.Forms
         int idProspect;
         string nom, adresse, complement, codePostal, ville, pays, tel, gsm, fax, email, web, nbEmployes, notes;
         bool view;
-        DateTime dateConversion;
+        DateTime dateConversion, datePremierContact, dateAbandon;
 
         ProspectsListForm owner;
 
@@ -119,6 +119,13 @@ namespace BizDev.Forms
             email = utils.RemoveDiacritics(TxtEmail.Text.ToLower().Trim());
             web = utils.RemoveDiacritics(TxtWeb.Text.ToLower().Trim());
             nbEmployes = utils.RemoveDiacritics(TxtNbEmployes.Text.ToLower().Trim());
+
+            /* Vérification des données */
+            bool erreurs = false;
+            string errMsg = "Votre saisie comporte des erreurs : \n\n";
+
+            
+
         }
 
         private void BtnCancel_Click(object sender, EventArgs e)
@@ -136,12 +143,23 @@ namespace BizDev.Forms
             SupprimerCategorie();
         }
 
+        private void TxtNom_Validating(object sender, CancelEventArgs e)
+        {
+            nom = utils.RemoveDiacritics(TxtNom.Text.Trim().ToUpper());
 
-        #endregion
+            if (nom.Length < 2)
+                ErrorProvider.SetError(TxtNom, "Nom trop court");
+            else
+                ErrorProvider.Clear();
+        }
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
+            
             Save();
         }
+
+        #endregion
+
     }
 }

@@ -357,6 +357,7 @@
             this.TxtNom.Name = "TxtNom";
             this.TxtNom.Size = new System.Drawing.Size(292, 20);
             this.TxtNom.TabIndex = 2;
+            this.TxtNom.Validating += new System.ComponentModel.CancelEventHandler(this.TxtNom_Validating);
             // 
             // BtnDelCategorie
             // 
