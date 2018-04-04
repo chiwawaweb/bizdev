@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BizDev.DTO;
+using BizDev.DAL;
 using BizDev.Library;
 
 namespace BizDev.Forms
@@ -17,11 +18,12 @@ namespace BizDev.Forms
         int idProspect;
         string nom, adresse, complement, codePostal, ville, pays, tel, gsm, fax, email, web, nbEmployes, notes;
         bool view;
-        DateTime dateConversion, datePremierContact, dateAbandon;
+        DateTime dateConversion, datePremierContact, dateAbandon, createdAt, updatedAt;
 
         ProspectsListForm owner;
 
         Utils utils = new Utils();
+        ProspectProvider prospectProvider = new ProspectProvider();
 
         public ProspectEditForm(ProspectsListForm _owner, bool _view, int _idProspect=0)
         {
@@ -87,16 +89,14 @@ namespace BizDev.Forms
             LsbCategories.Items.Remove(LsbCategories.SelectedItem);
         }
 
-        #region Gestion des événements
+        
 
-        private void BtnClose_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
+       
 
         private void NewMode()
         {
             Text = "Nouveau prospect";
+            
         }
         
         private void ViewMode()
@@ -122,28 +122,78 @@ namespace BizDev.Forms
 
             /* Vérification des données */
             bool erreurs = false;
-            string errMsg = "Votre saisie comporte des erreurs : \n\n";
+            
             ErrorProvider.Clear();
 
-            if (!IsNomValid())
+            if (nom.Length<2)
             {
+                erreurs = true;
                 ErrorProvider.SetError(TxtNom, "Nom trop court");
             }
 
             if (utils.IsEmailValid(email)==false)
             {
+                erreurs = true;
                 ErrorProvider.SetError(TxtEmail, "Email incorrect");
             }
 
-            
-           
-            
+            /* Contrôle si erreurs */
+            if (erreurs == false)
+            {
+                /* Aucune erreur, on continue */
+                using (Context context = new Context())
+                {
+                    if (view == true)
+                    {
+                        UpdateDatabase();
+                    }
+                    else
+                    {
+                        AddDatabase();
+                    }
+                    Close();
+                }
+            }
+
+
 
         }
 
-        private bool IsNomValid()
+        private void AddDatabase()
         {
-            return (nom.Length > 1);
+            Prospect prospect = new Prospect
+            {
+                Nom = nom,
+                Adresse = adresse,
+                Complement = complement,
+                CodePostal = codePostal,
+                Ville = ville,
+                Pays = pays,
+                Tel = tel,
+                Gsm = gsm,
+                Fax = fax,
+                Email = email,
+                Web = web,
+                NbEmployes = nbEmployes,
+                Notes = notes,
+                CreatedAt = createdAt
+
+            };
+
+            prospectProvider.Create(prospect);
+            idProspect = prospect.Id;
+        }
+
+        private void UpdateDatabase()
+        {
+            MessageBox.Show("upd");
+        }
+
+        #region Gestion des événements
+
+        private void BtnClose_Click(object sender, EventArgs e)
+        {
+            Close();
         }
 
         private void BtnCancel_Click(object sender, EventArgs e)
