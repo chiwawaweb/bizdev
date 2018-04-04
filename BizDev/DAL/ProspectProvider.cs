@@ -74,5 +74,27 @@ namespace BizDev.DAL
                 }
             }
         }
+
+        public List<Prospect> Search(string keywords)
+        {
+            using (Context context = new Context())
+            {
+                try
+                {
+                    var clients = from b in context.Prospects select b;
+                    
+                    clients = from b in context.Prospects
+                                orderby (b.Nom) ascending
+                                where (b.Nom.Contains(keywords))
+                                select b;
+
+                    return clients.ToList();
+                }
+                catch
+                {
+                    throw;
+                }
+            }
+        }
     }
 }

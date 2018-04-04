@@ -71,7 +71,7 @@
             this.DgvLog = new System.Windows.Forms.DataGridView();
             this.ChkConversion = new System.Windows.Forms.CheckBox();
             this.DtpPremierContact = new System.Windows.Forms.DateTimePicker();
-            this.DtpConverti = new System.Windows.Forms.DateTimePicker();
+            this.DtpConversion = new System.Windows.Forms.DateTimePicker();
             this.ChkAbandon = new System.Windows.Forms.CheckBox();
             this.DtpAbandon = new System.Windows.Forms.DateTimePicker();
             this.BtnSave = new System.Windows.Forms.Button();
@@ -421,7 +421,7 @@
             this.TabJournal.Controls.Add(this.DgvLog);
             this.TabJournal.Controls.Add(this.ChkConversion);
             this.TabJournal.Controls.Add(this.DtpPremierContact);
-            this.TabJournal.Controls.Add(this.DtpConverti);
+            this.TabJournal.Controls.Add(this.DtpConversion);
             this.TabJournal.Controls.Add(this.ChkAbandon);
             this.TabJournal.Controls.Add(this.DtpAbandon);
             this.TabJournal.Location = new System.Drawing.Point(4, 22);
@@ -517,13 +517,13 @@
             // 
             // DtpConverti
             // 
-            this.DtpConverti.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DtpConverti.Location = new System.Drawing.Point(217, 31);
-            this.DtpConverti.Name = "DtpConverti";
-            this.DtpConverti.Size = new System.Drawing.Size(95, 20);
-            this.DtpConverti.TabIndex = 31;
-            this.DtpConverti.TabStop = false;
-            this.DtpConverti.Visible = false;
+            this.DtpConversion.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DtpConversion.Location = new System.Drawing.Point(217, 31);
+            this.DtpConversion.Name = "DtpConverti";
+            this.DtpConversion.Size = new System.Drawing.Size(95, 20);
+            this.DtpConversion.TabIndex = 31;
+            this.DtpConversion.TabStop = false;
+            this.DtpConversion.Visible = false;
             // 
             // ChkAbandon
             // 
@@ -644,7 +644,7 @@
         private System.Windows.Forms.TabPage TabJournal;
         private System.Windows.Forms.DataGridView DgvLog;
         private System.Windows.Forms.CheckBox ChkConversion;
-        private System.Windows.Forms.DateTimePicker DtpConverti;
+        private System.Windows.Forms.DateTimePicker DtpConversion;
         private System.Windows.Forms.CheckBox ChkAbandon;
         private System.Windows.Forms.DateTimePicker DtpAbandon;
         private System.Windows.Forms.Button BtnEdit;

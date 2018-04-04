@@ -17,7 +17,7 @@ namespace BizDev.Forms
     {
         int idProspect;
         string nom, adresse, complement, codePostal, ville, pays, tel, gsm, fax, email, web, nbEmployes, notes;
-        bool view, premierContact, conversion, Abandon;
+        bool view, premierContact, conversion, abandon;
         DateTime dateConversion, datePremierContact, dateAbandon, createdAt, updatedAt;
 
         ProspectsListForm owner;
@@ -45,9 +45,7 @@ namespace BizDev.Forms
 
             /* Combobox pays */
             Pays country = new Pays();
-
             country.Nom = string.Empty;
-
             var dsPays = new List<Pays>();
             dsPays.Add(country);
             foreach (Pays pays in country.GetAllPays().OrderBy(o => o.Nom))
@@ -126,6 +124,9 @@ namespace BizDev.Forms
             premierContact = ChkPremierContact.Checked;
             datePremierContact = DtpPremierContact.Value;
             conversion = ChkConversion.Checked;
+            dateConversion = DtpConversion.Value;
+            abandon = ChkAbandon.Checked;
+            dateAbandon = DtpAbandon.Value;
 
             /* Vérification des données */
             bool erreurs = false;
@@ -209,9 +210,11 @@ namespace BizDev.Forms
             prospect.NbEmployes = nbEmployes;
             prospect.Notes = notes;
             prospect.PremierContact = premierContact;
-            prospect.DateConversion = dateConversion;
+            prospect.DatePremierContact = datePremierContact;
             prospect.Conversion = conversion;
-
+            prospect.DateConversion = dateConversion;
+            prospect.Abandon = abandon;
+            prospect.DateAbandon = dateAbandon;
             prospect.UpdatedAt = DateTime.Now;
 
             prospectProvider.Update(prospect);

@@ -32,6 +32,7 @@
             this.ToolStrip = new System.Windows.Forms.ToolStrip();
             this.TbnNew = new System.Windows.Forms.ToolStripButton();
             this.DgvProspects = new System.Windows.Forms.DataGridView();
+            this.TbnView = new System.Windows.Forms.ToolStripButton();
             this.ToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvProspects)).BeginInit();
             this.SuspendLayout();
@@ -39,7 +40,8 @@
             // ToolStrip
             // 
             this.ToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.TbnNew});
+            this.TbnNew,
+            this.TbnView});
             this.ToolStrip.Location = new System.Drawing.Point(0, 0);
             this.ToolStrip.Name = "ToolStrip";
             this.ToolStrip.Size = new System.Drawing.Size(800, 25);
@@ -57,14 +59,32 @@
             // 
             // DgvProspects
             // 
+            this.DgvProspects.AllowUserToAddRows = false;
+            this.DgvProspects.AllowUserToDeleteRows = false;
+            this.DgvProspects.AllowUserToResizeColumns = false;
+            this.DgvProspects.AllowUserToResizeRows = false;
             this.DgvProspects.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DgvProspects.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvProspects.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.DgvProspects.Location = new System.Drawing.Point(0, 28);
             this.DgvProspects.Name = "DgvProspects";
+            this.DgvProspects.ShowCellErrors = false;
+            this.DgvProspects.ShowCellToolTips = false;
+            this.DgvProspects.ShowEditingIcon = false;
+            this.DgvProspects.ShowRowErrors = false;
             this.DgvProspects.Size = new System.Drawing.Size(800, 422);
             this.DgvProspects.TabIndex = 1;
+            // 
+            // TbnView
+            // 
+            this.TbnView.Image = ((System.Drawing.Image)(resources.GetObject("TbnView.Image")));
+            this.TbnView.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.TbnView.Name = "TbnView";
+            this.TbnView.Size = new System.Drawing.Size(93, 22);
+            this.TbnView.Text = "Visualisation";
+            this.TbnView.Click += new System.EventHandler(this.TbnView_Click);
             // 
             // ProspectsListForm
             // 
@@ -77,6 +97,7 @@
             this.Name = "ProspectsListForm";
             this.ShowInTaskbar = false;
             this.Text = "Liste de prospects";
+            this.Load += new System.EventHandler(this.ProspectsListForm_Load);
             this.ToolStrip.ResumeLayout(false);
             this.ToolStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvProspects)).EndInit();
@@ -90,5 +111,6 @@
         private System.Windows.Forms.ToolStrip ToolStrip;
         private System.Windows.Forms.ToolStripButton TbnNew;
         private System.Windows.Forms.DataGridView DgvProspects;
+        private System.Windows.Forms.ToolStripButton TbnView;
     }
 }
