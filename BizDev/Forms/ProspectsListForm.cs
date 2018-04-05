@@ -41,8 +41,10 @@ namespace BizDev.Forms
 
             if (firstLine == true)
             {
-                _idRetour = 0;
+                idRetour = 0;
             }
+
+            
 
             CreateTable(list);
         }
@@ -127,35 +129,23 @@ namespace BizDev.Forms
                 DateTime datePremierContact = list[i].DatePremierContact;
                 string strDatePremierContact = string.Empty;
                 if (datePremierContact == DateTime.Parse("30/12/1899"))
-                {
                     strDatePremierContact = string.Empty;
-                }
                 else
-                {
                     strDatePremierContact = datePremierContact.ToShortDateString();
-                }
 
                 DateTime dateConversion = list[i].DateConversion;
                 string strDateConversion = string.Empty;
                 if (dateConversion == DateTime.Parse("30/12/1899"))
-                {
                     strDateConversion = string.Empty;
-                }
                 else
-                {
                     strDateConversion = dateConversion.ToShortDateString();
-                }
 
                 DateTime dateAbandon = list[i].DateAbandon;
                 string strDateAbandon = string.Empty;
                 if (dateAbandon == DateTime.Parse("30/12/1899"))
-                {
                     strDateAbandon = string.Empty;
-                }
                 else
-                {
                     strDateAbandon = dateAbandon.ToShortDateString();
-                }
 
                 DgvProspects.Rows[number].Cells[0].Value = id.ToString("00000");
                 DgvProspects.Rows[number].Cells[1].Value = nom;

@@ -248,7 +248,8 @@ namespace BizDev.Forms
 
         private void ProspectEditForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            owner.RefreshData();
+            MessageBox.Show(idProspect.ToString());
+            owner.RefreshData(idProspect);
         }
 
         private void BtnCancel_Click(object sender, EventArgs e)

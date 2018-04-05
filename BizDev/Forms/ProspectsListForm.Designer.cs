@@ -78,6 +78,7 @@
             this.DgvProspects.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvProspects.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.DgvProspects.Location = new System.Drawing.Point(0, 28);
+            this.DgvProspects.MultiSelect = false;
             this.DgvProspects.Name = "DgvProspects";
             this.DgvProspects.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvProspects.ShowCellErrors = false;
