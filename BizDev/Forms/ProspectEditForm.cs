@@ -149,6 +149,24 @@ namespace BizDev.Forms
                 ErrorProvider.SetError(TxtEmail, "Email incorrect");
             }
 
+            if (pays.Length<2)
+            {
+                erreurs = true;
+                ErrorProvider.SetError(CbxPays, "Pays obligatoire");
+            }
+
+            if (LsbCategories.Items.Count<1)
+            {
+                erreurs = true;
+                ErrorProvider.SetError(CbxCategorie, "Sélectionner au moins une catégorie");
+            }
+
+            if (premierContact==false)
+            {
+                datePremierContact = DateTime.Parse("31/12/1899");
+            }
+
+
             /* Contrôle si erreurs */
             if (erreurs == false)
             {

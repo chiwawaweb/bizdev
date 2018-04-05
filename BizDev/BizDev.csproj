@@ -76,6 +76,7 @@
   <ItemGroup>
     <Compile Include="DAL\Context.cs" />
     <Compile Include="DAL\ProspectProvider.cs" />
+    <Compile Include="DTO\Prospect_Categorie.cs" />
     <Compile Include="DTO\ProspectLog.cs" />
     <Compile Include="DTO\Prospect.cs" />
     <Compile Include="Forms\MainForm.cs">

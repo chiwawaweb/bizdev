@@ -12,7 +12,7 @@ namespace BizDev.Library
         public string Nom { get; set; }
         public string Abrv { get; set; }
 
-        public string Fullname => Nom;
+        public string Fullname => Nom.ToUpper();
 
         public List<Pays> GetAllPays()
         {
@@ -20,7 +20,6 @@ namespace BizDev.Library
             {
                 new Pays { Abrv="fr", Nom="France" },
                 new Pays { Abrv="lu", Nom="Luxembourg"},
-                new Pays { Abrv="de", Nom="Allemagne"},
                 new Pays { Abrv="be", Nom="Belgique"},
 
             };

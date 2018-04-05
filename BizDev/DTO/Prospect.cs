@@ -22,8 +22,8 @@ namespace BizDev.DTO
         public string Web { get; set; }
         public string NbEmployes { get; set; }
 
-        public bool PremierContact;
-        public DateTime DatePremierContact;
+        public bool PremierContact { get; set; }
+        public DateTime DatePremierContact { get; set; }
         public bool Conversion { get; set; }
         public DateTime DateConversion { get; set; }
         public bool Abandon { get; set; }

@@ -80,41 +80,41 @@ namespace BizDev.Forms
             };
             adresseCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
-            DataGridViewTextBoxColumn datePremierContact = new DataGridViewTextBoxColumn
+            DataGridViewTextBoxColumn datePremierContactCol = new DataGridViewTextBoxColumn
             {
                 Name = "DATE_PREMIERCONTACT",
                 HeaderText = "Contact",
                 Width = 100
             };
-            datePremierContact.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            datePremierContact.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            datePremierContactCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            datePremierContactCol.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
-            DataGridViewTextBoxColumn dateConversion = new DataGridViewTextBoxColumn
+            DataGridViewTextBoxColumn dateConversionCol = new DataGridViewTextBoxColumn
             {
                 Name = "DATE_CONVERSION",
                 HeaderText = "Conversion",
                 Width = 100
             };
-            dateConversion.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dateConversion.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dateConversionCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dateConversionCol.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
-            DataGridViewTextBoxColumn dateAbandon = new DataGridViewTextBoxColumn
+            DataGridViewTextBoxColumn dateAbandonCol = new DataGridViewTextBoxColumn
             {
                 Name = "DATE_ABANDON",
                 HeaderText = "Abandon",
                 Width = 100
             };
-            dateAbandon.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dateAbandon.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dateAbandonCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dateAbandonCol.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
 
             /* Création des colonnes */
             DgvProspects.Columns.Add(idCol);
             DgvProspects.Columns.Add(nomCol);
             DgvProspects.Columns.Add(adresseCol);
-            DgvProspects.Columns.Add(datePremierContact);
-            DgvProspects.Columns.Add(dateConversion);
-            DgvProspects.Columns.Add(dateAbandon);
+            DgvProspects.Columns.Add(datePremierContactCol);
+            DgvProspects.Columns.Add(dateConversionCol);
+            DgvProspects.Columns.Add(dateAbandonCol);
 
             /* Ajout des lignes */
             for (int i = 0; i < list.Count; i++)
@@ -124,14 +124,16 @@ namespace BizDev.Forms
                 int id = list[i].Id;
                 string nom = list[i].Nom.Trim();
                 string adresse = list[i].Adresse + " " + list[i].Complement + list[i].CodePostal + " " + list[i].Ville.Trim();
-                DateTime dateContact = list[i].DatePremierContact;
+                DateTime datePremierContact = list[i].DatePremierContact;
+                DateTime dateConversion = list[i].DateConversion;
+                DateTime dateAbandon = list[i].DateConversion;
 
                 DgvProspects.Rows[number].Cells[0].Value = id.ToString("00000");
                 DgvProspects.Rows[number].Cells[1].Value = nom;
                 DgvProspects.Rows[number].Cells[2].Value = adresse;
-                DgvProspects.Rows[number].Cells[3].Value = dateContact.ToShortDateString();
-                DgvProspects.Rows[number].Cells[4].Value = dateConversion;
-                DgvProspects.Rows[number].Cells[5].Value = dateAbandon;
+                DgvProspects.Rows[number].Cells[3].Value = datePremierContact.ToShortDateString();
+                DgvProspects.Rows[number].Cells[4].Value = dateConversion.ToShortDateString();
+                DgvProspects.Rows[number].Cells[5].Value = dateAbandon.ToShortDateString();
 
                 /* Sélection du client par idRetour */
                 if (list[i].Id == idRetour)
