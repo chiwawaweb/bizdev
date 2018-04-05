@@ -107,7 +107,56 @@ namespace BizDev.Forms
         
         private void ViewMode()
         {
+            /* Modification des contrôles */
+            BtnSave.Visible = false;
+            BtnCancel.Visible = false;
+            BtnClose.Visible = true;
+            BtnAddCategorie.Visible = false;
+            BtnDelCategorie.Visible = false;
+            CbxCategorie.Enabled = false;
+            LsbCategories.Enabled = false;
+            TxtNom.ReadOnly = true;
+            TxtNom.BackColor = Color.LightGray;
+            TxtNom.TabStop = false;
+            TxtAdresse.ReadOnly = true;
+            TxtAdresse.BackColor = Color.LightGray;
+            TxtAdresse.TabStop = false;
+            TxtComplement.ReadOnly = true;
+            TxtComplement.BackColor = Color.LightGray;
+            TxtComplement.TabStop = false;
+            TxtCodePostal.ReadOnly = true;
+            TxtCodePostal.BackColor = Color.LightGray;
+            TxtCodePostal.TabStop = false;
+            TxtVille.ReadOnly = true;
+            TxtVille.BackColor = Color.LightGray;
+            TxtVille.TabStop = false;
+            CbxPays.Enabled = false;
+            CbxPays.BackColor = Color.LightGray;
+            CbxPays.TabStop = false;
+            TxtTel.ReadOnly = true;
+            TxtTel.BackColor = Color.LightGray;
+            TxtTel.TabStop = false;
+            TxtGsm.ReadOnly = true;
+            TxtGsm.BackColor = Color.LightGray;
+            TxtGsm.TabStop = false;
+            TxtFax.ReadOnly = true;
+            TxtFax.BackColor = Color.LightGray;
+            TxtFax.TabStop = false;
+            TxtEmail.ReadOnly = true;
+            TxtEmail.BackColor = Color.LightGray;
+            TxtEmail.TabStop = false;
+            TxtWeb.ReadOnly = true;
+            TxtWeb.BackColor = Color.LightGray;
+            TxtWeb.TabStop = false;
+            TxtNbEmployes.ReadOnly = true;
+            TxtNbEmployes.BackColor = Color.LightGray;
+            TxtNbEmployes.TabStop = false;
+            TxtNotes.ReadOnly = true;
+            TxtNotes.BackColor = Color.LightGray;
+            TxtNotes.TabStop = false;
             Text = "Visualisation du prospect : ";
+
+
         }
 
         private void Save()
@@ -248,7 +297,6 @@ namespace BizDev.Forms
 
         private void ProspectEditForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            MessageBox.Show(idProspect.ToString());
             owner.RefreshData(idProspect);
         }
 
