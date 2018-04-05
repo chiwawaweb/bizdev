@@ -161,10 +161,7 @@ namespace BizDev.Forms
                 ErrorProvider.SetError(CbxCategorie, "Sélectionner au moins une catégorie");
             }
 
-            if (premierContact==false)
-            {
-                datePremierContact = DateTime.Parse("31/12/1899");
-            }
+            
 
 
             /* Contrôle si erreurs */
