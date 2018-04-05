@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProspectsListForm));
             this.ToolStrip = new System.Windows.Forms.ToolStrip();
             this.TbnNew = new System.Windows.Forms.ToolStripButton();
-            this.DgvProspects = new System.Windows.Forms.DataGridView();
             this.TbnView = new System.Windows.Forms.ToolStripButton();
+            this.DgvProspects = new System.Windows.Forms.DataGridView();
             this.ToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvProspects)).BeginInit();
             this.SuspendLayout();
@@ -57,6 +57,15 @@
             this.TbnNew.Text = "Nouveau prospect";
             this.TbnNew.Click += new System.EventHandler(this.TbnNew_Click);
             // 
+            // TbnView
+            // 
+            this.TbnView.Image = ((System.Drawing.Image)(resources.GetObject("TbnView.Image")));
+            this.TbnView.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.TbnView.Name = "TbnView";
+            this.TbnView.Size = new System.Drawing.Size(93, 22);
+            this.TbnView.Text = "Visualisation";
+            this.TbnView.Click += new System.EventHandler(this.TbnView_Click);
+            // 
             // DgvProspects
             // 
             this.DgvProspects.AllowUserToAddRows = false;
@@ -70,21 +79,13 @@
             this.DgvProspects.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.DgvProspects.Location = new System.Drawing.Point(0, 28);
             this.DgvProspects.Name = "DgvProspects";
+            this.DgvProspects.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvProspects.ShowCellErrors = false;
             this.DgvProspects.ShowCellToolTips = false;
             this.DgvProspects.ShowEditingIcon = false;
             this.DgvProspects.ShowRowErrors = false;
             this.DgvProspects.Size = new System.Drawing.Size(800, 422);
             this.DgvProspects.TabIndex = 1;
-            // 
-            // TbnView
-            // 
-            this.TbnView.Image = ((System.Drawing.Image)(resources.GetObject("TbnView.Image")));
-            this.TbnView.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.TbnView.Name = "TbnView";
-            this.TbnView.Size = new System.Drawing.Size(93, 22);
-            this.TbnView.Text = "Visualisation";
-            this.TbnView.Click += new System.EventHandler(this.TbnView_Click);
             // 
             // ProspectsListForm
             // 

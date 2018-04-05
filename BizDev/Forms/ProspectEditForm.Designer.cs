@@ -515,11 +515,11 @@
             this.DtpPremierContact.TabStop = false;
             this.DtpPremierContact.Visible = false;
             // 
-            // DtpConverti
+            // DtpConversion
             // 
             this.DtpConversion.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.DtpConversion.Location = new System.Drawing.Point(217, 31);
-            this.DtpConversion.Name = "DtpConverti";
+            this.DtpConversion.Name = "DtpConversion";
             this.DtpConversion.Size = new System.Drawing.Size(95, 20);
             this.DtpConversion.TabIndex = 31;
             this.DtpConversion.TabStop = false;
@@ -606,6 +606,7 @@
             this.Name = "ProspectEditForm";
             this.ShowInTaskbar = false;
             this.Text = "Fiche prospect";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ProspectEditForm_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).EndInit();
             this.TabControl.ResumeLayout(false);
             this.TabCoordonnees.ResumeLayout(false);

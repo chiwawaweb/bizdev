@@ -20,6 +20,8 @@ namespace BizDev.Forms
         bool view, premierContact, conversion, abandon;
         DateTime dateConversion, datePremierContact, dateAbandon, createdAt, updatedAt;
 
+        
+
         ProspectsListForm owner;
 
         Utils utils = new Utils();
@@ -30,6 +32,8 @@ namespace BizDev.Forms
             idProspect = _idProspect;
             view = _view;
             owner = _owner;
+
+            FormClosed += new FormClosedEventHandler(ProspectEditForm_FormClosed);
 
             InitializeComponent();
 
@@ -98,7 +102,7 @@ namespace BizDev.Forms
         private void NewMode()
         {
             Text = "Nouveau prospect";
-            
+            TabControl.TabPages.Remove(TabJournal);   
         }
         
         private void ViewMode()
@@ -160,6 +164,7 @@ namespace BizDev.Forms
                         AddDatabase();
                     }
                     Close();
+                    owner.RefreshData();
                 }
             }
 
@@ -225,6 +230,11 @@ namespace BizDev.Forms
         private void BtnClose_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void ProspectEditForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            owner.Refresh();
         }
 
         private void BtnCancel_Click(object sender, EventArgs e)
