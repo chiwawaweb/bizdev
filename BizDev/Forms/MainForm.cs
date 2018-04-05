@@ -23,7 +23,7 @@ namespace BizDev.Forms
 
         private void OuvreListeProspects()
         {
-            ProspectsListForm prospectsListForm = new ProspectsListForm(this)
+            ProspectsListForm prospectsListForm = new ProspectsListForm()
             {
                 MdiParent = this
             };

@@ -164,7 +164,6 @@ namespace BizDev.Forms
                         AddDatabase();
                     }
                     Close();
-                    owner.RefreshData();
                 }
             }
 
@@ -234,7 +233,7 @@ namespace BizDev.Forms
 
         private void ProspectEditForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            owner.Refresh();
+            owner.RefreshData();
         }
 
         private void BtnCancel_Click(object sender, EventArgs e)

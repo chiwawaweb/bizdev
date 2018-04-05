@@ -19,11 +19,11 @@ namespace BizDev.Forms
 
         Utils utils = new Utils();
         ProspectProvider prospectProvider = new ProspectProvider();
-        Form owner;
+        //Form owner;
 
-        public ProspectsListForm(Form _owner, int _idRetour=0)
+        public ProspectsListForm(int _idRetour=0)
         {
-            owner = _owner;
+            //owner = _owner;
             idRetour = _idRetour;
 
             InitializeComponent();
