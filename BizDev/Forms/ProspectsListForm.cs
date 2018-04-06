@@ -169,7 +169,13 @@ namespace BizDev.Forms
 
         private void ViewProspect()
         {
-            new ProspectEditForm(this, true).ShowDialog();
+            if (DgvProspects.RowCount > 0)
+            {
+                idRetour = int.Parse(DgvProspects.CurrentRow.Cells[0].Value.ToString());
+                new ProspectEditForm(this, true, idRetour).ShowDialog();
+                
+            }
+            
         }
 
         #region Gestion des événements

@@ -23,6 +23,7 @@ namespace BizDev.Forms
         
 
         ProspectsListForm owner;
+        Prospect prospect;
 
         Utils utils = new Utils();
         ProspectProvider prospectProvider = new ProspectProvider();
@@ -154,7 +155,17 @@ namespace BizDev.Forms
             TxtNotes.ReadOnly = true;
             TxtNotes.BackColor = Color.LightGray;
             TxtNotes.TabStop = false;
-            Text = "Visualisation du prospect : ";
+
+            /* Récupération des données */
+            prospect = prospectProvider.GetProspectById(idProspect);
+
+            nom = prospect.Nom;
+
+
+            /* Affichage des données */
+            TxtNom.Text = nom;
+
+            Text = "Visualisation du prospect : " + nom;
 
 
         }
