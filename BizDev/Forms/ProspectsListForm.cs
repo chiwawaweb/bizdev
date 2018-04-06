@@ -195,6 +195,11 @@ namespace BizDev.Forms
             RefreshData();
         }
 
+        private void DgvProspects_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            ViewProspect();
+        }
+
         #endregion
 
 

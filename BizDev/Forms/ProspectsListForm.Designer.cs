@@ -87,6 +87,7 @@
             this.DgvProspects.ShowRowErrors = false;
             this.DgvProspects.Size = new System.Drawing.Size(800, 422);
             this.DgvProspects.TabIndex = 1;
+            this.DgvProspects.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DgvProspects_CellMouseDoubleClick);
             // 
             // ProspectsListForm
             // 

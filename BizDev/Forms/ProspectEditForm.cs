@@ -160,14 +160,44 @@ namespace BizDev.Forms
             prospect = prospectProvider.GetProspectById(idProspect);
 
             nom = prospect.Nom;
-
+            adresse = prospect.Adresse;
+            complement = prospect.Complement;
+            codePostal = prospect.CodePostal;
+            ville = prospect.Ville;
+            pays = prospect.Pays;
+            tel = prospect.Tel;
+            gsm = prospect.Gsm;
+            fax = prospect.Fax;
+            email = prospect.Email;
+            web = prospect.Web;
+            notes = prospect.Notes;
+            createdAt = prospect.CreatedAt;
+            updatedAt = prospect.UpdatedAt;
 
             /* Affichage des données */
             TxtNom.Text = nom;
+            TxtAdresse.Text = adresse;
+            TxtComplement.Text = complement;
+            TxtCodePostal.Text = codePostal;
+            TxtVille.Text = ville;
+            CbxPays.Text = pays;
 
             Text = "Visualisation du prospect : " + nom;
 
+            
+        }
 
+        public void DrawRectangleRectangle(PaintEventArgs e)
+        {
+
+            // Create pen.
+            Pen blackPen = new Pen(Color.Black, 3);
+
+            // Create rectangle.
+            Rectangle rect = new Rectangle(0, 0, 200, 200);
+
+            // Draw rectangle to screen.
+            e.Graphics.DrawRectangle(blackPen, rect);
         }
 
         private void Save()

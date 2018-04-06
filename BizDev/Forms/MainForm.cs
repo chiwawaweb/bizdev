@@ -19,6 +19,7 @@ namespace BizDev.Forms
 
             ProspectProvider prospectProvider = new ProspectProvider();
             prospectProvider.CountAll();
+            
         }
 
         private void OuvreListeProspects()
@@ -28,6 +29,15 @@ namespace BizDev.Forms
                 MdiParent = this
             };
             prospectsListForm.Show();
+        }
+
+        private void OuvreStatistiques()
+        {
+            StatistiquesForm statistiquesForm = new StatistiquesForm()
+            {
+                MdiParent = this
+            };
+            statistiquesForm.Show();
         }
 
         #region Gestion des événements
@@ -40,8 +50,16 @@ namespace BizDev.Forms
         private void TooListeProspects_Click(object sender, EventArgs e)
         {
             OuvreListeProspects();
+           
+        }
+
+        private void TooStatistiquesProspects_Click(object sender, EventArgs e)
+        {
+            OuvreStatistiques();
         }
 
         #endregion
+
+
     }
 }

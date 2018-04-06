@@ -62,7 +62,7 @@
             // TooQuitter
             // 
             this.TooQuitter.Name = "TooQuitter";
-            this.TooQuitter.Size = new System.Drawing.Size(180, 22);
+            this.TooQuitter.Size = new System.Drawing.Size(111, 22);
             this.TooQuitter.Text = "Quitter";
             this.TooQuitter.Click += new System.EventHandler(this.TooQuitter_Click);
             // 
@@ -87,6 +87,7 @@
             this.TooStatistiquesProspects.Name = "TooStatistiquesProspects";
             this.TooStatistiquesProspects.Size = new System.Drawing.Size(180, 22);
             this.TooStatistiquesProspects.Text = "Statistiques";
+            this.TooStatistiquesProspects.Click += new System.EventHandler(this.TooStatistiquesProspects_Click);
             // 
             // toolStripMenuItem1
             // 
