@@ -32,7 +32,6 @@
             this.ErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.CbxPays = new System.Windows.Forms.ComboBox();
             this.TxtNom = new System.Windows.Forms.TextBox();
-            this.LsbCategories = new System.Windows.Forms.ListBox();
             this.CbxCategorie = new System.Windows.Forms.ComboBox();
             this.LblNbEmployes = new System.Windows.Forms.Label();
             this.TxtNbEmployes = new System.Windows.Forms.TextBox();
@@ -44,7 +43,7 @@
             this.TxtFax = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.TxtWeb = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.LblEmail = new System.Windows.Forms.Label();
             this.TxtEmail = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.TxtGsm = new System.Windows.Forms.TextBox();
@@ -59,14 +58,12 @@
             this.LblAdresse = new System.Windows.Forms.Label();
             this.TxtAdresse = new System.Windows.Forms.TextBox();
             this.LblNom = new System.Windows.Forms.Label();
-            this.BtnDelCategorie = new System.Windows.Forms.Button();
             this.LblCategorie = new System.Windows.Forms.Label();
-            this.BtnAddCategorie = new System.Windows.Forms.Button();
             this.TabJournal = new System.Windows.Forms.TabPage();
             this.ChkPremierContact = new System.Windows.Forms.CheckBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.LblDatePremierContact = new System.Windows.Forms.Label();
+            this.LblDateAbandon = new System.Windows.Forms.Label();
+            this.LblDateConversion = new System.Windows.Forms.Label();
             this.BtnAddLog = new System.Windows.Forms.Button();
             this.DgvLog = new System.Windows.Forms.DataGridView();
             this.ChkConversion = new System.Windows.Forms.CheckBox();
@@ -111,17 +108,6 @@
             this.TxtNom.TabIndex = 2;
             this.TxtNom.Validating += new System.ComponentModel.CancelEventHandler(this.TxtNom_Validating);
             // 
-            // LsbCategories
-            // 
-            this.LsbCategories.BackColor = System.Drawing.SystemColors.Control;
-            this.LsbCategories.FormattingEnabled = true;
-            this.ErrorProvider.SetIconAlignment(this.LsbCategories, System.Windows.Forms.ErrorIconAlignment.MiddleLeft);
-            this.LsbCategories.Location = new System.Drawing.Point(22, 56);
-            this.LsbCategories.Name = "LsbCategories";
-            this.LsbCategories.Size = new System.Drawing.Size(292, 43);
-            this.LsbCategories.TabIndex = 1;
-            this.LsbCategories.TabStop = false;
-            // 
             // CbxCategorie
             // 
             this.CbxCategorie.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -136,7 +122,7 @@
             // LblNbEmployes
             // 
             this.LblNbEmployes.AutoSize = true;
-            this.LblNbEmployes.Location = new System.Drawing.Point(368, 160);
+            this.LblNbEmployes.Location = new System.Drawing.Point(19, 63);
             this.LblNbEmployes.Name = "LblNbEmployes";
             this.LblNbEmployes.Size = new System.Drawing.Size(52, 13);
             this.LblNbEmployes.TabIndex = 12;
@@ -145,16 +131,16 @@
             // TxtNbEmployes
             // 
             this.TxtNbEmployes.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.TxtNbEmployes.Location = new System.Drawing.Point(371, 176);
+            this.TxtNbEmployes.Location = new System.Drawing.Point(22, 79);
             this.TxtNbEmployes.MaxLength = 5;
             this.TxtNbEmployes.Name = "TxtNbEmployes";
             this.TxtNbEmployes.Size = new System.Drawing.Size(46, 20);
-            this.TxtNbEmployes.TabIndex = 13;
+            this.TxtNbEmployes.TabIndex = 1;
             // 
             // LblCommentaires
             // 
             this.LblCommentaires.AutoSize = true;
-            this.LblCommentaires.Location = new System.Drawing.Point(368, 207);
+            this.LblCommentaires.Location = new System.Drawing.Point(370, 160);
             this.LblCommentaires.Name = "LblCommentaires";
             this.LblCommentaires.Size = new System.Drawing.Size(73, 13);
             this.LblCommentaires.TabIndex = 29;
@@ -163,13 +149,13 @@
             // TxtNotes
             // 
             this.TxtNotes.AcceptsReturn = true;
-            this.TxtNotes.Location = new System.Drawing.Point(371, 223);
+            this.TxtNotes.Location = new System.Drawing.Point(371, 176);
             this.TxtNotes.MaxLength = 20000;
             this.TxtNotes.Multiline = true;
             this.TxtNotes.Name = "TxtNotes";
             this.TxtNotes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.TxtNotes.Size = new System.Drawing.Size(314, 90);
-            this.TxtNotes.TabIndex = 14;
+            this.TxtNotes.Size = new System.Drawing.Size(314, 137);
+            this.TxtNotes.TabIndex = 13;
             // 
             // TabControl
             // 
@@ -188,7 +174,7 @@
             this.TabCoordonnees.Controls.Add(this.TxtFax);
             this.TabCoordonnees.Controls.Add(this.label11);
             this.TabCoordonnees.Controls.Add(this.TxtWeb);
-            this.TabCoordonnees.Controls.Add(this.label10);
+            this.TabCoordonnees.Controls.Add(this.LblEmail);
             this.TabCoordonnees.Controls.Add(this.TxtEmail);
             this.TabCoordonnees.Controls.Add(this.label8);
             this.TabCoordonnees.Controls.Add(this.TxtGsm);
@@ -209,10 +195,7 @@
             this.TabCoordonnees.Controls.Add(this.TxtNbEmployes);
             this.TabCoordonnees.Controls.Add(this.LblNom);
             this.TabCoordonnees.Controls.Add(this.TxtNom);
-            this.TabCoordonnees.Controls.Add(this.BtnDelCategorie);
             this.TabCoordonnees.Controls.Add(this.LblCategorie);
-            this.TabCoordonnees.Controls.Add(this.BtnAddCategorie);
-            this.TabCoordonnees.Controls.Add(this.LsbCategories);
             this.TabCoordonnees.Controls.Add(this.CbxCategorie);
             this.TabCoordonnees.Location = new System.Drawing.Point(4, 22);
             this.TabCoordonnees.Name = "TabCoordonnees";
@@ -256,14 +239,14 @@
             this.TxtWeb.Size = new System.Drawing.Size(309, 20);
             this.TxtWeb.TabIndex = 12;
             // 
-            // label10
+            // LblEmail
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(368, 63);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(32, 13);
-            this.label10.TabIndex = 37;
-            this.label10.Text = "Email";
+            this.LblEmail.AutoSize = true;
+            this.LblEmail.Location = new System.Drawing.Point(368, 63);
+            this.LblEmail.Name = "LblEmail";
+            this.LblEmail.Size = new System.Drawing.Size(32, 13);
+            this.LblEmail.TabIndex = 37;
+            this.LblEmail.Text = "Email";
             // 
             // TxtEmail
             // 
@@ -384,17 +367,6 @@
             this.LblNom.TabIndex = 20;
             this.LblNom.Text = "Nom";
             // 
-            // BtnDelCategorie
-            // 
-            this.BtnDelCategorie.Location = new System.Drawing.Point(320, 55);
-            this.BtnDelCategorie.Name = "BtnDelCategorie";
-            this.BtnDelCategorie.Size = new System.Drawing.Size(23, 23);
-            this.BtnDelCategorie.TabIndex = 11;
-            this.BtnDelCategorie.TabStop = false;
-            this.BtnDelCategorie.Text = "-";
-            this.BtnDelCategorie.UseVisualStyleBackColor = true;
-            this.BtnDelCategorie.Click += new System.EventHandler(this.BtnDelCategorie_Click);
-            // 
             // LblCategorie
             // 
             this.LblCategorie.AutoSize = true;
@@ -404,23 +376,12 @@
             this.LblCategorie.TabIndex = 10;
             this.LblCategorie.Text = "Catégorie";
             // 
-            // BtnAddCategorie
-            // 
-            this.BtnAddCategorie.Location = new System.Drawing.Point(320, 31);
-            this.BtnAddCategorie.Name = "BtnAddCategorie";
-            this.BtnAddCategorie.Size = new System.Drawing.Size(23, 23);
-            this.BtnAddCategorie.TabIndex = 9;
-            this.BtnAddCategorie.TabStop = false;
-            this.BtnAddCategorie.Text = "+";
-            this.BtnAddCategorie.UseVisualStyleBackColor = true;
-            this.BtnAddCategorie.Click += new System.EventHandler(this.BtnAddCategorie_Click);
-            // 
             // TabJournal
             // 
             this.TabJournal.Controls.Add(this.ChkPremierContact);
-            this.TabJournal.Controls.Add(this.label14);
-            this.TabJournal.Controls.Add(this.label2);
-            this.TabJournal.Controls.Add(this.label1);
+            this.TabJournal.Controls.Add(this.LblDatePremierContact);
+            this.TabJournal.Controls.Add(this.LblDateAbandon);
+            this.TabJournal.Controls.Add(this.LblDateConversion);
             this.TabJournal.Controls.Add(this.BtnAddLog);
             this.TabJournal.Controls.Add(this.DgvLog);
             this.TabJournal.Controls.Add(this.ChkConversion);
@@ -447,36 +408,37 @@
             this.ChkPremierContact.TabStop = false;
             this.ChkPremierContact.Text = "Prise de contact";
             this.ChkPremierContact.UseVisualStyleBackColor = true;
+            this.ChkPremierContact.CheckedChanged += new System.EventHandler(this.ChkPremierContact_CheckedChanged);
             // 
-            // label14
+            // LblDatePremierContact
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(124, 8);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(90, 13);
-            this.label14.TabIndex = 35;
-            this.label14.Text = "Date de contact :";
-            this.label14.Visible = false;
+            this.LblDatePremierContact.AutoSize = true;
+            this.LblDatePremierContact.Location = new System.Drawing.Point(124, 8);
+            this.LblDatePremierContact.Name = "LblDatePremierContact";
+            this.LblDatePremierContact.Size = new System.Drawing.Size(90, 13);
+            this.LblDatePremierContact.TabIndex = 35;
+            this.LblDatePremierContact.Text = "Date de contact :";
+            this.LblDatePremierContact.Visible = false;
             // 
-            // label2
+            // LblDateAbandon
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(133, 60);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 13);
-            this.label2.TabIndex = 38;
-            this.label2.Text = "Date abandon :";
-            this.label2.Visible = false;
+            this.LblDateAbandon.AutoSize = true;
+            this.LblDateAbandon.Location = new System.Drawing.Point(133, 60);
+            this.LblDateAbandon.Name = "LblDateAbandon";
+            this.LblDateAbandon.Size = new System.Drawing.Size(81, 13);
+            this.LblDateAbandon.TabIndex = 38;
+            this.LblDateAbandon.Text = "Date abandon :";
+            this.LblDateAbandon.Visible = false;
             // 
-            // label1
+            // LblDateConversion
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(123, 34);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 13);
-            this.label1.TabIndex = 37;
-            this.label1.Text = "Date conversion :";
-            this.label1.Visible = false;
+            this.LblDateConversion.AutoSize = true;
+            this.LblDateConversion.Location = new System.Drawing.Point(123, 34);
+            this.LblDateConversion.Name = "LblDateConversion";
+            this.LblDateConversion.Size = new System.Drawing.Size(91, 13);
+            this.LblDateConversion.TabIndex = 37;
+            this.LblDateConversion.Text = "Date conversion :";
+            this.LblDateConversion.Visible = false;
             // 
             // BtnAddLog
             // 
@@ -587,7 +549,7 @@
             // 
             // BtnEdit
             // 
-            this.BtnEdit.Location = new System.Drawing.Point(498, 392);
+            this.BtnEdit.Location = new System.Drawing.Point(597, 394);
             this.BtnEdit.Name = "BtnEdit";
             this.BtnEdit.Size = new System.Drawing.Size(23, 23);
             this.BtnEdit.TabIndex = 39;
@@ -610,6 +572,7 @@
             this.MinimizeBox = false;
             this.Name = "ProspectEditForm";
             this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Fiche prospect";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ProspectEditForm_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).EndInit();
@@ -642,10 +605,7 @@
         private System.Windows.Forms.TextBox TxtAdresse;
         private System.Windows.Forms.Label LblNom;
         private System.Windows.Forms.TextBox TxtNom;
-        private System.Windows.Forms.Button BtnDelCategorie;
         private System.Windows.Forms.Label LblCategorie;
-        private System.Windows.Forms.Button BtnAddCategorie;
-        private System.Windows.Forms.ListBox LsbCategories;
         private System.Windows.Forms.ComboBox CbxCategorie;
         private System.Windows.Forms.TabPage TabJournal;
         private System.Windows.Forms.DataGridView DgvLog;
@@ -659,7 +619,7 @@
         private System.Windows.Forms.Button BtnSave;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox TxtWeb;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label LblEmail;
         private System.Windows.Forms.TextBox TxtEmail;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox TxtGsm;
@@ -668,10 +628,10 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox TxtFax;
         private System.Windows.Forms.Button BtnAddLog;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label LblDateAbandon;
+        private System.Windows.Forms.Label LblDateConversion;
         private System.Windows.Forms.CheckBox ChkPremierContact;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label LblDatePremierContact;
         private System.Windows.Forms.DateTimePicker DtpPremierContact;
     }
 }

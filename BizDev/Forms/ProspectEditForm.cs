@@ -16,11 +16,14 @@ namespace BizDev.Forms
     public partial class ProspectEditForm : Form
     {
         int idProspect;
-        string nom, adresse, complement, codePostal, ville, pays, tel, gsm, fax, email, web, nbEmployes, notes;
+        string categorie, nom, adresse, complement, codePostal, ville, pays, tel, gsm, fax, email, web, nbEmployes, notes;
         bool view, premierContact, conversion, abandon;
         DateTime dateConversion, datePremierContact, dateAbandon, createdAt, updatedAt;
 
-        
+        private void ChkPremierContact_CheckedChanged(object sender, EventArgs e)
+        {
+            AfficheDates();
+        }
 
         ProspectsListForm owner;
         Prospect prospect;
@@ -40,7 +43,9 @@ namespace BizDev.Forms
 
             /* Combobox catégories */
             ProspectCategorie prospectCategorie = new ProspectCategorie();
+            prospectCategorie.Nom = string.Empty;
             var dsCat = new List<ProspectCategorie>();
+            dsCat.Add(prospectCategorie);
             foreach (ProspectCategorie categorie in prospectCategorie.GetAllProspectCategories().OrderBy(o => o.Nom))
             {
                 dsCat.Add(categorie);
@@ -72,34 +77,6 @@ namespace BizDev.Forms
             }
         }
 
-        private void AjouterCategorie()
-        {
-            
-            bool categorieExiste=false;
-            foreach (string categorie in LsbCategories.Items)
-            {
-                if (categorie == CbxCategorie.Text)
-                {
-                    categorieExiste = true;
-                }
-            }
-
-            if (categorieExiste==false)
-            {
-                LsbCategories.Items.Add(CbxCategorie.Text);
-            }
-            LsbCategories.Sorted = true;
-        }
-
-        private void SupprimerCategorie()
-        {
-            LsbCategories.Items.Remove(LsbCategories.SelectedItem);
-        }
-
-        
-
-       
-
         private void NewMode()
         {
             Text = "Nouveau prospect";
@@ -112,10 +89,8 @@ namespace BizDev.Forms
             BtnSave.Visible = false;
             BtnCancel.Visible = false;
             BtnClose.Visible = true;
-            BtnAddCategorie.Visible = false;
-            BtnDelCategorie.Visible = false;
+            BtnEdit.Visible = true;
             CbxCategorie.Enabled = false;
-            LsbCategories.Enabled = false;
             TxtNom.ReadOnly = true;
             TxtNom.BackColor = Color.LightGray;
             TxtNom.TabStop = false;
@@ -155,10 +130,12 @@ namespace BizDev.Forms
             TxtNotes.ReadOnly = true;
             TxtNotes.BackColor = Color.LightGray;
             TxtNotes.TabStop = false;
+            
 
             /* Récupération des données */
             prospect = prospectProvider.GetProspectById(idProspect);
 
+            categorie = prospect.Categorie;
             nom = prospect.Nom;
             adresse = prospect.Adresse;
             complement = prospect.Complement;
@@ -170,22 +147,66 @@ namespace BizDev.Forms
             fax = prospect.Fax;
             email = prospect.Email;
             web = prospect.Web;
+            nbEmployes = prospect.NbEmployes;
             notes = prospect.Notes;
+            premierContact = prospect.PremierContact;
+            datePremierContact = prospect.DatePremierContact;
+            conversion = prospect.Conversion;
+            dateConversion = prospect.DateConversion;
+            abandon = prospect.Abandon;
+            dateAbandon = prospect.DateAbandon;
             createdAt = prospect.CreatedAt;
             updatedAt = prospect.UpdatedAt;
 
             /* Affichage des données */
+            CbxCategorie.Text = categorie;
             TxtNom.Text = nom;
             TxtAdresse.Text = adresse;
             TxtComplement.Text = complement;
             TxtCodePostal.Text = codePostal;
             TxtVille.Text = ville;
             CbxPays.Text = pays;
+            TxtTel.Text = tel;
+            TxtFax.Text = fax;
+            TxtGsm.Text = gsm;
+            TxtEmail.Text = email;
+            TxtWeb.Text = web;
+            TxtNbEmployes.Text = nbEmployes;
+            TxtNotes.Text = notes;
+            ChkPremierContact.Checked = premierContact;
+            DtpPremierContact.Value = datePremierContact;
+            ChkConversion.Checked = conversion;
+            DtpConversion.Value = dateConversion;
+            ChkAbandon.Checked = abandon;
+            DtpAbandon.Value = dateAbandon;
+
+           
+            AfficheDates();
 
             Text = "Visualisation du prospect : " + nom;
 
             
         }
+
+        /// <summary>
+        /// Gère l'affichage et les valeurs des dates en fonction des checkbox
+        /// </summary>
+        private void AfficheDates()
+        {
+            /* Prise de contact */
+            if (ChkPremierContact.Checked==true)
+            {
+                LblDatePremierContact.Visible = true;
+                DtpPremierContact.Visible = true;
+            }
+            else
+            {
+                LblDatePremierContact.Visible = false;
+                DtpPremierContact.Visible = false;
+                
+            }
+        }
+            
 
         public void DrawRectangleRectangle(PaintEventArgs e)
         {
@@ -203,6 +224,7 @@ namespace BizDev.Forms
         private void Save()
         {
             /* Récuperation des données */
+            categorie = CbxCategorie.Text;
             nom = utils.RemoveDiacritics(TxtNom.Text.ToUpper().Trim());
             adresse = utils.RemoveDiacritics(TxtAdresse.Text.ToUpper().Trim());
             complement = utils.RemoveDiacritics(TxtComplement.Text.ToUpper().Trim());
@@ -227,6 +249,12 @@ namespace BizDev.Forms
             
             ErrorProvider.Clear();
 
+            if (categorie.Length<2)
+            {
+                erreurs = true;
+                ErrorProvider.SetError(CbxCategorie, "Catégorie non renseignée");
+            }
+
             if (nom.Length<2)
             {
                 erreurs = true;
@@ -245,11 +273,7 @@ namespace BizDev.Forms
                 ErrorProvider.SetError(CbxPays, "Pays obligatoire");
             }
 
-            if (LsbCategories.Items.Count<1)
-            {
-                erreurs = true;
-                ErrorProvider.SetError(CbxCategorie, "Sélectionner au moins une catégorie");
-            }
+            
 
             
 
@@ -280,6 +304,7 @@ namespace BizDev.Forms
         {
             Prospect prospect = new Prospect
             {
+                Categorie = categorie,
                 Nom = nom,
                 Adresse = adresse,
                 Complement = complement,
@@ -305,6 +330,7 @@ namespace BizDev.Forms
         {
             Prospect prospect = prospectProvider.GetProspectById(idProspect);
 
+            prospect.Categorie = categorie;
             prospect.Nom = nom;
             prospect.Adresse = adresse;
             prospect.Complement = complement;
@@ -344,16 +370,6 @@ namespace BizDev.Forms
         private void BtnCancel_Click(object sender, EventArgs e)
         {
             Close();
-        }
-
-        private void BtnAddCategorie_Click(object sender, EventArgs e)
-        {
-            AjouterCategorie();
-        }
-
-        private void BtnDelCategorie_Click(object sender, EventArgs e)
-        {
-            SupprimerCategorie();
         }
 
         private void TxtNom_Validating(object sender, CancelEventArgs e)
