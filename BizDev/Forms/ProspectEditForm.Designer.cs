@@ -102,7 +102,7 @@
             this.TxtNom.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TxtNom.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ErrorProvider.SetIconAlignment(this.TxtNom, System.Windows.Forms.ErrorIconAlignment.MiddleLeft);
-            this.TxtNom.Location = new System.Drawing.Point(22, 131);
+            this.TxtNom.Location = new System.Drawing.Point(22, 32);
             this.TxtNom.Name = "TxtNom";
             this.TxtNom.Size = new System.Drawing.Size(292, 20);
             this.TxtNom.TabIndex = 2;
@@ -112,7 +112,7 @@
             this.CbxCategorie.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CbxCategorie.FormattingEnabled = true;
             this.ErrorProvider.SetIconAlignment(this.CbxCategorie, System.Windows.Forms.ErrorIconAlignment.MiddleLeft);
-            this.CbxCategorie.Location = new System.Drawing.Point(22, 32);
+            this.CbxCategorie.Location = new System.Drawing.Point(22, 79);
             this.CbxCategorie.Name = "CbxCategorie";
             this.CbxCategorie.Size = new System.Drawing.Size(292, 21);
             this.CbxCategorie.TabIndex = 0;
@@ -121,7 +121,7 @@
             // LblNbEmployes
             // 
             this.LblNbEmployes.AutoSize = true;
-            this.LblNbEmployes.Location = new System.Drawing.Point(19, 63);
+            this.LblNbEmployes.Location = new System.Drawing.Point(19, 110);
             this.LblNbEmployes.Name = "LblNbEmployes";
             this.LblNbEmployes.Size = new System.Drawing.Size(52, 13);
             this.LblNbEmployes.TabIndex = 12;
@@ -130,7 +130,7 @@
             // TxtNbEmployes
             // 
             this.TxtNbEmployes.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.TxtNbEmployes.Location = new System.Drawing.Point(22, 79);
+            this.TxtNbEmployes.Location = new System.Drawing.Point(22, 126);
             this.TxtNbEmployes.MaxLength = 5;
             this.TxtNbEmployes.Name = "TxtNbEmployes";
             this.TxtNbEmployes.Size = new System.Drawing.Size(46, 20);
@@ -360,7 +360,7 @@
             // LblNom
             // 
             this.LblNom.AutoSize = true;
-            this.LblNom.Location = new System.Drawing.Point(19, 115);
+            this.LblNom.Location = new System.Drawing.Point(19, 16);
             this.LblNom.Name = "LblNom";
             this.LblNom.Size = new System.Drawing.Size(29, 13);
             this.LblNom.TabIndex = 20;
@@ -369,7 +369,7 @@
             // LblCategorie
             // 
             this.LblCategorie.AutoSize = true;
-            this.LblCategorie.Location = new System.Drawing.Point(19, 16);
+            this.LblCategorie.Location = new System.Drawing.Point(19, 63);
             this.LblCategorie.Name = "LblCategorie";
             this.LblCategorie.Size = new System.Drawing.Size(52, 13);
             this.LblCategorie.TabIndex = 10;
