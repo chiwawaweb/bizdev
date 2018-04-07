@@ -60,21 +60,21 @@
             this.LblNom = new System.Windows.Forms.Label();
             this.LblCategorie = new System.Windows.Forms.Label();
             this.TabJournal = new System.Windows.Forms.TabPage();
-            this.ChkPremierContact = new System.Windows.Forms.CheckBox();
             this.LblDatePremierContact = new System.Windows.Forms.Label();
             this.LblDateAbandon = new System.Windows.Forms.Label();
             this.LblDateConversion = new System.Windows.Forms.Label();
             this.BtnAddLog = new System.Windows.Forms.Button();
             this.DgvLog = new System.Windows.Forms.DataGridView();
-            this.ChkConversion = new System.Windows.Forms.CheckBox();
-            this.DtpPremierContact = new System.Windows.Forms.DateTimePicker();
-            this.DtpConversion = new System.Windows.Forms.DateTimePicker();
-            this.ChkAbandon = new System.Windows.Forms.CheckBox();
-            this.DtpAbandon = new System.Windows.Forms.DateTimePicker();
             this.BtnSave = new System.Windows.Forms.Button();
             this.BtnCancel = new System.Windows.Forms.Button();
             this.BtnClose = new System.Windows.Forms.Button();
             this.BtnEdit = new System.Windows.Forms.Button();
+            this.BtnDatePremierContact = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             this.TabControl.SuspendLayout();
             this.TabCoordonnees.SuspendLayout();
@@ -106,7 +106,6 @@
             this.TxtNom.Name = "TxtNom";
             this.TxtNom.Size = new System.Drawing.Size(292, 20);
             this.TxtNom.TabIndex = 2;
-            this.TxtNom.Validating += new System.ComponentModel.CancelEventHandler(this.TxtNom_Validating);
             // 
             // CbxCategorie
             // 
@@ -378,17 +377,17 @@
             // 
             // TabJournal
             // 
-            this.TabJournal.Controls.Add(this.ChkPremierContact);
+            this.TabJournal.Controls.Add(this.textBox3);
+            this.TabJournal.Controls.Add(this.textBox2);
+            this.TabJournal.Controls.Add(this.textBox1);
+            this.TabJournal.Controls.Add(this.button2);
+            this.TabJournal.Controls.Add(this.button1);
+            this.TabJournal.Controls.Add(this.BtnDatePremierContact);
+            this.TabJournal.Controls.Add(this.BtnAddLog);
+            this.TabJournal.Controls.Add(this.DgvLog);
             this.TabJournal.Controls.Add(this.LblDatePremierContact);
             this.TabJournal.Controls.Add(this.LblDateAbandon);
             this.TabJournal.Controls.Add(this.LblDateConversion);
-            this.TabJournal.Controls.Add(this.BtnAddLog);
-            this.TabJournal.Controls.Add(this.DgvLog);
-            this.TabJournal.Controls.Add(this.ChkConversion);
-            this.TabJournal.Controls.Add(this.DtpPremierContact);
-            this.TabJournal.Controls.Add(this.DtpConversion);
-            this.TabJournal.Controls.Add(this.ChkAbandon);
-            this.TabJournal.Controls.Add(this.DtpAbandon);
             this.TabJournal.Location = new System.Drawing.Point(4, 22);
             this.TabJournal.Name = "TabJournal";
             this.TabJournal.Padding = new System.Windows.Forms.Padding(3);
@@ -397,52 +396,36 @@
             this.TabJournal.Text = "Historique";
             this.TabJournal.UseVisualStyleBackColor = true;
             // 
-            // ChkPremierContact
-            // 
-            this.ChkPremierContact.AutoSize = true;
-            this.ChkPremierContact.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ChkPremierContact.Location = new System.Drawing.Point(15, 7);
-            this.ChkPremierContact.Name = "ChkPremierContact";
-            this.ChkPremierContact.Size = new System.Drawing.Size(103, 17);
-            this.ChkPremierContact.TabIndex = 39;
-            this.ChkPremierContact.TabStop = false;
-            this.ChkPremierContact.Text = "Prise de contact";
-            this.ChkPremierContact.UseVisualStyleBackColor = true;
-            this.ChkPremierContact.CheckedChanged += new System.EventHandler(this.ChkPremierContact_CheckedChanged);
-            // 
             // LblDatePremierContact
             // 
             this.LblDatePremierContact.AutoSize = true;
-            this.LblDatePremierContact.Location = new System.Drawing.Point(124, 8);
+            this.LblDatePremierContact.Location = new System.Drawing.Point(14, 16);
             this.LblDatePremierContact.Name = "LblDatePremierContact";
             this.LblDatePremierContact.Size = new System.Drawing.Size(90, 13);
             this.LblDatePremierContact.TabIndex = 35;
-            this.LblDatePremierContact.Text = "Date de contact :";
-            this.LblDatePremierContact.Visible = false;
+            this.LblDatePremierContact.Text = "Prise de contact :";
             // 
             // LblDateAbandon
             // 
             this.LblDateAbandon.AutoSize = true;
-            this.LblDateAbandon.Location = new System.Drawing.Point(133, 60);
+            this.LblDateAbandon.Location = new System.Drawing.Point(516, 17);
             this.LblDateAbandon.Name = "LblDateAbandon";
-            this.LblDateAbandon.Size = new System.Drawing.Size(81, 13);
+            this.LblDateAbandon.Size = new System.Drawing.Size(56, 13);
             this.LblDateAbandon.TabIndex = 38;
-            this.LblDateAbandon.Text = "Date abandon :";
-            this.LblDateAbandon.Visible = false;
+            this.LblDateAbandon.Text = "Abandon :";
             // 
             // LblDateConversion
             // 
             this.LblDateConversion.AutoSize = true;
-            this.LblDateConversion.Location = new System.Drawing.Point(123, 34);
+            this.LblDateConversion.Location = new System.Drawing.Point(274, 16);
             this.LblDateConversion.Name = "LblDateConversion";
-            this.LblDateConversion.Size = new System.Drawing.Size(91, 13);
+            this.LblDateConversion.Size = new System.Drawing.Size(66, 13);
             this.LblDateConversion.TabIndex = 37;
-            this.LblDateConversion.Text = "Date conversion :";
-            this.LblDateConversion.Visible = false;
+            this.LblDateConversion.Text = "Conversion :";
             // 
             // BtnAddLog
             // 
-            this.BtnAddLog.Location = new System.Drawing.Point(550, 55);
+            this.BtnAddLog.Location = new System.Drawing.Point(550, 50);
             this.BtnAddLog.Name = "BtnAddLog";
             this.BtnAddLog.Size = new System.Drawing.Size(132, 23);
             this.BtnAddLog.TabIndex = 36;
@@ -453,65 +436,11 @@
             // DgvLog
             // 
             this.DgvLog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvLog.Location = new System.Drawing.Point(15, 83);
+            this.DgvLog.Location = new System.Drawing.Point(15, 79);
             this.DgvLog.Name = "DgvLog";
-            this.DgvLog.Size = new System.Drawing.Size(667, 261);
+            this.DgvLog.Size = new System.Drawing.Size(667, 265);
             this.DgvLog.TabIndex = 34;
             this.DgvLog.TabStop = false;
-            // 
-            // ChkConversion
-            // 
-            this.ChkConversion.AutoSize = true;
-            this.ChkConversion.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ChkConversion.Location = new System.Drawing.Point(53, 33);
-            this.ChkConversion.Name = "ChkConversion";
-            this.ChkConversion.Size = new System.Drawing.Size(65, 17);
-            this.ChkConversion.TabIndex = 30;
-            this.ChkConversion.TabStop = false;
-            this.ChkConversion.Text = "Converti";
-            this.ChkConversion.UseVisualStyleBackColor = true;
-            // 
-            // DtpPremierContact
-            // 
-            this.DtpPremierContact.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DtpPremierContact.Location = new System.Drawing.Point(217, 5);
-            this.DtpPremierContact.Name = "DtpPremierContact";
-            this.DtpPremierContact.Size = new System.Drawing.Size(95, 20);
-            this.DtpPremierContact.TabIndex = 34;
-            this.DtpPremierContact.TabStop = false;
-            this.DtpPremierContact.Visible = false;
-            // 
-            // DtpConversion
-            // 
-            this.DtpConversion.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DtpConversion.Location = new System.Drawing.Point(217, 31);
-            this.DtpConversion.Name = "DtpConversion";
-            this.DtpConversion.Size = new System.Drawing.Size(95, 20);
-            this.DtpConversion.TabIndex = 31;
-            this.DtpConversion.TabStop = false;
-            this.DtpConversion.Visible = false;
-            // 
-            // ChkAbandon
-            // 
-            this.ChkAbandon.AutoSize = true;
-            this.ChkAbandon.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ChkAbandon.Location = new System.Drawing.Point(49, 59);
-            this.ChkAbandon.Name = "ChkAbandon";
-            this.ChkAbandon.Size = new System.Drawing.Size(69, 17);
-            this.ChkAbandon.TabIndex = 32;
-            this.ChkAbandon.TabStop = false;
-            this.ChkAbandon.Text = "Abandon";
-            this.ChkAbandon.UseVisualStyleBackColor = true;
-            // 
-            // DtpAbandon
-            // 
-            this.DtpAbandon.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DtpAbandon.Location = new System.Drawing.Point(217, 57);
-            this.DtpAbandon.Name = "DtpAbandon";
-            this.DtpAbandon.Size = new System.Drawing.Size(95, 20);
-            this.DtpAbandon.TabIndex = 33;
-            this.DtpAbandon.TabStop = false;
-            this.DtpAbandon.Visible = false;
             // 
             // BtnSave
             // 
@@ -556,6 +485,66 @@
             this.BtnEdit.TabStop = false;
             this.BtnEdit.UseVisualStyleBackColor = true;
             this.BtnEdit.Visible = false;
+            // 
+            // BtnDatePremierContact
+            // 
+            this.BtnDatePremierContact.Location = new System.Drawing.Point(190, 12);
+            this.BtnDatePremierContact.Name = "BtnDatePremierContact";
+            this.BtnDatePremierContact.Size = new System.Drawing.Size(24, 22);
+            this.BtnDatePremierContact.TabIndex = 40;
+            this.BtnDatePremierContact.Text = "...";
+            this.BtnDatePremierContact.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(426, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(24, 22);
+            this.button1.TabIndex = 41;
+            this.button1.Text = "...";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(658, 12);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(24, 22);
+            this.button2.TabIndex = 42;
+            this.button2.Text = "...";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.PaleGreen;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(107, 13);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(81, 20);
+            this.textBox1.TabIndex = 43;
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.Color.Gold;
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(343, 13);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(81, 20);
+            this.textBox2.TabIndex = 44;
+            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.Color.LightCoral;
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(575, 14);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
+            this.textBox3.Size = new System.Drawing.Size(81, 20);
+            this.textBox3.TabIndex = 45;
+            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // ProspectEditForm
             // 
@@ -609,10 +598,6 @@
         private System.Windows.Forms.ComboBox CbxCategorie;
         private System.Windows.Forms.TabPage TabJournal;
         private System.Windows.Forms.DataGridView DgvLog;
-        private System.Windows.Forms.CheckBox ChkConversion;
-        private System.Windows.Forms.DateTimePicker DtpConversion;
-        private System.Windows.Forms.CheckBox ChkAbandon;
-        private System.Windows.Forms.DateTimePicker DtpAbandon;
         private System.Windows.Forms.Button BtnEdit;
         private System.Windows.Forms.Button BtnClose;
         private System.Windows.Forms.Button BtnCancel;
@@ -630,8 +615,12 @@
         private System.Windows.Forms.Button BtnAddLog;
         private System.Windows.Forms.Label LblDateAbandon;
         private System.Windows.Forms.Label LblDateConversion;
-        private System.Windows.Forms.CheckBox ChkPremierContact;
         private System.Windows.Forms.Label LblDatePremierContact;
-        private System.Windows.Forms.DateTimePicker DtpPremierContact;
+        private System.Windows.Forms.Button BtnDatePremierContact;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }

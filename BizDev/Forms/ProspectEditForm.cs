@@ -20,10 +20,7 @@ namespace BizDev.Forms
         bool view, premierContact, conversion, abandon;
         DateTime dateConversion, datePremierContact, dateAbandon, createdAt, updatedAt;
 
-        private void ChkPremierContact_CheckedChanged(object sender, EventArgs e)
-        {
-            AfficheDates();
-        }
+        
 
         ProspectsListForm owner;
         Prospect prospect;
@@ -173,15 +170,7 @@ namespace BizDev.Forms
             TxtWeb.Text = web;
             TxtNbEmployes.Text = nbEmployes;
             TxtNotes.Text = notes;
-            ChkPremierContact.Checked = premierContact;
-            DtpPremierContact.Value = datePremierContact;
-            ChkConversion.Checked = conversion;
-            DtpConversion.Value = dateConversion;
-            ChkAbandon.Checked = abandon;
-            DtpAbandon.Value = dateAbandon;
-
            
-            AfficheDates();
 
             Text = "Visualisation du prospect : " + nom;
 
@@ -193,18 +182,12 @@ namespace BizDev.Forms
         /// </summary>
         private void AfficheDates()
         {
-            /* Prise de contact */
-            if (ChkPremierContact.Checked==true)
-            {
-                LblDatePremierContact.Visible = true;
-                DtpPremierContact.Visible = true;
-            }
-            else
-            {
-                LblDatePremierContact.Visible = false;
-                DtpPremierContact.Visible = false;
-                
-            }
+            
+
+
+            /* Redéfinition des valeurs des dates */
+
+
         }
             
 
@@ -237,12 +220,6 @@ namespace BizDev.Forms
             email = utils.RemoveDiacritics(TxtEmail.Text.ToLower().Trim());
             web = utils.RemoveDiacritics(TxtWeb.Text.ToLower().Trim());
             nbEmployes = utils.RemoveDiacritics(TxtNbEmployes.Text.ToLower().Trim());
-            premierContact = ChkPremierContact.Checked;
-            datePremierContact = DtpPremierContact.Value;
-            conversion = ChkConversion.Checked;
-            dateConversion = DtpConversion.Value;
-            abandon = ChkAbandon.Checked;
-            dateAbandon = DtpAbandon.Value;
 
             /* Vérification des données */
             bool erreurs = false;
@@ -272,11 +249,6 @@ namespace BizDev.Forms
                 erreurs = true;
                 ErrorProvider.SetError(CbxPays, "Pays obligatoire");
             }
-
-            
-
-            
-
 
             /* Contrôle si erreurs */
             if (erreurs == false)
@@ -372,18 +344,41 @@ namespace BizDev.Forms
             Close();
         }
 
-        private void TxtNom_Validating(object sender, CancelEventArgs e)
-        {
-           
-        }
-
         private void BtnSave_Click(object sender, EventArgs e)
         {
-            
             Save();
         }
 
-        #endregion
+        private void ChkAbandon_CheckedChanged(object sender, EventArgs e)
+        {
+            //AfficheDates();
+        }
 
+        private void ChkConversion_CheckedChanged(object sender, EventArgs e)
+        {
+            //AfficheDates();
+        }
+
+        private void ChkPremierContact_CheckedChanged(object sender, EventArgs e)
+        {
+            //AfficheDates();
+        }
+
+        private void ChkAbandon_CheckStateChanged(object sender, EventArgs e)
+        {
+            AfficheDates();
+        }
+
+        private void ChkConversion_CheckStateChanged(object sender, EventArgs e)
+        {
+            AfficheDates();
+        }
+
+        private void ChkPremierContact_CheckStateChanged(object sender, EventArgs e)
+        {
+            AfficheDates();
+        }
+
+        #endregion
     }
 }
