@@ -25,6 +25,8 @@ namespace BizDev.Forms
         ProspectsListForm owner;
         Prospect prospect;
 
+        
+
         Utils utils = new Utils();
         ProspectProvider prospectProvider = new ProspectProvider();
 
@@ -128,7 +130,6 @@ namespace BizDev.Forms
             TxtNotes.BackColor = Color.LightGray;
             TxtNotes.TabStop = false;
             
-
             /* Récupération des données */
             prospect = prospectProvider.GetProspectById(idProspect);
 
@@ -176,20 +177,6 @@ namespace BizDev.Forms
 
             
         }
-
-        /// <summary>
-        /// Gère l'affichage et les valeurs des dates en fonction des checkbox
-        /// </summary>
-        private void AfficheDates()
-        {
-            
-
-
-            /* Redéfinition des valeurs des dates */
-
-
-        }
-            
 
         public void DrawRectangleRectangle(PaintEventArgs e)
         {
@@ -267,9 +254,6 @@ namespace BizDev.Forms
                     Close();
                 }
             }
-
-
-
         }
 
         private void AddDatabase()
@@ -349,34 +333,19 @@ namespace BizDev.Forms
             Save();
         }
 
-        private void ChkAbandon_CheckedChanged(object sender, EventArgs e)
+        private void BtnPremierContact_Click(object sender, EventArgs e)
         {
-            //AfficheDates();
+            new ProspectDate(idProspect, "P").ShowDialog();
         }
 
-        private void ChkConversion_CheckedChanged(object sender, EventArgs e)
+        private void BtnConversion_Click(object sender, EventArgs e)
         {
-            //AfficheDates();
+            new ProspectDate(idProspect, "C").ShowDialog();
         }
 
-        private void ChkPremierContact_CheckedChanged(object sender, EventArgs e)
+        private void BtnAbandon_Click(object sender, EventArgs e)
         {
-            //AfficheDates();
-        }
-
-        private void ChkAbandon_CheckStateChanged(object sender, EventArgs e)
-        {
-            AfficheDates();
-        }
-
-        private void ChkConversion_CheckStateChanged(object sender, EventArgs e)
-        {
-            AfficheDates();
-        }
-
-        private void ChkPremierContact_CheckStateChanged(object sender, EventArgs e)
-        {
-            AfficheDates();
+            new ProspectDate(idProspect, "A").ShowDialog();
         }
 
         #endregion

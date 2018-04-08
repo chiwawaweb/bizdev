@@ -37,9 +37,10 @@
             // 
             // BtnSave
             // 
-            this.BtnSave.Location = new System.Drawing.Point(272, 188);
+            this.BtnSave.Location = new System.Drawing.Point(137, 89);
+            this.BtnSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnSave.Name = "BtnSave";
-            this.BtnSave.Size = new System.Drawing.Size(109, 35);
+            this.BtnSave.Size = new System.Drawing.Size(73, 23);
             this.BtnSave.TabIndex = 0;
             this.BtnSave.Text = "Enregistrer";
             this.BtnSave.UseVisualStyleBackColor = true;
@@ -47,9 +48,10 @@
             // 
             // BtnCancel
             // 
-            this.BtnCancel.Location = new System.Drawing.Point(145, 188);
+            this.BtnCancel.Location = new System.Drawing.Point(51, 89);
+            this.BtnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnCancel.Name = "BtnCancel";
-            this.BtnCancel.Size = new System.Drawing.Size(121, 35);
+            this.BtnCancel.Size = new System.Drawing.Size(81, 23);
             this.BtnCancel.TabIndex = 1;
             this.BtnCancel.Text = "Annuler";
             this.BtnCancel.UseVisualStyleBackColor = true;
@@ -57,18 +59,23 @@
             // 
             // DtpDate
             // 
+            this.DtpDate.CalendarFont = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DtpDate.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DtpDate.Location = new System.Drawing.Point(39, 84);
+            this.DtpDate.Location = new System.Drawing.Point(51, 33);
+            this.DtpDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DtpDate.Name = "DtpDate";
-            this.DtpDate.Size = new System.Drawing.Size(153, 26);
+            this.DtpDate.Size = new System.Drawing.Size(128, 26);
             this.DtpDate.TabIndex = 2;
             // 
             // ChkDelDate
             // 
             this.ChkDelDate.AutoSize = true;
-            this.ChkDelDate.Location = new System.Drawing.Point(169, 139);
+            this.ChkDelDate.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ChkDelDate.Location = new System.Drawing.Point(51, 59);
+            this.ChkDelDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ChkDelDate.Name = "ChkDelDate";
-            this.ChkDelDate.Size = new System.Drawing.Size(160, 24);
+            this.ChkDelDate.Size = new System.Drawing.Size(129, 20);
             this.ChkDelDate.TabIndex = 3;
             this.ChkDelDate.Text = "Supprimer la date";
             this.ChkDelDate.UseVisualStyleBackColor = true;
@@ -77,27 +84,32 @@
             // LblLegende
             // 
             this.LblLegende.AutoSize = true;
-            this.LblLegende.Location = new System.Drawing.Point(141, 38);
+            this.LblLegende.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblLegende.Location = new System.Drawing.Point(48, 15);
+            this.LblLegende.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblLegende.Name = "LblLegende";
-            this.LblLegende.Size = new System.Drawing.Size(14, 20);
+            this.LblLegende.Size = new System.Drawing.Size(37, 16);
             this.LblLegende.TabIndex = 4;
-            this.LblLegende.Text = "-";
+            this.LblLegende.Text = "Date";
             // 
             // ProspectDate
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(405, 258);
+            this.ClientSize = new System.Drawing.Size(264, 137);
             this.Controls.Add(this.LblLegende);
             this.Controls.Add(this.ChkDelDate);
             this.Controls.Add(this.DtpDate);
             this.Controls.Add(this.BtnCancel);
             this.Controls.Add(this.BtnSave);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ProspectDate";
+            this.ShowIcon = false;
             this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Date";
             this.ResumeLayout(false);
             this.PerformLayout();
