@@ -169,6 +169,7 @@
             // 
             // TabCoordonnees
             // 
+            this.TabCoordonnees.Controls.Add(this.BtnEdit);
             this.TabCoordonnees.Controls.Add(this.label9);
             this.TabCoordonnees.Controls.Add(this.TxtFax);
             this.TabCoordonnees.Controls.Add(this.label11);
@@ -405,6 +406,7 @@
             this.TxtAbandon.ReadOnly = true;
             this.TxtAbandon.Size = new System.Drawing.Size(81, 20);
             this.TxtAbandon.TabIndex = 45;
+            this.TxtAbandon.TabStop = false;
             this.TxtAbandon.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtConversion
@@ -416,6 +418,7 @@
             this.TxtConversion.ReadOnly = true;
             this.TxtConversion.Size = new System.Drawing.Size(81, 20);
             this.TxtConversion.TabIndex = 44;
+            this.TxtConversion.TabStop = false;
             this.TxtConversion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtPremierContact
@@ -427,6 +430,7 @@
             this.TxtPremierContact.ReadOnly = true;
             this.TxtPremierContact.Size = new System.Drawing.Size(81, 20);
             this.TxtPremierContact.TabIndex = 43;
+            this.TxtPremierContact.TabStop = false;
             this.TxtPremierContact.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // BtnAbandon
@@ -435,6 +439,7 @@
             this.BtnAbandon.Name = "BtnAbandon";
             this.BtnAbandon.Size = new System.Drawing.Size(24, 22);
             this.BtnAbandon.TabIndex = 42;
+            this.BtnAbandon.TabStop = false;
             this.BtnAbandon.Text = "...";
             this.BtnAbandon.UseVisualStyleBackColor = true;
             this.BtnAbandon.Click += new System.EventHandler(this.BtnAbandon_Click);
@@ -445,6 +450,7 @@
             this.BtnConversion.Name = "BtnConversion";
             this.BtnConversion.Size = new System.Drawing.Size(24, 22);
             this.BtnConversion.TabIndex = 41;
+            this.BtnConversion.TabStop = false;
             this.BtnConversion.Text = "...";
             this.BtnConversion.UseVisualStyleBackColor = true;
             this.BtnConversion.Click += new System.EventHandler(this.BtnConversion_Click);
@@ -455,6 +461,7 @@
             this.BtnPremierContact.Name = "BtnPremierContact";
             this.BtnPremierContact.Size = new System.Drawing.Size(24, 22);
             this.BtnPremierContact.TabIndex = 40;
+            this.BtnPremierContact.TabStop = false;
             this.BtnPremierContact.Text = "...";
             this.BtnPremierContact.UseVisualStyleBackColor = true;
             this.BtnPremierContact.Click += new System.EventHandler(this.BtnPremierContact_Click);
@@ -507,7 +514,7 @@
             // 
             // BtnSave
             // 
-            this.BtnSave.Location = new System.Drawing.Point(623, 394);
+            this.BtnSave.Location = new System.Drawing.Point(627, 394);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Size = new System.Drawing.Size(75, 23);
             this.BtnSave.TabIndex = 36;
@@ -518,7 +525,7 @@
             // 
             // BtnCancel
             // 
-            this.BtnCancel.Location = new System.Drawing.Point(542, 394);
+            this.BtnCancel.Location = new System.Drawing.Point(547, 394);
             this.BtnCancel.Name = "BtnCancel";
             this.BtnCancel.Size = new System.Drawing.Size(75, 23);
             this.BtnCancel.TabIndex = 37;
@@ -529,7 +536,8 @@
             // 
             // BtnClose
             // 
-            this.BtnClose.Location = new System.Drawing.Point(623, 394);
+            this.BtnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.BtnClose.Location = new System.Drawing.Point(627, 394);
             this.BtnClose.Name = "BtnClose";
             this.BtnClose.Size = new System.Drawing.Size(75, 23);
             this.BtnClose.TabIndex = 38;
@@ -541,7 +549,7 @@
             // 
             // BtnEdit
             // 
-            this.BtnEdit.Location = new System.Drawing.Point(597, 394);
+            this.BtnEdit.Location = new System.Drawing.Point(663, 319);
             this.BtnEdit.Name = "BtnEdit";
             this.BtnEdit.Size = new System.Drawing.Size(23, 23);
             this.BtnEdit.TabIndex = 39;
@@ -555,7 +563,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.BtnClose;
             this.ClientSize = new System.Drawing.Size(722, 436);
-            this.Controls.Add(this.BtnEdit);
             this.Controls.Add(this.BtnClose);
             this.Controls.Add(this.BtnCancel);
             this.Controls.Add(this.BtnSave);

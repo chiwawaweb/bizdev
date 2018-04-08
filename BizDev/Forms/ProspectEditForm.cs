@@ -171,7 +171,16 @@ namespace BizDev.Forms
             TxtWeb.Text = web;
             TxtNbEmployes.Text = nbEmployes;
             TxtNotes.Text = notes;
+
+            AfficheDates();
+
+            Text = "Visualisation du prospect : " + nom;
+
             
+        }
+
+        private void AfficheDates()
+        {
             if (premierContact == true)
             {
                 TxtPremierContact.Text = datePremierContact.ToShortDateString();
@@ -198,10 +207,6 @@ namespace BizDev.Forms
             {
                 TxtAbandon.Text = "n.c.";
             }
-
-            Text = "Visualisation du prospect : " + nom;
-
-            
         }
 
         
@@ -330,7 +335,15 @@ namespace BizDev.Forms
         {
             prospect = prospectProvider.GetProspectById(idProspect);
 
-            TxtPremierContact.Text = datePremierContact.ToShortDateString();
+            premierContact = prospect.PremierContact;
+            datePremierContact = prospect.DatePremierContact;
+            conversion = prospect.Conversion;
+            dateConversion = prospect.DateConversion;
+            abandon = prospect.Abandon;
+            dateAbandon = prospect.DateAbandon; 
+
+
+            AfficheDates();
         }
 
         #region Gestion des événements
