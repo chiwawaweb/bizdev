@@ -70,7 +70,7 @@ namespace BizDev.Forms
             {
                 Name = "NOM",
                 HeaderText = "Nom du prospect",
-                Width = 300
+                Width = 400
             };
             nomCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
@@ -78,7 +78,7 @@ namespace BizDev.Forms
             {
                 Name = "ADRESSE",
                 HeaderText = "Adresse du prospect",
-                Width = 400
+                Width = 450
             };
             adresseCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 

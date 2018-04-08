@@ -44,7 +44,7 @@
             this.TbnView});
             this.ToolStrip.Location = new System.Drawing.Point(0, 0);
             this.ToolStrip.Name = "ToolStrip";
-            this.ToolStrip.Size = new System.Drawing.Size(800, 25);
+            this.ToolStrip.Size = new System.Drawing.Size(1270, 25);
             this.ToolStrip.TabIndex = 0;
             this.ToolStrip.Text = "toolStrip1";
             // 
@@ -85,7 +85,7 @@
             this.DgvProspects.ShowCellToolTips = false;
             this.DgvProspects.ShowEditingIcon = false;
             this.DgvProspects.ShowRowErrors = false;
-            this.DgvProspects.Size = new System.Drawing.Size(800, 422);
+            this.DgvProspects.Size = new System.Drawing.Size(1270, 549);
             this.DgvProspects.TabIndex = 1;
             this.DgvProspects.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DgvProspects_CellMouseDoubleClick);
             // 
@@ -93,7 +93,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1270, 577);
             this.Controls.Add(this.DgvProspects);
             this.Controls.Add(this.ToolStrip);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;

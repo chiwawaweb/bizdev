@@ -294,7 +294,7 @@ namespace BizDev.Forms
                 Web = web,
                 NbEmployes = nbEmployes,
                 Notes = notes,
-                CreatedAt = createdAt
+                CreatedAt = DateTime.Now
 
             };
 
@@ -346,6 +346,67 @@ namespace BizDev.Forms
             AfficheDates();
         }
 
+        private void Edit()
+        {
+            DialogResult result = MessageBox.Show("Etes-vous certain de vouloir modifier cette fiche ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                UpdateMode();
+            }
+        }
+
+        private void UpdateMode()
+        {
+            /* Modification des contrôles */
+            BtnEdit.Visible = false;
+            BtnClose.Visible = false;
+            BtnCancel.Visible = true;
+            BtnSave.Visible = true;
+            Text = "Modification fiche prospect : " + nom;
+            TabControl.TabPages.Remove(TabJournal);
+            TxtNom.ReadOnly = false;
+            TxtNom.TabStop = true;
+            TxtNom.BackColor = Color.Beige;
+            CbxCategorie.Enabled = true;
+            TxtNbEmployes.ReadOnly = false;
+            TxtNbEmployes.TabStop = true;
+            TxtNbEmployes.BackColor = Color.Beige;
+            TxtAdresse.ReadOnly = false;
+            TxtAdresse.TabStop = true;
+            TxtAdresse.BackColor = Color.Beige;
+            TxtComplement.ReadOnly = false;
+            TxtComplement.TabStop = true;
+            TxtComplement.BackColor = Color.Beige;
+            TxtCodePostal.ReadOnly = false;
+            TxtCodePostal.TabStop = true;
+            TxtCodePostal.BackColor = Color.Beige;
+            TxtVille.ReadOnly = false;
+            TxtVille.TabStop = true;
+            TxtVille.BackColor = Color.Beige;
+            CbxPays.Enabled = true;
+            CbxPays.TabStop = true;
+            CbxPays.BackColor = Color.Beige;
+            TxtTel.ReadOnly = false;
+            TxtTel.TabStop = true;
+            TxtTel.BackColor = Color.Beige;
+            TxtGsm.ReadOnly = false;
+            TxtGsm.TabStop = true;
+            TxtGsm.BackColor = Color.Beige;
+            TxtFax.ReadOnly = false;
+            TxtFax.TabStop = true;
+            TxtFax.BackColor = Color.Beige;
+            TxtEmail.ReadOnly = false;
+            TxtEmail.TabStop = true;
+            TxtEmail.BackColor = Color.Beige;
+            TxtWeb.ReadOnly = false;
+            TxtWeb.TabStop = true;
+            TxtWeb.BackColor = Color.Beige;
+            TxtNotes.ReadOnly = false;
+            TxtNotes.TabStop = true;
+            TxtNotes.BackColor = Color.Beige;
+
+        }
+
         #region Gestion des événements
 
         private void BtnClose_Click(object sender, EventArgs e)
@@ -381,6 +442,11 @@ namespace BizDev.Forms
         private void BtnAbandon_Click(object sender, EventArgs e)
         {
             new ProspectDate(this, idProspect, "A").ShowDialog();
+        }
+
+        private void BtnEdit_Click(object sender, EventArgs e)
+        {
+            Edit();
         }
 
         #endregion

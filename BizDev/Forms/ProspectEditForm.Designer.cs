@@ -89,6 +89,7 @@
             // 
             // CbxPays
             // 
+            this.CbxPays.BackColor = System.Drawing.Color.Beige;
             this.CbxPays.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CbxPays.FormattingEnabled = true;
             this.ErrorProvider.SetIconAlignment(this.CbxPays, System.Windows.Forms.ErrorIconAlignment.MiddleLeft);
@@ -99,6 +100,7 @@
             // 
             // TxtNom
             // 
+            this.TxtNom.BackColor = System.Drawing.Color.Beige;
             this.TxtNom.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TxtNom.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ErrorProvider.SetIconAlignment(this.TxtNom, System.Windows.Forms.ErrorIconAlignment.MiddleLeft);
@@ -109,6 +111,7 @@
             // 
             // CbxCategorie
             // 
+            this.CbxCategorie.BackColor = System.Drawing.Color.Beige;
             this.CbxCategorie.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CbxCategorie.FormattingEnabled = true;
             this.ErrorProvider.SetIconAlignment(this.CbxCategorie, System.Windows.Forms.ErrorIconAlignment.MiddleLeft);
@@ -129,6 +132,7 @@
             // 
             // TxtNbEmployes
             // 
+            this.TxtNbEmployes.BackColor = System.Drawing.Color.Beige;
             this.TxtNbEmployes.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TxtNbEmployes.Location = new System.Drawing.Point(22, 126);
             this.TxtNbEmployes.MaxLength = 5;
@@ -148,6 +152,7 @@
             // TxtNotes
             // 
             this.TxtNotes.AcceptsReturn = true;
+            this.TxtNotes.BackColor = System.Drawing.Color.Beige;
             this.TxtNotes.Location = new System.Drawing.Point(371, 176);
             this.TxtNotes.MaxLength = 20000;
             this.TxtNotes.Multiline = true;
@@ -216,6 +221,7 @@
             // 
             // TxtFax
             // 
+            this.TxtFax.BackColor = System.Drawing.Color.Beige;
             this.TxtFax.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TxtFax.Location = new System.Drawing.Point(583, 32);
             this.TxtFax.Name = "TxtFax";
@@ -233,6 +239,7 @@
             // 
             // TxtWeb
             // 
+            this.TxtWeb.BackColor = System.Drawing.Color.Beige;
             this.TxtWeb.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
             this.TxtWeb.Location = new System.Drawing.Point(371, 131);
             this.TxtWeb.Name = "TxtWeb";
@@ -250,6 +257,7 @@
             // 
             // TxtEmail
             // 
+            this.TxtEmail.BackColor = System.Drawing.Color.Beige;
             this.TxtEmail.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
             this.TxtEmail.Location = new System.Drawing.Point(371, 79);
             this.TxtEmail.Name = "TxtEmail";
@@ -267,6 +275,7 @@
             // 
             // TxtGsm
             // 
+            this.TxtGsm.BackColor = System.Drawing.Color.Beige;
             this.TxtGsm.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TxtGsm.Location = new System.Drawing.Point(477, 32);
             this.TxtGsm.Name = "TxtGsm";
@@ -284,6 +293,7 @@
             // 
             // TxtTel
             // 
+            this.TxtTel.BackColor = System.Drawing.Color.Beige;
             this.TxtTel.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TxtTel.Location = new System.Drawing.Point(371, 32);
             this.TxtTel.Name = "TxtTel";
@@ -310,6 +320,7 @@
             // 
             // TxtVille
             // 
+            this.TxtVille.BackColor = System.Drawing.Color.Beige;
             this.TxtVille.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TxtVille.Location = new System.Drawing.Point(88, 248);
             this.TxtVille.Name = "TxtVille";
@@ -327,6 +338,7 @@
             // 
             // TxtCodePostal
             // 
+            this.TxtCodePostal.BackColor = System.Drawing.Color.Beige;
             this.TxtCodePostal.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TxtCodePostal.Location = new System.Drawing.Point(22, 248);
             this.TxtCodePostal.Name = "TxtCodePostal";
@@ -335,6 +347,7 @@
             // 
             // TxtComplement
             // 
+            this.TxtComplement.BackColor = System.Drawing.Color.Beige;
             this.TxtComplement.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TxtComplement.Location = new System.Drawing.Point(22, 202);
             this.TxtComplement.Name = "TxtComplement";
@@ -352,6 +365,7 @@
             // 
             // TxtAdresse
             // 
+            this.TxtAdresse.BackColor = System.Drawing.Color.Beige;
             this.TxtAdresse.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TxtAdresse.Location = new System.Drawing.Point(22, 176);
             this.TxtAdresse.Name = "TxtAdresse";
@@ -556,6 +570,7 @@
             this.BtnEdit.TabStop = false;
             this.BtnEdit.UseVisualStyleBackColor = true;
             this.BtnEdit.Visible = false;
+            this.BtnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
             // 
             // ProspectEditForm
             // 
