@@ -400,7 +400,7 @@
             // 
             this.TxtAbandon.BackColor = System.Drawing.Color.LightCoral;
             this.TxtAbandon.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtAbandon.Location = new System.Drawing.Point(575, 14);
+            this.TxtAbandon.Location = new System.Drawing.Point(575, 13);
             this.TxtAbandon.Name = "TxtAbandon";
             this.TxtAbandon.ReadOnly = true;
             this.TxtAbandon.Size = new System.Drawing.Size(81, 20);
@@ -553,6 +553,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.BtnClose;
             this.ClientSize = new System.Drawing.Size(722, 436);
             this.Controls.Add(this.BtnEdit);
             this.Controls.Add(this.BtnClose);

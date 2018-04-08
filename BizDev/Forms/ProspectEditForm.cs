@@ -171,25 +171,40 @@ namespace BizDev.Forms
             TxtWeb.Text = web;
             TxtNbEmployes.Text = nbEmployes;
             TxtNotes.Text = notes;
-           
+            
+            if (premierContact == true)
+            {
+                TxtPremierContact.Text = datePremierContact.ToShortDateString();
+            }
+            else
+            {
+                TxtPremierContact.Text = "n.c.";
+            }
+
+            if (conversion == true)
+            {
+                TxtConversion.Text = dateConversion.ToShortDateString();
+            }
+            else
+            {
+                TxtConversion.Text = "n.c.";
+            }
+
+            if (abandon == true)
+            {
+                TxtAbandon.Text = dateAbandon.ToShortDateString();
+            }
+            else
+            {
+                TxtAbandon.Text = "n.c.";
+            }
 
             Text = "Visualisation du prospect : " + nom;
 
             
         }
 
-        public void DrawRectangleRectangle(PaintEventArgs e)
-        {
-
-            // Create pen.
-            Pen blackPen = new Pen(Color.Black, 3);
-
-            // Create rectangle.
-            Rectangle rect = new Rectangle(0, 0, 200, 200);
-
-            // Draw rectangle to screen.
-            e.Graphics.DrawRectangle(blackPen, rect);
-        }
+        
 
         private void Save()
         {
@@ -311,6 +326,13 @@ namespace BizDev.Forms
             prospectProvider.Update(prospect);
         }
 
+        public void RefreshData()
+        {
+            prospect = prospectProvider.GetProspectById(idProspect);
+
+            TxtPremierContact.Text = datePremierContact.ToShortDateString();
+        }
+
         #region Gestion des événements
 
         private void BtnClose_Click(object sender, EventArgs e)
@@ -335,17 +357,17 @@ namespace BizDev.Forms
 
         private void BtnPremierContact_Click(object sender, EventArgs e)
         {
-            new ProspectDate(idProspect, "P").ShowDialog();
+            new ProspectDate(this, idProspect, "P").ShowDialog();
         }
 
         private void BtnConversion_Click(object sender, EventArgs e)
         {
-            new ProspectDate(idProspect, "C").ShowDialog();
+            new ProspectDate(this, idProspect, "C").ShowDialog();
         }
 
         private void BtnAbandon_Click(object sender, EventArgs e)
         {
-            new ProspectDate(idProspect, "A").ShowDialog();
+            new ProspectDate(this, idProspect, "A").ShowDialog();
         }
 
         #endregion

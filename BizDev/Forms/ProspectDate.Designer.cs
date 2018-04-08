@@ -38,7 +38,7 @@
             // BtnSave
             // 
             this.BtnSave.Location = new System.Drawing.Point(137, 89);
-            this.BtnSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnSave.Margin = new System.Windows.Forms.Padding(2);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Size = new System.Drawing.Size(73, 23);
             this.BtnSave.TabIndex = 0;
@@ -48,8 +48,9 @@
             // 
             // BtnCancel
             // 
+            this.BtnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.BtnCancel.Location = new System.Drawing.Point(51, 89);
-            this.BtnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.BtnCancel.Name = "BtnCancel";
             this.BtnCancel.Size = new System.Drawing.Size(81, 23);
             this.BtnCancel.TabIndex = 1;
@@ -63,7 +64,7 @@
             this.DtpDate.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.DtpDate.Location = new System.Drawing.Point(51, 33);
-            this.DtpDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DtpDate.Margin = new System.Windows.Forms.Padding(2);
             this.DtpDate.Name = "DtpDate";
             this.DtpDate.Size = new System.Drawing.Size(128, 26);
             this.DtpDate.TabIndex = 2;
@@ -73,7 +74,7 @@
             this.ChkDelDate.AutoSize = true;
             this.ChkDelDate.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ChkDelDate.Location = new System.Drawing.Point(51, 59);
-            this.ChkDelDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ChkDelDate.Margin = new System.Windows.Forms.Padding(2);
             this.ChkDelDate.Name = "ChkDelDate";
             this.ChkDelDate.Size = new System.Drawing.Size(129, 20);
             this.ChkDelDate.TabIndex = 3;
@@ -96,6 +97,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.BtnCancel;
             this.ClientSize = new System.Drawing.Size(264, 137);
             this.Controls.Add(this.LblLegende);
             this.Controls.Add(this.ChkDelDate);
@@ -103,7 +105,7 @@
             this.Controls.Add(this.BtnCancel);
             this.Controls.Add(this.BtnSave);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ProspectDate";
@@ -111,6 +113,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Date";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ProspectDate_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

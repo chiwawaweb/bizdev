@@ -15,43 +15,40 @@ namespace BizDev.Forms
     public partial class ProspectDate : Form
     {
         int idProspect;
-        string type;
-        bool premierContact, conversion, abandon;
-        DateTime datePremierContact, dateConversion, dateAbandon;
+        string type, nom;
+        bool newState, premierContact, conversion, abandon;
+        DateTime newDate, datePremierContact, dateConversion, dateAbandon;
 
-        Prospect prospect; 
+        Prospect prospect;
+        ProspectEditForm owner;
 
         ProspectProvider prospectProvider = new ProspectProvider();
 
-        public ProspectDate(int _id, string _type)
+        private void ProspectDate_FormClosed(object sender, FormClosedEventArgs e)
         {
+            owner.RefreshData();
+        }
+
+        public ProspectDate(ProspectEditForm _owner, int _id, string _type)
+        {
+            owner = _owner;
             idProspect = _id;
             type = _type;
 
             InitializeComponent();
 
-            switch (type)
-            {
-                case "P":
-                    Text = "Prise de contact";
-                    break;
-
-                case "C":
-                    Text = "Conversion";
-                    break;
-
-                case "A":
-                    Text = "Abandon";
-                    break;
-            }
-
             RecupereInfos();
+
+            
+
+            Text = nom;
         }
 
         private void RecupereInfos()
         {
             prospect = prospectProvider.GetProspectById(idProspect);
 
+            nom = prospect.Nom;
             premierContact = prospect.PremierContact;
             datePremierContact = prospect.DatePremierContact;
             conversion = prospect.Conversion;
@@ -59,14 +56,113 @@ namespace BizDev.Forms
             abandon = prospect.Abandon;
             dateAbandon = prospect.DateAbandon;
 
+            /* Affiche les données */
+            switch (type)
+            {
+                case "P":
+                    LblLegende.Text = "Date de prise de contact";
+                    if (premierContact == true)
+                    {
+                        DtpDate.Value = datePremierContact;
+                        ChkDelDate.Visible = true;
+                    }
+                    else
+                    {
+                        DtpDate.Value = DateTime.Now;
+                        ChkDelDate.Visible = false;
+                    }
 
+                    break;
+
+                case "C":
+                    LblLegende.Text = "Date de conversion";
+                    if (conversion == true)
+                    {
+                        DtpDate.Value = dateConversion;
+                        ChkDelDate.Visible = true;
+                    }
+                    else
+                    {
+                        DtpDate.Value = DateTime.Now;
+                        ChkDelDate.Visible = false;
+                    }
+                    break;
+
+                case "A":
+                    LblLegende.Text = "Date d'abandon";
+                    if (abandon == true)
+                    {
+                        DtpDate.Value = dateAbandon;
+                        ChkDelDate.Visible = true;
+                    }
+                    else
+                    {
+                        DtpDate.Value = DateTime.Now;
+                        ChkDelDate.Visible = false;
+                    }
+                    break;
+            }
+        }
+
+        private void Save()
+        {
+            /* Récupération des données */
+            if (ChkDelDate.Checked != true)
+            {
+                newDate = DtpDate.Value;
+                newState = true;
+            }
+            else
+            {
+                newDate = DateTime.Parse("30/12/1899");
+                newState = false;
+            }
+
+            switch (type)
+            {
+                case "P":
+
+                    datePremierContact = newDate;
+                    premierContact = newState;
+                    break;
+
+                case "C":
+                    dateConversion = newDate;
+                    conversion = newState;
+                    break;
+
+                case "A":
+                    dateAbandon = newDate;
+                    abandon = newState;
+                    break;
+            }
+
+            UpdateDatabase();
+
+            Close();
+        }
+
+        private void UpdateDatabase()
+        {
+            Prospect prospect = prospectProvider.GetProspectById(idProspect);
+
+            prospect.PremierContact = premierContact;
+            prospect.DatePremierContact = datePremierContact;
+            prospect.Conversion = conversion;
+            prospect.DateConversion = dateConversion;
+            prospect.Abandon = abandon;
+            prospect.DateAbandon = dateAbandon;
+
+            prospectProvider.Update(prospect);
+
+            
         }
 
         #region Gestion des événements
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
-
+            Save();
         }
 
         private void BtnCancel_Click(object sender, EventArgs e)
