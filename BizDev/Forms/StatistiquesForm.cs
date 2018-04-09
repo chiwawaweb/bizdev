@@ -31,12 +31,12 @@ namespace BizDev.Forms
         {
             TNew = prospectProvider.CountAll();
             PNew = 100;
-            TContacts = prospectProvider.TContacts();
-            T30Contacts = prospectProvider.T30Contacts();
+            TContacts = prospectProvider.TContacts(0);
+            T30Contacts = prospectProvider.TContacts(-1);
             PContacts = (TContacts / TNew)*100;
-            TConversions = prospectProvider.TConversions();
+            TConversions = prospectProvider.TConversions(0);
             PConversions = (TConversions / TNew) * 100;
-            TAbandons = prospectProvider.TAbandons();
+            TAbandons = prospectProvider.TAbandons(0);
             PAbandons = (TAbandons / TNew) * 100;
         }
 
