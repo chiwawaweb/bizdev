@@ -396,13 +396,10 @@ namespace BizDev.Forms
             noteCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             noteCol.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
-
-
             /* Création des colonnes */
             DgvLog.Columns.Add(idCol);
             DgvLog.Columns.Add(dateCol);
             DgvLog.Columns.Add(noteCol);
-
 
             /* Ajout des lignes */
             for (int i = 0; i < list.Count; i++)
@@ -423,7 +420,6 @@ namespace BizDev.Forms
                     DgvLog.Rows[number].Cells[1].Selected = true;
                 }
             }
-
         }
 
         private void Edit()

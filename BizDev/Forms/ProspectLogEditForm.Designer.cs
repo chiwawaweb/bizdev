@@ -28,19 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.TxtSuivi = new System.Windows.Forms.TextBox();
+            this.TxtNote = new System.Windows.Forms.TextBox();
             this.BtnSave = new System.Windows.Forms.Button();
             this.BtnCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // TxtSuivi
             // 
-            this.TxtSuivi.Dock = System.Windows.Forms.DockStyle.Top;
-            this.TxtSuivi.Location = new System.Drawing.Point(0, 0);
-            this.TxtSuivi.Multiline = true;
-            this.TxtSuivi.Name = "TxtSuivi";
-            this.TxtSuivi.Size = new System.Drawing.Size(505, 214);
-            this.TxtSuivi.TabIndex = 0;
+            this.TxtNote.Dock = System.Windows.Forms.DockStyle.Top;
+            this.TxtNote.Location = new System.Drawing.Point(0, 0);
+            this.TxtNote.Multiline = true;
+            this.TxtNote.Name = "TxtSuivi";
+            this.TxtNote.Size = new System.Drawing.Size(505, 214);
+            this.TxtNote.TabIndex = 0;
             // 
             // BtnSave
             // 
@@ -71,7 +71,7 @@
             this.ClientSize = new System.Drawing.Size(505, 260);
             this.Controls.Add(this.BtnCancel);
             this.Controls.Add(this.BtnSave);
-            this.Controls.Add(this.TxtSuivi);
+            this.Controls.Add(this.TxtNote);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -87,7 +87,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox TxtSuivi;
+        private System.Windows.Forms.TextBox TxtNote;
         private System.Windows.Forms.Button BtnSave;
         private System.Windows.Forms.Button BtnCancel;
     }
