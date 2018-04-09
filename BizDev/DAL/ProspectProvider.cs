@@ -118,8 +118,29 @@ namespace BizDev.DAL
             }
         }
 
+        public int T30Contacts()
+        {
+            DateTime T30 = DateTime.Now.AddMonths(-1);
+            using (Context context = new Context())
+            {
+                try
+                {
+                    var prospects = from b in context.Prospects
+                                    where b.DatePremierContact >= T30
+                                    select b;
+
+                    return prospects.Count();
+                }
+                catch
+                {
+                    throw;
+                }
+            }
+        }
+
         public int TConversions()
         {
+            
             using (Context context = new Context())
             {
                 try

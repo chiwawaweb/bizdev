@@ -63,13 +63,14 @@
             this.TxtTAbandons = new System.Windows.Forms.TextBox();
             this.TxtPAbandons = new System.Windows.Forms.TextBox();
             this.TxtTContacts = new System.Windows.Forms.TextBox();
+            this.BtnClose = new System.Windows.Forms.Button();
             this.GrpDonnees.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(63, 85);
+            this.label2.Location = new System.Drawing.Point(65, 85);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 13);
@@ -79,7 +80,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(92, 109);
+            this.label3.Location = new System.Drawing.Point(94, 109);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 13);
@@ -89,7 +90,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(101, 133);
+            this.label4.Location = new System.Drawing.Point(104, 133);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(61, 13);
@@ -121,7 +122,6 @@
             this.GrpDonnees.Controls.Add(this.label7);
             this.GrpDonnees.Controls.Add(this.TxtPNew);
             this.GrpDonnees.Controls.Add(this.TxtTNew);
-            this.GrpDonnees.Controls.Add(this.label6);
             this.GrpDonnees.Controls.Add(this.label5);
             this.GrpDonnees.Controls.Add(this.TxtPContacts);
             this.GrpDonnees.Controls.Add(this.TxtPConversions);
@@ -129,6 +129,7 @@
             this.GrpDonnees.Controls.Add(this.TxtTAbandons);
             this.GrpDonnees.Controls.Add(this.TxtPAbandons);
             this.GrpDonnees.Controls.Add(this.TxtTContacts);
+            this.GrpDonnees.Controls.Add(this.label6);
             this.GrpDonnees.Controls.Add(this.label4);
             this.GrpDonnees.Controls.Add(this.label2);
             this.GrpDonnees.Controls.Add(this.label3);
@@ -150,6 +151,7 @@
             this.textBox17.Size = new System.Drawing.Size(45, 20);
             this.textBox17.TabIndex = 35;
             this.textBox17.TabStop = false;
+            this.textBox17.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // textBox18
             // 
@@ -160,6 +162,7 @@
             this.textBox18.Size = new System.Drawing.Size(43, 20);
             this.textBox18.TabIndex = 34;
             this.textBox18.TabStop = false;
+            this.textBox18.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // textBox19
             // 
@@ -170,6 +173,7 @@
             this.textBox19.Size = new System.Drawing.Size(45, 20);
             this.textBox19.TabIndex = 33;
             this.textBox19.TabStop = false;
+            this.textBox19.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // textBox20
             // 
@@ -180,6 +184,7 @@
             this.textBox20.Size = new System.Drawing.Size(45, 20);
             this.textBox20.TabIndex = 32;
             this.textBox20.TabStop = false;
+            this.textBox20.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // textBox21
             // 
@@ -190,6 +195,7 @@
             this.textBox21.Size = new System.Drawing.Size(43, 20);
             this.textBox21.TabIndex = 31;
             this.textBox21.TabStop = false;
+            this.textBox21.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // textBox22
             // 
@@ -200,6 +206,7 @@
             this.textBox22.Size = new System.Drawing.Size(43, 20);
             this.textBox22.TabIndex = 30;
             this.textBox22.TabStop = false;
+            this.textBox22.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // textBox23
             // 
@@ -210,6 +217,7 @@
             this.textBox23.Size = new System.Drawing.Size(45, 20);
             this.textBox23.TabIndex = 29;
             this.textBox23.TabStop = false;
+            this.textBox23.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // textBox24
             // 
@@ -220,6 +228,7 @@
             this.textBox24.Size = new System.Drawing.Size(43, 20);
             this.textBox24.TabIndex = 28;
             this.textBox24.TabStop = false;
+            this.textBox24.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // TxtP30New
             // 
@@ -230,6 +239,7 @@
             this.TxtP30New.Size = new System.Drawing.Size(45, 20);
             this.TxtP30New.TabIndex = 27;
             this.TxtP30New.TabStop = false;
+            this.TxtP30New.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // TxtT30New
             // 
@@ -240,6 +250,7 @@
             this.TxtT30New.Size = new System.Drawing.Size(43, 20);
             this.TxtT30New.TabIndex = 26;
             this.TxtT30New.TabStop = false;
+            this.TxtT30New.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // textBox11
             // 
@@ -250,6 +261,7 @@
             this.textBox11.Size = new System.Drawing.Size(45, 20);
             this.textBox11.TabIndex = 25;
             this.textBox11.TabStop = false;
+            this.textBox11.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // textBox12
             // 
@@ -260,6 +272,7 @@
             this.textBox12.Size = new System.Drawing.Size(45, 20);
             this.textBox12.TabIndex = 24;
             this.textBox12.TabStop = false;
+            this.textBox12.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // TxtT30Conversions
             // 
@@ -270,6 +283,7 @@
             this.TxtT30Conversions.Size = new System.Drawing.Size(43, 20);
             this.TxtT30Conversions.TabIndex = 23;
             this.TxtT30Conversions.TabStop = false;
+            this.TxtT30Conversions.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // TxtT30Abandons
             // 
@@ -280,6 +294,7 @@
             this.TxtT30Abandons.Size = new System.Drawing.Size(43, 20);
             this.TxtT30Abandons.TabIndex = 22;
             this.TxtT30Abandons.TabStop = false;
+            this.TxtT30Abandons.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // textBox15
             // 
@@ -290,6 +305,7 @@
             this.textBox15.Size = new System.Drawing.Size(45, 20);
             this.textBox15.TabIndex = 21;
             this.textBox15.TabStop = false;
+            this.textBox15.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // TxtT30Contacts
             // 
@@ -300,6 +316,7 @@
             this.TxtT30Contacts.Size = new System.Drawing.Size(43, 20);
             this.TxtT30Contacts.TabIndex = 20;
             this.TxtT30Contacts.TabStop = false;
+            this.TxtT30Contacts.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label9
             // 
@@ -467,12 +484,27 @@
             this.TxtTContacts.TabStop = false;
             this.TxtTContacts.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+            // BtnClose
+            // 
+            this.BtnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.BtnClose.Location = new System.Drawing.Point(411, 209);
+            this.BtnClose.Name = "BtnClose";
+            this.BtnClose.Size = new System.Drawing.Size(75, 23);
+            this.BtnClose.TabIndex = 5;
+            this.BtnClose.TabStop = false;
+            this.BtnClose.Text = "Fermer";
+            this.BtnClose.UseVisualStyleBackColor = true;
+            this.BtnClose.Click += new System.EventHandler(this.BtnClose_Click);
+            // 
             // StatistiquesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.BtnClose;
             this.ClientSize = new System.Drawing.Size(505, 244);
+            this.Controls.Add(this.BtnClose);
             this.Controls.Add(this.GrpDonnees);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "StatistiquesForm";
@@ -525,5 +557,6 @@
         private System.Windows.Forms.TextBox TxtTAbandons;
         private System.Windows.Forms.TextBox TxtPAbandons;
         private System.Windows.Forms.TextBox TxtTContacts;
+        private System.Windows.Forms.Button BtnClose;
     }
 }
