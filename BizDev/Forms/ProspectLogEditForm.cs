@@ -19,11 +19,14 @@ namespace BizDev.Forms
         string note;
         DateTime date;
 
+        ProspectEditForm owner;
+
         ProspectProvider prospectProvider = new ProspectProvider();
         ProspectLogProvider prospectLogProvider = new ProspectLogProvider();
 
-        public ProspectLogEditForm(int _idProspect)
+        public ProspectLogEditForm(ProspectEditForm _owner, int _idProspect)
         {
+            owner = _owner;
             idProspect = _idProspect;
             
             InitializeComponent();
@@ -61,6 +64,11 @@ namespace BizDev.Forms
         private void BtnCancel_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void ProspectLogEditForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            owner.RefreshData();
         }
 
         private void BtnSave_Click(object sender, EventArgs e)

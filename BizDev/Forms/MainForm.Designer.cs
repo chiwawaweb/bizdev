@@ -36,6 +36,7 @@
             this.TooStatistiquesProspects = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.StatusStrip = new System.Windows.Forms.StatusStrip();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.MenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -78,14 +79,14 @@
             // TooListeProspects
             // 
             this.TooListeProspects.Name = "TooListeProspects";
-            this.TooListeProspects.Size = new System.Drawing.Size(180, 22);
+            this.TooListeProspects.Size = new System.Drawing.Size(168, 22);
             this.TooListeProspects.Text = "Liste de prospects";
             this.TooListeProspects.Click += new System.EventHandler(this.TooListeProspects_Click);
             // 
             // TooStatistiquesProspects
             // 
             this.TooStatistiquesProspects.Name = "TooStatistiquesProspects";
-            this.TooStatistiquesProspects.Size = new System.Drawing.Size(180, 22);
+            this.TooStatistiquesProspects.Size = new System.Drawing.Size(168, 22);
             this.TooStatistiquesProspects.Text = "Statistiques";
             this.TooStatistiquesProspects.Click += new System.EventHandler(this.TooStatistiquesProspects_Click);
             // 
@@ -103,11 +104,20 @@
             this.StatusStrip.TabIndex = 2;
             this.StatusStrip.Text = "statusStrip1";
             // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Location = new System.Drawing.Point(0, 24);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(799, 25);
+            this.toolStrip1.TabIndex = 4;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(799, 546);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.StatusStrip);
             this.Controls.Add(this.MenuStrip);
             this.IsMdiContainer = true;
@@ -133,5 +143,6 @@
         private System.Windows.Forms.ToolStripMenuItem TooStatistiquesProspects;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.StatusStrip StatusStrip;
+        private System.Windows.Forms.ToolStrip toolStrip1;
     }
 }

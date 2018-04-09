@@ -33,12 +33,12 @@
             this.BtnCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // TxtSuivi
+            // TxtNote
             // 
             this.TxtNote.Dock = System.Windows.Forms.DockStyle.Top;
             this.TxtNote.Location = new System.Drawing.Point(0, 0);
             this.TxtNote.Multiline = true;
-            this.TxtNote.Name = "TxtSuivi";
+            this.TxtNote.Name = "TxtNote";
             this.TxtNote.Size = new System.Drawing.Size(505, 214);
             this.TxtNote.TabIndex = 0;
             // 
@@ -80,6 +80,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Suivi";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ProspectLogEditForm_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

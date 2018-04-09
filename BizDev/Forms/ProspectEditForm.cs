@@ -371,7 +371,7 @@ namespace BizDev.Forms
                 Name = "ID",
                 HeaderText = "#",
                 Width = 60,
-                Visible = true
+                Visible = false
             };
             idCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             idCol.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -390,12 +390,11 @@ namespace BizDev.Forms
             {
                 Name = "NOTE",
                 HeaderText = "Annotation",
-                Width = 500,
+                Width = 520,
                 Visible = true
             };
             noteCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            noteCol.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-
+            
             /* Création des colonnes */
             DgvLog.Columns.Add(idCol);
             DgvLog.Columns.Add(dateCol);
@@ -526,7 +525,7 @@ namespace BizDev.Forms
 
         private void BtnAddLog_Click(object sender, EventArgs e)
         {
-            new ProspectLogEditForm(idProspect).ShowDialog(this);
+            new ProspectLogEditForm(this, idProspect).ShowDialog(this);
         }
 
         private void ProspectEditForm_Load(object sender, EventArgs e)
