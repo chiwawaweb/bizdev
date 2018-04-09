@@ -26,7 +26,7 @@ namespace BizDev.Forms
 
         private void ProspectDate_FormClosed(object sender, FormClosedEventArgs e)
         {
-            owner.RefreshData();
+            owner.MajDates();
         }
 
         public ProspectDate(ProspectEditForm _owner, int _id, string _type)

@@ -489,6 +489,7 @@
             this.BtnAddLog.TabStop = false;
             this.BtnAddLog.Text = "Ajouter un suivi";
             this.BtnAddLog.UseVisualStyleBackColor = true;
+            this.BtnAddLog.Click += new System.EventHandler(this.BtnAddLog_Click);
             // 
             // DgvLog
             // 

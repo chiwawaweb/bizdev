@@ -25,7 +25,10 @@ namespace BizDev.Forms
         ProspectsListForm owner;
         Prospect prospect;
 
-        
+        private void BtnAddLog_Click(object sender, EventArgs e)
+        {
+            new ProspectLogEditForm(idProspect).ShowDialog(this);
+        }
 
         Utils utils = new Utils();
         ProspectProvider prospectProvider = new ProspectProvider();
@@ -331,7 +334,7 @@ namespace BizDev.Forms
             prospectProvider.Update(prospect);
         }
 
-        public void RefreshData()
+        public void MajDates()
         {
             prospect = prospectProvider.GetProspectById(idProspect);
 
@@ -342,8 +345,40 @@ namespace BizDev.Forms
             abandon = prospect.Abandon;
             dateAbandon = prospect.DateAbandon; 
 
-
             AfficheDates();
+        }
+
+        public void RefreshData(int _id)
+        {
+
+        }
+
+        private void CreateTable(List<ProspectLogEditForm> list)
+        {
+            DgvLog.Rows.Clear();
+            DgvLog.Columns.Clear();
+            DgvLog.DefaultCellStyle.Font = new Font("Consolas", 10);
+
+            /* Mise en forme */
+            DataGridViewTextBoxColumn idCol = new DataGridViewTextBoxColumn
+            {
+                Name = "ID",
+                HeaderText = "#",
+                Width = 60,
+                Visible = true
+            };
+            idCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            idCol.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+
+
+
+            /* Création des colonnes */
+            DgvLog.Columns.Add(idCol);
+
+
+
+
         }
 
         private void Edit()

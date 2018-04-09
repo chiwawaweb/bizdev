@@ -97,6 +97,12 @@
     <Compile Include="Forms\ProspectEditForm.Designer.cs">
       <DependentUpon>ProspectEditForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ProspectLogEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ProspectLogEditForm.Designer.cs">
+      <DependentUpon>ProspectLogEditForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ProspectsListForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ProspectEditForm.resx">
       <DependentUpon>ProspectEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ProspectLogEditForm.resx">
+      <DependentUpon>ProspectLogEditForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ProspectsListForm.resx">
       <DependentUpon>ProspectsListForm.cs</DependentUpon>
