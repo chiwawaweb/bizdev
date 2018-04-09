@@ -82,7 +82,6 @@ namespace BizDev.Forms
         private void NewMode()
         {
             Text = "Nouveau prospect";
-            TabControl.TabPages.Remove(TabJournal);   
         }
         
         private void ViewMode()
@@ -398,7 +397,6 @@ namespace BizDev.Forms
             BtnCancel.Visible = true;
             BtnSave.Visible = true;
             Text = "Modification fiche prospect : " + nom;
-            TabControl.TabPages.Remove(TabJournal);
             TxtNom.ReadOnly = false;
             TxtNom.TabStop = true;
             TxtNom.BackColor = Color.Beige;
