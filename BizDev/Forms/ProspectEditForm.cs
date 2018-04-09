@@ -15,24 +15,22 @@ namespace BizDev.Forms
 {
     public partial class ProspectEditForm : Form
     {
-        int idProspect;
+        int idProspect, idRetourSuivi;
         string categorie, nom, adresse, complement, codePostal, ville, pays, tel, gsm, fax, email, web, nbEmployes, notes;
         bool view, premierContact, conversion, abandon;
         DateTime dateConversion, datePremierContact, dateAbandon, createdAt, updatedAt;
 
-        
-
         ProspectsListForm owner;
         Prospect prospect;
 
-        private void BtnAddLog_Click(object sender, EventArgs e)
-        {
-            new ProspectLogEditForm(idProspect).ShowDialog(this);
-        }
+        ProspectLogProvider prospectLogProvider = new ProspectLogProvider();
+
+        
 
         Utils utils = new Utils();
         ProspectProvider prospectProvider = new ProspectProvider();
 
+        
         public ProspectEditForm(ProspectsListForm _owner, bool _view, int _idProspect=0)
         {
             idProspect = _idProspect;
@@ -81,6 +79,8 @@ namespace BizDev.Forms
 
         private void NewMode()
         {
+            BtnAddLog.Enabled = false;
+            DgvLog.Enabled = false;
             Text = "Nouveau prospect";
         }
         
@@ -347,13 +347,20 @@ namespace BizDev.Forms
             AfficheDates();
         }
 
-        public void RefreshData(int _id)
+        public void RefreshData(int _idRetourSuivi=0)
         {
+            idRetourSuivi = _idRetourSuivi;
 
+            List<ProspectLog> list;
+            list = prospectLogProvider.GetByProspectId(idProspect);
+
+            CreateTable(list, _idRetourSuivi);
         }
 
-        private void CreateTable(List<ProspectLogEditForm> list)
+        private void CreateTable(List<ProspectLog> list, int _idRetourSuivi)
         {
+            idRetourSuivi = _idRetourSuivi;
+
             DgvLog.Rows.Clear();
             DgvLog.Columns.Clear();
             DgvLog.DefaultCellStyle.Font = new Font("Consolas", 10);
@@ -369,14 +376,53 @@ namespace BizDev.Forms
             idCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             idCol.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
+            DataGridViewTextBoxColumn dateCol = new DataGridViewTextBoxColumn
+            {
+                Name = "DATE",
+                HeaderText = "Date",
+                Width = 90,
+                Visible = true
+            };
+            dateCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dateCol.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            DataGridViewTextBoxColumn noteCol = new DataGridViewTextBoxColumn
+            {
+                Name = "NOTE",
+                HeaderText = "Annotation",
+                Width = 500,
+                Visible = true
+            };
+            noteCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            noteCol.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
 
 
             /* Création des colonnes */
             DgvLog.Columns.Add(idCol);
+            DgvLog.Columns.Add(dateCol);
+            DgvLog.Columns.Add(noteCol);
 
 
+            /* Ajout des lignes */
+            for (int i = 0; i < list.Count; i++)
+            {
+                int number = DgvLog.Rows.Add();
 
+                int id = list[i].Id;
+                DateTime date = list[i].Date;
+                string note = list[i].Note;
+
+                DgvLog.Rows[number].Cells[0].Value = id;
+                DgvLog.Rows[number].Cells[1].Value = date.ToString("dd/MM/yyyy");
+                DgvLog.Rows[number].Cells[2].Value = note;
+
+                /* pointe sur l'enregistrement courant */
+                if (list[i].Id == this.idRetourSuivi)
+                {
+                    DgvLog.Rows[number].Cells[1].Selected = true;
+                }
+            }
 
         }
 
@@ -481,6 +527,17 @@ namespace BizDev.Forms
         {
             Edit();
         }
+
+        private void BtnAddLog_Click(object sender, EventArgs e)
+        {
+            new ProspectLogEditForm(idProspect).ShowDialog(this);
+        }
+
+        private void ProspectEditForm_Load(object sender, EventArgs e)
+        {
+            RefreshData();
+        }
+
 
         #endregion
     }

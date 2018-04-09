@@ -350,7 +350,7 @@
             // 
             this.TxtAbandon.BackColor = System.Drawing.Color.LightCoral;
             this.TxtAbandon.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtAbandon.Location = new System.Drawing.Point(582, 365);
+            this.TxtAbandon.Location = new System.Drawing.Point(582, 356);
             this.TxtAbandon.Name = "TxtAbandon";
             this.TxtAbandon.ReadOnly = true;
             this.TxtAbandon.Size = new System.Drawing.Size(81, 20);
@@ -362,7 +362,7 @@
             // 
             this.TxtConversion.BackColor = System.Drawing.Color.Gold;
             this.TxtConversion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtConversion.Location = new System.Drawing.Point(350, 365);
+            this.TxtConversion.Location = new System.Drawing.Point(350, 356);
             this.TxtConversion.Name = "TxtConversion";
             this.TxtConversion.ReadOnly = true;
             this.TxtConversion.Size = new System.Drawing.Size(81, 20);
@@ -374,7 +374,7 @@
             // 
             this.TxtPremierContact.BackColor = System.Drawing.Color.PaleGreen;
             this.TxtPremierContact.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtPremierContact.Location = new System.Drawing.Point(114, 365);
+            this.TxtPremierContact.Location = new System.Drawing.Point(114, 356);
             this.TxtPremierContact.Name = "TxtPremierContact";
             this.TxtPremierContact.ReadOnly = true;
             this.TxtPremierContact.Size = new System.Drawing.Size(81, 20);
@@ -384,7 +384,7 @@
             // 
             // BtnAbandon
             // 
-            this.BtnAbandon.Location = new System.Drawing.Point(665, 364);
+            this.BtnAbandon.Location = new System.Drawing.Point(665, 355);
             this.BtnAbandon.Name = "BtnAbandon";
             this.BtnAbandon.Size = new System.Drawing.Size(24, 22);
             this.BtnAbandon.TabIndex = 42;
@@ -395,7 +395,7 @@
             // 
             // BtnConversion
             // 
-            this.BtnConversion.Location = new System.Drawing.Point(433, 364);
+            this.BtnConversion.Location = new System.Drawing.Point(433, 355);
             this.BtnConversion.Name = "BtnConversion";
             this.BtnConversion.Size = new System.Drawing.Size(24, 22);
             this.BtnConversion.TabIndex = 41;
@@ -406,7 +406,7 @@
             // 
             // BtnPremierContact
             // 
-            this.BtnPremierContact.Location = new System.Drawing.Point(197, 364);
+            this.BtnPremierContact.Location = new System.Drawing.Point(197, 355);
             this.BtnPremierContact.Name = "BtnPremierContact";
             this.BtnPremierContact.Size = new System.Drawing.Size(24, 22);
             this.BtnPremierContact.TabIndex = 40;
@@ -417,28 +417,39 @@
             // 
             // BtnAddLog
             // 
-            this.BtnAddLog.Location = new System.Drawing.Point(25, 402);
+            this.BtnAddLog.Location = new System.Drawing.Point(25, 390);
             this.BtnAddLog.Name = "BtnAddLog";
             this.BtnAddLog.Size = new System.Drawing.Size(132, 23);
             this.BtnAddLog.TabIndex = 36;
             this.BtnAddLog.TabStop = false;
-            this.BtnAddLog.Text = "Ajouter un suivi";
+            this.BtnAddLog.Text = "Ajouter une annotation";
             this.BtnAddLog.UseVisualStyleBackColor = true;
             this.BtnAddLog.Click += new System.EventHandler(this.BtnAddLog_Click);
             // 
             // DgvLog
             // 
+            this.DgvLog.AllowUserToAddRows = false;
+            this.DgvLog.AllowUserToDeleteRows = false;
+            this.DgvLog.AllowUserToResizeColumns = false;
+            this.DgvLog.AllowUserToResizeRows = false;
             this.DgvLog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvLog.Location = new System.Drawing.Point(25, 426);
+            this.DgvLog.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.DgvLog.Location = new System.Drawing.Point(25, 419);
             this.DgvLog.Name = "DgvLog";
-            this.DgvLog.Size = new System.Drawing.Size(667, 72);
+            this.DgvLog.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.DgvLog.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DgvLog.ShowCellErrors = false;
+            this.DgvLog.ShowCellToolTips = false;
+            this.DgvLog.ShowEditingIcon = false;
+            this.DgvLog.ShowRowErrors = false;
+            this.DgvLog.Size = new System.Drawing.Size(667, 79);
             this.DgvLog.TabIndex = 34;
             this.DgvLog.TabStop = false;
             // 
             // LblDatePremierContact
             // 
             this.LblDatePremierContact.AutoSize = true;
-            this.LblDatePremierContact.Location = new System.Drawing.Point(21, 368);
+            this.LblDatePremierContact.Location = new System.Drawing.Point(21, 359);
             this.LblDatePremierContact.Name = "LblDatePremierContact";
             this.LblDatePremierContact.Size = new System.Drawing.Size(90, 13);
             this.LblDatePremierContact.TabIndex = 35;
@@ -447,7 +458,7 @@
             // LblDateAbandon
             // 
             this.LblDateAbandon.AutoSize = true;
-            this.LblDateAbandon.Location = new System.Drawing.Point(523, 369);
+            this.LblDateAbandon.Location = new System.Drawing.Point(523, 360);
             this.LblDateAbandon.Name = "LblDateAbandon";
             this.LblDateAbandon.Size = new System.Drawing.Size(56, 13);
             this.LblDateAbandon.TabIndex = 38;
@@ -456,7 +467,7 @@
             // LblDateConversion
             // 
             this.LblDateConversion.AutoSize = true;
-            this.LblDateConversion.Location = new System.Drawing.Point(281, 368);
+            this.LblDateConversion.Location = new System.Drawing.Point(281, 359);
             this.LblDateConversion.Name = "LblDateConversion";
             this.LblDateConversion.Size = new System.Drawing.Size(66, 13);
             this.LblDateConversion.TabIndex = 37;
@@ -553,6 +564,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Fiche prospect";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ProspectEditForm_FormClosed);
+            this.Load += new System.EventHandler(this.ProspectEditForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvLog)).EndInit();
             this.ResumeLayout(false);
