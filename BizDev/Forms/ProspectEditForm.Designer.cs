@@ -152,17 +152,19 @@
             this.TxtNotes.Multiline = true;
             this.TxtNotes.Name = "TxtNotes";
             this.TxtNotes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.TxtNotes.Size = new System.Drawing.Size(314, 69);
+            this.TxtNotes.Size = new System.Drawing.Size(312, 69);
             this.TxtNotes.TabIndex = 13;
             // 
             // BtnEdit
             // 
-            this.BtnEdit.Location = new System.Drawing.Point(588, 504);
+            this.BtnEdit.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.BtnEdit.Image = global::BizDev.Properties.Resources.icon_cadenas_16;
+            this.BtnEdit.Location = new System.Drawing.Point(584, 504);
             this.BtnEdit.Name = "BtnEdit";
-            this.BtnEdit.Size = new System.Drawing.Size(23, 23);
+            this.BtnEdit.Size = new System.Drawing.Size(26, 26);
             this.BtnEdit.TabIndex = 39;
             this.BtnEdit.TabStop = false;
-            this.BtnEdit.UseVisualStyleBackColor = true;
+            this.BtnEdit.UseVisualStyleBackColor = false;
             this.BtnEdit.Visible = false;
             this.BtnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
             // 
@@ -199,7 +201,7 @@
             this.TxtWeb.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
             this.TxtWeb.Location = new System.Drawing.Point(376, 138);
             this.TxtWeb.Name = "TxtWeb";
-            this.TxtWeb.Size = new System.Drawing.Size(309, 20);
+            this.TxtWeb.Size = new System.Drawing.Size(312, 20);
             this.TxtWeb.TabIndex = 12;
             // 
             // LblEmail
@@ -217,7 +219,7 @@
             this.TxtEmail.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
             this.TxtEmail.Location = new System.Drawing.Point(376, 86);
             this.TxtEmail.Name = "TxtEmail";
-            this.TxtEmail.Size = new System.Drawing.Size(311, 20);
+            this.TxtEmail.Size = new System.Drawing.Size(312, 20);
             this.TxtEmail.TabIndex = 11;
             // 
             // label8
@@ -417,7 +419,7 @@
             // 
             // BtnAddLog
             // 
-            this.BtnAddLog.Location = new System.Drawing.Point(25, 339);
+            this.BtnAddLog.Location = new System.Drawing.Point(27, 339);
             this.BtnAddLog.Name = "BtnAddLog";
             this.BtnAddLog.Size = new System.Drawing.Size(132, 23);
             this.BtnAddLog.TabIndex = 36;
@@ -434,7 +436,7 @@
             this.DgvLog.AllowUserToResizeRows = false;
             this.DgvLog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvLog.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.DgvLog.Location = new System.Drawing.Point(25, 368);
+            this.DgvLog.Location = new System.Drawing.Point(27, 368);
             this.DgvLog.Name = "DgvLog";
             this.DgvLog.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.DgvLog.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -442,7 +444,7 @@
             this.DgvLog.ShowCellToolTips = false;
             this.DgvLog.ShowEditingIcon = false;
             this.DgvLog.ShowRowErrors = false;
-            this.DgvLog.Size = new System.Drawing.Size(660, 130);
+            this.DgvLog.Size = new System.Drawing.Size(661, 130);
             this.DgvLog.TabIndex = 34;
             this.DgvLog.TabStop = false;
             // 
@@ -475,7 +477,7 @@
             // 
             // BtnSave
             // 
-            this.BtnSave.Location = new System.Drawing.Point(617, 504);
+            this.BtnSave.Location = new System.Drawing.Point(613, 504);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Size = new System.Drawing.Size(75, 23);
             this.BtnSave.TabIndex = 36;
@@ -486,9 +488,9 @@
             // 
             // BtnCancel
             // 
-            this.BtnCancel.Location = new System.Drawing.Point(537, 504);
+            this.BtnCancel.Location = new System.Drawing.Point(532, 504);
             this.BtnCancel.Name = "BtnCancel";
-            this.BtnCancel.Size = new System.Drawing.Size(75, 23);
+            this.BtnCancel.Size = new System.Drawing.Size(75, 26);
             this.BtnCancel.TabIndex = 37;
             this.BtnCancel.TabStop = false;
             this.BtnCancel.Text = "Annuler";
@@ -498,9 +500,9 @@
             // BtnClose
             // 
             this.BtnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.BtnClose.Location = new System.Drawing.Point(617, 504);
+            this.BtnClose.Location = new System.Drawing.Point(613, 504);
             this.BtnClose.Name = "BtnClose";
-            this.BtnClose.Size = new System.Drawing.Size(75, 23);
+            this.BtnClose.Size = new System.Drawing.Size(75, 26);
             this.BtnClose.TabIndex = 38;
             this.BtnClose.TabStop = false;
             this.BtnClose.Text = "Fermer";
