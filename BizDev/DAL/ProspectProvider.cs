@@ -81,14 +81,14 @@ namespace BizDev.DAL
             {
                 try
                 {
-                    var clients = from b in context.Prospects select b;
+                    var prospects = from b in context.Prospects select b;
                     
-                    clients = from b in context.Prospects
+                    prospects = from b in context.Prospects
                                 orderby (b.Nom) ascending
                                 where (b.Nom.Contains(keywords))
                                 select b;
 
-                    return clients.ToList();
+                    return prospects.ToList();
                 }
                 catch
                 {
@@ -96,5 +96,33 @@ namespace BizDev.DAL
                 }
             }
         }
+
+        #region Statistiques
+
+        public int TContacts()
+        {
+            using (Context context = new Context())
+            {
+                try
+                {
+                    var prospects = from b in context.Prospects select b;
+
+                    prospects = from b in context.Prospects
+                                orderby (b.Nom) ascending
+                                
+                                select b;
+
+                    return prospects.Count();
+                }
+                catch
+                {
+                    throw;
+                }
+            }
+
+            
+        }
+
+        #endregion
     }
 }
