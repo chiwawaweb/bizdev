@@ -39,6 +39,7 @@
             this.StatusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.TooProspects = new System.Windows.Forms.ToolStripButton();
+            this.TooProspectsStatistiques = new System.Windows.Forms.ToolStripButton();
             this.MenuStrip.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -52,8 +53,7 @@
             this.toolStripMenuItem1});
             this.MenuStrip.Location = new System.Drawing.Point(0, 0);
             this.MenuStrip.Name = "MenuStrip";
-            this.MenuStrip.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
-            this.MenuStrip.Size = new System.Drawing.Size(1198, 35);
+            this.MenuStrip.Size = new System.Drawing.Size(799, 24);
             this.MenuStrip.TabIndex = 0;
             this.MenuStrip.Text = "menuStrip1";
             // 
@@ -62,13 +62,13 @@
             this.fichierToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TooQuitter});
             this.fichierToolStripMenuItem.Name = "fichierToolStripMenuItem";
-            this.fichierToolStripMenuItem.Size = new System.Drawing.Size(74, 29);
+            this.fichierToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
             this.fichierToolStripMenuItem.Text = "Fichier";
             // 
             // TooQuitter
             // 
             this.TooQuitter.Name = "TooQuitter";
-            this.TooQuitter.Size = new System.Drawing.Size(151, 30);
+            this.TooQuitter.Size = new System.Drawing.Size(111, 22);
             this.TooQuitter.Text = "Quitter";
             this.TooQuitter.Click += new System.EventHandler(this.TooQuitter_Click);
             // 
@@ -78,36 +78,35 @@
             this.TooListeProspects,
             this.TooStatistiquesProspects});
             this.prospectsToolStripMenuItem.Name = "prospectsToolStripMenuItem";
-            this.prospectsToolStripMenuItem.Size = new System.Drawing.Size(101, 29);
+            this.prospectsToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
             this.prospectsToolStripMenuItem.Text = "Prospects";
             // 
             // TooListeProspects
             // 
             this.TooListeProspects.Name = "TooListeProspects";
-            this.TooListeProspects.Size = new System.Drawing.Size(239, 30);
+            this.TooListeProspects.Size = new System.Drawing.Size(168, 22);
             this.TooListeProspects.Text = "Liste de prospects";
             this.TooListeProspects.Click += new System.EventHandler(this.TooListeProspects_Click);
             // 
             // TooStatistiquesProspects
             // 
             this.TooStatistiquesProspects.Name = "TooStatistiquesProspects";
-            this.TooStatistiquesProspects.Size = new System.Drawing.Size(239, 30);
+            this.TooStatistiquesProspects.Size = new System.Drawing.Size(168, 22);
             this.TooStatistiquesProspects.Text = "Statistiques";
             this.TooStatistiquesProspects.Click += new System.EventHandler(this.TooStatistiquesProspects_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(32, 29);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(24, 20);
             this.toolStripMenuItem1.Text = "?";
             // 
             // StatusStrip
             // 
             this.StatusStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.StatusStrip.Location = new System.Drawing.Point(0, 818);
+            this.StatusStrip.Location = new System.Drawing.Point(0, 524);
             this.StatusStrip.Name = "StatusStrip";
-            this.StatusStrip.Padding = new System.Windows.Forms.Padding(2, 0, 21, 0);
-            this.StatusStrip.Size = new System.Drawing.Size(1198, 22);
+            this.StatusStrip.Size = new System.Drawing.Size(799, 22);
             this.StatusStrip.TabIndex = 2;
             this.StatusStrip.Text = "statusStrip1";
             // 
@@ -115,11 +114,11 @@
             // 
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.TooProspects});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 35);
+            this.TooProspects,
+            this.TooProspectsStatistiques});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
-            this.toolStrip1.Size = new System.Drawing.Size(1198, 32);
+            this.toolStrip1.Size = new System.Drawing.Size(799, 31);
             this.toolStrip1.TabIndex = 4;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -128,20 +127,29 @@
             this.TooProspects.Image = ((System.Drawing.Image)(resources.GetObject("TooProspects.Image")));
             this.TooProspects.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.TooProspects.Name = "TooProspects";
-            this.TooProspects.Size = new System.Drawing.Size(117, 29);
+            this.TooProspects.Size = new System.Drawing.Size(86, 28);
             this.TooProspects.Text = "Prospects";
+            this.TooProspects.Click += new System.EventHandler(this.TooProspects_Click);
+            // 
+            // TooProspectsStatistiques
+            // 
+            this.TooProspectsStatistiques.Image = ((System.Drawing.Image)(resources.GetObject("TooProspectsStatistiques.Image")));
+            this.TooProspectsStatistiques.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.TooProspectsStatistiques.Name = "TooProspectsStatistiques";
+            this.TooProspectsStatistiques.Size = new System.Drawing.Size(95, 28);
+            this.TooProspectsStatistiques.Text = "Statistiques";
+            this.TooProspectsStatistiques.Click += new System.EventHandler(this.TooProspectsStatistiques_Click);
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1198, 840);
+            this.ClientSize = new System.Drawing.Size(799, 546);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.StatusStrip);
             this.Controls.Add(this.MenuStrip);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.MenuStrip;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BizDev";
@@ -167,5 +175,6 @@
         private System.Windows.Forms.StatusStrip StatusStrip;
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton TooProspects;
+        private System.Windows.Forms.ToolStripButton TooProspectsStatistiques;
     }
 }

@@ -19,7 +19,6 @@ namespace BizDev.Forms
 
             ProspectProvider prospectProvider = new ProspectProvider();
             prospectProvider.CountAll();
-            
         }
 
         private void OuvreListeProspects()
@@ -50,10 +49,19 @@ namespace BizDev.Forms
         private void TooListeProspects_Click(object sender, EventArgs e)
         {
             OuvreListeProspects();
-           
         }
 
         private void TooStatistiquesProspects_Click(object sender, EventArgs e)
+        {
+            OuvreStatistiques();
+        }
+
+        private void TooProspects_Click(object sender, EventArgs e)
+        {
+            OuvreListeProspects();
+        }
+
+        private void TooProspectsStatistiques_Click(object sender, EventArgs e)
         {
             OuvreStatistiques();
         }

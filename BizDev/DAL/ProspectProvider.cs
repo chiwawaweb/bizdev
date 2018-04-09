@@ -81,9 +81,7 @@ namespace BizDev.DAL
             {
                 try
                 {
-                    var prospects = from b in context.Prospects select b;
-                    
-                    prospects = from b in context.Prospects
+                    var prospects = from b in context.Prospects
                                 orderby (b.Nom) ascending
                                 where (b.Nom.Contains(keywords))
                                 select b;
@@ -99,17 +97,16 @@ namespace BizDev.DAL
 
         #region Statistiques
 
+        DateTime noDate = DateTime.Parse("30/12/1899");
+
         public int TContacts()
         {
             using (Context context = new Context())
             {
                 try
                 {
-                    var prospects = from b in context.Prospects select b;
-
-                    prospects = from b in context.Prospects
-                                orderby (b.Nom) ascending
-                                
+                    var prospects = from b in context.Prospects
+                                where b.DatePremierContact!=noDate
                                 select b;
 
                     return prospects.Count();
@@ -119,8 +116,44 @@ namespace BizDev.DAL
                     throw;
                 }
             }
+        }
 
-            
+        public int TConversions()
+        {
+            using (Context context = new Context())
+            {
+                try
+                {
+                    var prospects = from b in context.Prospects
+                                    where b.DateConversion != noDate
+                                    select b;
+
+                    return prospects.Count();
+                }
+                catch
+                {
+                    throw;
+                }
+            }
+        }
+
+        public int TAbandons()
+        {
+            using (Context context = new Context())
+            {
+                try
+                {
+                    var prospects = from b in context.Prospects
+                                    where b.DateAbandon != noDate
+                                    select b;
+
+                    return prospects.Count();
+                }
+                catch
+                {
+                    throw;
+                }
+            }
         }
 
         #endregion

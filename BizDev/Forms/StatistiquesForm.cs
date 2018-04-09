@@ -14,6 +14,9 @@ namespace BizDev.Forms
 {
     public partial class StatistiquesForm : Form
     {
+        double TNew, TContacts, TConversions, TAbandons;
+        double PNew, PContacts, PConversions, PAbandons;
+
         ProspectProvider prospectProvider = new ProspectProvider();
 
         public StatistiquesForm()
@@ -23,21 +26,39 @@ namespace BizDev.Forms
 
         }
 
+        private void CalculDonnees()
+        {
+            TNew = prospectProvider.CountAll();
+            PNew = 100;
+            TContacts = prospectProvider.TContacts();
+            PContacts = (TContacts / TNew)*100;
+            TConversions = prospectProvider.TConversions();
+            PConversions = (TConversions / TNew) * 100;
+            TAbandons = prospectProvider.TAbandons();
+            PAbandons = (TAbandons / TNew) * 100;
+        }
+
         private void AfficheDonnees()
         {
-            TxtTNew.Text = prospectProvider.CountAll().ToString();
-            TxtPNew.Text = "100 %";
-            TxtTContacts.Text = prospectProvider.TContacts().ToString();
+            TxtTNew.Text = TNew.ToString();
+            TxtPNew.Text = PNew.ToString("0.00") + " %";
+            TxtTContacts.Text = TContacts.ToString();
+            TxtPContacts.Text = PContacts.ToString("0.00") + " %";
+            TxtTConversions.Text = TContacts.ToString();
+            TxtPConversions.Text = PConversions.ToString("0.00") + " %";
+            TxtTAbandons.Text = TAbandons.ToString();
+            TxtPAbandons.Text = PAbandons.ToString("0.00") + " %";
         }
 
         private void StatistiquesForm_Paint(object sender, PaintEventArgs e)
         {
-            Pen pen = new Pen(Color.FromArgb(255, 0, 0, 0));
+            Pen pen = new Pen(Color.FromArgb(255, 0, 0, 178));
             e.Graphics.DrawLine(pen, 20, 10, 300, 100);
         }
 
         private void StatistiquesForm_Load(object sender, EventArgs e)
         {
+            CalculDonnees();
             AfficheDonnees();
         }
     }

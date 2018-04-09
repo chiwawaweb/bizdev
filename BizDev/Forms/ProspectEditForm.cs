@@ -81,6 +81,15 @@ namespace BizDev.Forms
         {
             BtnAddLog.Enabled = false;
             DgvLog.Enabled = false;
+            TxtPremierContact.Visible = false;
+            TxtConversion.Visible = false;
+            TxtAbandon.Visible = false;
+            BtnPremierContact.Visible = false;
+            BtnConversion.Visible = false;
+            BtnAbandon.Visible = false;
+            LblDatePremierContact.Visible = false;
+            LblDateConversion.Visible = false;
+            LblDateAbandon.Visible = false;
             Text = "Nouveau prospect";
         }
         
