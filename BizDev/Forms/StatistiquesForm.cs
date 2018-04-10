@@ -27,6 +27,8 @@ namespace BizDev.Forms
         double TM12New, TM12Contacts, TM12Conversions, TM12Abandons;
         double PM12New, PM12Contacts, PM12Conversions, PM12Abandons;
 
+        List<Prospect> prospect;
+
         ProspectProvider prospectProvider = new ProspectProvider();
 
         public StatistiquesForm()
@@ -36,6 +38,7 @@ namespace BizDev.Forms
 
         private void CalculDonnees()
         {
+            /* Récupération des données */
             TNew = prospectProvider.TNew(0);
             TM1New = prospectProvider.TNew(-1);
             TM3New = prospectProvider.TNew(-3);
@@ -65,22 +68,22 @@ namespace BizDev.Forms
             TM6Conversions = prospectProvider.TConversions(-6);
             PM6Conversions = (TM6Conversions / TM6Contacts) * 100;
             TM9Conversions = prospectProvider.TConversions(-9);
-
+            PM9Conversions = (TM9Conversions / TM9Contacts) * 100;
             TM12Conversions = prospectProvider.TConversions(-12);
-            //PM12Conversions = (TM12Conversions / TConversions) * 100;
+            PM12Conversions = (TM12Conversions / TM12Contacts) * 100;
 
             TAbandons = prospectProvider.TAbandons(0);
             PAbandons = (TAbandons / TNew) * 100;
             TM1Abandons = prospectProvider.TAbandons(-1);
-            //PM1Abandons = (TM1Abandons / TNew) * 100;
+            PM1Abandons = (TM1Abandons / TM1New) * 100;
             TM3Abandons = prospectProvider.TAbandons(-3);
-
+            PM3Abandons = (TM3Abandons / TM3New) * 100;
             TM6Abandons = prospectProvider.TAbandons(-6);
-
+            PM6Abandons = (TM6Abandons / TM6New) * 100;
             TM9Abandons = prospectProvider.TAbandons(-9);
-
+            PM9Abandons = (TM9Abandons / TM9New) * 100;
             TM12Abandons = prospectProvider.TAbandons(-12);
-            //PM12Abandons = (TM12Abandons / TNew) * 100;
+            PM12Abandons = (TM12Abandons / TM12New) * 100;
         }
 
         private void AfficheDonnees()
@@ -134,8 +137,10 @@ namespace BizDev.Forms
 
         private void StatistiquesForm_Paint(object sender, PaintEventArgs e)
         {
+            /*
             Pen pen = new Pen(Color.FromArgb(255, 0, 0, 178));
             e.Graphics.DrawLine(pen, 20, 10, 300, 100);
+            */
         }
 
         private void StatistiquesForm_Load(object sender, EventArgs e)

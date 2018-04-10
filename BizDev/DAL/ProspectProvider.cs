@@ -60,6 +60,25 @@ namespace BizDev.DAL
             }
         }
 
+        public List<Prospect> All()
+        {
+            using (Context context = new Context())
+            {
+                try
+                {
+                    var prospects = from b in context.Prospects
+                                    
+                                    select b;
+
+                    return prospects.ToList();
+                }
+                catch
+                {
+                    throw;
+                }
+            }
+        }
+
         public Prospect GetProspectById(int id)
         {
             using (Context context = new Context())

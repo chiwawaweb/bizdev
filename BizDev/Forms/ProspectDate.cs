@@ -172,7 +172,14 @@ namespace BizDev.Forms
 
         private void ChkDelDate_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (ChkDelDate.Checked==true)
+            {
+                DtpDate.Enabled = false;
+            }
+            else
+            {
+                DtpDate.Enabled = true;
+            }
         }
 
         #endregion

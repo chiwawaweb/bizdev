@@ -192,6 +192,7 @@
             // 
             // TxtTM12New
             // 
+            this.TxtTM12New.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtTM12New.Location = new System.Drawing.Point(675, 61);
             this.TxtTM12New.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtTM12New.Name = "TxtTM12New";
@@ -199,7 +200,7 @@
             this.TxtTM12New.Size = new System.Drawing.Size(44, 20);
             this.TxtTM12New.TabIndex = 34;
             this.TxtTM12New.TabStop = false;
-            this.TxtTM12New.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtTM12New.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtPM12Contacts
             // 
@@ -207,10 +208,10 @@
             this.TxtPM12Contacts.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtPM12Contacts.Name = "TxtPM12Contacts";
             this.TxtPM12Contacts.ReadOnly = true;
-            this.TxtPM12Contacts.Size = new System.Drawing.Size(47, 20);
+            this.TxtPM12Contacts.Size = new System.Drawing.Size(50, 20);
             this.TxtPM12Contacts.TabIndex = 33;
             this.TxtPM12Contacts.TabStop = false;
-            this.TxtPM12Contacts.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtPM12Contacts.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtPM12Conversions
             // 
@@ -218,13 +219,14 @@
             this.TxtPM12Conversions.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtPM12Conversions.Name = "TxtPM12Conversions";
             this.TxtPM12Conversions.ReadOnly = true;
-            this.TxtPM12Conversions.Size = new System.Drawing.Size(47, 20);
+            this.TxtPM12Conversions.Size = new System.Drawing.Size(50, 20);
             this.TxtPM12Conversions.TabIndex = 32;
             this.TxtPM12Conversions.TabStop = false;
-            this.TxtPM12Conversions.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtPM12Conversions.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtTM12Conversions
             // 
+            this.TxtTM12Conversions.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtTM12Conversions.Location = new System.Drawing.Point(675, 109);
             this.TxtTM12Conversions.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtTM12Conversions.Name = "TxtTM12Conversions";
@@ -232,10 +234,11 @@
             this.TxtTM12Conversions.Size = new System.Drawing.Size(44, 20);
             this.TxtTM12Conversions.TabIndex = 31;
             this.TxtTM12Conversions.TabStop = false;
-            this.TxtTM12Conversions.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtTM12Conversions.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtTM12Abandons
             // 
+            this.TxtTM12Abandons.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtTM12Abandons.Location = new System.Drawing.Point(675, 133);
             this.TxtTM12Abandons.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtTM12Abandons.Name = "TxtTM12Abandons";
@@ -243,7 +246,7 @@
             this.TxtTM12Abandons.Size = new System.Drawing.Size(44, 20);
             this.TxtTM12Abandons.TabIndex = 30;
             this.TxtTM12Abandons.TabStop = false;
-            this.TxtTM12Abandons.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtTM12Abandons.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtPM12Abandons
             // 
@@ -251,13 +254,14 @@
             this.TxtPM12Abandons.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtPM12Abandons.Name = "TxtPM12Abandons";
             this.TxtPM12Abandons.ReadOnly = true;
-            this.TxtPM12Abandons.Size = new System.Drawing.Size(47, 20);
+            this.TxtPM12Abandons.Size = new System.Drawing.Size(50, 20);
             this.TxtPM12Abandons.TabIndex = 29;
             this.TxtPM12Abandons.TabStop = false;
-            this.TxtPM12Abandons.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtPM12Abandons.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtTM12Contacts
             // 
+            this.TxtTM12Contacts.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtTM12Contacts.Location = new System.Drawing.Point(675, 86);
             this.TxtTM12Contacts.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtTM12Contacts.Name = "TxtTM12Contacts";
@@ -265,10 +269,11 @@
             this.TxtTM12Contacts.Size = new System.Drawing.Size(44, 20);
             this.TxtTM12Contacts.TabIndex = 28;
             this.TxtTM12Contacts.TabStop = false;
-            this.TxtTM12Contacts.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtTM12Contacts.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtTM1New
             // 
+            this.TxtTM1New.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtTM1New.Location = new System.Drawing.Point(270, 62);
             this.TxtTM1New.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtTM1New.Name = "TxtTM1New";
@@ -276,7 +281,7 @@
             this.TxtTM1New.Size = new System.Drawing.Size(44, 20);
             this.TxtTM1New.TabIndex = 26;
             this.TxtTM1New.TabStop = false;
-            this.TxtTM1New.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtTM1New.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtPM1Contacts
             // 
@@ -284,10 +289,10 @@
             this.TxtPM1Contacts.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtPM1Contacts.Name = "TxtPM1Contacts";
             this.TxtPM1Contacts.ReadOnly = true;
-            this.TxtPM1Contacts.Size = new System.Drawing.Size(47, 20);
+            this.TxtPM1Contacts.Size = new System.Drawing.Size(50, 20);
             this.TxtPM1Contacts.TabIndex = 25;
             this.TxtPM1Contacts.TabStop = false;
-            this.TxtPM1Contacts.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtPM1Contacts.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtPM1Conversions
             // 
@@ -295,13 +300,14 @@
             this.TxtPM1Conversions.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtPM1Conversions.Name = "TxtPM1Conversions";
             this.TxtPM1Conversions.ReadOnly = true;
-            this.TxtPM1Conversions.Size = new System.Drawing.Size(47, 20);
+            this.TxtPM1Conversions.Size = new System.Drawing.Size(50, 20);
             this.TxtPM1Conversions.TabIndex = 24;
             this.TxtPM1Conversions.TabStop = false;
-            this.TxtPM1Conversions.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtPM1Conversions.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtTM1Conversions
             // 
+            this.TxtTM1Conversions.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtTM1Conversions.Location = new System.Drawing.Point(270, 110);
             this.TxtTM1Conversions.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtTM1Conversions.Name = "TxtTM1Conversions";
@@ -309,10 +315,11 @@
             this.TxtTM1Conversions.Size = new System.Drawing.Size(44, 20);
             this.TxtTM1Conversions.TabIndex = 23;
             this.TxtTM1Conversions.TabStop = false;
-            this.TxtTM1Conversions.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtTM1Conversions.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtTM1Abandons
             // 
+            this.TxtTM1Abandons.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtTM1Abandons.Location = new System.Drawing.Point(270, 134);
             this.TxtTM1Abandons.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtTM1Abandons.Name = "TxtTM1Abandons";
@@ -320,7 +327,7 @@
             this.TxtTM1Abandons.Size = new System.Drawing.Size(44, 20);
             this.TxtTM1Abandons.TabIndex = 22;
             this.TxtTM1Abandons.TabStop = false;
-            this.TxtTM1Abandons.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtTM1Abandons.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtPM1Abandons
             // 
@@ -328,13 +335,14 @@
             this.TxtPM1Abandons.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtPM1Abandons.Name = "TxtPM1Abandons";
             this.TxtPM1Abandons.ReadOnly = true;
-            this.TxtPM1Abandons.Size = new System.Drawing.Size(47, 20);
+            this.TxtPM1Abandons.Size = new System.Drawing.Size(50, 20);
             this.TxtPM1Abandons.TabIndex = 21;
             this.TxtPM1Abandons.TabStop = false;
-            this.TxtPM1Abandons.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtPM1Abandons.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtTM1Contacts
             // 
+            this.TxtTM1Contacts.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtTM1Contacts.Location = new System.Drawing.Point(270, 87);
             this.TxtTM1Contacts.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtTM1Contacts.Name = "TxtTM1Contacts";
@@ -342,12 +350,12 @@
             this.TxtTM1Contacts.Size = new System.Drawing.Size(44, 20);
             this.TxtTM1Contacts.TabIndex = 20;
             this.TxtTM1Contacts.TabStop = false;
-            this.TxtTM1Contacts.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtTM1Contacts.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(678, 43);
+            this.label9.Location = new System.Drawing.Point(682, 43);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(31, 13);
@@ -357,7 +365,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(736, 43);
+            this.label10.Location = new System.Drawing.Point(739, 43);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(15, 13);
@@ -377,7 +385,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(332, 44);
+            this.label8.Location = new System.Drawing.Point(334, 44);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(15, 13);
@@ -396,6 +404,7 @@
             // 
             // TxtTNew
             // 
+            this.TxtTNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtTNew.Location = new System.Drawing.Point(165, 62);
             this.TxtTNew.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtTNew.Name = "TxtTNew";
@@ -403,7 +412,7 @@
             this.TxtTNew.Size = new System.Drawing.Size(43, 20);
             this.TxtTNew.TabIndex = 13;
             this.TxtTNew.TabStop = false;
-            this.TxtTNew.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtTNew.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label5
             // 
@@ -421,10 +430,10 @@
             this.TxtPContacts.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtPContacts.Name = "TxtPContacts";
             this.TxtPContacts.ReadOnly = true;
-            this.TxtPContacts.Size = new System.Drawing.Size(51, 20);
+            this.TxtPContacts.Size = new System.Drawing.Size(50, 20);
             this.TxtPContacts.TabIndex = 10;
             this.TxtPContacts.TabStop = false;
-            this.TxtPContacts.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtPContacts.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtPConversions
             // 
@@ -432,13 +441,14 @@
             this.TxtPConversions.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtPConversions.Name = "TxtPConversions";
             this.TxtPConversions.ReadOnly = true;
-            this.TxtPConversions.Size = new System.Drawing.Size(51, 20);
+            this.TxtPConversions.Size = new System.Drawing.Size(50, 20);
             this.TxtPConversions.TabIndex = 9;
             this.TxtPConversions.TabStop = false;
-            this.TxtPConversions.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtPConversions.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtTConversions
             // 
+            this.TxtTConversions.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtTConversions.Location = new System.Drawing.Point(164, 110);
             this.TxtTConversions.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtTConversions.Name = "TxtTConversions";
@@ -446,10 +456,11 @@
             this.TxtTConversions.Size = new System.Drawing.Size(44, 20);
             this.TxtTConversions.TabIndex = 8;
             this.TxtTConversions.TabStop = false;
-            this.TxtTConversions.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtTConversions.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtTAbandons
             // 
+            this.TxtTAbandons.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtTAbandons.Location = new System.Drawing.Point(164, 134);
             this.TxtTAbandons.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtTAbandons.Name = "TxtTAbandons";
@@ -457,7 +468,7 @@
             this.TxtTAbandons.Size = new System.Drawing.Size(44, 20);
             this.TxtTAbandons.TabIndex = 7;
             this.TxtTAbandons.TabStop = false;
-            this.TxtTAbandons.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtTAbandons.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtPAbandons
             // 
@@ -465,13 +476,14 @@
             this.TxtPAbandons.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtPAbandons.Name = "TxtPAbandons";
             this.TxtPAbandons.ReadOnly = true;
-            this.TxtPAbandons.Size = new System.Drawing.Size(51, 20);
+            this.TxtPAbandons.Size = new System.Drawing.Size(50, 20);
             this.TxtPAbandons.TabIndex = 6;
             this.TxtPAbandons.TabStop = false;
-            this.TxtPAbandons.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtPAbandons.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtTContacts
             // 
+            this.TxtTContacts.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtTContacts.Location = new System.Drawing.Point(164, 86);
             this.TxtTContacts.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.TxtTContacts.Name = "TxtTContacts";
@@ -479,7 +491,7 @@
             this.TxtTContacts.Size = new System.Drawing.Size(44, 20);
             this.TxtTContacts.TabIndex = 5;
             this.TxtTContacts.TabStop = false;
-            this.TxtTContacts.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtTContacts.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label6
             // 
@@ -505,6 +517,7 @@
             // 
             // TxtTM3New
             // 
+            this.TxtTM3New.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtTM3New.Location = new System.Drawing.Point(376, 62);
             this.TxtTM3New.Margin = new System.Windows.Forms.Padding(2);
             this.TxtTM3New.Name = "TxtTM3New";
@@ -512,7 +525,7 @@
             this.TxtTM3New.Size = new System.Drawing.Size(44, 20);
             this.TxtTM3New.TabIndex = 44;
             this.TxtTM3New.TabStop = false;
-            this.TxtTM3New.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtTM3New.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtPM3Contacts
             // 
@@ -520,10 +533,10 @@
             this.TxtPM3Contacts.Margin = new System.Windows.Forms.Padding(2);
             this.TxtPM3Contacts.Name = "TxtPM3Contacts";
             this.TxtPM3Contacts.ReadOnly = true;
-            this.TxtPM3Contacts.Size = new System.Drawing.Size(47, 20);
+            this.TxtPM3Contacts.Size = new System.Drawing.Size(50, 20);
             this.TxtPM3Contacts.TabIndex = 43;
             this.TxtPM3Contacts.TabStop = false;
-            this.TxtPM3Contacts.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtPM3Contacts.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtPM3Conversions
             // 
@@ -531,13 +544,14 @@
             this.TxtPM3Conversions.Margin = new System.Windows.Forms.Padding(2);
             this.TxtPM3Conversions.Name = "TxtPM3Conversions";
             this.TxtPM3Conversions.ReadOnly = true;
-            this.TxtPM3Conversions.Size = new System.Drawing.Size(47, 20);
+            this.TxtPM3Conversions.Size = new System.Drawing.Size(50, 20);
             this.TxtPM3Conversions.TabIndex = 42;
             this.TxtPM3Conversions.TabStop = false;
-            this.TxtPM3Conversions.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtPM3Conversions.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtTM3Conversions
             // 
+            this.TxtTM3Conversions.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtTM3Conversions.Location = new System.Drawing.Point(376, 110);
             this.TxtTM3Conversions.Margin = new System.Windows.Forms.Padding(2);
             this.TxtTM3Conversions.Name = "TxtTM3Conversions";
@@ -545,10 +559,11 @@
             this.TxtTM3Conversions.Size = new System.Drawing.Size(44, 20);
             this.TxtTM3Conversions.TabIndex = 41;
             this.TxtTM3Conversions.TabStop = false;
-            this.TxtTM3Conversions.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtTM3Conversions.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtTM3Abandons
             // 
+            this.TxtTM3Abandons.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtTM3Abandons.Location = new System.Drawing.Point(376, 134);
             this.TxtTM3Abandons.Margin = new System.Windows.Forms.Padding(2);
             this.TxtTM3Abandons.Name = "TxtTM3Abandons";
@@ -556,7 +571,7 @@
             this.TxtTM3Abandons.Size = new System.Drawing.Size(44, 20);
             this.TxtTM3Abandons.TabIndex = 40;
             this.TxtTM3Abandons.TabStop = false;
-            this.TxtTM3Abandons.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtTM3Abandons.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtPM3Abandons
             // 
@@ -564,13 +579,14 @@
             this.TxtPM3Abandons.Margin = new System.Windows.Forms.Padding(2);
             this.TxtPM3Abandons.Name = "TxtPM3Abandons";
             this.TxtPM3Abandons.ReadOnly = true;
-            this.TxtPM3Abandons.Size = new System.Drawing.Size(47, 20);
+            this.TxtPM3Abandons.Size = new System.Drawing.Size(50, 20);
             this.TxtPM3Abandons.TabIndex = 39;
             this.TxtPM3Abandons.TabStop = false;
-            this.TxtPM3Abandons.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtPM3Abandons.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtTM3Contacts
             // 
+            this.TxtTM3Contacts.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtTM3Contacts.Location = new System.Drawing.Point(376, 87);
             this.TxtTM3Contacts.Margin = new System.Windows.Forms.Padding(2);
             this.TxtTM3Contacts.Name = "TxtTM3Contacts";
@@ -578,7 +594,7 @@
             this.TxtTM3Contacts.Size = new System.Drawing.Size(44, 20);
             this.TxtTM3Contacts.TabIndex = 38;
             this.TxtTM3Contacts.TabStop = false;
-            this.TxtTM3Contacts.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtTM3Contacts.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label11
             // 
@@ -593,7 +609,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(438, 44);
+            this.label12.Location = new System.Drawing.Point(436, 44);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(15, 13);
@@ -602,6 +618,7 @@
             // 
             // TxtTM6New
             // 
+            this.TxtTM6New.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtTM6New.Location = new System.Drawing.Point(474, 61);
             this.TxtTM6New.Margin = new System.Windows.Forms.Padding(2);
             this.TxtTM6New.Name = "TxtTM6New";
@@ -609,7 +626,7 @@
             this.TxtTM6New.Size = new System.Drawing.Size(44, 20);
             this.TxtTM6New.TabIndex = 54;
             this.TxtTM6New.TabStop = false;
-            this.TxtTM6New.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtTM6New.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtPM6Contacts
             // 
@@ -617,10 +634,10 @@
             this.TxtPM6Contacts.Margin = new System.Windows.Forms.Padding(2);
             this.TxtPM6Contacts.Name = "TxtPM6Contacts";
             this.TxtPM6Contacts.ReadOnly = true;
-            this.TxtPM6Contacts.Size = new System.Drawing.Size(47, 20);
+            this.TxtPM6Contacts.Size = new System.Drawing.Size(50, 20);
             this.TxtPM6Contacts.TabIndex = 53;
             this.TxtPM6Contacts.TabStop = false;
-            this.TxtPM6Contacts.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtPM6Contacts.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtPM6Conversions
             // 
@@ -628,13 +645,14 @@
             this.TxtPM6Conversions.Margin = new System.Windows.Forms.Padding(2);
             this.TxtPM6Conversions.Name = "TxtPM6Conversions";
             this.TxtPM6Conversions.ReadOnly = true;
-            this.TxtPM6Conversions.Size = new System.Drawing.Size(47, 20);
+            this.TxtPM6Conversions.Size = new System.Drawing.Size(50, 20);
             this.TxtPM6Conversions.TabIndex = 52;
             this.TxtPM6Conversions.TabStop = false;
-            this.TxtPM6Conversions.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtPM6Conversions.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtTM6Conversions
             // 
+            this.TxtTM6Conversions.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtTM6Conversions.Location = new System.Drawing.Point(474, 109);
             this.TxtTM6Conversions.Margin = new System.Windows.Forms.Padding(2);
             this.TxtTM6Conversions.Name = "TxtTM6Conversions";
@@ -642,10 +660,11 @@
             this.TxtTM6Conversions.Size = new System.Drawing.Size(44, 20);
             this.TxtTM6Conversions.TabIndex = 51;
             this.TxtTM6Conversions.TabStop = false;
-            this.TxtTM6Conversions.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtTM6Conversions.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtTM6Abandons
             // 
+            this.TxtTM6Abandons.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtTM6Abandons.Location = new System.Drawing.Point(474, 133);
             this.TxtTM6Abandons.Margin = new System.Windows.Forms.Padding(2);
             this.TxtTM6Abandons.Name = "TxtTM6Abandons";
@@ -653,7 +672,7 @@
             this.TxtTM6Abandons.Size = new System.Drawing.Size(44, 20);
             this.TxtTM6Abandons.TabIndex = 50;
             this.TxtTM6Abandons.TabStop = false;
-            this.TxtTM6Abandons.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtTM6Abandons.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtPM6Abandons
             // 
@@ -661,13 +680,14 @@
             this.TxtPM6Abandons.Margin = new System.Windows.Forms.Padding(2);
             this.TxtPM6Abandons.Name = "TxtPM6Abandons";
             this.TxtPM6Abandons.ReadOnly = true;
-            this.TxtPM6Abandons.Size = new System.Drawing.Size(47, 20);
+            this.TxtPM6Abandons.Size = new System.Drawing.Size(50, 20);
             this.TxtPM6Abandons.TabIndex = 49;
             this.TxtPM6Abandons.TabStop = false;
-            this.TxtPM6Abandons.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtPM6Abandons.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtTM6Contacts
             // 
+            this.TxtTM6Contacts.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtTM6Contacts.Location = new System.Drawing.Point(474, 86);
             this.TxtTM6Contacts.Margin = new System.Windows.Forms.Padding(2);
             this.TxtTM6Contacts.Name = "TxtTM6Contacts";
@@ -675,12 +695,12 @@
             this.TxtTM6Contacts.Size = new System.Drawing.Size(44, 20);
             this.TxtTM6Contacts.TabIndex = 48;
             this.TxtTM6Contacts.TabStop = false;
-            this.TxtTM6Contacts.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtTM6Contacts.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(473, 43);
+            this.label13.Location = new System.Drawing.Point(486, 43);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(25, 13);
@@ -699,85 +719,89 @@
             // 
             // TxtTM9New
             // 
-            this.TxtTM9New.Location = new System.Drawing.Point(569, 61);
+            this.TxtTM9New.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtTM9New.Location = new System.Drawing.Point(573, 61);
             this.TxtTM9New.Margin = new System.Windows.Forms.Padding(2);
             this.TxtTM9New.Name = "TxtTM9New";
             this.TxtTM9New.ReadOnly = true;
             this.TxtTM9New.Size = new System.Drawing.Size(44, 20);
             this.TxtTM9New.TabIndex = 64;
             this.TxtTM9New.TabStop = false;
-            this.TxtTM9New.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtTM9New.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtPM9Contacts
             // 
-            this.TxtPM9Contacts.Location = new System.Drawing.Point(615, 86);
+            this.TxtPM9Contacts.Location = new System.Drawing.Point(619, 86);
             this.TxtPM9Contacts.Margin = new System.Windows.Forms.Padding(2);
             this.TxtPM9Contacts.Name = "TxtPM9Contacts";
             this.TxtPM9Contacts.ReadOnly = true;
-            this.TxtPM9Contacts.Size = new System.Drawing.Size(47, 20);
+            this.TxtPM9Contacts.Size = new System.Drawing.Size(50, 20);
             this.TxtPM9Contacts.TabIndex = 63;
             this.TxtPM9Contacts.TabStop = false;
-            this.TxtPM9Contacts.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtPM9Contacts.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtPM9Conversions
             // 
-            this.TxtPM9Conversions.Location = new System.Drawing.Point(615, 109);
+            this.TxtPM9Conversions.Location = new System.Drawing.Point(619, 109);
             this.TxtPM9Conversions.Margin = new System.Windows.Forms.Padding(2);
             this.TxtPM9Conversions.Name = "TxtPM9Conversions";
             this.TxtPM9Conversions.ReadOnly = true;
-            this.TxtPM9Conversions.Size = new System.Drawing.Size(47, 20);
+            this.TxtPM9Conversions.Size = new System.Drawing.Size(50, 20);
             this.TxtPM9Conversions.TabIndex = 62;
             this.TxtPM9Conversions.TabStop = false;
-            this.TxtPM9Conversions.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtPM9Conversions.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtTM9Conversions
             // 
-            this.TxtTM9Conversions.Location = new System.Drawing.Point(569, 109);
+            this.TxtTM9Conversions.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtTM9Conversions.Location = new System.Drawing.Point(573, 109);
             this.TxtTM9Conversions.Margin = new System.Windows.Forms.Padding(2);
             this.TxtTM9Conversions.Name = "TxtTM9Conversions";
             this.TxtTM9Conversions.ReadOnly = true;
             this.TxtTM9Conversions.Size = new System.Drawing.Size(44, 20);
             this.TxtTM9Conversions.TabIndex = 61;
             this.TxtTM9Conversions.TabStop = false;
-            this.TxtTM9Conversions.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtTM9Conversions.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtTM9Abandons
             // 
-            this.TxtTM9Abandons.Location = new System.Drawing.Point(569, 133);
+            this.TxtTM9Abandons.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtTM9Abandons.Location = new System.Drawing.Point(573, 133);
             this.TxtTM9Abandons.Margin = new System.Windows.Forms.Padding(2);
             this.TxtTM9Abandons.Name = "TxtTM9Abandons";
             this.TxtTM9Abandons.ReadOnly = true;
             this.TxtTM9Abandons.Size = new System.Drawing.Size(44, 20);
             this.TxtTM9Abandons.TabIndex = 60;
             this.TxtTM9Abandons.TabStop = false;
-            this.TxtTM9Abandons.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtTM9Abandons.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtPM9Abandons
             // 
-            this.TxtPM9Abandons.Location = new System.Drawing.Point(615, 133);
+            this.TxtPM9Abandons.Location = new System.Drawing.Point(619, 133);
             this.TxtPM9Abandons.Margin = new System.Windows.Forms.Padding(2);
             this.TxtPM9Abandons.Name = "TxtPM9Abandons";
             this.TxtPM9Abandons.ReadOnly = true;
-            this.TxtPM9Abandons.Size = new System.Drawing.Size(47, 20);
+            this.TxtPM9Abandons.Size = new System.Drawing.Size(50, 20);
             this.TxtPM9Abandons.TabIndex = 59;
             this.TxtPM9Abandons.TabStop = false;
-            this.TxtPM9Abandons.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtPM9Abandons.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TxtTM9Contacts
             // 
-            this.TxtTM9Contacts.Location = new System.Drawing.Point(569, 86);
+            this.TxtTM9Contacts.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtTM9Contacts.Location = new System.Drawing.Point(573, 86);
             this.TxtTM9Contacts.Margin = new System.Windows.Forms.Padding(2);
             this.TxtTM9Contacts.Name = "TxtTM9Contacts";
             this.TxtTM9Contacts.ReadOnly = true;
             this.TxtTM9Contacts.Size = new System.Drawing.Size(44, 20);
             this.TxtTM9Contacts.TabIndex = 58;
             this.TxtTM9Contacts.TabStop = false;
-            this.TxtTM9Contacts.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtTM9Contacts.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(568, 43);
+            this.label15.Location = new System.Drawing.Point(583, 43);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(25, 13);
@@ -787,7 +811,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(631, 43);
+            this.label16.Location = new System.Drawing.Point(633, 43);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(15, 13);
