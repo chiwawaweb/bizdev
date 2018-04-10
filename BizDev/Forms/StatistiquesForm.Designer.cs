@@ -32,7 +32,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.GrpDonnees = new System.Windows.Forms.GroupBox();
-            this.TxtPM12New = new System.Windows.Forms.TextBox();
             this.TxtTM12New = new System.Windows.Forms.TextBox();
             this.TxtPM12Contacts = new System.Windows.Forms.TextBox();
             this.TxtPM12Conversions = new System.Windows.Forms.TextBox();
@@ -40,7 +39,6 @@
             this.TxtTM12Abandons = new System.Windows.Forms.TextBox();
             this.TxtPM12Abandons = new System.Windows.Forms.TextBox();
             this.TxtTM12Contacts = new System.Windows.Forms.TextBox();
-            this.TxtPM1New = new System.Windows.Forms.TextBox();
             this.TxtTM1New = new System.Windows.Forms.TextBox();
             this.TxtPM1Contacts = new System.Windows.Forms.TextBox();
             this.TxtPM1Conversions = new System.Windows.Forms.TextBox();
@@ -53,7 +51,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.TxtPNew = new System.Windows.Forms.TextBox();
             this.TxtTNew = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.TxtPContacts = new System.Windows.Forms.TextBox();
@@ -64,7 +61,6 @@
             this.TxtTContacts = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.BtnClose = new System.Windows.Forms.Button();
-            this.TxtPM3New = new System.Windows.Forms.TextBox();
             this.TxtTM3New = new System.Windows.Forms.TextBox();
             this.TxtPM3Contacts = new System.Windows.Forms.TextBox();
             this.TxtPM3Conversions = new System.Windows.Forms.TextBox();
@@ -74,7 +70,6 @@
             this.TxtTM3Contacts = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.TxtPM6New = new System.Windows.Forms.TextBox();
             this.TxtTM6New = new System.Windows.Forms.TextBox();
             this.TxtPM6Contacts = new System.Windows.Forms.TextBox();
             this.TxtPM6Conversions = new System.Windows.Forms.TextBox();
@@ -84,7 +79,6 @@
             this.TxtTM6Contacts = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.TxtPM9New = new System.Windows.Forms.TextBox();
             this.TxtTM9New = new System.Windows.Forms.TextBox();
             this.TxtPM9Contacts = new System.Windows.Forms.TextBox();
             this.TxtPM9Conversions = new System.Windows.Forms.TextBox();
@@ -100,7 +94,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(65, 85);
+            this.label2.Location = new System.Drawing.Point(61, 89);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 13);
@@ -110,7 +104,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(94, 109);
+            this.label3.Location = new System.Drawing.Point(90, 113);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 13);
@@ -120,7 +114,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(104, 133);
+            this.label4.Location = new System.Drawing.Point(100, 137);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(61, 13);
@@ -129,7 +123,6 @@
             // 
             // GrpDonnees
             // 
-            this.GrpDonnees.Controls.Add(this.TxtPM9New);
             this.GrpDonnees.Controls.Add(this.TxtTM9New);
             this.GrpDonnees.Controls.Add(this.TxtPM9Contacts);
             this.GrpDonnees.Controls.Add(this.TxtPM9Conversions);
@@ -139,7 +132,6 @@
             this.GrpDonnees.Controls.Add(this.TxtTM9Contacts);
             this.GrpDonnees.Controls.Add(this.label15);
             this.GrpDonnees.Controls.Add(this.label16);
-            this.GrpDonnees.Controls.Add(this.TxtPM6New);
             this.GrpDonnees.Controls.Add(this.TxtTM6New);
             this.GrpDonnees.Controls.Add(this.TxtPM6Contacts);
             this.GrpDonnees.Controls.Add(this.TxtPM6Conversions);
@@ -149,7 +141,6 @@
             this.GrpDonnees.Controls.Add(this.TxtTM6Contacts);
             this.GrpDonnees.Controls.Add(this.label13);
             this.GrpDonnees.Controls.Add(this.label14);
-            this.GrpDonnees.Controls.Add(this.TxtPM3New);
             this.GrpDonnees.Controls.Add(this.TxtTM3New);
             this.GrpDonnees.Controls.Add(this.TxtPM3Contacts);
             this.GrpDonnees.Controls.Add(this.TxtPM3Conversions);
@@ -159,7 +150,6 @@
             this.GrpDonnees.Controls.Add(this.TxtTM3Contacts);
             this.GrpDonnees.Controls.Add(this.label11);
             this.GrpDonnees.Controls.Add(this.label12);
-            this.GrpDonnees.Controls.Add(this.TxtPM12New);
             this.GrpDonnees.Controls.Add(this.TxtTM12New);
             this.GrpDonnees.Controls.Add(this.TxtPM12Contacts);
             this.GrpDonnees.Controls.Add(this.TxtPM12Conversions);
@@ -167,7 +157,6 @@
             this.GrpDonnees.Controls.Add(this.TxtTM12Abandons);
             this.GrpDonnees.Controls.Add(this.TxtPM12Abandons);
             this.GrpDonnees.Controls.Add(this.TxtTM12Contacts);
-            this.GrpDonnees.Controls.Add(this.TxtPM1New);
             this.GrpDonnees.Controls.Add(this.TxtTM1New);
             this.GrpDonnees.Controls.Add(this.TxtPM1Contacts);
             this.GrpDonnees.Controls.Add(this.TxtPM1Conversions);
@@ -180,7 +169,6 @@
             this.GrpDonnees.Controls.Add(this.label1);
             this.GrpDonnees.Controls.Add(this.label8);
             this.GrpDonnees.Controls.Add(this.label7);
-            this.GrpDonnees.Controls.Add(this.TxtPNew);
             this.GrpDonnees.Controls.Add(this.TxtTNew);
             this.GrpDonnees.Controls.Add(this.label5);
             this.GrpDonnees.Controls.Add(this.TxtPContacts);
@@ -201,17 +189,6 @@
             this.GrpDonnees.TabIndex = 4;
             this.GrpDonnees.TabStop = false;
             this.GrpDonnees.Text = "Données";
-            // 
-            // TxtPM12New
-            // 
-            this.TxtPM12New.Location = new System.Drawing.Point(721, 61);
-            this.TxtPM12New.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.TxtPM12New.Name = "TxtPM12New";
-            this.TxtPM12New.ReadOnly = true;
-            this.TxtPM12New.Size = new System.Drawing.Size(47, 20);
-            this.TxtPM12New.TabIndex = 35;
-            this.TxtPM12New.TabStop = false;
-            this.TxtPM12New.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // TxtTM12New
             // 
@@ -289,17 +266,6 @@
             this.TxtTM12Contacts.TabIndex = 28;
             this.TxtTM12Contacts.TabStop = false;
             this.TxtTM12Contacts.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // TxtPM1New
-            // 
-            this.TxtPM1New.Location = new System.Drawing.Point(316, 62);
-            this.TxtPM1New.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.TxtPM1New.Name = "TxtPM1New";
-            this.TxtPM1New.ReadOnly = true;
-            this.TxtPM1New.Size = new System.Drawing.Size(47, 20);
-            this.TxtPM1New.TabIndex = 27;
-            this.TxtPM1New.TabStop = false;
-            this.TxtPM1New.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // TxtTM1New
             // 
@@ -428,17 +394,6 @@
             this.label7.TabIndex = 15;
             this.label7.Text = "Total";
             // 
-            // TxtPNew
-            // 
-            this.TxtPNew.Location = new System.Drawing.Point(210, 62);
-            this.TxtPNew.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.TxtPNew.Name = "TxtPNew";
-            this.TxtPNew.ReadOnly = true;
-            this.TxtPNew.Size = new System.Drawing.Size(51, 20);
-            this.TxtPNew.TabIndex = 14;
-            this.TxtPNew.TabStop = false;
-            this.TxtPNew.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
             // TxtTNew
             // 
             this.TxtTNew.Location = new System.Drawing.Point(165, 62);
@@ -529,12 +484,12 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(54, 61);
+            this.label6.Location = new System.Drawing.Point(101, 65);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(111, 13);
+            this.label6.Size = new System.Drawing.Size(60, 13);
             this.label6.TabIndex = 12;
-            this.label6.Text = "Nouveaux prospects :";
+            this.label6.Text = "Prospects :";
             // 
             // BtnClose
             // 
@@ -547,17 +502,6 @@
             this.BtnClose.Text = "Fermer";
             this.BtnClose.UseVisualStyleBackColor = true;
             this.BtnClose.Click += new System.EventHandler(this.BtnClose_Click);
-            // 
-            // TxtPM3New
-            // 
-            this.TxtPM3New.Location = new System.Drawing.Point(422, 62);
-            this.TxtPM3New.Margin = new System.Windows.Forms.Padding(2);
-            this.TxtPM3New.Name = "TxtPM3New";
-            this.TxtPM3New.ReadOnly = true;
-            this.TxtPM3New.Size = new System.Drawing.Size(47, 20);
-            this.TxtPM3New.TabIndex = 45;
-            this.TxtPM3New.TabStop = false;
-            this.TxtPM3New.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // TxtTM3New
             // 
@@ -656,17 +600,6 @@
             this.label12.TabIndex = 36;
             this.label12.Text = "%";
             // 
-            // TxtPM6New
-            // 
-            this.TxtPM6New.Location = new System.Drawing.Point(520, 61);
-            this.TxtPM6New.Margin = new System.Windows.Forms.Padding(2);
-            this.TxtPM6New.Name = "TxtPM6New";
-            this.TxtPM6New.ReadOnly = true;
-            this.TxtPM6New.Size = new System.Drawing.Size(47, 20);
-            this.TxtPM6New.TabIndex = 55;
-            this.TxtPM6New.TabStop = false;
-            this.TxtPM6New.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
             // TxtTM6New
             // 
             this.TxtTM6New.Location = new System.Drawing.Point(474, 61);
@@ -763,17 +696,6 @@
             this.label14.Size = new System.Drawing.Size(15, 13);
             this.label14.TabIndex = 46;
             this.label14.Text = "%";
-            // 
-            // TxtPM9New
-            // 
-            this.TxtPM9New.Location = new System.Drawing.Point(615, 61);
-            this.TxtPM9New.Margin = new System.Windows.Forms.Padding(2);
-            this.TxtPM9New.Name = "TxtPM9New";
-            this.TxtPM9New.ReadOnly = true;
-            this.TxtPM9New.Size = new System.Drawing.Size(47, 20);
-            this.TxtPM9New.TabIndex = 65;
-            this.TxtPM9New.TabStop = false;
-            this.TxtPM9New.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // TxtTM9New
             // 
@@ -902,7 +824,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox GrpDonnees;
-        private System.Windows.Forms.TextBox TxtPM12New;
         private System.Windows.Forms.TextBox TxtTM12New;
         private System.Windows.Forms.TextBox TxtPM12Contacts;
         private System.Windows.Forms.TextBox TxtPM12Conversions;
@@ -910,7 +831,6 @@
         private System.Windows.Forms.TextBox TxtTM12Abandons;
         private System.Windows.Forms.TextBox TxtPM12Abandons;
         private System.Windows.Forms.TextBox TxtTM12Contacts;
-        private System.Windows.Forms.TextBox TxtPM1New;
         private System.Windows.Forms.TextBox TxtTM1New;
         private System.Windows.Forms.TextBox TxtPM1Contacts;
         private System.Windows.Forms.TextBox TxtPM1Conversions;
@@ -923,7 +843,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox TxtPNew;
         private System.Windows.Forms.TextBox TxtTNew;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
@@ -934,7 +853,6 @@
         private System.Windows.Forms.TextBox TxtPAbandons;
         private System.Windows.Forms.TextBox TxtTContacts;
         private System.Windows.Forms.Button BtnClose;
-        private System.Windows.Forms.TextBox TxtPM9New;
         private System.Windows.Forms.TextBox TxtTM9New;
         private System.Windows.Forms.TextBox TxtPM9Contacts;
         private System.Windows.Forms.TextBox TxtPM9Conversions;
@@ -944,7 +862,6 @@
         private System.Windows.Forms.TextBox TxtTM9Contacts;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox TxtPM6New;
         private System.Windows.Forms.TextBox TxtTM6New;
         private System.Windows.Forms.TextBox TxtPM6Contacts;
         private System.Windows.Forms.TextBox TxtPM6Conversions;
@@ -954,7 +871,6 @@
         private System.Windows.Forms.TextBox TxtTM6Contacts;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox TxtPM3New;
         private System.Windows.Forms.TextBox TxtTM3New;
         private System.Windows.Forms.TextBox TxtPM3Contacts;
         private System.Windows.Forms.TextBox TxtPM3Conversions;

@@ -37,46 +37,40 @@ namespace BizDev.Forms
         private void CalculDonnees()
         {
             TNew = prospectProvider.TNew(0);
-            //PNew = 100;
             TM1New = prospectProvider.TNew(-1);
-            //PM1New = (TM1New / TNew) * 100;
             TM3New = prospectProvider.TNew(-3);
-            //PM3New = (TM3New / TNew) * 100;
             TM6New = prospectProvider.TNew(-6);
-
             TM9New = prospectProvider.TNew(-9);
-
             TM12New = prospectProvider.TNew(-12);
-            //PM12New = (TM12New / TNew) * 100;
 
             TContacts = prospectProvider.TContacts(0);
-            //PContacts = (TContacts / TNew) * 100;
+            PContacts = (TContacts / TNew) * 100;
             TM1Contacts = prospectProvider.TContacts(-1);
-            //PM1Contacts = (TM1Contacts / TContacts) * 100;
+            PM1Contacts = (TM1Contacts / TM1New) * 100;
             TM3Contacts = prospectProvider.TContacts(-3);
-
+            PM3Contacts = (TM3Contacts / TM3New) * 100;
             TM6Contacts = prospectProvider.TContacts(-6);
-
+            PM6Contacts = (TM6Contacts / TM6New) * 100;
             TM9Contacts = prospectProvider.TContacts(-9);
-
+            PM9Contacts = (TM9Contacts / TM9New) * 100;
             TM12Contacts = prospectProvider.TContacts(-12);
-            //PM12Contacts = (TM12Contacts / TContacts) * 100;
+            PM12Contacts = (TM12Contacts / TM12New) * 100;
 
             TConversions = prospectProvider.TConversions(0);
-            PConversions = (TConversions / TNew) * 100;
+            PConversions = (TConversions / TContacts) * 100;
             TM1Conversions = prospectProvider.TConversions(-1);
-            //PM1Conversions = (TM1Conversions / TConversions) * 100;
+            PM1Conversions = (TM1Conversions / TM1Contacts) * 100;
             TM3Conversions = prospectProvider.TConversions(-3);
-
+            PM3Conversions = (TM3Conversions / TM3Contacts) * 100;
             TM6Conversions = prospectProvider.TConversions(-6);
-
+            PM6Conversions = (TM6Conversions / TM6Contacts) * 100;
             TM9Conversions = prospectProvider.TConversions(-9);
 
             TM12Conversions = prospectProvider.TConversions(-12);
             //PM12Conversions = (TM12Conversions / TConversions) * 100;
 
             TAbandons = prospectProvider.TAbandons(0);
-            //PAbandons = (TAbandons / TNew) * 100;
+            PAbandons = (TAbandons / TNew) * 100;
             TM1Abandons = prospectProvider.TAbandons(-1);
             //PM1Abandons = (TM1Abandons / TNew) * 100;
             TM3Abandons = prospectProvider.TAbandons(-3);
@@ -92,17 +86,11 @@ namespace BizDev.Forms
         private void AfficheDonnees()
         {
             TxtTNew.Text = TNew.ToString();
-            TxtPNew.Text = PNew.ToString("0.00") + " %";
             TxtTM1New.Text = TM1New.ToString();
-            TxtPM1New.Text = PM1New.ToString("0.00") + " %";
             TxtTM3New.Text = TM3New.ToString();
-            TxtPM3New.Text = PM3New.ToString("0.00") + " %";
             TxtTM6New.Text = TM6New.ToString();
-            TxtPM6New.Text = PM6New.ToString("0.00") + " %";
             TxtTM9New.Text = TM9New.ToString();
-            TxtPM9New.Text = PM9New.ToString("0.00") + " %";
             TxtTM12New.Text = TM12New.ToString();
-            TxtPM12New.Text = PM12New.ToString("0.00") + " %";
 
             TxtTContacts.Text = TContacts.ToString();
             TxtPContacts.Text = PContacts.ToString("0.00") + " %";
