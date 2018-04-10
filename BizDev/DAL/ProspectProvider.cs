@@ -97,7 +97,7 @@ namespace BizDev.DAL
 
         #region Statistiques
 
-        //DateTime noDate = new DateTime(1899,12,30);
+        DateTime noDate = new DateTime(1899,12, 30);
 
         public int TContacts(int nbMois)
         {
@@ -114,9 +114,19 @@ namespace BizDev.DAL
             {
                 try
                 {
-                    var prospects = from b in context.Prospects
-                                    where b.DatePremierContact == dateTContacts
+                    IQueryable<Prospect> prospects; /// A remonter
+                    if (nbMois!=0)
+                    {
+                        prospects = from b in context.Prospects //// a remonter !!!!
+                                    where b.DatePremierContact >= dateTContacts
                                     select b;
+                    }
+                    else
+                    {
+                        prospects = from b in context.Prospects
+                                    where b.DatePremierContact != noDate 
+                                    select b;
+                    }
 
                     return prospects.Count();
                 }
