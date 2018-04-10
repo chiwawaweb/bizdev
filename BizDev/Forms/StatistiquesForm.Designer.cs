@@ -32,21 +32,21 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.GrpDonnees = new System.Windows.Forms.GroupBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.textBox20 = new System.Windows.Forms.TextBox();
-            this.textBox21 = new System.Windows.Forms.TextBox();
-            this.textBox22 = new System.Windows.Forms.TextBox();
-            this.textBox23 = new System.Windows.Forms.TextBox();
-            this.textBox24 = new System.Windows.Forms.TextBox();
+            this.TxtP365New = new System.Windows.Forms.TextBox();
+            this.TxtT365New = new System.Windows.Forms.TextBox();
+            this.TxtP365Contacts = new System.Windows.Forms.TextBox();
+            this.TxtP365Conversions = new System.Windows.Forms.TextBox();
+            this.TxtT365Conversions = new System.Windows.Forms.TextBox();
+            this.TxtT365Abandons = new System.Windows.Forms.TextBox();
+            this.TxtP365Abandons = new System.Windows.Forms.TextBox();
+            this.TxtT365Contacts = new System.Windows.Forms.TextBox();
             this.TxtP30New = new System.Windows.Forms.TextBox();
             this.TxtT30New = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.TxtP30Contacts = new System.Windows.Forms.TextBox();
+            this.TxtP30Conversions = new System.Windows.Forms.TextBox();
             this.TxtT30Conversions = new System.Windows.Forms.TextBox();
             this.TxtT30Abandons = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.TxtP30Abandons = new System.Windows.Forms.TextBox();
             this.TxtT30Contacts = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -55,7 +55,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.TxtPNew = new System.Windows.Forms.TextBox();
             this.TxtTNew = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.TxtPContacts = new System.Windows.Forms.TextBox();
             this.TxtPConversions = new System.Windows.Forms.TextBox();
@@ -63,6 +62,7 @@
             this.TxtTAbandons = new System.Windows.Forms.TextBox();
             this.TxtPAbandons = new System.Windows.Forms.TextBox();
             this.TxtTContacts = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.BtnClose = new System.Windows.Forms.Button();
             this.GrpDonnees.SuspendLayout();
             this.SuspendLayout();
@@ -99,21 +99,21 @@
             // 
             // GrpDonnees
             // 
-            this.GrpDonnees.Controls.Add(this.textBox17);
-            this.GrpDonnees.Controls.Add(this.textBox18);
-            this.GrpDonnees.Controls.Add(this.textBox19);
-            this.GrpDonnees.Controls.Add(this.textBox20);
-            this.GrpDonnees.Controls.Add(this.textBox21);
-            this.GrpDonnees.Controls.Add(this.textBox22);
-            this.GrpDonnees.Controls.Add(this.textBox23);
-            this.GrpDonnees.Controls.Add(this.textBox24);
+            this.GrpDonnees.Controls.Add(this.TxtP365New);
+            this.GrpDonnees.Controls.Add(this.TxtT365New);
+            this.GrpDonnees.Controls.Add(this.TxtP365Contacts);
+            this.GrpDonnees.Controls.Add(this.TxtP365Conversions);
+            this.GrpDonnees.Controls.Add(this.TxtT365Conversions);
+            this.GrpDonnees.Controls.Add(this.TxtT365Abandons);
+            this.GrpDonnees.Controls.Add(this.TxtP365Abandons);
+            this.GrpDonnees.Controls.Add(this.TxtT365Contacts);
             this.GrpDonnees.Controls.Add(this.TxtP30New);
             this.GrpDonnees.Controls.Add(this.TxtT30New);
-            this.GrpDonnees.Controls.Add(this.textBox11);
-            this.GrpDonnees.Controls.Add(this.textBox12);
+            this.GrpDonnees.Controls.Add(this.TxtP30Contacts);
+            this.GrpDonnees.Controls.Add(this.TxtP30Conversions);
             this.GrpDonnees.Controls.Add(this.TxtT30Conversions);
             this.GrpDonnees.Controls.Add(this.TxtT30Abandons);
-            this.GrpDonnees.Controls.Add(this.textBox15);
+            this.GrpDonnees.Controls.Add(this.TxtP30Abandons);
             this.GrpDonnees.Controls.Add(this.TxtT30Contacts);
             this.GrpDonnees.Controls.Add(this.label9);
             this.GrpDonnees.Controls.Add(this.label10);
@@ -134,186 +134,202 @@
             this.GrpDonnees.Controls.Add(this.label2);
             this.GrpDonnees.Controls.Add(this.label3);
             this.GrpDonnees.Location = new System.Drawing.Point(17, 23);
-            this.GrpDonnees.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GrpDonnees.Margin = new System.Windows.Forms.Padding(2);
             this.GrpDonnees.Name = "GrpDonnees";
-            this.GrpDonnees.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GrpDonnees.Padding = new System.Windows.Forms.Padding(2);
             this.GrpDonnees.Size = new System.Drawing.Size(469, 173);
             this.GrpDonnees.TabIndex = 4;
             this.GrpDonnees.TabStop = false;
             this.GrpDonnees.Text = "Données";
             // 
-            // textBox17
+            // TxtP365New
             // 
-            this.textBox17.Location = new System.Drawing.Point(417, 57);
-            this.textBox17.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.ReadOnly = true;
-            this.textBox17.Size = new System.Drawing.Size(45, 20);
-            this.textBox17.TabIndex = 35;
-            this.textBox17.TabStop = false;
-            this.textBox17.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtP365New.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtP365New.Location = new System.Drawing.Point(417, 62);
+            this.TxtP365New.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtP365New.Name = "TxtP365New";
+            this.TxtP365New.ReadOnly = true;
+            this.TxtP365New.Size = new System.Drawing.Size(45, 13);
+            this.TxtP365New.TabIndex = 35;
+            this.TxtP365New.TabStop = false;
+            this.TxtP365New.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox18
+            // TxtT365New
             // 
-            this.textBox18.Location = new System.Drawing.Point(371, 57);
-            this.textBox18.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.ReadOnly = true;
-            this.textBox18.Size = new System.Drawing.Size(43, 20);
-            this.textBox18.TabIndex = 34;
-            this.textBox18.TabStop = false;
-            this.textBox18.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtT365New.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtT365New.Location = new System.Drawing.Point(371, 62);
+            this.TxtT365New.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtT365New.Name = "TxtT365New";
+            this.TxtT365New.ReadOnly = true;
+            this.TxtT365New.Size = new System.Drawing.Size(43, 13);
+            this.TxtT365New.TabIndex = 34;
+            this.TxtT365New.TabStop = false;
+            this.TxtT365New.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox19
+            // TxtP365Contacts
             // 
-            this.textBox19.Location = new System.Drawing.Point(417, 82);
-            this.textBox19.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.ReadOnly = true;
-            this.textBox19.Size = new System.Drawing.Size(45, 20);
-            this.textBox19.TabIndex = 33;
-            this.textBox19.TabStop = false;
-            this.textBox19.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtP365Contacts.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtP365Contacts.Location = new System.Drawing.Point(417, 87);
+            this.TxtP365Contacts.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtP365Contacts.Name = "TxtP365Contacts";
+            this.TxtP365Contacts.ReadOnly = true;
+            this.TxtP365Contacts.Size = new System.Drawing.Size(45, 13);
+            this.TxtP365Contacts.TabIndex = 33;
+            this.TxtP365Contacts.TabStop = false;
+            this.TxtP365Contacts.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox20
+            // TxtP365Conversions
             // 
-            this.textBox20.Location = new System.Drawing.Point(417, 105);
-            this.textBox20.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.ReadOnly = true;
-            this.textBox20.Size = new System.Drawing.Size(45, 20);
-            this.textBox20.TabIndex = 32;
-            this.textBox20.TabStop = false;
-            this.textBox20.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtP365Conversions.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtP365Conversions.Location = new System.Drawing.Point(417, 110);
+            this.TxtP365Conversions.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtP365Conversions.Name = "TxtP365Conversions";
+            this.TxtP365Conversions.ReadOnly = true;
+            this.TxtP365Conversions.Size = new System.Drawing.Size(45, 13);
+            this.TxtP365Conversions.TabIndex = 32;
+            this.TxtP365Conversions.TabStop = false;
+            this.TxtP365Conversions.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox21
+            // TxtT365Conversions
             // 
-            this.textBox21.Location = new System.Drawing.Point(371, 105);
-            this.textBox21.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.ReadOnly = true;
-            this.textBox21.Size = new System.Drawing.Size(43, 20);
-            this.textBox21.TabIndex = 31;
-            this.textBox21.TabStop = false;
-            this.textBox21.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtT365Conversions.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtT365Conversions.Location = new System.Drawing.Point(371, 110);
+            this.TxtT365Conversions.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtT365Conversions.Name = "TxtT365Conversions";
+            this.TxtT365Conversions.ReadOnly = true;
+            this.TxtT365Conversions.Size = new System.Drawing.Size(43, 13);
+            this.TxtT365Conversions.TabIndex = 31;
+            this.TxtT365Conversions.TabStop = false;
+            this.TxtT365Conversions.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox22
+            // TxtT365Abandons
             // 
-            this.textBox22.Location = new System.Drawing.Point(371, 129);
-            this.textBox22.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.ReadOnly = true;
-            this.textBox22.Size = new System.Drawing.Size(43, 20);
-            this.textBox22.TabIndex = 30;
-            this.textBox22.TabStop = false;
-            this.textBox22.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtT365Abandons.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtT365Abandons.Location = new System.Drawing.Point(371, 134);
+            this.TxtT365Abandons.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtT365Abandons.Name = "TxtT365Abandons";
+            this.TxtT365Abandons.ReadOnly = true;
+            this.TxtT365Abandons.Size = new System.Drawing.Size(43, 13);
+            this.TxtT365Abandons.TabIndex = 30;
+            this.TxtT365Abandons.TabStop = false;
+            this.TxtT365Abandons.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox23
+            // TxtP365Abandons
             // 
-            this.textBox23.Location = new System.Drawing.Point(417, 129);
-            this.textBox23.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.ReadOnly = true;
-            this.textBox23.Size = new System.Drawing.Size(45, 20);
-            this.textBox23.TabIndex = 29;
-            this.textBox23.TabStop = false;
-            this.textBox23.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtP365Abandons.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtP365Abandons.Location = new System.Drawing.Point(417, 134);
+            this.TxtP365Abandons.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtP365Abandons.Name = "TxtP365Abandons";
+            this.TxtP365Abandons.ReadOnly = true;
+            this.TxtP365Abandons.Size = new System.Drawing.Size(45, 13);
+            this.TxtP365Abandons.TabIndex = 29;
+            this.TxtP365Abandons.TabStop = false;
+            this.TxtP365Abandons.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox24
+            // TxtT365Contacts
             // 
-            this.textBox24.Location = new System.Drawing.Point(371, 82);
-            this.textBox24.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox24.Name = "textBox24";
-            this.textBox24.ReadOnly = true;
-            this.textBox24.Size = new System.Drawing.Size(43, 20);
-            this.textBox24.TabIndex = 28;
-            this.textBox24.TabStop = false;
-            this.textBox24.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtT365Contacts.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtT365Contacts.Location = new System.Drawing.Point(371, 87);
+            this.TxtT365Contacts.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtT365Contacts.Name = "TxtT365Contacts";
+            this.TxtT365Contacts.ReadOnly = true;
+            this.TxtT365Contacts.Size = new System.Drawing.Size(43, 13);
+            this.TxtT365Contacts.TabIndex = 28;
+            this.TxtT365Contacts.TabStop = false;
+            this.TxtT365Contacts.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // TxtP30New
             // 
-            this.TxtP30New.Location = new System.Drawing.Point(316, 57);
-            this.TxtP30New.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtP30New.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtP30New.Location = new System.Drawing.Point(316, 62);
+            this.TxtP30New.Margin = new System.Windows.Forms.Padding(2);
             this.TxtP30New.Name = "TxtP30New";
             this.TxtP30New.ReadOnly = true;
-            this.TxtP30New.Size = new System.Drawing.Size(45, 20);
+            this.TxtP30New.Size = new System.Drawing.Size(45, 13);
             this.TxtP30New.TabIndex = 27;
             this.TxtP30New.TabStop = false;
             this.TxtP30New.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // TxtT30New
             // 
-            this.TxtT30New.Location = new System.Drawing.Point(270, 57);
-            this.TxtT30New.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtT30New.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtT30New.Location = new System.Drawing.Point(270, 62);
+            this.TxtT30New.Margin = new System.Windows.Forms.Padding(2);
             this.TxtT30New.Name = "TxtT30New";
             this.TxtT30New.ReadOnly = true;
-            this.TxtT30New.Size = new System.Drawing.Size(43, 20);
+            this.TxtT30New.Size = new System.Drawing.Size(43, 13);
             this.TxtT30New.TabIndex = 26;
             this.TxtT30New.TabStop = false;
             this.TxtT30New.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox11
+            // TxtP30Contacts
             // 
-            this.textBox11.Location = new System.Drawing.Point(316, 82);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.ReadOnly = true;
-            this.textBox11.Size = new System.Drawing.Size(45, 20);
-            this.textBox11.TabIndex = 25;
-            this.textBox11.TabStop = false;
-            this.textBox11.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtP30Contacts.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtP30Contacts.Location = new System.Drawing.Point(316, 87);
+            this.TxtP30Contacts.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtP30Contacts.Name = "TxtP30Contacts";
+            this.TxtP30Contacts.ReadOnly = true;
+            this.TxtP30Contacts.Size = new System.Drawing.Size(45, 13);
+            this.TxtP30Contacts.TabIndex = 25;
+            this.TxtP30Contacts.TabStop = false;
+            this.TxtP30Contacts.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox12
+            // TxtP30Conversions
             // 
-            this.textBox12.Location = new System.Drawing.Point(316, 105);
-            this.textBox12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.ReadOnly = true;
-            this.textBox12.Size = new System.Drawing.Size(45, 20);
-            this.textBox12.TabIndex = 24;
-            this.textBox12.TabStop = false;
-            this.textBox12.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtP30Conversions.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtP30Conversions.Location = new System.Drawing.Point(316, 110);
+            this.TxtP30Conversions.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtP30Conversions.Name = "TxtP30Conversions";
+            this.TxtP30Conversions.ReadOnly = true;
+            this.TxtP30Conversions.Size = new System.Drawing.Size(45, 13);
+            this.TxtP30Conversions.TabIndex = 24;
+            this.TxtP30Conversions.TabStop = false;
+            this.TxtP30Conversions.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // TxtT30Conversions
             // 
-            this.TxtT30Conversions.Location = new System.Drawing.Point(270, 105);
-            this.TxtT30Conversions.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtT30Conversions.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtT30Conversions.Location = new System.Drawing.Point(270, 110);
+            this.TxtT30Conversions.Margin = new System.Windows.Forms.Padding(2);
             this.TxtT30Conversions.Name = "TxtT30Conversions";
             this.TxtT30Conversions.ReadOnly = true;
-            this.TxtT30Conversions.Size = new System.Drawing.Size(43, 20);
+            this.TxtT30Conversions.Size = new System.Drawing.Size(43, 13);
             this.TxtT30Conversions.TabIndex = 23;
             this.TxtT30Conversions.TabStop = false;
             this.TxtT30Conversions.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // TxtT30Abandons
             // 
-            this.TxtT30Abandons.Location = new System.Drawing.Point(270, 129);
-            this.TxtT30Abandons.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtT30Abandons.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtT30Abandons.Location = new System.Drawing.Point(270, 134);
+            this.TxtT30Abandons.Margin = new System.Windows.Forms.Padding(2);
             this.TxtT30Abandons.Name = "TxtT30Abandons";
             this.TxtT30Abandons.ReadOnly = true;
-            this.TxtT30Abandons.Size = new System.Drawing.Size(43, 20);
+            this.TxtT30Abandons.Size = new System.Drawing.Size(43, 13);
             this.TxtT30Abandons.TabIndex = 22;
             this.TxtT30Abandons.TabStop = false;
             this.TxtT30Abandons.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox15
+            // TxtP30Abandons
             // 
-            this.textBox15.Location = new System.Drawing.Point(316, 129);
-            this.textBox15.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.ReadOnly = true;
-            this.textBox15.Size = new System.Drawing.Size(45, 20);
-            this.textBox15.TabIndex = 21;
-            this.textBox15.TabStop = false;
-            this.textBox15.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtP30Abandons.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtP30Abandons.Location = new System.Drawing.Point(316, 134);
+            this.TxtP30Abandons.Margin = new System.Windows.Forms.Padding(2);
+            this.TxtP30Abandons.Name = "TxtP30Abandons";
+            this.TxtP30Abandons.ReadOnly = true;
+            this.TxtP30Abandons.Size = new System.Drawing.Size(45, 13);
+            this.TxtP30Abandons.TabIndex = 21;
+            this.TxtP30Abandons.TabStop = false;
+            this.TxtP30Abandons.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // TxtT30Contacts
             // 
-            this.TxtT30Contacts.Location = new System.Drawing.Point(270, 82);
-            this.TxtT30Contacts.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtT30Contacts.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtT30Contacts.Location = new System.Drawing.Point(270, 87);
+            this.TxtT30Contacts.Margin = new System.Windows.Forms.Padding(2);
             this.TxtT30Contacts.Name = "TxtT30Contacts";
             this.TxtT30Contacts.ReadOnly = true;
-            this.TxtT30Contacts.Size = new System.Drawing.Size(43, 20);
+            this.TxtT30Contacts.Size = new System.Drawing.Size(43, 13);
             this.TxtT30Contacts.TabIndex = 20;
             this.TxtT30Contacts.TabStop = false;
             this.TxtT30Contacts.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -372,7 +388,7 @@
             // 
             this.TxtPNew.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtPNew.Location = new System.Drawing.Point(210, 62);
-            this.TxtPNew.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtPNew.Margin = new System.Windows.Forms.Padding(2);
             this.TxtPNew.Name = "TxtPNew";
             this.TxtPNew.ReadOnly = true;
             this.TxtPNew.Size = new System.Drawing.Size(50, 13);
@@ -384,23 +400,13 @@
             // 
             this.TxtTNew.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtTNew.Location = new System.Drawing.Point(165, 62);
-            this.TxtTNew.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtTNew.Margin = new System.Windows.Forms.Padding(2);
             this.TxtTNew.Name = "TxtTNew";
             this.TxtTNew.ReadOnly = true;
             this.TxtTNew.Size = new System.Drawing.Size(42, 13);
             this.TxtTNew.TabIndex = 13;
             this.TxtTNew.TabStop = false;
             this.TxtTNew.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(54, 61);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(111, 13);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Nouveaux prospects :";
             // 
             // label5
             // 
@@ -416,7 +422,7 @@
             // 
             this.TxtPContacts.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtPContacts.Location = new System.Drawing.Point(210, 86);
-            this.TxtPContacts.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtPContacts.Margin = new System.Windows.Forms.Padding(2);
             this.TxtPContacts.Name = "TxtPContacts";
             this.TxtPContacts.ReadOnly = true;
             this.TxtPContacts.Size = new System.Drawing.Size(50, 13);
@@ -428,7 +434,7 @@
             // 
             this.TxtPConversions.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtPConversions.Location = new System.Drawing.Point(211, 110);
-            this.TxtPConversions.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtPConversions.Margin = new System.Windows.Forms.Padding(2);
             this.TxtPConversions.Name = "TxtPConversions";
             this.TxtPConversions.ReadOnly = true;
             this.TxtPConversions.Size = new System.Drawing.Size(49, 13);
@@ -440,7 +446,7 @@
             // 
             this.TxtTConversions.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtTConversions.Location = new System.Drawing.Point(164, 110);
-            this.TxtTConversions.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtTConversions.Margin = new System.Windows.Forms.Padding(2);
             this.TxtTConversions.Name = "TxtTConversions";
             this.TxtTConversions.ReadOnly = true;
             this.TxtTConversions.Size = new System.Drawing.Size(43, 13);
@@ -452,7 +458,7 @@
             // 
             this.TxtTAbandons.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtTAbandons.Location = new System.Drawing.Point(164, 134);
-            this.TxtTAbandons.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtTAbandons.Margin = new System.Windows.Forms.Padding(2);
             this.TxtTAbandons.Name = "TxtTAbandons";
             this.TxtTAbandons.ReadOnly = true;
             this.TxtTAbandons.Size = new System.Drawing.Size(43, 13);
@@ -464,7 +470,7 @@
             // 
             this.TxtPAbandons.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtPAbandons.Location = new System.Drawing.Point(210, 134);
-            this.TxtPAbandons.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtPAbandons.Margin = new System.Windows.Forms.Padding(2);
             this.TxtPAbandons.Name = "TxtPAbandons";
             this.TxtPAbandons.ReadOnly = true;
             this.TxtPAbandons.Size = new System.Drawing.Size(50, 13);
@@ -476,13 +482,23 @@
             // 
             this.TxtTContacts.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TxtTContacts.Location = new System.Drawing.Point(164, 86);
-            this.TxtTContacts.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtTContacts.Margin = new System.Windows.Forms.Padding(2);
             this.TxtTContacts.Name = "TxtTContacts";
             this.TxtTContacts.ReadOnly = true;
             this.TxtTContacts.Size = new System.Drawing.Size(43, 13);
             this.TxtTContacts.TabIndex = 5;
             this.TxtTContacts.TabStop = false;
             this.TxtTContacts.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(54, 61);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(111, 13);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Nouveaux prospects :";
             // 
             // BtnClose
             // 
@@ -526,21 +542,21 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox GrpDonnees;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.TextBox textBox20;
-        private System.Windows.Forms.TextBox textBox21;
-        private System.Windows.Forms.TextBox textBox22;
-        private System.Windows.Forms.TextBox textBox23;
-        private System.Windows.Forms.TextBox textBox24;
+        private System.Windows.Forms.TextBox TxtP365New;
+        private System.Windows.Forms.TextBox TxtT365New;
+        private System.Windows.Forms.TextBox TxtP365Contacts;
+        private System.Windows.Forms.TextBox TxtP365Conversions;
+        private System.Windows.Forms.TextBox TxtT365Conversions;
+        private System.Windows.Forms.TextBox TxtT365Abandons;
+        private System.Windows.Forms.TextBox TxtP365Abandons;
+        private System.Windows.Forms.TextBox TxtT365Contacts;
         private System.Windows.Forms.TextBox TxtP30New;
         private System.Windows.Forms.TextBox TxtT30New;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox TxtP30Contacts;
+        private System.Windows.Forms.TextBox TxtP30Conversions;
         private System.Windows.Forms.TextBox TxtT30Conversions;
         private System.Windows.Forms.TextBox TxtT30Abandons;
-        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.TextBox TxtP30Abandons;
         private System.Windows.Forms.TextBox TxtT30Contacts;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;

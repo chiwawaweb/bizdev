@@ -98,26 +98,46 @@ namespace BizDev.DAL
         #region Statistiques
 
         DateTime noDate = new DateTime(1899,12, 30);
+        IQueryable<Prospect> prospects;
 
-        public int TContacts(int nbMois)
+        public int TNew(int nbMois)
         {
-            DateTime dateTContacts;
-            if (nbMois!=0)
-            {
-                dateTContacts = DateTime.Now.AddMonths(nbMois);
-            }
-            else
-            {
-                dateTContacts = new DateTime(1899, 12, 30);
-            }
             using (Context context = new Context())
             {
                 try
                 {
-                    IQueryable<Prospect> prospects; /// A remonter
+                    if (nbMois != 0)
+                    {
+                        DateTime dateTNew = DateTime.Now.AddMonths(nbMois);
+                        prospects = from b in context.Prospects
+                                    where b.CreatedAt >= dateTNew
+                                    select b;
+                    }
+                    else
+                    {
+                        prospects = from b in context.Prospects
+                                    where b.CreatedAt != noDate
+                                    select b;
+                    }
+                    return prospects.Count();
+                }
+                catch
+                {
+                    throw;
+                }
+            }
+        }
+
+        public int TContacts(int nbMois)
+        {
+            using (Context context = new Context())
+            {
+                try
+                {
                     if (nbMois!=0)
                     {
-                        prospects = from b in context.Prospects //// a remonter !!!!
+                        DateTime dateTContacts = DateTime.Now.AddMonths(nbMois);
+                        prospects = from b in context.Prospects
                                     where b.DatePremierContact >= dateTContacts
                                     select b;
                     }
@@ -127,7 +147,6 @@ namespace BizDev.DAL
                                     where b.DatePremierContact != noDate 
                                     select b;
                     }
-
                     return prospects.Count();
                 }
                 catch
@@ -139,23 +158,23 @@ namespace BizDev.DAL
 
         public int TConversions(int nbMois)
         {
-            DateTime dateTConversions;
-            if (nbMois != 0)
-            {
-                dateTConversions = DateTime.Now.AddMonths(nbMois);
-            }
-            else
-            {
-                dateTConversions = DateTime.Now.AddMonths(-2000);
-            }
             using (Context context = new Context())
             {
                 try
                 {
-                    var prospects = from b in context.Prospects
-                                    where b.DateConversion >= dateTConversions
-                                    select b;
-
+                    if (nbMois != 0)
+                    {
+                        DateTime dateTConversions = DateTime.Now.AddMonths(nbMois);
+                        prospects = from b in context.Prospects
+                                        where b.DateConversion >= dateTConversions
+                                        select b;
+                    }
+                    else
+                    {
+                        prospects = from b in context.Prospects
+                                        where b.DateConversion != noDate
+                                        select b;
+                    }
                     return prospects.Count();
                 }
                 catch
@@ -167,23 +186,23 @@ namespace BizDev.DAL
 
         public int TAbandons(int nbMois)
         {
-            DateTime dateTAbandons;
-            if (nbMois != 0)
-            {
-                dateTAbandons = DateTime.Now.AddMonths(nbMois);
-            }
-            else
-            {
-                dateTAbandons = DateTime.Now.AddMonths(-2000);
-            }
             using (Context context = new Context())
             {
                 try
                 {
-                    var prospects = from b in context.Prospects
-                                    where b.DateAbandon >= dateTAbandons
-                                    select b;
-
+                    if (nbMois != 0)
+                    {
+                        DateTime dateTAbandons = DateTime.Now.AddMonths(nbMois);
+                        prospects = from b in context.Prospects
+                                        where b.DateAbandon >= dateTAbandons
+                                        select b;
+                    }
+                    else
+                    {
+                        prospects = from b in context.Prospects
+                                        where b.DateAbandon != noDate
+                                        select b;
+                    }
                     return prospects.Count();
                 }
                 catch
