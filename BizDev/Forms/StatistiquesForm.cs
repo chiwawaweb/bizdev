@@ -149,7 +149,7 @@ namespace BizDev.Forms
         {
             //AddXY value in chart1 in series named as Salary  
             
-            ChaTotal.ChartAreas[0].AxisY.Maximum = 100;
+            //ChaTotal.ChartAreas[0].AxisY.Maximum = 100;
             //ChaTotal.ChartAreas[0].BackColor = SystemColors.Control;
             ChaTotal.Series["Total"].Points.AddXY("Contacts", (PContacts/100).ToString("0.00"));
             ChaTotal.Series["Total"].Points.AddXY("Conversions", (PConversions/100).ToString("0.00"));
@@ -158,6 +158,23 @@ namespace BizDev.Forms
             ChaTotal.Series["M1"].Points.AddXY("Contacts", (PM1Contacts/100).ToString("0.00"));
             ChaTotal.Series["M1"].Points.AddXY("Conversions", (PM1Conversions/100).ToString("0.00"));
             ChaTotal.Series["M1"].Points.AddXY("Abandons", (PM1Abandons/100).ToString("0.00"));
+
+            ChaTotal.Series["M3"].Points.AddXY("Contacts", (PM3Contacts / 100).ToString("0.00"));
+            ChaTotal.Series["M3"].Points.AddXY("Conversions", (PM3Conversions / 100).ToString("0.00"));
+            ChaTotal.Series["M3"].Points.AddXY("Abandons", (PM3Abandons / 100).ToString("0.00"));
+
+            ChaTotal.Series["M6"].Points.AddXY("Contacts", (PM6Contacts / 100).ToString("0.00"));
+            ChaTotal.Series["M6"].Points.AddXY("Conversions", (PM6Conversions / 100).ToString("0.00"));
+            ChaTotal.Series["M6"].Points.AddXY("Abandons", (PM6Abandons / 100).ToString("0.00"));
+
+            ChaTotal.Series["M9"].Points.AddXY("Contacts", (PM9Contacts / 100).ToString("0.00"));
+            ChaTotal.Series["M9"].Points.AddXY("Conversions", (PM9Conversions / 100).ToString("0.00"));
+            ChaTotal.Series["M9"].Points.AddXY("Abandons", (PM9Abandons / 100).ToString("0.00"));
+
+            ChaTotal.Series["M12"].Points.AddXY("Contacts", (PM12Contacts / 100).ToString("0.00"));
+            ChaTotal.Series["M12"].Points.AddXY("Conversions", (PM12Conversions / 100).ToString("0.00"));
+            ChaTotal.Series["M12"].Points.AddXY("Abandons", (PM12Abandons / 100).ToString("0.00"));
+
             ChaTotal.BackColor = SystemColors.Control;
             //ChaTotal.Series["Salary"].Points.AddXY("Gurmeet", "10000");
             //ChaTotal.Series["Salary"].Points.AddXY("Suresh", "8500");

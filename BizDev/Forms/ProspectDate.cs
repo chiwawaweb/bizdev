@@ -121,7 +121,6 @@ namespace BizDev.Forms
             switch (type)
             {
                 case "P":
-
                     datePremierContact = newDate;
                     premierContact = newState;
                     break;
