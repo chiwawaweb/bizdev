@@ -14,6 +14,11 @@ namespace BizDev.Forms
 {
     public partial class StatistiquesForm : Form
     {
+        double[] TotalNew = new double[12];
+        double[] TotalContacts = new double[12];
+        double[] TotalConversions = new double[12];
+        double[] TotalAbandons = new double[12];
+
         double TNew, TContacts, TConversions, TAbandons;
         double PNew, PContacts, PConversions, PAbandons;
         double TM1New, TM1Contacts, TM1Conversions, TM1Abandons;
@@ -34,9 +39,21 @@ namespace BizDev.Forms
             InitializeComponent();
         }
 
-        private void CalculDonnees()
+        private void CalculDonnees(int annee)
         {
             /* Récupération des données */
+            for (int i=0;i<12;i++)
+            {
+                TotalNew[i] = prospectProvider.TNewMonth(annee, i + 1);
+                TotalContacts[i] = prospectProvider.TContactsMonth(annee, i + 1);
+                TotalConversions[i] = prospectProvider.TConversionsMonth(annee, i + 1);
+                TotalAbandons[i] = prospectProvider.TAbandonsMonth(annee, i + 1);
+
+                Console.WriteLine(TotalNew[i].ToString());
+            }
+
+            /*
+
             TNew = prospectProvider.TNew(0);
             TM1New = prospectProvider.TNew(-1);
             TM3New = prospectProvider.TNew(-3);
@@ -82,6 +99,8 @@ namespace BizDev.Forms
             PM9Abandons = (TM9Abandons / TM9New) * 100;
             TM12Abandons = prospectProvider.TAbandons(-12);
             PM12Abandons = (TM12Abandons / TM12New) * 100;
+
+            */
         }
 
         private void AfficheDonnees()
@@ -191,7 +210,7 @@ namespace BizDev.Forms
 
         private void StatistiquesForm_Load(object sender, EventArgs e)
         {
-            CalculDonnees();
+            CalculDonnees(DateTime.Now.Year);
             AfficheDonnees();
 
             int Test = prospectProvider.TNewMonth(2018, 4);
