@@ -18,10 +18,14 @@ namespace BizDev.Forms
 
         double[] TotalNew = new double[12];
         double[] TotalContacts = new double[12];
+        double[] PercentContacts = new double[12];
         double[] TotalConversions = new double[12];
+        double[] PercentConversions = new double[12];
         double[] TotalAbandons = new double[12];
+        double[] PercentAbandons = new double[12];
 
         double TOTNew, TOTContacts, TOTConversions, TOTAbandons;
+        double PERNew, PERContacts, PERConversions, PERAbandons;
         
 
         ProspectProvider prospectProvider = new ProspectProvider();
@@ -41,6 +45,9 @@ namespace BizDev.Forms
                 TotalNew[i] = prospectProvider.TotalNew(annee, i + 1);
                 TOTNew += TotalNew[i];
                 TotalContacts[i] = prospectProvider.TotalContacts(annee, i + 1);
+                
+                PercentContacts[i] = (TotalContacts[i] / TotalNew[i]);
+                MessageBox.Show(PercentContacts[i].ToString());
                 TOTContacts += TotalContacts[i];
                 TotalConversions[i] = prospectProvider.TotalConversions(annee, i + 1);
                 TOTConversions += TotalConversions[i];
@@ -52,6 +59,7 @@ namespace BizDev.Forms
         private void AfficheDonnees()
         {
             TxtT01New.Text = TotalNew[0].ToString();
+            TxtP01Contacts.Text = PercentContacts[0].ToString();
             TxtT01Contacts.Text = TotalContacts[0].ToString();
             TxtT01Conversions.Text = TotalConversions[0].ToString();
             TxtT01Abandons.Text = TotalAbandons[0].ToString();
@@ -111,7 +119,10 @@ namespace BizDev.Forms
             TxtT12Conversions.Text = TotalConversions[11].ToString();
             TxtT12Abandons.Text = TotalAbandons[11].ToString();
 
-
+            TxtTOTNew.Text = TOTNew.ToString();
+            TxtTOTContacts.Text = TOTContacts.ToString();
+            TxtTOTConversions.Text = TOTConversions.ToString();
+            TxtTOTAbandons.Text = TOTAbandons.ToString();
 
         }
 

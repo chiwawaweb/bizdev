@@ -41,7 +41,7 @@
             this.textBox31 = new System.Windows.Forms.TextBox();
             this.textBox30 = new System.Windows.Forms.TextBox();
             this.textBox29 = new System.Windows.Forms.TextBox();
-            this.TxtP01New = new System.Windows.Forms.TextBox();
+            this.TxtP01Contacts = new System.Windows.Forms.TextBox();
             this.TxtT12Abandons = new System.Windows.Forms.TextBox();
             this.TxtT12Conversions = new System.Windows.Forms.TextBox();
             this.TxtT12Contacts = new System.Windows.Forms.TextBox();
@@ -115,7 +115,7 @@
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.textBox14 = new System.Windows.Forms.TextBox();
             this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.TxtP01Conversions = new System.Windows.Forms.TextBox();
             this.textBox17 = new System.Windows.Forms.TextBox();
             this.textBox18 = new System.Windows.Forms.TextBox();
             this.textBox19 = new System.Windows.Forms.TextBox();
@@ -126,7 +126,7 @@
             this.textBox24 = new System.Windows.Forms.TextBox();
             this.textBox25 = new System.Windows.Forms.TextBox();
             this.textBox26 = new System.Windows.Forms.TextBox();
-            this.textBox27 = new System.Windows.Forms.TextBox();
+            this.TxtP01Abandons = new System.Windows.Forms.TextBox();
             this.textBox28 = new System.Windows.Forms.TextBox();
             this.textBox40 = new System.Windows.Forms.TextBox();
             this.textBox41 = new System.Windows.Forms.TextBox();
@@ -232,18 +232,18 @@
             this.textBox29.TabStop = false;
             this.textBox29.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // TxtP01New
+            // TxtP01Contacts
             // 
-            this.TxtP01New.BackColor = System.Drawing.SystemColors.Control;
-            this.TxtP01New.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TxtP01New.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.TxtP01New.Location = new System.Drawing.Point(157, 73);
-            this.TxtP01New.Name = "TxtP01New";
-            this.TxtP01New.ReadOnly = true;
-            this.TxtP01New.Size = new System.Drawing.Size(33, 20);
-            this.TxtP01New.TabIndex = 119;
-            this.TxtP01New.TabStop = false;
-            this.TxtP01New.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtP01Contacts.BackColor = System.Drawing.SystemColors.Control;
+            this.TxtP01Contacts.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TxtP01Contacts.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.TxtP01Contacts.Location = new System.Drawing.Point(157, 73);
+            this.TxtP01Contacts.Name = "TxtP01Contacts";
+            this.TxtP01Contacts.ReadOnly = true;
+            this.TxtP01Contacts.Size = new System.Drawing.Size(33, 20);
+            this.TxtP01Contacts.TabIndex = 119;
+            this.TxtP01Contacts.TabStop = false;
+            this.TxtP01Contacts.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // TxtT12Abandons
             // 
@@ -1102,18 +1102,18 @@
             this.textBox15.TabStop = false;
             this.textBox15.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox16
+            // TxtP01Conversions
             // 
-            this.textBox16.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox16.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBox16.Location = new System.Drawing.Point(157, 99);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.ReadOnly = true;
-            this.textBox16.Size = new System.Drawing.Size(33, 20);
-            this.textBox16.TabIndex = 136;
-            this.textBox16.TabStop = false;
-            this.textBox16.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtP01Conversions.BackColor = System.Drawing.SystemColors.Control;
+            this.TxtP01Conversions.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TxtP01Conversions.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.TxtP01Conversions.Location = new System.Drawing.Point(157, 99);
+            this.TxtP01Conversions.Name = "TxtP01Conversions";
+            this.TxtP01Conversions.ReadOnly = true;
+            this.TxtP01Conversions.Size = new System.Drawing.Size(33, 20);
+            this.TxtP01Conversions.TabIndex = 136;
+            this.TxtP01Conversions.TabStop = false;
+            this.TxtP01Conversions.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // textBox17
             // 
@@ -1227,18 +1227,18 @@
             this.textBox26.TabStop = false;
             this.textBox26.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox27
+            // TxtP01Abandons
             // 
-            this.textBox27.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox27.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBox27.Location = new System.Drawing.Point(157, 125);
-            this.textBox27.Name = "textBox27";
-            this.textBox27.ReadOnly = true;
-            this.textBox27.Size = new System.Drawing.Size(33, 20);
-            this.textBox27.TabIndex = 147;
-            this.textBox27.TabStop = false;
-            this.textBox27.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TxtP01Abandons.BackColor = System.Drawing.SystemColors.Control;
+            this.TxtP01Abandons.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TxtP01Abandons.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.TxtP01Abandons.Location = new System.Drawing.Point(157, 125);
+            this.TxtP01Abandons.Name = "TxtP01Abandons";
+            this.TxtP01Abandons.ReadOnly = true;
+            this.TxtP01Abandons.Size = new System.Drawing.Size(33, 20);
+            this.TxtP01Abandons.TabIndex = 147;
+            this.TxtP01Abandons.TabStop = false;
+            this.TxtP01Abandons.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // textBox28
             // 
@@ -1304,7 +1304,7 @@
             this.Controls.Add(this.textBox24);
             this.Controls.Add(this.textBox25);
             this.Controls.Add(this.textBox26);
-            this.Controls.Add(this.textBox27);
+            this.Controls.Add(this.TxtP01Abandons);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.textBox8);
@@ -1315,7 +1315,7 @@
             this.Controls.Add(this.textBox13);
             this.Controls.Add(this.textBox14);
             this.Controls.Add(this.textBox15);
-            this.Controls.Add(this.textBox16);
+            this.Controls.Add(this.TxtP01Conversions);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.TxtTOTAbandons);
             this.Controls.Add(this.TxtTOTConversions);
@@ -1332,7 +1332,7 @@
             this.Controls.Add(this.textBox31);
             this.Controls.Add(this.textBox30);
             this.Controls.Add(this.textBox29);
-            this.Controls.Add(this.TxtP01New);
+            this.Controls.Add(this.TxtP01Contacts);
             this.Controls.Add(this.TxtT12Abandons);
             this.Controls.Add(this.TxtT12Conversions);
             this.Controls.Add(this.TxtT12Contacts);
@@ -1410,7 +1410,7 @@
         private System.Windows.Forms.TextBox textBox31;
         private System.Windows.Forms.TextBox textBox30;
         private System.Windows.Forms.TextBox textBox29;
-        private System.Windows.Forms.TextBox TxtP01New;
+        private System.Windows.Forms.TextBox TxtP01Contacts;
         private System.Windows.Forms.TextBox TxtT12Abandons;
         private System.Windows.Forms.TextBox TxtT12Conversions;
         private System.Windows.Forms.TextBox TxtT12Contacts;
@@ -1484,7 +1484,7 @@
         private System.Windows.Forms.TextBox textBox13;
         private System.Windows.Forms.TextBox textBox14;
         private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.TextBox TxtP01Conversions;
         private System.Windows.Forms.TextBox textBox17;
         private System.Windows.Forms.TextBox textBox18;
         private System.Windows.Forms.TextBox textBox19;
@@ -1495,7 +1495,7 @@
         private System.Windows.Forms.TextBox textBox24;
         private System.Windows.Forms.TextBox textBox25;
         private System.Windows.Forms.TextBox textBox26;
-        private System.Windows.Forms.TextBox textBox27;
+        private System.Windows.Forms.TextBox TxtP01Abandons;
         private System.Windows.Forms.TextBox textBox28;
         private System.Windows.Forms.TextBox textBox40;
         private System.Windows.Forms.TextBox textBox41;
