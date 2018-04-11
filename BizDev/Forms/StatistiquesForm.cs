@@ -14,6 +14,8 @@ namespace BizDev.Forms
 {
     public partial class StatistiquesForm : Form
     {
+        int annee;
+
         double[] TotalNew = new double[12];
         double[] TotalContacts = new double[12];
         double[] TotalConversions = new double[12];
@@ -34,8 +36,10 @@ namespace BizDev.Forms
 
         ProspectProvider prospectProvider = new ProspectProvider();
 
-        public StatistiquesForm()
+        public StatistiquesForm(int _annee)
         {
+            annee = _annee;
+
             InitializeComponent();
         }
 
@@ -44,131 +48,80 @@ namespace BizDev.Forms
             /* Récupération des données */
             for (int i=0;i<12;i++)
             {
-                TotalNew[i] = prospectProvider.TNewMonth(annee, i + 1);
-                TotalContacts[i] = prospectProvider.TContactsMonth(annee, i + 1);
-                TotalConversions[i] = prospectProvider.TConversionsMonth(annee, i + 1);
-                TotalAbandons[i] = prospectProvider.TAbandonsMonth(annee, i + 1);
-
-                Console.WriteLine(TotalNew[i].ToString());
+                TotalNew[i] = prospectProvider.TotalNew(annee, i + 1);
+                TotalContacts[i] = prospectProvider.TotalContacts(annee, i + 1);
+                TotalConversions[i] = prospectProvider.TotalConversions(annee, i + 1);
+                TotalAbandons[i] = prospectProvider.TotalAbandons(annee, i + 1);
             }
-
-            /*
-
-            TNew = prospectProvider.TNew(0);
-            TM1New = prospectProvider.TNew(-1);
-            TM3New = prospectProvider.TNew(-3);
-            TM6New = prospectProvider.TNew(-6);
-            TM9New = prospectProvider.TNew(-9);
-            TM12New = prospectProvider.TNew(-12);
-
-            TContacts = prospectProvider.TContacts(0);
-            PContacts = (TContacts / TNew) * 100;
-            TM1Contacts = prospectProvider.TContacts(-1);
-            PM1Contacts = (TM1Contacts / TM1New) * 100;
-            TM3Contacts = prospectProvider.TContacts(-3);
-            PM3Contacts = (TM3Contacts / TM3New) * 100;
-            TM6Contacts = prospectProvider.TContacts(-6);
-            PM6Contacts = (TM6Contacts / TM6New) * 100;
-            TM9Contacts = prospectProvider.TContacts(-9);
-            PM9Contacts = (TM9Contacts / TM9New) * 100;
-            TM12Contacts = prospectProvider.TContacts(-12);
-            PM12Contacts = (TM12Contacts / TM12New) * 100;
-
-            TConversions = prospectProvider.TConversions(0);
-            PConversions = (TConversions / TContacts) * 100;
-            TM1Conversions = prospectProvider.TConversions(-1);
-            PM1Conversions = (TM1Conversions / TM1Contacts) * 100;
-            TM3Conversions = prospectProvider.TConversions(-3);
-            PM3Conversions = (TM3Conversions / TM3Contacts) * 100;
-            TM6Conversions = prospectProvider.TConversions(-6);
-            PM6Conversions = (TM6Conversions / TM6Contacts) * 100;
-            TM9Conversions = prospectProvider.TConversions(-9);
-            PM9Conversions = (TM9Conversions / TM9Contacts) * 100;
-            TM12Conversions = prospectProvider.TConversions(-12);
-            PM12Conversions = (TM12Conversions / TM12Contacts) * 100;
-
-            TAbandons = prospectProvider.TAbandons(0);
-            PAbandons = (TAbandons / TNew) * 100;
-            TM1Abandons = prospectProvider.TAbandons(-1);
-            PM1Abandons = (TM1Abandons / TM1New) * 100;
-            TM3Abandons = prospectProvider.TAbandons(-3);
-            PM3Abandons = (TM3Abandons / TM3New) * 100;
-            TM6Abandons = prospectProvider.TAbandons(-6);
-            PM6Abandons = (TM6Abandons / TM6New) * 100;
-            TM9Abandons = prospectProvider.TAbandons(-9);
-            PM9Abandons = (TM9Abandons / TM9New) * 100;
-            TM12Abandons = prospectProvider.TAbandons(-12);
-            PM12Abandons = (TM12Abandons / TM12New) * 100;
-
-            */
         }
 
         private void AfficheDonnees()
         {
-            TxtTNew.Text = TNew.ToString();
-            TxtTM1New.Text = TM1New.ToString();
-            TxtTM3New.Text = TM3New.ToString();
-            TxtTM6New.Text = TM6New.ToString();
-            TxtTM9New.Text = TM9New.ToString();
-            TxtTM12New.Text = TM12New.ToString();
+            TxtT01New.Text = TotalNew[0].ToString();
+            TxtT01Contacts.Text = TotalContacts[0].ToString();
+            TxtT01Conversions.Text = TotalConversions[0].ToString();
+            TxtT01Abandons.Text = TotalAbandons[0].ToString();
 
-            TxtTContacts.Text = TContacts.ToString();
-            TxtPContacts.Text = PContacts.ToString("0.00") + " %";
-            TxtTM1Contacts.Text = TM1Contacts.ToString();
-            TxtPM1Contacts.Text = PM1Contacts.ToString("0.00") + " %";
-            TxtTM3Contacts.Text = TM3Contacts.ToString();
-            TxtPM3Contacts.Text = PM3Contacts.ToString("0.00") + " %";
-            TxtTM6Contacts.Text = TM6Contacts.ToString();
-            TxtPM6Contacts.Text = PM6Contacts.ToString("0.00") + " %";
-            TxtTM9Contacts.Text = TM9Contacts.ToString();
-            TxtPM9Contacts.Text = PM9Contacts.ToString("0.00") + " %";
-            TxtTM12Contacts.Text = TM12Contacts.ToString();
-            TxtPM12Contacts.Text = PM12Contacts.ToString("0.00") + " %";
+            TxtT02New.Text = TotalNew[1].ToString();
+            TxtT02Contacts.Text = TotalContacts[1].ToString();
+            TxtT02Conversions.Text = TotalConversions[1].ToString();
+            TxtT02Abandons.Text = TotalAbandons[1].ToString();
 
-            TxtTConversions.Text = TConversions.ToString();
-            TxtPConversions.Text = PConversions.ToString("0.00") + " %";
-            TxtTM1Conversions.Text = TM1Conversions.ToString();
-            TxtPM1Conversions.Text = PM1Conversions.ToString("0.00") + " %";
-            TxtTM3Conversions.Text = TM3Conversions.ToString();
-            TxtPM3Conversions.Text = PM3Conversions.ToString("0.00") + " %";
-            TxtTM6Conversions.Text = TM6Conversions.ToString();
-            TxtPM6Conversions.Text = PM6Conversions.ToString("0.00") + " %";
-            TxtTM9Conversions.Text = TM9Conversions.ToString();
-            TxtPM9Conversions.Text = PM9Conversions.ToString("0.00") + " %";
-            TxtTM12Conversions.Text = TM12Conversions.ToString();
-            TxtPM12Conversions.Text = PM12Conversions.ToString("0.00") + " %";
+            TxtT03New.Text = TotalNew[2].ToString();
+            TxtT03Contacts.Text = TotalContacts[2].ToString();
+            TxtT03Conversions.Text = TotalConversions[2].ToString();
+            TxtT03Abandons.Text = TotalAbandons[2].ToString();
 
-            TxtTAbandons.Text = TAbandons.ToString();
-            TxtPAbandons.Text = PAbandons.ToString("0.00") + " %";
-            TxtTM1Abandons.Text = TM1Abandons.ToString();
-            TxtPM1Abandons.Text = PM1Abandons.ToString("0.00") + " %";
-            TxtTM3Abandons.Text = TM3Abandons.ToString();
-            TxtPM3Abandons.Text = PM3Abandons.ToString("0.00") + " %";
-            TxtTM6Abandons.Text = TM6Abandons.ToString();
-            TxtPM6Abandons.Text = PM6Abandons.ToString("0.00") + " %";
-            TxtTM9Abandons.Text = TM9Abandons.ToString();
-            TxtPM9Abandons.Text = PM9Abandons.ToString("0.00") + " %";
-            TxtTM12Abandons.Text = TM12Abandons.ToString();
-            TxtPM12Abandons.Text = PM12Abandons.ToString("0.00") + " %";
+            TxtT04New.Text = TotalNew[3].ToString();
+            TxtT04Contacts.Text = TotalContacts[3].ToString();
+            TxtT04Conversions.Text = TotalConversions[3].ToString();
+            TxtT04Abandons.Text = TotalAbandons[3].ToString();
+
+            TxtT05New.Text = TotalNew[4].ToString();
+            TxtT05Contacts.Text = TotalContacts[4].ToString();
+            TxtT05Conversions.Text = TotalConversions[4].ToString();
+            TxtT05Abandons.Text = TotalAbandons[4].ToString();
+
+            TxtT06New.Text = TotalNew[5].ToString();
+            TxtT06Contacts.Text = TotalContacts[5].ToString();
+            TxtT06Conversions.Text = TotalConversions[5].ToString();
+            TxtT06Abandons.Text = TotalAbandons[5].ToString();
+
+            TxtT07New.Text = TotalNew[6].ToString();
+            TxtT07Contacts.Text = TotalContacts[6].ToString();
+            TxtT07Conversions.Text = TotalConversions[6].ToString();
+            TxtT07Abandons.Text = TotalAbandons[6].ToString();
+
+            TxtT08New.Text = TotalNew[7].ToString();
+            TxtT08Contacts.Text = TotalContacts[7].ToString();
+            TxtT08Conversions.Text = TotalConversions[7].ToString();
+            TxtT08Abandons.Text = TotalAbandons[7].ToString();
+
+            TxtT09New.Text = TotalNew[8].ToString();
+            TxtT09Contacts.Text = TotalContacts[8].ToString();
+            TxtT09Conversions.Text = TotalConversions[8].ToString();
+            TxtT09Abandons.Text = TotalAbandons[8].ToString();
+
+            TxtT10New.Text = TotalNew[9].ToString();
+            TxtT10Contacts.Text = TotalContacts[9].ToString();
+            TxtT10Conversions.Text = TotalConversions[9].ToString();
+            TxtT10Abandons.Text = TotalAbandons[9].ToString();
+
+            TxtT11New.Text = TotalNew[10].ToString();
+            TxtT11Contacts.Text = TotalContacts[10].ToString();
+            TxtT11Conversions.Text = TotalConversions[10].ToString();
+            TxtT11Abandons.Text = TotalAbandons[10].ToString();
+
+            TxtT12New.Text = TotalNew[11].ToString();
+            TxtT12Contacts.Text = TotalContacts[11].ToString();
+            TxtT12Conversions.Text = TotalConversions[11].ToString();
+            TxtT12Abandons.Text = TotalAbandons[11].ToString();
+
+
         }
-
-        private void StatistiquesForm_Paint(object sender, PaintEventArgs e)
-        {
-            /*
-            Pen pen = new Pen(Color.FromArgb(255, 0, 0, 178));
-            e.Graphics.DrawLine(pen, 20, 10, 300, 100);
-            */
-        }
-
-        
 
         private void fillChart()
         {
-            //AddXY value in chart1 in series named as Salary  
-
-            //ChaTotal.ChartAreas[0].AxisY.Maximum = 100;
-            //ChaTotal.ChartAreas[0].BackColor = SystemColors.Control;
-            
             ChaTotal.Series["Prospects"].Points.AddXY("Janvier", TotalNew[0].ToString());
             ChaTotal.Series["Prospects"].Points.AddXY("Février", TotalNew[1].ToString());
             ChaTotal.Series["Prospects"].Points.AddXY("Mars", TotalNew[2].ToString());
@@ -182,6 +135,31 @@ namespace BizDev.Forms
             ChaTotal.Series["Prospects"].Points.AddXY("Novembre", TotalNew[10].ToString());
             ChaTotal.Series["Prospects"].Points.AddXY("Décembre", TotalNew[11].ToString());
 
+            ChaTotal.Series["Contacts"].Points.AddXY("Janvier", TotalContacts[0].ToString());
+            ChaTotal.Series["Contacts"].Points.AddXY("Février", TotalContacts[1].ToString());
+            ChaTotal.Series["Contacts"].Points.AddXY("Mars", TotalContacts[2].ToString());
+            ChaTotal.Series["Contacts"].Points.AddXY("Avril", TotalContacts[3].ToString());
+            ChaTotal.Series["Contacts"].Points.AddXY("Mai", TotalContacts[4].ToString());
+            ChaTotal.Series["Contacts"].Points.AddXY("Juin", TotalContacts[5].ToString());
+            ChaTotal.Series["Contacts"].Points.AddXY("Juillet", TotalContacts[6].ToString());
+            ChaTotal.Series["Contacts"].Points.AddXY("Août", TotalContacts[7].ToString());
+            ChaTotal.Series["Contacts"].Points.AddXY("Septembre", TotalContacts[8].ToString());
+            ChaTotal.Series["Contacts"].Points.AddXY("Octobre", TotalContacts[9].ToString());
+            ChaTotal.Series["Contacts"].Points.AddXY("Novembre", TotalContacts[10].ToString());
+            ChaTotal.Series["Contacts"].Points.AddXY("Décembre", TotalContacts[11].ToString());
+
+            ChaTotal.Series["Conversions"].Points.AddXY("Janvier", TotalConversions[0].ToString());
+            ChaTotal.Series["Conversions"].Points.AddXY("Février", TotalConversions[1].ToString());
+            ChaTotal.Series["Conversions"].Points.AddXY("Mars", TotalConversions[2].ToString());
+            ChaTotal.Series["Conversions"].Points.AddXY("Avril", TotalConversions[3].ToString());
+            ChaTotal.Series["Conversions"].Points.AddXY("Mai", TotalConversions[4].ToString());
+            ChaTotal.Series["Conversions"].Points.AddXY("Juin", TotalConversions[5].ToString());
+            ChaTotal.Series["Conversions"].Points.AddXY("Juillet", TotalConversions[6].ToString());
+            ChaTotal.Series["Conversions"].Points.AddXY("Août", TotalConversions[7].ToString());
+            ChaTotal.Series["Conversions"].Points.AddXY("Septembre", TotalConversions[8].ToString());
+            ChaTotal.Series["Conversions"].Points.AddXY("Octobre", TotalConversions[9].ToString());
+            ChaTotal.Series["Conversions"].Points.AddXY("Novembre", TotalConversions[10].ToString());
+            ChaTotal.Series["Conversions"].Points.AddXY("Décembre", TotalConversions[11].ToString());
 
             /*
             ChaTotal.Series["M1"].Points.AddXY("Contacts", (PM1Contacts/100).ToString("0.00"));
@@ -224,7 +202,7 @@ namespace BizDev.Forms
             CalculDonnees(DateTime.Now.Year);
             AfficheDonnees();
 
-            int Test = prospectProvider.TNewMonth(2018, 4);
+            int Test = prospectProvider.TotalNew(2018, 4);
             Console.WriteLine("TEST : " + Test);
 
             fillChart();

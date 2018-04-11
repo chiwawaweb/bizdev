@@ -32,7 +32,7 @@ namespace BizDev.Forms
 
         private void OuvreStatistiques()
         {
-            StatistiquesForm statistiquesForm = new StatistiquesForm()
+            StatistiquesForm statistiquesForm = new StatistiquesForm(DateTime.Now.Year)
             {
                 MdiParent = this
             };

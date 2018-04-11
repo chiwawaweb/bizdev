@@ -122,119 +122,7 @@ namespace BizDev.DAL
         DateTime noDate = new DateTime(1899, 12, 30);
         IQueryable<Prospect> prospects;
 
-        public int TNew(int nbMois)
-        {
-            using (Context context = new Context())
-            {
-                try
-                {
-                    if (nbMois != 0)
-                    {
-                        DateTime dateTNew = DateTime.Now.AddMonths(nbMois);
-                        prospects = from b in context.Prospects
-                                    where b.CreatedAt >= dateTNew
-                                    select b;
-                    }
-                    else
-                    {
-                        prospects = from b in context.Prospects
-                                    where b.CreatedAt != noDate
-                                    select b;
-                    }
-                    return prospects.Count();
-                }
-                catch
-                {
-                    throw;
-                }
-            }
-        }
-
-        public int TContacts(int nbMois)
-        {
-            using (Context context = new Context())
-            {
-                try
-                {
-                    if (nbMois != 0)
-                    {
-                        DateTime dateTContacts = DateTime.Now.AddMonths(nbMois);
-                        prospects = from b in context.Prospects
-                                    where b.DatePremierContact >= dateTContacts
-                                    select b;
-                    }
-                    else
-                    {
-                        prospects = from b in context.Prospects
-                                    where b.DatePremierContact != noDate
-                                    select b;
-                    }
-                    return prospects.Count();
-                }
-                catch
-                {
-                    throw;
-                }
-            }
-        }
-
-        public int TConversions(int nbMois)
-        {
-            using (Context context = new Context())
-            {
-                try
-                {
-                    if (nbMois != 0)
-                    {
-                        DateTime dateTConversions = DateTime.Now.AddMonths(nbMois);
-                        prospects = from b in context.Prospects
-                                    where b.DateConversion >= dateTConversions
-                                    select b;
-                    }
-                    else
-                    {
-                        prospects = from b in context.Prospects
-                                    where b.DateConversion != noDate
-                                    select b;
-                    }
-                    return prospects.Count();
-                }
-                catch
-                {
-                    throw;
-                }
-            }
-        }
-
-        public int TAbandons(int nbMois)
-        {
-            using (Context context = new Context())
-            {
-                try
-                {
-                    if (nbMois != 0)
-                    {
-                        DateTime dateTAbandons = DateTime.Now.AddMonths(nbMois);
-                        prospects = from b in context.Prospects
-                                    where b.DateAbandon >= dateTAbandons
-                                    select b;
-                    }
-                    else
-                    {
-                        prospects = from b in context.Prospects
-                                    where b.DateAbandon != noDate
-                                    select b;
-                    }
-                    return prospects.Count();
-                }
-                catch
-                {
-                    throw;
-                }
-            }
-        }
-
-        public int TNewMonth(int annee, int mois)
+        public int TotalNew(int annee, int mois)
         {
 
             dateDebut = new DateTime(annee, mois, 1);
@@ -259,7 +147,7 @@ namespace BizDev.DAL
 
         }
 
-        public int TContactsMonth(int annee, int mois)
+        public int TotalContacts(int annee, int mois)
         {
 
             dateDebut = new DateTime(annee, mois, 1);
@@ -282,7 +170,7 @@ namespace BizDev.DAL
             }
         }
 
-        public int TConversionsMonth(int annee, int mois)
+        public int TotalConversions(int annee, int mois)
         {
 
             dateDebut = new DateTime(annee, mois, 1);
@@ -305,7 +193,7 @@ namespace BizDev.DAL
             }
         }
 
-        public int TAbandonsMonth(int annee, int mois)
+        public int TotalAbandons(int annee, int mois)
         {
 
             dateDebut = new DateTime(annee, mois, 1);
