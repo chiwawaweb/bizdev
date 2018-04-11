@@ -148,7 +148,7 @@ namespace BizDev.Forms
         private void fillChart()
         {
             //AddXY value in chart1 in series named as Salary  
-            ChaTotal.BackColor = SystemColors.Control;
+            
             ChaTotal.ChartAreas[0].AxisY.Maximum = 100;
             //ChaTotal.ChartAreas[0].BackColor = SystemColors.Control;
             ChaTotal.Series["Total"].Points.AddXY("Contacts", (PContacts/100).ToString("0.00"));
@@ -158,7 +158,7 @@ namespace BizDev.Forms
             ChaTotal.Series["M1"].Points.AddXY("Contacts", (PM1Contacts/100).ToString("0.00"));
             ChaTotal.Series["M1"].Points.AddXY("Conversions", (PM1Conversions/100).ToString("0.00"));
             ChaTotal.Series["M1"].Points.AddXY("Abandons", (PM1Abandons/100).ToString("0.00"));
-
+            ChaTotal.BackColor = SystemColors.Control;
             //ChaTotal.Series["Salary"].Points.AddXY("Gurmeet", "10000");
             //ChaTotal.Series["Salary"].Points.AddXY("Suresh", "8500");
             //chart title  

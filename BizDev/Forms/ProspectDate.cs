@@ -147,11 +147,11 @@ namespace BizDev.Forms
             Prospect prospect = prospectProvider.GetProspectById(idProspect);
 
             prospect.PremierContact = premierContact;
-            prospect.DatePremierContact = datePremierContact;
+            prospect.DatePremierContact = Convert.ToDateTime(datePremierContact.ToShortDateString());
             prospect.Conversion = conversion;
-            prospect.DateConversion = dateConversion;
+            prospect.DateConversion = Convert.ToDateTime(dateConversion.ToShortDateString());
             prospect.Abandon = abandon;
-            prospect.DateAbandon = dateAbandon;
+            prospect.DateAbandon = Convert.ToDateTime(dateAbandon.ToShortDateString());
 
             prospectProvider.Update(prospect);
 

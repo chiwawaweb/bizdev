@@ -479,7 +479,7 @@
             // 
             this.BtnSave.Location = new System.Drawing.Point(613, 504);
             this.BtnSave.Name = "BtnSave";
-            this.BtnSave.Size = new System.Drawing.Size(75, 23);
+            this.BtnSave.Size = new System.Drawing.Size(75, 26);
             this.BtnSave.TabIndex = 36;
             this.BtnSave.TabStop = false;
             this.BtnSave.Text = "Enregistrer";
