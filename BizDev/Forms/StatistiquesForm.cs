@@ -27,8 +27,6 @@ namespace BizDev.Forms
         double TM12New, TM12Contacts, TM12Conversions, TM12Abandons;
         double PM12New, PM12Contacts, PM12Conversions, PM12Abandons;
 
-        List<Prospect> prospect;
-
         ProspectProvider prospectProvider = new ProspectProvider();
 
         public StatistiquesForm()
@@ -148,9 +146,10 @@ namespace BizDev.Forms
         private void fillChart()
         {
             //AddXY value in chart1 in series named as Salary  
-            
+
             //ChaTotal.ChartAreas[0].AxisY.Maximum = 100;
             //ChaTotal.ChartAreas[0].BackColor = SystemColors.Control;
+            
             ChaTotal.Series["Total"].Points.AddXY("Contacts", (PContacts/100).ToString("0.00"));
             ChaTotal.Series["Total"].Points.AddXY("Conversions", (PConversions/100).ToString("0.00"));
             ChaTotal.Series["Total"].Points.AddXY("Abandons", (PAbandons/100).ToString("0.00"));
@@ -176,6 +175,7 @@ namespace BizDev.Forms
             ChaTotal.Series["M12"].Points.AddXY("Abandons", (PM12Abandons / 100).ToString("0.00"));
 
             ChaTotal.BackColor = SystemColors.Control;
+            
             //ChaTotal.Series["Salary"].Points.AddXY("Gurmeet", "10000");
             //ChaTotal.Series["Salary"].Points.AddXY("Suresh", "8500");
             //chart title  
@@ -193,6 +193,9 @@ namespace BizDev.Forms
         {
             CalculDonnees();
             AfficheDonnees();
+
+            int Test = prospectProvider.TNewMonth(2018, 4);
+            Console.WriteLine("TEST : " + Test);
 
             fillChart();
         }

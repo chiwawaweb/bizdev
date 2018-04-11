@@ -231,6 +231,29 @@ namespace BizDev.DAL
             }
         }
 
+        public int TNewMonth(int annee, int mois)
+        {
+            DateTime dateDebut, dateFin;
+            dateDebut = new DateTime(annee, mois, 1);
+            dateFin = new DateTime(annee, mois, DateTime.DaysInMonth(annee, mois));
+            using (Context context = new Context())
+            {
+                try
+                {
+                    prospects = from b in context.Prospects
+                                    where b.CreatedAt >= dateDebut
+                                    && b.CreatedAt <= dateFin
+                                    select b;
+                    
+                    return prospects.Count();
+                }
+                catch
+                {
+                    throw;
+                }
+            }
+        }
+
         #endregion
     }
 }
