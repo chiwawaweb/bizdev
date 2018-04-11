@@ -21,18 +21,8 @@ namespace BizDev.Forms
         double[] TotalConversions = new double[12];
         double[] TotalAbandons = new double[12];
 
-        double TNew, TContacts, TConversions, TAbandons;
-        double PNew, PContacts, PConversions, PAbandons;
-        double TM1New, TM1Contacts, TM1Conversions, TM1Abandons;
-        double PM1New, PM1Contacts, PM1Conversions, PM1Abandons;
-        double TM3New, TM3Contacts, TM3Conversions, TM3Abandons;
-        double PM3New, PM3Contacts, PM3Conversions, PM3Abandons;
-        double TM6New, TM6Contacts, TM6Conversions, TM6Abandons;
-        double PM6New, PM6Contacts, PM6Conversions, PM6Abandons;
-        double TM9New, TM9Contacts, TM9Conversions, TM9Abandons;
-        double PM9New, PM9Contacts, PM9Conversions, PM9Abandons;
-        double TM12New, TM12Contacts, TM12Conversions, TM12Abandons;
-        double PM12New, PM12Contacts, PM12Conversions, PM12Abandons;
+        double TOTNew, TOTContacts, TOTConversions, TOTAbandons;
+        
 
         ProspectProvider prospectProvider = new ProspectProvider();
 
@@ -49,9 +39,13 @@ namespace BizDev.Forms
             for (int i=0;i<12;i++)
             {
                 TotalNew[i] = prospectProvider.TotalNew(annee, i + 1);
+                TOTNew += TotalNew[i];
                 TotalContacts[i] = prospectProvider.TotalContacts(annee, i + 1);
+                TOTContacts += TotalContacts[i];
                 TotalConversions[i] = prospectProvider.TotalConversions(annee, i + 1);
+                TOTConversions += TotalConversions[i];
                 TotalAbandons[i] = prospectProvider.TotalAbandons(annee, i + 1);
+                TOTAbandons += TotalAbandons[i];
             }
         }
 
@@ -118,6 +112,7 @@ namespace BizDev.Forms
             TxtT12Abandons.Text = TotalAbandons[11].ToString();
 
 
+
         }
 
         private void fillChart()
@@ -134,6 +129,7 @@ namespace BizDev.Forms
             ChaTotal.Series["Prospects"].Points.AddXY("Octobre", TotalNew[9].ToString());
             ChaTotal.Series["Prospects"].Points.AddXY("Novembre", TotalNew[10].ToString());
             ChaTotal.Series["Prospects"].Points.AddXY("Décembre", TotalNew[11].ToString());
+            ChaTotal.Series["Prospects"].Color = Color.Blue;
 
             ChaTotal.Series["Contacts"].Points.AddXY("Janvier", TotalContacts[0].ToString());
             ChaTotal.Series["Contacts"].Points.AddXY("Février", TotalContacts[1].ToString());
@@ -161,31 +157,21 @@ namespace BizDev.Forms
             ChaTotal.Series["Conversions"].Points.AddXY("Novembre", TotalConversions[10].ToString());
             ChaTotal.Series["Conversions"].Points.AddXY("Décembre", TotalConversions[11].ToString());
 
-            /*
-            ChaTotal.Series["M1"].Points.AddXY("Contacts", (PM1Contacts/100).ToString("0.00"));
-            ChaTotal.Series["M1"].Points.AddXY("Conversions", (PM1Conversions/100).ToString("0.00"));
-            ChaTotal.Series["M1"].Points.AddXY("Abandons", (PM1Abandons/100).ToString("0.00"));
+            ChaTotal.Series["Abandons"].Points.AddXY("Janvier", TotalAbandons[0].ToString());
+            ChaTotal.Series["Abandons"].Points.AddXY("Février", TotalAbandons[1].ToString());
+            ChaTotal.Series["Abandons"].Points.AddXY("Mars", TotalAbandons[2].ToString());
+            ChaTotal.Series["Abandons"].Points.AddXY("Avril", TotalAbandons[3].ToString());
+            ChaTotal.Series["Abandons"].Points.AddXY("Mai", TotalAbandons[4].ToString());
+            ChaTotal.Series["Abandons"].Points.AddXY("Juin", TotalAbandons[5].ToString());
+            ChaTotal.Series["Abandons"].Points.AddXY("Juillet", TotalAbandons[6].ToString());
+            ChaTotal.Series["Abandons"].Points.AddXY("Août", TotalAbandons[7].ToString());
+            ChaTotal.Series["Abandons"].Points.AddXY("Septembre", TotalAbandons[8].ToString());
+            ChaTotal.Series["Abandons"].Points.AddXY("Octobre", TotalAbandons[9].ToString());
+            ChaTotal.Series["Abandons"].Points.AddXY("Novembre", TotalAbandons[10].ToString());
+            ChaTotal.Series["Abandons"].Points.AddXY("Décembre", TotalAbandons[11].ToString());
 
-            ChaTotal.Series["M3"].Points.AddXY("Contacts", (PM3Contacts / 100).ToString("0.00"));
-            ChaTotal.Series["M3"].Points.AddXY("Conversions", (PM3Conversions / 100).ToString("0.00"));
-            ChaTotal.Series["M3"].Points.AddXY("Abandons", (PM3Abandons / 100).ToString("0.00"));
-
-            ChaTotal.Series["M6"].Points.AddXY("Contacts", (PM6Contacts / 100).ToString("0.00"));
-            ChaTotal.Series["M6"].Points.AddXY("Conversions", (PM6Conversions / 100).ToString("0.00"));
-            ChaTotal.Series["M6"].Points.AddXY("Abandons", (PM6Abandons / 100).ToString("0.00"));
-
-            ChaTotal.Series["M9"].Points.AddXY("Contacts", (PM9Contacts / 100).ToString("0.00"));
-            ChaTotal.Series["M9"].Points.AddXY("Conversions", (PM9Conversions / 100).ToString("0.00"));
-            ChaTotal.Series["M9"].Points.AddXY("Abandons", (PM9Abandons / 100).ToString("0.00"));
-
-            ChaTotal.Series["M12"].Points.AddXY("Contacts", (PM12Contacts / 100).ToString("0.00"));
-            ChaTotal.Series["M12"].Points.AddXY("Conversions", (PM12Conversions / 100).ToString("0.00"));
-            ChaTotal.Series["M12"].Points.AddXY("Abandons", (PM12Abandons / 100).ToString("0.00"));
-            */
             ChaTotal.BackColor = SystemColors.Control;
             
-            //ChaTotal.Series["Salary"].Points.AddXY("Gurmeet", "10000");
-            //ChaTotal.Series["Salary"].Points.AddXY("Suresh", "8500");
             //chart title  
             //ChaTotal.Titles.Add("Salary Chart");
         }
