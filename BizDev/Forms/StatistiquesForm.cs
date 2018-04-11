@@ -143,10 +143,26 @@ namespace BizDev.Forms
             */
         }
 
-        private void StatistiquesForm_Load(object sender, EventArgs e)
+        
+
+        private void fillChart()
         {
-            CalculDonnees();
-            AfficheDonnees();
+            //AddXY value in chart1 in series named as Salary  
+            ChaTotal.BackColor = SystemColors.Control;
+            ChaTotal.ChartAreas[0].AxisY.Maximum = 100;
+            //ChaTotal.ChartAreas[0].BackColor = SystemColors.Control;
+            ChaTotal.Series["Total"].Points.AddXY("Contacts", (PContacts/100).ToString("0.00"));
+            ChaTotal.Series["Total"].Points.AddXY("Conversions", (PConversions/100).ToString("0.00"));
+            ChaTotal.Series["Total"].Points.AddXY("Abandons", (PAbandons/100).ToString("0.00"));
+
+            ChaTotal.Series["M1"].Points.AddXY("Contacts", (PM1Contacts/100).ToString("0.00"));
+            ChaTotal.Series["M1"].Points.AddXY("Conversions", (PM1Conversions/100).ToString("0.00"));
+            ChaTotal.Series["M1"].Points.AddXY("Abandons", (PM1Abandons/100).ToString("0.00"));
+
+            //ChaTotal.Series["Salary"].Points.AddXY("Gurmeet", "10000");
+            //ChaTotal.Series["Salary"].Points.AddXY("Suresh", "8500");
+            //chart title  
+            //ChaTotal.Titles.Add("Salary Chart");
         }
 
         #region Gestion des événements
@@ -154,6 +170,14 @@ namespace BizDev.Forms
         private void BtnClose_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void StatistiquesForm_Load(object sender, EventArgs e)
+        {
+            CalculDonnees();
+            AfficheDonnees();
+
+            fillChart();
         }
 
         #endregion
