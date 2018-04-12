@@ -42,15 +42,19 @@ namespace BizDev.Forms
             /* Récupération des données */
             for (int i=0;i<12;i++)
             {
+                /* Nouveaux prospects */
                 TotalNew[i] = prospectProvider.TotalNew(annee, i + 1);
                 TOTNew += TotalNew[i];
+
+                /* Prises de contacts */
                 TotalContacts[i] = prospectProvider.TotalContacts(annee, i + 1);
-                
-                PercentContacts[i] = (TotalContacts[i] / TotalNew[i]);
-                MessageBox.Show(PercentContacts[i].ToString());
                 TOTContacts += TotalContacts[i];
+                
+                /* Conversions */
                 TotalConversions[i] = prospectProvider.TotalConversions(annee, i + 1);
                 TOTConversions += TotalConversions[i];
+
+                /* Abandons */
                 TotalAbandons[i] = prospectProvider.TotalAbandons(annee, i + 1);
                 TOTAbandons += TotalAbandons[i];
             }
@@ -59,7 +63,6 @@ namespace BizDev.Forms
         private void AfficheDonnees()
         {
             TxtT01New.Text = TotalNew[0].ToString();
-            TxtP01Contacts.Text = PercentContacts[0].ToString();
             TxtT01Contacts.Text = TotalContacts[0].ToString();
             TxtT01Conversions.Text = TotalConversions[0].ToString();
             TxtT01Abandons.Text = TotalAbandons[0].ToString();

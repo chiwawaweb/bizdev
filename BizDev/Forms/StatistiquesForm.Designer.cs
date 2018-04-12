@@ -28,20 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.BtnClose = new System.Windows.Forms.Button();
             this.ChaTotal = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.textBox33 = new System.Windows.Forms.TextBox();
-            this.textBox32 = new System.Windows.Forms.TextBox();
-            this.textBox31 = new System.Windows.Forms.TextBox();
-            this.textBox30 = new System.Windows.Forms.TextBox();
-            this.textBox29 = new System.Windows.Forms.TextBox();
-            this.TxtP01Contacts = new System.Windows.Forms.TextBox();
             this.TxtT12Abandons = new System.Windows.Forms.TextBox();
             this.TxtT12Conversions = new System.Windows.Forms.TextBox();
             this.TxtT12Contacts = new System.Windows.Forms.TextBox();
@@ -94,43 +88,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox34 = new System.Windows.Forms.TextBox();
-            this.textBox35 = new System.Windows.Forms.TextBox();
-            this.textBox36 = new System.Windows.Forms.TextBox();
-            this.textBox37 = new System.Windows.Forms.TextBox();
-            this.textBox38 = new System.Windows.Forms.TextBox();
-            this.textBox39 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.TxtTOTAbandons = new System.Windows.Forms.TextBox();
             this.TxtTOTConversions = new System.Windows.Forms.TextBox();
             this.TxtTOTContacts = new System.Windows.Forms.TextBox();
             this.TxtTOTNew = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.TxtP01Conversions = new System.Windows.Forms.TextBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.textBox20 = new System.Windows.Forms.TextBox();
-            this.textBox21 = new System.Windows.Forms.TextBox();
-            this.textBox22 = new System.Windows.Forms.TextBox();
-            this.textBox23 = new System.Windows.Forms.TextBox();
-            this.textBox24 = new System.Windows.Forms.TextBox();
-            this.textBox25 = new System.Windows.Forms.TextBox();
-            this.textBox26 = new System.Windows.Forms.TextBox();
-            this.TxtP01Abandons = new System.Windows.Forms.TextBox();
             this.textBox28 = new System.Windows.Forms.TextBox();
-            this.textBox40 = new System.Windows.Forms.TextBox();
             this.textBox41 = new System.Windows.Forms.TextBox();
-            this.textBox42 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.ChaTotal)).BeginInit();
             this.SuspendLayout();
             // 
@@ -148,102 +112,32 @@
             // 
             // ChaTotal
             // 
-            chartArea2.Name = "ChartArea1";
-            this.ChaTotal.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.ChaTotal.Legends.Add(legend2);
+            chartArea1.Name = "ChartArea1";
+            this.ChaTotal.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.ChaTotal.Legends.Add(legend1);
             this.ChaTotal.Location = new System.Drawing.Point(17, 201);
             this.ChaTotal.Name = "ChaTotal";
             this.ChaTotal.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Pastel;
-            series5.ChartArea = "ChartArea1";
-            series5.Legend = "Legend1";
-            series5.Name = "Prospects";
-            series6.ChartArea = "ChartArea1";
-            series6.Legend = "Legend1";
-            series6.Name = "Contacts";
-            series7.ChartArea = "ChartArea1";
-            series7.Legend = "Legend1";
-            series7.Name = "Conversions";
-            series8.ChartArea = "ChartArea1";
-            series8.Legend = "Legend1";
-            series8.Name = "Abandons";
-            this.ChaTotal.Series.Add(series5);
-            this.ChaTotal.Series.Add(series6);
-            this.ChaTotal.Series.Add(series7);
-            this.ChaTotal.Series.Add(series8);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Prospects";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Contacts";
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Conversions";
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Abandons";
+            this.ChaTotal.Series.Add(series1);
+            this.ChaTotal.Series.Add(series2);
+            this.ChaTotal.Series.Add(series3);
+            this.ChaTotal.Series.Add(series4);
             this.ChaTotal.Size = new System.Drawing.Size(1106, 322);
             this.ChaTotal.TabIndex = 6;
             this.ChaTotal.TabStop = false;
-            // 
-            // textBox33
-            // 
-            this.textBox33.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox33.Location = new System.Drawing.Point(542, 73);
-            this.textBox33.Name = "textBox33";
-            this.textBox33.ReadOnly = true;
-            this.textBox33.Size = new System.Drawing.Size(33, 20);
-            this.textBox33.TabIndex = 124;
-            this.textBox33.TabStop = false;
-            this.textBox33.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // textBox32
-            // 
-            this.textBox32.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox32.Location = new System.Drawing.Point(465, 73);
-            this.textBox32.Name = "textBox32";
-            this.textBox32.ReadOnly = true;
-            this.textBox32.Size = new System.Drawing.Size(33, 20);
-            this.textBox32.TabIndex = 123;
-            this.textBox32.TabStop = false;
-            this.textBox32.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // textBox31
-            // 
-            this.textBox31.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox31.Location = new System.Drawing.Point(388, 73);
-            this.textBox31.Name = "textBox31";
-            this.textBox31.ReadOnly = true;
-            this.textBox31.Size = new System.Drawing.Size(33, 20);
-            this.textBox31.TabIndex = 122;
-            this.textBox31.TabStop = false;
-            this.textBox31.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // textBox30
-            // 
-            this.textBox30.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox30.Location = new System.Drawing.Point(311, 73);
-            this.textBox30.Name = "textBox30";
-            this.textBox30.ReadOnly = true;
-            this.textBox30.Size = new System.Drawing.Size(33, 20);
-            this.textBox30.TabIndex = 121;
-            this.textBox30.TabStop = false;
-            this.textBox30.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // textBox29
-            // 
-            this.textBox29.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox29.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox29.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBox29.Location = new System.Drawing.Point(234, 73);
-            this.textBox29.Name = "textBox29";
-            this.textBox29.ReadOnly = true;
-            this.textBox29.Size = new System.Drawing.Size(33, 20);
-            this.textBox29.TabIndex = 120;
-            this.textBox29.TabStop = false;
-            this.textBox29.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // TxtP01Contacts
-            // 
-            this.TxtP01Contacts.BackColor = System.Drawing.SystemColors.Control;
-            this.TxtP01Contacts.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TxtP01Contacts.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.TxtP01Contacts.Location = new System.Drawing.Point(157, 73);
-            this.TxtP01Contacts.Name = "TxtP01Contacts";
-            this.TxtP01Contacts.ReadOnly = true;
-            this.TxtP01Contacts.Size = new System.Drawing.Size(33, 20);
-            this.TxtP01Contacts.TabIndex = 119;
-            this.TxtP01Contacts.TabStop = false;
-            this.TxtP01Contacts.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // TxtT12Abandons
             // 
@@ -865,72 +759,6 @@
             this.label3.TabIndex = 68;
             this.label3.Text = "Conversions :";
             // 
-            // textBox34
-            // 
-            this.textBox34.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox34.Location = new System.Drawing.Point(619, 73);
-            this.textBox34.Name = "textBox34";
-            this.textBox34.ReadOnly = true;
-            this.textBox34.Size = new System.Drawing.Size(33, 20);
-            this.textBox34.TabIndex = 125;
-            this.textBox34.TabStop = false;
-            this.textBox34.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // textBox35
-            // 
-            this.textBox35.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox35.Location = new System.Drawing.Point(696, 73);
-            this.textBox35.Name = "textBox35";
-            this.textBox35.ReadOnly = true;
-            this.textBox35.Size = new System.Drawing.Size(33, 20);
-            this.textBox35.TabIndex = 126;
-            this.textBox35.TabStop = false;
-            this.textBox35.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // textBox36
-            // 
-            this.textBox36.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox36.Location = new System.Drawing.Point(773, 73);
-            this.textBox36.Name = "textBox36";
-            this.textBox36.ReadOnly = true;
-            this.textBox36.Size = new System.Drawing.Size(33, 20);
-            this.textBox36.TabIndex = 127;
-            this.textBox36.TabStop = false;
-            this.textBox36.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // textBox37
-            // 
-            this.textBox37.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox37.Location = new System.Drawing.Point(850, 73);
-            this.textBox37.Name = "textBox37";
-            this.textBox37.ReadOnly = true;
-            this.textBox37.Size = new System.Drawing.Size(33, 20);
-            this.textBox37.TabIndex = 128;
-            this.textBox37.TabStop = false;
-            this.textBox37.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // textBox38
-            // 
-            this.textBox38.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox38.Location = new System.Drawing.Point(927, 73);
-            this.textBox38.Name = "textBox38";
-            this.textBox38.ReadOnly = true;
-            this.textBox38.Size = new System.Drawing.Size(33, 20);
-            this.textBox38.TabIndex = 129;
-            this.textBox38.TabStop = false;
-            this.textBox38.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // textBox39
-            // 
-            this.textBox39.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox39.Location = new System.Drawing.Point(1004, 73);
-            this.textBox39.Name = "textBox39";
-            this.textBox39.ReadOnly = true;
-            this.textBox39.Size = new System.Drawing.Size(33, 20);
-            this.textBox39.TabIndex = 130;
-            this.textBox39.TabStop = false;
-            this.textBox39.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
             // textBox1
             // 
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -990,256 +818,6 @@
             this.TxtTOTNew.TabStop = false;
             this.TxtTOTNew.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox6
-            // 
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox6.Location = new System.Drawing.Point(927, 99);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.ReadOnly = true;
-            this.textBox6.Size = new System.Drawing.Size(33, 20);
-            this.textBox6.TabIndex = 146;
-            this.textBox6.TabStop = false;
-            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // textBox7
-            // 
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox7.Location = new System.Drawing.Point(850, 99);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.ReadOnly = true;
-            this.textBox7.Size = new System.Drawing.Size(33, 20);
-            this.textBox7.TabIndex = 145;
-            this.textBox7.TabStop = false;
-            this.textBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // textBox8
-            // 
-            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox8.Location = new System.Drawing.Point(773, 99);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.ReadOnly = true;
-            this.textBox8.Size = new System.Drawing.Size(33, 20);
-            this.textBox8.TabIndex = 144;
-            this.textBox8.TabStop = false;
-            this.textBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // textBox9
-            // 
-            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox9.Location = new System.Drawing.Point(696, 99);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.ReadOnly = true;
-            this.textBox9.Size = new System.Drawing.Size(33, 20);
-            this.textBox9.TabIndex = 143;
-            this.textBox9.TabStop = false;
-            this.textBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // textBox10
-            // 
-            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox10.Location = new System.Drawing.Point(619, 99);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.ReadOnly = true;
-            this.textBox10.Size = new System.Drawing.Size(33, 20);
-            this.textBox10.TabIndex = 142;
-            this.textBox10.TabStop = false;
-            this.textBox10.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // textBox11
-            // 
-            this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox11.Location = new System.Drawing.Point(542, 99);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.ReadOnly = true;
-            this.textBox11.Size = new System.Drawing.Size(33, 20);
-            this.textBox11.TabIndex = 141;
-            this.textBox11.TabStop = false;
-            this.textBox11.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // textBox12
-            // 
-            this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox12.Location = new System.Drawing.Point(465, 99);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.ReadOnly = true;
-            this.textBox12.Size = new System.Drawing.Size(33, 20);
-            this.textBox12.TabIndex = 140;
-            this.textBox12.TabStop = false;
-            this.textBox12.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // textBox13
-            // 
-            this.textBox13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox13.Location = new System.Drawing.Point(388, 99);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.ReadOnly = true;
-            this.textBox13.Size = new System.Drawing.Size(33, 20);
-            this.textBox13.TabIndex = 139;
-            this.textBox13.TabStop = false;
-            this.textBox13.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // textBox14
-            // 
-            this.textBox14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox14.Location = new System.Drawing.Point(311, 99);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.ReadOnly = true;
-            this.textBox14.Size = new System.Drawing.Size(33, 20);
-            this.textBox14.TabIndex = 138;
-            this.textBox14.TabStop = false;
-            this.textBox14.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // textBox15
-            // 
-            this.textBox15.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox15.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBox15.Location = new System.Drawing.Point(234, 99);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.ReadOnly = true;
-            this.textBox15.Size = new System.Drawing.Size(33, 20);
-            this.textBox15.TabIndex = 137;
-            this.textBox15.TabStop = false;
-            this.textBox15.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // TxtP01Conversions
-            // 
-            this.TxtP01Conversions.BackColor = System.Drawing.SystemColors.Control;
-            this.TxtP01Conversions.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TxtP01Conversions.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.TxtP01Conversions.Location = new System.Drawing.Point(157, 99);
-            this.TxtP01Conversions.Name = "TxtP01Conversions";
-            this.TxtP01Conversions.ReadOnly = true;
-            this.TxtP01Conversions.Size = new System.Drawing.Size(33, 20);
-            this.TxtP01Conversions.TabIndex = 136;
-            this.TxtP01Conversions.TabStop = false;
-            this.TxtP01Conversions.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // textBox17
-            // 
-            this.textBox17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox17.Location = new System.Drawing.Point(927, 125);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.ReadOnly = true;
-            this.textBox17.Size = new System.Drawing.Size(33, 20);
-            this.textBox17.TabIndex = 157;
-            this.textBox17.TabStop = false;
-            this.textBox17.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // textBox18
-            // 
-            this.textBox18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox18.Location = new System.Drawing.Point(850, 125);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.ReadOnly = true;
-            this.textBox18.Size = new System.Drawing.Size(33, 20);
-            this.textBox18.TabIndex = 156;
-            this.textBox18.TabStop = false;
-            this.textBox18.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // textBox19
-            // 
-            this.textBox19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox19.Location = new System.Drawing.Point(773, 125);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.ReadOnly = true;
-            this.textBox19.Size = new System.Drawing.Size(33, 20);
-            this.textBox19.TabIndex = 155;
-            this.textBox19.TabStop = false;
-            this.textBox19.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // textBox20
-            // 
-            this.textBox20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox20.Location = new System.Drawing.Point(696, 125);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.ReadOnly = true;
-            this.textBox20.Size = new System.Drawing.Size(33, 20);
-            this.textBox20.TabIndex = 154;
-            this.textBox20.TabStop = false;
-            this.textBox20.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // textBox21
-            // 
-            this.textBox21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox21.Location = new System.Drawing.Point(619, 125);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.ReadOnly = true;
-            this.textBox21.Size = new System.Drawing.Size(33, 20);
-            this.textBox21.TabIndex = 153;
-            this.textBox21.TabStop = false;
-            this.textBox21.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // textBox22
-            // 
-            this.textBox22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox22.Location = new System.Drawing.Point(542, 125);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.ReadOnly = true;
-            this.textBox22.Size = new System.Drawing.Size(33, 20);
-            this.textBox22.TabIndex = 152;
-            this.textBox22.TabStop = false;
-            this.textBox22.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // textBox23
-            // 
-            this.textBox23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox23.Location = new System.Drawing.Point(465, 125);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.ReadOnly = true;
-            this.textBox23.Size = new System.Drawing.Size(33, 20);
-            this.textBox23.TabIndex = 151;
-            this.textBox23.TabStop = false;
-            this.textBox23.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // textBox24
-            // 
-            this.textBox24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox24.Location = new System.Drawing.Point(388, 125);
-            this.textBox24.Name = "textBox24";
-            this.textBox24.ReadOnly = true;
-            this.textBox24.Size = new System.Drawing.Size(33, 20);
-            this.textBox24.TabIndex = 150;
-            this.textBox24.TabStop = false;
-            this.textBox24.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // textBox25
-            // 
-            this.textBox25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox25.Location = new System.Drawing.Point(311, 125);
-            this.textBox25.Name = "textBox25";
-            this.textBox25.ReadOnly = true;
-            this.textBox25.Size = new System.Drawing.Size(33, 20);
-            this.textBox25.TabIndex = 149;
-            this.textBox25.TabStop = false;
-            this.textBox25.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // textBox26
-            // 
-            this.textBox26.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox26.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.textBox26.Location = new System.Drawing.Point(234, 125);
-            this.textBox26.Name = "textBox26";
-            this.textBox26.ReadOnly = true;
-            this.textBox26.Size = new System.Drawing.Size(33, 20);
-            this.textBox26.TabIndex = 148;
-            this.textBox26.TabStop = false;
-            this.textBox26.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // TxtP01Abandons
-            // 
-            this.TxtP01Abandons.BackColor = System.Drawing.SystemColors.Control;
-            this.TxtP01Abandons.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TxtP01Abandons.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.TxtP01Abandons.Location = new System.Drawing.Point(157, 125);
-            this.TxtP01Abandons.Name = "TxtP01Abandons";
-            this.TxtP01Abandons.ReadOnly = true;
-            this.TxtP01Abandons.Size = new System.Drawing.Size(33, 20);
-            this.TxtP01Abandons.TabIndex = 147;
-            this.TxtP01Abandons.TabStop = false;
-            this.TxtP01Abandons.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
             // textBox28
             // 
             this.textBox28.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -1250,17 +828,6 @@
             this.textBox28.TabIndex = 159;
             this.textBox28.TabStop = false;
             this.textBox28.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // textBox40
-            // 
-            this.textBox40.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox40.Location = new System.Drawing.Point(1004, 99);
-            this.textBox40.Name = "textBox40";
-            this.textBox40.ReadOnly = true;
-            this.textBox40.Size = new System.Drawing.Size(33, 20);
-            this.textBox40.TabIndex = 158;
-            this.textBox40.TabStop = false;
-            this.textBox40.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // textBox41
             // 
@@ -1273,17 +840,6 @@
             this.textBox41.TabStop = false;
             this.textBox41.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // textBox42
-            // 
-            this.textBox42.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox42.Location = new System.Drawing.Point(1004, 125);
-            this.textBox42.Name = "textBox42";
-            this.textBox42.ReadOnly = true;
-            this.textBox42.Size = new System.Drawing.Size(33, 20);
-            this.textBox42.TabIndex = 160;
-            this.textBox42.TabStop = false;
-            this.textBox42.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
             // StatistiquesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1291,48 +847,12 @@
             this.CancelButton = this.BtnClose;
             this.ClientSize = new System.Drawing.Size(1139, 576);
             this.Controls.Add(this.textBox41);
-            this.Controls.Add(this.textBox42);
             this.Controls.Add(this.textBox28);
-            this.Controls.Add(this.textBox40);
-            this.Controls.Add(this.textBox17);
-            this.Controls.Add(this.textBox18);
-            this.Controls.Add(this.textBox19);
-            this.Controls.Add(this.textBox20);
-            this.Controls.Add(this.textBox21);
-            this.Controls.Add(this.textBox22);
-            this.Controls.Add(this.textBox23);
-            this.Controls.Add(this.textBox24);
-            this.Controls.Add(this.textBox25);
-            this.Controls.Add(this.textBox26);
-            this.Controls.Add(this.TxtP01Abandons);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.textBox12);
-            this.Controls.Add(this.textBox13);
-            this.Controls.Add(this.textBox14);
-            this.Controls.Add(this.textBox15);
-            this.Controls.Add(this.TxtP01Conversions);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.TxtTOTAbandons);
             this.Controls.Add(this.TxtTOTConversions);
             this.Controls.Add(this.TxtTOTContacts);
             this.Controls.Add(this.TxtTOTNew);
-            this.Controls.Add(this.textBox39);
-            this.Controls.Add(this.textBox38);
-            this.Controls.Add(this.textBox37);
-            this.Controls.Add(this.textBox36);
-            this.Controls.Add(this.textBox35);
-            this.Controls.Add(this.textBox34);
-            this.Controls.Add(this.textBox33);
-            this.Controls.Add(this.textBox32);
-            this.Controls.Add(this.textBox31);
-            this.Controls.Add(this.textBox30);
-            this.Controls.Add(this.textBox29);
-            this.Controls.Add(this.TxtP01Contacts);
             this.Controls.Add(this.TxtT12Abandons);
             this.Controls.Add(this.TxtT12Conversions);
             this.Controls.Add(this.TxtT12Contacts);
@@ -1405,12 +925,6 @@
         #endregion
         private System.Windows.Forms.Button BtnClose;
         private System.Windows.Forms.DataVisualization.Charting.Chart ChaTotal;
-        private System.Windows.Forms.TextBox textBox33;
-        private System.Windows.Forms.TextBox textBox32;
-        private System.Windows.Forms.TextBox textBox31;
-        private System.Windows.Forms.TextBox textBox30;
-        private System.Windows.Forms.TextBox textBox29;
-        private System.Windows.Forms.TextBox TxtP01Contacts;
         private System.Windows.Forms.TextBox TxtT12Abandons;
         private System.Windows.Forms.TextBox TxtT12Conversions;
         private System.Windows.Forms.TextBox TxtT12Contacts;
@@ -1463,42 +977,12 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox34;
-        private System.Windows.Forms.TextBox textBox35;
-        private System.Windows.Forms.TextBox textBox36;
-        private System.Windows.Forms.TextBox textBox37;
-        private System.Windows.Forms.TextBox textBox38;
-        private System.Windows.Forms.TextBox textBox39;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox TxtTOTAbandons;
         private System.Windows.Forms.TextBox TxtTOTConversions;
         private System.Windows.Forms.TextBox TxtTOTContacts;
         private System.Windows.Forms.TextBox TxtTOTNew;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox TxtP01Conversions;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.TextBox textBox20;
-        private System.Windows.Forms.TextBox textBox21;
-        private System.Windows.Forms.TextBox textBox22;
-        private System.Windows.Forms.TextBox textBox23;
-        private System.Windows.Forms.TextBox textBox24;
-        private System.Windows.Forms.TextBox textBox25;
-        private System.Windows.Forms.TextBox textBox26;
-        private System.Windows.Forms.TextBox TxtP01Abandons;
         private System.Windows.Forms.TextBox textBox28;
-        private System.Windows.Forms.TextBox textBox40;
         private System.Windows.Forms.TextBox textBox41;
-        private System.Windows.Forms.TextBox textBox42;
     }
 }
