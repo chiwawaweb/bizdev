@@ -60,74 +60,212 @@ namespace BizDev.Forms
             }
         }
 
-        private void AfficheDonnees()
+        private void CreateTable()
         {
-            TxtT01New.Text = TotalNew[0].ToString();
-            TxtT01Contacts.Text = TotalContacts[0].ToString();
-            TxtT01Conversions.Text = TotalConversions[0].ToString();
-            TxtT01Abandons.Text = TotalAbandons[0].ToString();
+            DgvStats.Rows.Clear();
+            DgvStats.Columns.Clear();
+            DgvStats.DefaultCellStyle.Font = new Font("Consolas", 10);
 
-            TxtT02New.Text = TotalNew[1].ToString();
-            TxtT02Contacts.Text = TotalContacts[1].ToString();
-            TxtT02Conversions.Text = TotalConversions[1].ToString();
-            TxtT02Abandons.Text = TotalAbandons[1].ToString();
+            /* Mise en forme */
+            DataGridViewTextBoxColumn labelCol = new DataGridViewTextBoxColumn
+            {
+                Name = "LABEL",
+                HeaderText = "",
+                Width = 130,
+                Visible = true
+            };
+            labelCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            labelCol.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
-            TxtT03New.Text = TotalNew[2].ToString();
-            TxtT03Contacts.Text = TotalContacts[2].ToString();
-            TxtT03Conversions.Text = TotalConversions[2].ToString();
-            TxtT03Abandons.Text = TotalAbandons[2].ToString();
+            DataGridViewTextBoxColumn janCol = new DataGridViewTextBoxColumn
+            {
+                Name = "JANVIER",
+                HeaderText = "JANVIER",
+                Width = 90,
+                Visible = true
+            };
+            janCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            janCol.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
-            TxtT04New.Text = TotalNew[3].ToString();
-            TxtT04Contacts.Text = TotalContacts[3].ToString();
-            TxtT04Conversions.Text = TotalConversions[3].ToString();
-            TxtT04Abandons.Text = TotalAbandons[3].ToString();
+            DataGridViewTextBoxColumn fevCol = new DataGridViewTextBoxColumn
+            {
+                Name = "FEVRIER",
+                HeaderText = "FEVRIER",
+                Width = 90,
+                Visible = true
+            };
+            fevCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            fevCol.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
-            TxtT05New.Text = TotalNew[4].ToString();
-            TxtT05Contacts.Text = TotalContacts[4].ToString();
-            TxtT05Conversions.Text = TotalConversions[4].ToString();
-            TxtT05Abandons.Text = TotalAbandons[4].ToString();
+            DataGridViewTextBoxColumn marCol = new DataGridViewTextBoxColumn
+            {
+                Name = "MARS",
+                HeaderText = "MARS",
+                Width = 65,
+                Visible = true
+            };
+            marCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            marCol.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
-            TxtT06New.Text = TotalNew[5].ToString();
-            TxtT06Contacts.Text = TotalContacts[5].ToString();
-            TxtT06Conversions.Text = TotalConversions[5].ToString();
-            TxtT06Abandons.Text = TotalAbandons[5].ToString();
+            DataGridViewTextBoxColumn avrCol = new DataGridViewTextBoxColumn
+            {
+                Name = "AVRIL",
+                HeaderText = "AVRIL",
+                Width = 65,
+                Visible = true
+            };
+            avrCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            avrCol.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
-            TxtT07New.Text = TotalNew[6].ToString();
-            TxtT07Contacts.Text = TotalContacts[6].ToString();
-            TxtT07Conversions.Text = TotalConversions[6].ToString();
-            TxtT07Abandons.Text = TotalAbandons[6].ToString();
+            DataGridViewTextBoxColumn maiCol = new DataGridViewTextBoxColumn
+            {
+                Name = "MAI",
+                HeaderText = "MAI",
+                Width = 65,
+                Visible = true
+            };
+            maiCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            maiCol.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
-            TxtT08New.Text = TotalNew[7].ToString();
-            TxtT08Contacts.Text = TotalContacts[7].ToString();
-            TxtT08Conversions.Text = TotalConversions[7].ToString();
-            TxtT08Abandons.Text = TotalAbandons[7].ToString();
+            DataGridViewTextBoxColumn juiCol = new DataGridViewTextBoxColumn
+            {
+                Name = "JUIN",
+                HeaderText = "JUIN",
+                Width = 65,
+                Visible = true
+            };
+            juiCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            juiCol.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
-            TxtT09New.Text = TotalNew[8].ToString();
-            TxtT09Contacts.Text = TotalContacts[8].ToString();
-            TxtT09Conversions.Text = TotalConversions[8].ToString();
-            TxtT09Abandons.Text = TotalAbandons[8].ToString();
+            DataGridViewTextBoxColumn julCol = new DataGridViewTextBoxColumn
+            {
+                Name = "JUILLET",
+                HeaderText = "JUILLET",
+                Width = 65,
+                Visible = true
+            };
+            julCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            julCol.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
-            TxtT10New.Text = TotalNew[9].ToString();
-            TxtT10Contacts.Text = TotalContacts[9].ToString();
-            TxtT10Conversions.Text = TotalConversions[9].ToString();
-            TxtT10Abandons.Text = TotalAbandons[9].ToString();
+            DataGridViewTextBoxColumn aouCol = new DataGridViewTextBoxColumn
+            {
+                Name = "AOUT",
+                HeaderText = "AOUT",
+                Width = 65,
+                Visible = true
+            };
+            aouCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            aouCol.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
-            TxtT11New.Text = TotalNew[10].ToString();
-            TxtT11Contacts.Text = TotalContacts[10].ToString();
-            TxtT11Conversions.Text = TotalConversions[10].ToString();
-            TxtT11Abandons.Text = TotalAbandons[10].ToString();
+            DataGridViewTextBoxColumn sepCol = new DataGridViewTextBoxColumn
+            {
+                Name = "SEPTEMBRE",
+                HeaderText = "SEPTEMBRE",
+                Width = 65,
+                Visible = true
+            };
+            sepCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            sepCol.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
-            TxtT12New.Text = TotalNew[11].ToString();
-            TxtT12Contacts.Text = TotalContacts[11].ToString();
-            TxtT12Conversions.Text = TotalConversions[11].ToString();
-            TxtT12Abandons.Text = TotalAbandons[11].ToString();
+            DataGridViewTextBoxColumn octCol = new DataGridViewTextBoxColumn
+            {
+                Name = "OCTOBRE",
+                HeaderText = "OCTOBRE",
+                Width = 65,
+                Visible = true
+            };
+            octCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            octCol.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
-            TxtTOTNew.Text = TOTNew.ToString();
-            TxtTOTContacts.Text = TOTContacts.ToString();
-            TxtTOTConversions.Text = TOTConversions.ToString();
-            TxtTOTAbandons.Text = TOTAbandons.ToString();
+            DataGridViewTextBoxColumn novCol = new DataGridViewTextBoxColumn
+            {
+                Name = "NOVEMBRE",
+                HeaderText = "NOVEMBRE",
+                Width = 65,
+                Visible = true
+            };
+            novCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            novCol.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            DataGridViewTextBoxColumn decCol = new DataGridViewTextBoxColumn
+            {
+                Name = "DECEMBRE",
+                HeaderText = "DECEMBRE",
+                Width = 65,
+                Visible = true
+            };
+            decCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            decCol.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            DataGridViewTextBoxColumn totCol = new DataGridViewTextBoxColumn
+            {
+                Name = "TOTAL",
+                HeaderText = "TOTAL",
+                Width = 90,
+                Visible = true
+            };
+            totCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            totCol.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            /* Création des colonnes */
+            DgvStats.Columns.Add(labelCol);
+            DgvStats.Columns.Add(janCol);
+            DgvStats.Columns.Add(fevCol);
+            DgvStats.Columns.Add(marCol);
+            DgvStats.Columns.Add(avrCol);
+            DgvStats.Columns.Add(maiCol);
+            DgvStats.Columns.Add(juiCol);
+            DgvStats.Columns.Add(julCol);
+            DgvStats.Columns.Add(aouCol);
+            DgvStats.Columns.Add(sepCol);
+            DgvStats.Columns.Add(octCol);
+            DgvStats.Columns.Add(novCol);
+            DgvStats.Columns.Add(decCol);
+            DgvStats.Columns.Add(totCol);
+
+
+            /* Ajout des lignes */
+            int rowNew = DgvStats.Rows.Add();
+
+            DgvStats.Rows[rowNew].Cells[0].Value = "Prospects";
+            for (int i=0;i<12;i++)
+            {
+                DgvStats.Rows[rowNew].Cells[i+1].Value = TotalNew[i];
+            }
+            DgvStats.Rows[rowNew].Cells[13].Value = TOTNew;
+
+            int rowContacts = DgvStats.Rows.Add();
+
+            DgvStats.Rows[rowContacts].Cells[0].Value = "Contacts";
+            for (int i = 0; i < 12; i++)
+            {
+                DgvStats.Rows[rowContacts].Cells[i + 1].Value = TotalContacts[i];
+            }
+            DgvStats.Rows[rowContacts].Cells[13].Value = TOTContacts;
+
+            int rowConversions = DgvStats.Rows.Add();
+
+            DgvStats.Rows[rowConversions].Cells[0].Value = "Conversions";
+            for (int i = 0; i < 12; i++)
+            {
+                DgvStats.Rows[rowConversions].Cells[i + 1].Value = TotalConversions[i];
+            }
+            DgvStats.Rows[rowConversions].Cells[13].Value = TOTConversions;
+
+            int rowAbandons = DgvStats.Rows.Add();
+
+            DgvStats.Rows[rowAbandons].Cells[0].Value = "Abandons";
+            for (int i = 0; i < 12; i++)
+            {
+                DgvStats.Rows[rowAbandons].Cells[i + 1].Value = TotalAbandons[i];
+            }
+            DgvStats.Rows[rowAbandons].Cells[13].Value = TOTAbandons;
+
+
 
         }
+
+        
 
         private void fillChart()
         {
@@ -200,7 +338,7 @@ namespace BizDev.Forms
         private void StatistiquesForm_Load(object sender, EventArgs e)
         {
             CalculDonnees(DateTime.Now.Year);
-            AfficheDonnees();
+            CreateTable();
 
             int Test = prospectProvider.TotalNew(2018, 4);
             Console.WriteLine("TEST : " + Test);
