@@ -76,46 +76,51 @@ namespace BizDev.Forms
             };
             labelCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             labelCol.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            labelCol.SortMode = DataGridViewColumnSortMode.NotSortable;
 
             DataGridViewTextBoxColumn janCol = new DataGridViewTextBoxColumn
             {
                 Name = "JANVIER",
-                HeaderText = "JANVIER",
+                HeaderText = "JAN",
                 Width = 90,
                 Visible = true
             };
             janCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             janCol.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            janCol.SortMode = DataGridViewColumnSortMode.NotSortable;
 
             DataGridViewTextBoxColumn fevCol = new DataGridViewTextBoxColumn
             {
                 Name = "FEVRIER",
-                HeaderText = "FEVRIER",
+                HeaderText = "FEV",
                 Width = 90,
                 Visible = true
             };
             fevCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             fevCol.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            fevCol.SortMode = DataGridViewColumnSortMode.NotSortable;
 
             DataGridViewTextBoxColumn marCol = new DataGridViewTextBoxColumn
             {
                 Name = "MARS",
-                HeaderText = "MARS",
+                HeaderText = "MAR",
                 Width = 65,
                 Visible = true
             };
             marCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             marCol.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            marCol.SortMode = DataGridViewColumnSortMode.NotSortable;
 
             DataGridViewTextBoxColumn avrCol = new DataGridViewTextBoxColumn
             {
                 Name = "AVRIL",
-                HeaderText = "AVRIL",
+                HeaderText = "AVR",
                 Width = 65,
                 Visible = true
             };
             avrCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             avrCol.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            avrCol.SortMode = DataGridViewColumnSortMode.NotSortable;
 
             DataGridViewTextBoxColumn maiCol = new DataGridViewTextBoxColumn
             {
@@ -126,76 +131,84 @@ namespace BizDev.Forms
             };
             maiCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             maiCol.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            maiCol.SortMode = DataGridViewColumnSortMode.NotSortable;
 
             DataGridViewTextBoxColumn juiCol = new DataGridViewTextBoxColumn
             {
                 Name = "JUIN",
-                HeaderText = "JUIN",
+                HeaderText = "JUI",
                 Width = 65,
                 Visible = true
             };
             juiCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             juiCol.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            juiCol.SortMode = DataGridViewColumnSortMode.NotSortable;
 
             DataGridViewTextBoxColumn julCol = new DataGridViewTextBoxColumn
             {
                 Name = "JUILLET",
-                HeaderText = "JUILLET",
+                HeaderText = "JUL",
                 Width = 65,
                 Visible = true
             };
             julCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             julCol.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            julCol.SortMode = DataGridViewColumnSortMode.NotSortable;
 
             DataGridViewTextBoxColumn aouCol = new DataGridViewTextBoxColumn
             {
                 Name = "AOUT",
-                HeaderText = "AOUT",
+                HeaderText = "AOU",
                 Width = 65,
                 Visible = true
             };
             aouCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             aouCol.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            aouCol.SortMode = DataGridViewColumnSortMode.NotSortable;
 
             DataGridViewTextBoxColumn sepCol = new DataGridViewTextBoxColumn
             {
                 Name = "SEPTEMBRE",
-                HeaderText = "SEPTEMBRE",
+                HeaderText = "SEP",
                 Width = 65,
                 Visible = true
             };
             sepCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             sepCol.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            sepCol.SortMode = DataGridViewColumnSortMode.NotSortable;
 
             DataGridViewTextBoxColumn octCol = new DataGridViewTextBoxColumn
             {
                 Name = "OCTOBRE",
-                HeaderText = "OCTOBRE",
+                HeaderText = "OCT",
                 Width = 65,
                 Visible = true
             };
             octCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             octCol.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            octCol.SortMode = DataGridViewColumnSortMode.NotSortable;
 
             DataGridViewTextBoxColumn novCol = new DataGridViewTextBoxColumn
             {
                 Name = "NOVEMBRE",
-                HeaderText = "NOVEMBRE",
+                HeaderText = "NOV",
                 Width = 65,
                 Visible = true
             };
             novCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             novCol.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            novCol.SortMode = DataGridViewColumnSortMode.NotSortable;
 
             DataGridViewTextBoxColumn decCol = new DataGridViewTextBoxColumn
             {
                 Name = "DECEMBRE",
-                HeaderText = "DECEMBRE",
+                HeaderText = "DEC",
                 Width = 65,
                 Visible = true
             };
             decCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             decCol.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            decCol.SortMode = DataGridViewColumnSortMode.NotSortable;
 
             DataGridViewTextBoxColumn totCol = new DataGridViewTextBoxColumn
             {
@@ -206,6 +219,7 @@ namespace BizDev.Forms
             };
             totCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             totCol.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            totCol.SortMode = DataGridViewColumnSortMode.NotSortable;
 
             /* Création des colonnes */
             DgvStats.Columns.Add(labelCol);
