@@ -71,6 +71,7 @@ namespace BizDev.Library
                 new ProspectCategorie { Abrv="LIB", Nom="Librairie et papeterie"},
                 new ProspectCategorie { Abrv="LOG", Nom="Logistique"},
                 new ProspectCategorie { Abrv="LOI", Nom="Loisirs"},
+                new ProspectCategorie { Abrv="OPT", Nom="Matériel optique"},
                 new ProspectCategorie { Abrv="VET", Nom="Médecine vétérinaire"},
                 new ProspectCategorie { Abrv="MED", Nom="Médecine, professions médicales et paramédicales"},
                 new ProspectCategorie { Abrv="MEN", Nom="Menuiserie"},
