@@ -72,6 +72,7 @@
             this.BtnSave = new System.Windows.Forms.Button();
             this.BtnCancel = new System.Windows.Forms.Button();
             this.BtnClose = new System.Windows.Forms.Button();
+            this.ChkClientPro = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvLog)).BeginInit();
             this.SuspendLayout();
@@ -90,7 +91,7 @@
             this.CbxPays.Location = new System.Drawing.Point(27, 303);
             this.CbxPays.Name = "CbxPays";
             this.CbxPays.Size = new System.Drawing.Size(292, 21);
-            this.CbxPays.TabIndex = 7;
+            this.CbxPays.TabIndex = 8;
             // 
             // TxtNom
             // 
@@ -113,7 +114,6 @@
             this.CbxCategorie.Name = "CbxCategorie";
             this.CbxCategorie.Size = new System.Drawing.Size(292, 21);
             this.CbxCategorie.TabIndex = 1;
-            this.CbxCategorie.TabStop = false;
             // 
             // LblNbEmployes
             // 
@@ -153,7 +153,7 @@
             this.TxtNotes.Name = "TxtNotes";
             this.TxtNotes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.TxtNotes.Size = new System.Drawing.Size(312, 69);
-            this.TxtNotes.TabIndex = 13;
+            this.TxtNotes.TabIndex = 14;
             // 
             // BtnEdit
             // 
@@ -184,7 +184,7 @@
             this.TxtFax.Location = new System.Drawing.Point(588, 39);
             this.TxtFax.Name = "TxtFax";
             this.TxtFax.Size = new System.Drawing.Size(100, 20);
-            this.TxtFax.TabIndex = 10;
+            this.TxtFax.TabIndex = 11;
             // 
             // label11
             // 
@@ -202,7 +202,7 @@
             this.TxtWeb.Location = new System.Drawing.Point(376, 138);
             this.TxtWeb.Name = "TxtWeb";
             this.TxtWeb.Size = new System.Drawing.Size(312, 20);
-            this.TxtWeb.TabIndex = 12;
+            this.TxtWeb.TabIndex = 13;
             // 
             // LblEmail
             // 
@@ -220,7 +220,7 @@
             this.TxtEmail.Location = new System.Drawing.Point(376, 86);
             this.TxtEmail.Name = "TxtEmail";
             this.TxtEmail.Size = new System.Drawing.Size(312, 20);
-            this.TxtEmail.TabIndex = 11;
+            this.TxtEmail.TabIndex = 12;
             // 
             // label8
             // 
@@ -238,7 +238,7 @@
             this.TxtGsm.Location = new System.Drawing.Point(482, 39);
             this.TxtGsm.Name = "TxtGsm";
             this.TxtGsm.Size = new System.Drawing.Size(100, 20);
-            this.TxtGsm.TabIndex = 9;
+            this.TxtGsm.TabIndex = 10;
             // 
             // label7
             // 
@@ -256,7 +256,7 @@
             this.TxtTel.Location = new System.Drawing.Point(376, 39);
             this.TxtTel.Name = "TxtTel";
             this.TxtTel.Size = new System.Drawing.Size(100, 20);
-            this.TxtTel.TabIndex = 8;
+            this.TxtTel.TabIndex = 9;
             // 
             // LblPays
             // 
@@ -283,7 +283,7 @@
             this.TxtVille.Location = new System.Drawing.Point(93, 259);
             this.TxtVille.Name = "TxtVille";
             this.TxtVille.Size = new System.Drawing.Size(226, 20);
-            this.TxtVille.TabIndex = 6;
+            this.TxtVille.TabIndex = 7;
             // 
             // LblCodePostal
             // 
@@ -301,7 +301,7 @@
             this.TxtCodePostal.Location = new System.Drawing.Point(27, 259);
             this.TxtCodePostal.Name = "TxtCodePostal";
             this.TxtCodePostal.Size = new System.Drawing.Size(60, 20);
-            this.TxtCodePostal.TabIndex = 5;
+            this.TxtCodePostal.TabIndex = 6;
             // 
             // TxtComplement
             // 
@@ -310,7 +310,7 @@
             this.TxtComplement.Location = new System.Drawing.Point(27, 213);
             this.TxtComplement.Name = "TxtComplement";
             this.TxtComplement.Size = new System.Drawing.Size(292, 20);
-            this.TxtComplement.TabIndex = 4;
+            this.TxtComplement.TabIndex = 5;
             // 
             // LblAdresse
             // 
@@ -328,7 +328,7 @@
             this.TxtAdresse.Location = new System.Drawing.Point(27, 187);
             this.TxtAdresse.Name = "TxtAdresse";
             this.TxtAdresse.Size = new System.Drawing.Size(292, 20);
-            this.TxtAdresse.TabIndex = 3;
+            this.TxtAdresse.TabIndex = 4;
             // 
             // LblNom
             // 
@@ -510,12 +510,23 @@
             this.BtnClose.Visible = false;
             this.BtnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
+            // ChkClientPro
+            // 
+            this.ChkClientPro.AutoSize = true;
+            this.ChkClientPro.Location = new System.Drawing.Point(149, 135);
+            this.ChkClientPro.Name = "ChkClientPro";
+            this.ChkClientPro.Size = new System.Drawing.Size(170, 17);
+            this.ChkClientPro.TabIndex = 3;
+            this.ChkClientPro.Text = "Client en compte professionnel";
+            this.ChkClientPro.UseVisualStyleBackColor = true;
+            // 
             // ProspectEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.BtnClose;
             this.ClientSize = new System.Drawing.Size(722, 542);
+            this.Controls.Add(this.ChkClientPro);
             this.Controls.Add(this.BtnAddLog);
             this.Controls.Add(this.TxtAbandon);
             this.Controls.Add(this.DgvLog);
@@ -618,5 +629,6 @@
         private System.Windows.Forms.TextBox TxtPremierContact;
         private System.Windows.Forms.Button BtnAbandon;
         private System.Windows.Forms.Button BtnConversion;
+        private System.Windows.Forms.CheckBox ChkClientPro;
     }
 }

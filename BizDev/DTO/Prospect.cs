@@ -10,6 +10,7 @@ namespace BizDev.DTO
     {
         public int Id { get; set; }
         public string Categorie { get; set; }
+        public bool ClientPro { get; set; }
         public string Nom { get; set; }
         public string Adresse { get; set; }
         public string Complement { get; set; }

@@ -188,5 +188,8 @@
   <ItemGroup>
     <None Include="Resources\icon_cadenas_16.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Logos\logo-cbc.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

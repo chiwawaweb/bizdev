@@ -17,7 +17,7 @@ namespace BizDev.Forms
     {
         int idProspect, idRetourSuivi;
         string categorie, nom, adresse, complement, codePostal, ville, pays, tel, gsm, fax, email, web, nbEmployes, notes;
-        bool view, premierContact, conversion, abandon;
+        bool view, premierContact, conversion, abandon, clientPro;
         DateTime dateConversion, datePremierContact, dateAbandon, createdAt, updatedAt;
 
         ProspectsListForm owner;
@@ -137,6 +137,7 @@ namespace BizDev.Forms
             TxtNbEmployes.ReadOnly = true;
             TxtNbEmployes.BackColor = Color.LightGray;
             TxtNbEmployes.TabStop = false;
+            ChkClientPro.Enabled = false;
             TxtNotes.ReadOnly = true;
             TxtNotes.BackColor = Color.LightGray;
             TxtNotes.TabStop = false;
@@ -157,6 +158,7 @@ namespace BizDev.Forms
             email = prospect.Email;
             web = prospect.Web;
             nbEmployes = prospect.NbEmployes;
+            clientPro = prospect.ClientPro;
             notes = prospect.Notes;
             premierContact = prospect.PremierContact;
             datePremierContact = prospect.DatePremierContact;
@@ -181,6 +183,7 @@ namespace BizDev.Forms
             TxtEmail.Text = email;
             TxtWeb.Text = web;
             TxtNbEmployes.Text = nbEmployes;
+            ChkClientPro.Checked = clientPro;
             TxtNotes.Text = notes;
 
             AfficheDates();
@@ -238,6 +241,7 @@ namespace BizDev.Forms
             email = utils.RemoveDiacritics(TxtEmail.Text.ToLower().Trim());
             web = utils.RemoveDiacritics(TxtWeb.Text.ToLower().Trim());
             nbEmployes = utils.RemoveDiacritics(TxtNbEmployes.Text.ToLower().Trim());
+            clientPro = ChkClientPro.Checked;
 
             /* Vérification des données */
             bool erreurs = false;
@@ -304,6 +308,7 @@ namespace BizDev.Forms
                 Email = email,
                 Web = web,
                 NbEmployes = nbEmployes,
+                ClientPro=clientPro,
                 Notes = notes,
                 CreatedAt = DateTime.Now
 
@@ -330,6 +335,7 @@ namespace BizDev.Forms
             prospect.Email = email;
             prospect.Web = web;
             prospect.NbEmployes = nbEmployes;
+            prospect.ClientPro = clientPro;
             prospect.Notes = notes;
             prospect.PremierContact = premierContact;
             prospect.DatePremierContact = datePremierContact;
@@ -454,6 +460,7 @@ namespace BizDev.Forms
             TxtNbEmployes.ReadOnly = false;
             TxtNbEmployes.TabStop = true;
             TxtNbEmployes.BackColor = Color.Beige;
+            ChkClientPro.Enabled = true;
             TxtAdresse.ReadOnly = false;
             TxtAdresse.TabStop = true;
             TxtAdresse.BackColor = Color.Beige;

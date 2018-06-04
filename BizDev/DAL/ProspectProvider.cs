@@ -143,13 +143,10 @@ namespace BizDev.DAL
                     throw;
                 }
             }
-
-
         }
 
         public int TotalContacts(int annee, int mois)
         {
-
             dateDebut = new DateTime(annee, mois, 1);
             dateFin = new DateTime(annee, mois, DateTime.DaysInMonth(annee, mois));
             using (Context context = new Context())
