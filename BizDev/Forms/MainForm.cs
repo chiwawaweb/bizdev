@@ -23,20 +23,26 @@ namespace BizDev.Forms
 
         private void OuvreListeProspects()
         {
-            ProspectsListForm prospectsListForm = new ProspectsListForm()
+            if (Application.OpenForms["ProspectsListForm"] == null)
             {
-                MdiParent = this
-            };
-            prospectsListForm.Show();
+                ProspectsListForm prospectsListForm = new ProspectsListForm()
+                {
+                    MdiParent = this
+                };
+                prospectsListForm.Show();
+            }
         }
 
         private void OuvreStatistiques()
         {
-            StatistiquesForm statistiquesForm = new StatistiquesForm(DateTime.Now.Year)
+            if (Application.OpenForms["StatistiquesForm"] == null)
             {
-                MdiParent = this
-            };
-            statistiquesForm.Show();
+                StatistiquesForm statistiquesForm = new StatistiquesForm(DateTime.Now.Year)
+                {
+                    MdiParent = this
+                };
+                statistiquesForm.Show();
+            }
         }
 
         #region Gestion des événements

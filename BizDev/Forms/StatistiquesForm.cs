@@ -35,6 +35,10 @@ namespace BizDev.Forms
             annee = _annee;
 
             InitializeComponent();
+
+            // placement du form dans le coin sup/gauche
+            this.StartPosition = FormStartPosition.Manual;
+            this.Location = new Point(0, 0);
         }
 
         private void CalculDonnees(int annee)

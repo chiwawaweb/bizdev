@@ -27,6 +27,10 @@ namespace BizDev.Forms
             idRetour = _idRetour;
 
             InitializeComponent();
+
+            // placement du form dans le coin sup/gauche
+            this.StartPosition = FormStartPosition.Manual;
+            this.Location = new Point(0, 0);
         }
 
         public void RefreshData(int _idRetour = 0, bool firstLine = false)
