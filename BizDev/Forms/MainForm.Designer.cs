@@ -124,7 +124,7 @@
             // 
             // TooProspects
             // 
-            this.TooProspects.Image = ((System.Drawing.Image)(resources.GetObject("TooProspects.Image")));
+            this.TooProspects.Image = global::BizDev.Properties.Resources.icon_clients_24;
             this.TooProspects.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.TooProspects.Name = "TooProspects";
             this.TooProspects.Size = new System.Drawing.Size(86, 28);
@@ -148,6 +148,7 @@
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.StatusStrip);
             this.Controls.Add(this.MenuStrip);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.MenuStrip;
             this.Name = "MainForm";

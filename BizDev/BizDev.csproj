@@ -46,6 +46,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon_logo.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
@@ -189,6 +192,18 @@
     <None Include="Resources\icon_cadenas_16.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="icon_logo.ico" />
+    <None Include="Resources\icon_statistiques_24.png" />
+    <None Include="Resources\icon_clients_24.png" />
+    <None Include="Resources\icon_clients_16.png" />
+    <None Include="Resources\icon_clients_128.png" />
+    <None Include="Resources\icon_logo_128.png" />
+    <None Include="Resources\icon_statistiques_16.png" />
+    <None Include="Resources\icon_statistiques_128.png" />
+    <None Include="Resources\icon_view_24.png" />
+    <None Include="Resources\icon_view_128.png" />
+    <None Include="Resources\icon_new_24.png" />
+    <None Include="Resources\icon_new_128.png" />
     <Content Include="Resources\Logos\logo-cbc.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
