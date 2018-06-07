@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BizDev.DTO;
 using BizDev.DAL;
+using System.Threading;
 
 namespace BizDev.Forms
 {
@@ -25,8 +26,6 @@ namespace BizDev.Forms
         double[] PercentAbandons = new double[12];
 
         double TOTNew, TOTContacts, TOTConversions, TOTAbandons;
-        double PERNew, PERContacts, PERConversions, PERAbandons;
-        
 
         ProspectProvider prospectProvider = new ProspectProvider();
 
@@ -241,7 +240,6 @@ namespace BizDev.Forms
             DgvStats.Columns.Add(decCol);
             DgvStats.Columns.Add(totCol);
 
-
             /* Ajout des lignes */
             int rowNew = DgvStats.Rows.Add();
 
@@ -278,15 +276,17 @@ namespace BizDev.Forms
                 DgvStats.Rows[rowAbandons].Cells[i + 1].Value = TotalAbandons[i];
             }
             DgvStats.Rows[rowAbandons].Cells[13].Value = TOTAbandons;
-
-
-
         }
 
         
 
-        private void fillChart()
+        private void FillChart()
         {
+            foreach (var series in ChaTotal.Series)
+            {
+                series.Points.Clear();
+            }
+
             ChaTotal.Series["Prospects"].Points.AddXY("Janvier", TotalNew[0].ToString());
             ChaTotal.Series["Prospects"].Points.AddXY("Février", TotalNew[1].ToString());
             ChaTotal.Series["Prospects"].Points.AddXY("Mars", TotalNew[2].ToString());
@@ -346,6 +346,11 @@ namespace BizDev.Forms
             //ChaTotal.Titles.Add("Salary Chart");
         }
 
+        private void BtnRefresh_Click(object sender, EventArgs e)
+        {
+            RefreshForm();
+        }
+
         #region Gestion des événements
 
         private void BtnClose_Click(object sender, EventArgs e)
@@ -355,13 +360,19 @@ namespace BizDev.Forms
 
         private void StatistiquesForm_Load(object sender, EventArgs e)
         {
+            
+        }
+
+        private void StatistiquesForm_Shown(object sender, EventArgs e)
+        {
+            RefreshForm();
+        }
+
+        private void RefreshForm()
+        {
             CalculDonnees(DateTime.Now.Year);
             CreateTable();
-
-            int Test = prospectProvider.TotalNew(2018, 4);
-            Console.WriteLine("TEST : " + Test);
-
-            fillChart();
+            FillChart();
         }
 
         #endregion

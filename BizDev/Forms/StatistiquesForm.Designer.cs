@@ -38,6 +38,7 @@
             this.ChaTotal = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.DgvStats = new System.Windows.Forms.DataGridView();
             this.LblTitre = new System.Windows.Forms.Label();
+            this.BtnRefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ChaTotal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvStats)).BeginInit();
             this.SuspendLayout();
@@ -116,12 +117,23 @@
             this.LblTitre.TabIndex = 164;
             this.LblTitre.Text = "Année";
             // 
+            // BtnRefresh
+            // 
+            this.BtnRefresh.Location = new System.Drawing.Point(995, 22);
+            this.BtnRefresh.Name = "BtnRefresh";
+            this.BtnRefresh.Size = new System.Drawing.Size(75, 23);
+            this.BtnRefresh.TabIndex = 165;
+            this.BtnRefresh.Text = "Rafraîchir";
+            this.BtnRefresh.UseVisualStyleBackColor = true;
+            this.BtnRefresh.Click += new System.EventHandler(this.BtnRefresh_Click);
+            // 
             // StatistiquesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.BtnClose;
             this.ClientSize = new System.Drawing.Size(1088, 576);
+            this.Controls.Add(this.BtnRefresh);
             this.Controls.Add(this.LblTitre);
             this.Controls.Add(this.DgvStats);
             this.Controls.Add(this.ChaTotal);
@@ -135,6 +147,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Statistiques";
             this.Load += new System.EventHandler(this.StatistiquesForm_Load);
+            this.Shown += new System.EventHandler(this.StatistiquesForm_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.ChaTotal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvStats)).EndInit();
             this.ResumeLayout(false);
@@ -147,5 +160,6 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart ChaTotal;
         private System.Windows.Forms.DataGridView DgvStats;
         private System.Windows.Forms.Label LblTitre;
+        private System.Windows.Forms.Button BtnRefresh;
     }
 }

@@ -31,6 +31,10 @@ namespace BizDev.Forms
                 };
                 prospectsListForm.Show();
             }
+            else
+            {
+                Application.OpenForms["ProspectsListForm"].Activate();
+            }
         }
 
         private void OuvreStatistiques()
@@ -42,6 +46,10 @@ namespace BizDev.Forms
                     MdiParent = this
                 };
                 statistiquesForm.Show();
+            }
+            else
+            {
+                Application.OpenForms["StatistiquesForm"].Activate();
             }
         }
 
