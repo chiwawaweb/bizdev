@@ -18,6 +18,7 @@ namespace BizDev.Library
         {
             List<ProspectCategorie> prospectCategorie = new List<ProspectCategorie>()
             {
+                new ProspectCategorie { Abrv="ZZZ", Nom="_A définir..." },
                 new ProspectCategorie { Abrv="ACO", Nom="Activité commerciale" },
                 new ProspectCategorie { Abrv="ASP", Nom="Activité spécialisée"},
                 new ProspectCategorie { Abrv="ASO", Nom="Activité sportive"},
