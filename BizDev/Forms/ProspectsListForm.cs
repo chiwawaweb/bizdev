@@ -86,6 +86,14 @@ namespace BizDev.Forms
             };
             adresseCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
+            DataGridViewTextBoxColumn telephoneCol = new DataGridViewTextBoxColumn
+            {
+                Name = "TEL",
+                HeaderText = "Téléphone du prospect",
+                Width = 100
+            };
+            telephoneCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
             DataGridViewTextBoxColumn datePremierContactCol = new DataGridViewTextBoxColumn
             {
                 Name = "DATE_PREMIERCONTACT",
@@ -118,6 +126,7 @@ namespace BizDev.Forms
             DgvProspects.Columns.Add(idCol);
             DgvProspects.Columns.Add(nomCol);
             DgvProspects.Columns.Add(adresseCol);
+            DgvProspects.Columns.Add(telephoneCol);
             DgvProspects.Columns.Add(datePremierContactCol);
             DgvProspects.Columns.Add(dateConversionCol);
             DgvProspects.Columns.Add(dateAbandonCol);
@@ -130,6 +139,7 @@ namespace BizDev.Forms
                 int id = list[i].Id;
                 string nom = list[i].Nom.Trim();
                 string adresse = list[i].Adresse + " " + list[i].Complement + list[i].CodePostal + " " + list[i].Ville.Trim();
+                string telephone = list[i].Tel;
                 DateTime datePremierContact = list[i].DatePremierContact;
                 string strDatePremierContact = string.Empty;
                 if (datePremierContact == DateTime.Parse("30/12/1899"))
@@ -154,9 +164,10 @@ namespace BizDev.Forms
                 DgvProspects.Rows[number].Cells[0].Value = id.ToString("00000");
                 DgvProspects.Rows[number].Cells[1].Value = nom;
                 DgvProspects.Rows[number].Cells[2].Value = adresse;
-                DgvProspects.Rows[number].Cells[3].Value = strDatePremierContact;
-                DgvProspects.Rows[number].Cells[4].Value = strDateConversion;
-                DgvProspects.Rows[number].Cells[5].Value = strDateAbandon;
+                DgvProspects.Rows[number].Cells[3].Value = telephone;
+                DgvProspects.Rows[number].Cells[4].Value = strDatePremierContact;
+                DgvProspects.Rows[number].Cells[5].Value = strDateConversion;
+                DgvProspects.Rows[number].Cells[6].Value = strDateAbandon;
 
                 /* Sélection du client par idRetour */
                 if (list[i].Id == idRetour)
