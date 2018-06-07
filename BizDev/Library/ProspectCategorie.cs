@@ -70,6 +70,7 @@ namespace BizDev.Library
                 new ProspectCategorie { Abrv="JUS", Nom="Justice"},
                 new ProspectCategorie { Abrv="LIB", Nom="Librairie et papeterie"},
                 new ProspectCategorie { Abrv="LOG", Nom="Logistique"},
+                new ProspectCategorie { Abrv="LOC", Nom="Location de matériel TP"},
                 new ProspectCategorie { Abrv="LOI", Nom="Loisirs"},
                 new ProspectCategorie { Abrv="OPT", Nom="Matériel optique"},
                 new ProspectCategorie { Abrv="VET", Nom="Médecine vétérinaire"},
