@@ -88,9 +88,10 @@
             this.CbxPays.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CbxPays.FormattingEnabled = true;
             this.ErrorProvider.SetIconAlignment(this.CbxPays, System.Windows.Forms.ErrorIconAlignment.MiddleLeft);
-            this.CbxPays.Location = new System.Drawing.Point(27, 303);
+            this.CbxPays.Location = new System.Drawing.Point(40, 466);
+            this.CbxPays.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CbxPays.Name = "CbxPays";
-            this.CbxPays.Size = new System.Drawing.Size(292, 21);
+            this.CbxPays.Size = new System.Drawing.Size(436, 28);
             this.CbxPays.TabIndex = 8;
             // 
             // TxtNom
@@ -99,28 +100,30 @@
             this.TxtNom.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TxtNom.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ErrorProvider.SetIconAlignment(this.TxtNom, System.Windows.Forms.ErrorIconAlignment.MiddleLeft);
-            this.TxtNom.Location = new System.Drawing.Point(27, 39);
+            this.TxtNom.Location = new System.Drawing.Point(40, 60);
+            this.TxtNom.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtNom.Name = "TxtNom";
-            this.TxtNom.Size = new System.Drawing.Size(292, 20);
+            this.TxtNom.Size = new System.Drawing.Size(436, 26);
             this.TxtNom.TabIndex = 0;
             // 
             // CbxCategorie
             // 
             this.CbxCategorie.BackColor = System.Drawing.Color.Beige;
-            this.CbxCategorie.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CbxCategorie.FormattingEnabled = true;
             this.ErrorProvider.SetIconAlignment(this.CbxCategorie, System.Windows.Forms.ErrorIconAlignment.MiddleLeft);
-            this.CbxCategorie.Location = new System.Drawing.Point(27, 86);
+            this.CbxCategorie.Location = new System.Drawing.Point(41, 130);
+            this.CbxCategorie.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CbxCategorie.Name = "CbxCategorie";
-            this.CbxCategorie.Size = new System.Drawing.Size(292, 21);
+            this.CbxCategorie.Size = new System.Drawing.Size(436, 28);
             this.CbxCategorie.TabIndex = 1;
             // 
             // LblNbEmployes
             // 
             this.LblNbEmployes.AutoSize = true;
-            this.LblNbEmployes.Location = new System.Drawing.Point(24, 117);
+            this.LblNbEmployes.Location = new System.Drawing.Point(36, 180);
+            this.LblNbEmployes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblNbEmployes.Name = "LblNbEmployes";
-            this.LblNbEmployes.Size = new System.Drawing.Size(52, 13);
+            this.LblNbEmployes.Size = new System.Drawing.Size(78, 20);
             this.LblNbEmployes.TabIndex = 12;
             this.LblNbEmployes.Text = "Employés";
             // 
@@ -128,18 +131,20 @@
             // 
             this.TxtNbEmployes.BackColor = System.Drawing.Color.Beige;
             this.TxtNbEmployes.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.TxtNbEmployes.Location = new System.Drawing.Point(27, 133);
+            this.TxtNbEmployes.Location = new System.Drawing.Point(40, 205);
+            this.TxtNbEmployes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtNbEmployes.MaxLength = 5;
             this.TxtNbEmployes.Name = "TxtNbEmployes";
-            this.TxtNbEmployes.Size = new System.Drawing.Size(46, 20);
+            this.TxtNbEmployes.Size = new System.Drawing.Size(67, 26);
             this.TxtNbEmployes.TabIndex = 2;
             // 
             // LblCommentaires
             // 
             this.LblCommentaires.AutoSize = true;
-            this.LblCommentaires.Location = new System.Drawing.Point(375, 171);
+            this.LblCommentaires.Location = new System.Drawing.Point(562, 263);
+            this.LblCommentaires.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblCommentaires.Name = "LblCommentaires";
-            this.LblCommentaires.Size = new System.Drawing.Size(73, 13);
+            this.LblCommentaires.Size = new System.Drawing.Size(112, 20);
             this.LblCommentaires.TabIndex = 29;
             this.LblCommentaires.Text = "Commentaires";
             // 
@@ -147,21 +152,23 @@
             // 
             this.TxtNotes.AcceptsReturn = true;
             this.TxtNotes.BackColor = System.Drawing.Color.Beige;
-            this.TxtNotes.Location = new System.Drawing.Point(376, 187);
+            this.TxtNotes.Location = new System.Drawing.Point(564, 288);
+            this.TxtNotes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtNotes.MaxLength = 20000;
             this.TxtNotes.Multiline = true;
             this.TxtNotes.Name = "TxtNotes";
             this.TxtNotes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.TxtNotes.Size = new System.Drawing.Size(312, 69);
+            this.TxtNotes.Size = new System.Drawing.Size(466, 104);
             this.TxtNotes.TabIndex = 14;
             // 
             // BtnEdit
             // 
             this.BtnEdit.BackColor = System.Drawing.Color.CornflowerBlue;
             this.BtnEdit.Image = global::BizDev.Properties.Resources.icon_cadenas_16;
-            this.BtnEdit.Location = new System.Drawing.Point(584, 504);
+            this.BtnEdit.Location = new System.Drawing.Point(876, 775);
+            this.BtnEdit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BtnEdit.Name = "BtnEdit";
-            this.BtnEdit.Size = new System.Drawing.Size(26, 26);
+            this.BtnEdit.Size = new System.Drawing.Size(39, 40);
             this.BtnEdit.TabIndex = 39;
             this.BtnEdit.TabStop = false;
             this.BtnEdit.UseVisualStyleBackColor = false;
@@ -171,9 +178,10 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(585, 23);
+            this.label9.Location = new System.Drawing.Point(878, 35);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(24, 13);
+            this.label9.Size = new System.Drawing.Size(35, 20);
             this.label9.TabIndex = 41;
             this.label9.Text = "Fax";
             // 
@@ -181,17 +189,19 @@
             // 
             this.TxtFax.BackColor = System.Drawing.Color.Beige;
             this.TxtFax.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.TxtFax.Location = new System.Drawing.Point(588, 39);
+            this.TxtFax.Location = new System.Drawing.Point(882, 60);
+            this.TxtFax.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtFax.Name = "TxtFax";
-            this.TxtFax.Size = new System.Drawing.Size(100, 20);
+            this.TxtFax.Size = new System.Drawing.Size(148, 26);
             this.TxtFax.TabIndex = 11;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(375, 122);
+            this.label11.Location = new System.Drawing.Point(562, 188);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(30, 13);
+            this.label11.Size = new System.Drawing.Size(42, 20);
             this.label11.TabIndex = 39;
             this.label11.Text = "Web";
             // 
@@ -199,17 +209,19 @@
             // 
             this.TxtWeb.BackColor = System.Drawing.Color.Beige;
             this.TxtWeb.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
-            this.TxtWeb.Location = new System.Drawing.Point(376, 138);
+            this.TxtWeb.Location = new System.Drawing.Point(564, 212);
+            this.TxtWeb.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtWeb.Name = "TxtWeb";
-            this.TxtWeb.Size = new System.Drawing.Size(312, 20);
+            this.TxtWeb.Size = new System.Drawing.Size(466, 26);
             this.TxtWeb.TabIndex = 13;
             // 
             // LblEmail
             // 
             this.LblEmail.AutoSize = true;
-            this.LblEmail.Location = new System.Drawing.Point(373, 70);
+            this.LblEmail.Location = new System.Drawing.Point(560, 108);
+            this.LblEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblEmail.Name = "LblEmail";
-            this.LblEmail.Size = new System.Drawing.Size(32, 13);
+            this.LblEmail.Size = new System.Drawing.Size(48, 20);
             this.LblEmail.TabIndex = 37;
             this.LblEmail.Text = "Email";
             // 
@@ -217,17 +229,19 @@
             // 
             this.TxtEmail.BackColor = System.Drawing.Color.Beige;
             this.TxtEmail.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
-            this.TxtEmail.Location = new System.Drawing.Point(376, 86);
+            this.TxtEmail.Location = new System.Drawing.Point(564, 132);
+            this.TxtEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtEmail.Name = "TxtEmail";
-            this.TxtEmail.Size = new System.Drawing.Size(312, 20);
+            this.TxtEmail.Size = new System.Drawing.Size(466, 26);
             this.TxtEmail.TabIndex = 12;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(479, 23);
+            this.label8.Location = new System.Drawing.Point(718, 35);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(46, 13);
+            this.label8.Size = new System.Drawing.Size(68, 20);
             this.label8.TabIndex = 33;
             this.label8.Text = "Portable";
             // 
@@ -235,17 +249,19 @@
             // 
             this.TxtGsm.BackColor = System.Drawing.Color.Beige;
             this.TxtGsm.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.TxtGsm.Location = new System.Drawing.Point(482, 39);
+            this.TxtGsm.Location = new System.Drawing.Point(723, 60);
+            this.TxtGsm.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtGsm.Name = "TxtGsm";
-            this.TxtGsm.Size = new System.Drawing.Size(100, 20);
+            this.TxtGsm.Size = new System.Drawing.Size(148, 26);
             this.TxtGsm.TabIndex = 10;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(373, 23);
+            this.label7.Location = new System.Drawing.Point(560, 35);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(58, 13);
+            this.label7.Size = new System.Drawing.Size(84, 20);
             this.label7.TabIndex = 31;
             this.label7.Text = "Téléphone";
             // 
@@ -253,26 +269,29 @@
             // 
             this.TxtTel.BackColor = System.Drawing.Color.Beige;
             this.TxtTel.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.TxtTel.Location = new System.Drawing.Point(376, 39);
+            this.TxtTel.Location = new System.Drawing.Point(564, 60);
+            this.TxtTel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtTel.Name = "TxtTel";
-            this.TxtTel.Size = new System.Drawing.Size(100, 20);
+            this.TxtTel.Size = new System.Drawing.Size(148, 26);
             this.TxtTel.TabIndex = 9;
             // 
             // LblPays
             // 
             this.LblPays.AutoSize = true;
-            this.LblPays.Location = new System.Drawing.Point(24, 287);
+            this.LblPays.Location = new System.Drawing.Point(36, 442);
+            this.LblPays.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblPays.Name = "LblPays";
-            this.LblPays.Size = new System.Drawing.Size(30, 13);
+            this.LblPays.Size = new System.Drawing.Size(43, 20);
             this.LblPays.TabIndex = 26;
             this.LblPays.Text = "Pays";
             // 
             // LblVille
             // 
             this.LblVille.AutoSize = true;
-            this.LblVille.Location = new System.Drawing.Point(90, 243);
+            this.LblVille.Location = new System.Drawing.Point(135, 374);
+            this.LblVille.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblVille.Name = "LblVille";
-            this.LblVille.Size = new System.Drawing.Size(26, 13);
+            this.LblVille.Size = new System.Drawing.Size(38, 20);
             this.LblVille.TabIndex = 24;
             this.LblVille.Text = "Ville";
             // 
@@ -280,17 +299,19 @@
             // 
             this.TxtVille.BackColor = System.Drawing.Color.Beige;
             this.TxtVille.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.TxtVille.Location = new System.Drawing.Point(93, 259);
+            this.TxtVille.Location = new System.Drawing.Point(140, 398);
+            this.TxtVille.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtVille.Name = "TxtVille";
-            this.TxtVille.Size = new System.Drawing.Size(226, 20);
+            this.TxtVille.Size = new System.Drawing.Size(337, 26);
             this.TxtVille.TabIndex = 7;
             // 
             // LblCodePostal
             // 
             this.LblCodePostal.AutoSize = true;
-            this.LblCodePostal.Location = new System.Drawing.Point(24, 243);
+            this.LblCodePostal.Location = new System.Drawing.Point(36, 374);
+            this.LblCodePostal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblCodePostal.Name = "LblCodePostal";
-            this.LblCodePostal.Size = new System.Drawing.Size(63, 13);
+            this.LblCodePostal.Size = new System.Drawing.Size(94, 20);
             this.LblCodePostal.TabIndex = 23;
             this.LblCodePostal.Text = "Code postal";
             // 
@@ -298,26 +319,29 @@
             // 
             this.TxtCodePostal.BackColor = System.Drawing.Color.Beige;
             this.TxtCodePostal.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.TxtCodePostal.Location = new System.Drawing.Point(27, 259);
+            this.TxtCodePostal.Location = new System.Drawing.Point(40, 398);
+            this.TxtCodePostal.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtCodePostal.Name = "TxtCodePostal";
-            this.TxtCodePostal.Size = new System.Drawing.Size(60, 20);
+            this.TxtCodePostal.Size = new System.Drawing.Size(88, 26);
             this.TxtCodePostal.TabIndex = 6;
             // 
             // TxtComplement
             // 
             this.TxtComplement.BackColor = System.Drawing.Color.Beige;
             this.TxtComplement.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.TxtComplement.Location = new System.Drawing.Point(27, 213);
+            this.TxtComplement.Location = new System.Drawing.Point(40, 328);
+            this.TxtComplement.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtComplement.Name = "TxtComplement";
-            this.TxtComplement.Size = new System.Drawing.Size(292, 20);
+            this.TxtComplement.Size = new System.Drawing.Size(436, 26);
             this.TxtComplement.TabIndex = 5;
             // 
             // LblAdresse
             // 
             this.LblAdresse.AutoSize = true;
-            this.LblAdresse.Location = new System.Drawing.Point(24, 171);
+            this.LblAdresse.Location = new System.Drawing.Point(36, 263);
+            this.LblAdresse.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblAdresse.Name = "LblAdresse";
-            this.LblAdresse.Size = new System.Drawing.Size(45, 13);
+            this.LblAdresse.Size = new System.Drawing.Size(68, 20);
             this.LblAdresse.TabIndex = 22;
             this.LblAdresse.Text = "Adresse";
             // 
@@ -325,26 +349,29 @@
             // 
             this.TxtAdresse.BackColor = System.Drawing.Color.Beige;
             this.TxtAdresse.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.TxtAdresse.Location = new System.Drawing.Point(27, 187);
+            this.TxtAdresse.Location = new System.Drawing.Point(40, 288);
+            this.TxtAdresse.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtAdresse.Name = "TxtAdresse";
-            this.TxtAdresse.Size = new System.Drawing.Size(292, 20);
+            this.TxtAdresse.Size = new System.Drawing.Size(436, 26);
             this.TxtAdresse.TabIndex = 4;
             // 
             // LblNom
             // 
             this.LblNom.AutoSize = true;
-            this.LblNom.Location = new System.Drawing.Point(24, 23);
+            this.LblNom.Location = new System.Drawing.Point(36, 35);
+            this.LblNom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblNom.Name = "LblNom";
-            this.LblNom.Size = new System.Drawing.Size(29, 13);
+            this.LblNom.Size = new System.Drawing.Size(42, 20);
             this.LblNom.TabIndex = 20;
             this.LblNom.Text = "Nom";
             // 
             // LblCategorie
             // 
             this.LblCategorie.AutoSize = true;
-            this.LblCategorie.Location = new System.Drawing.Point(24, 70);
+            this.LblCategorie.Location = new System.Drawing.Point(36, 108);
+            this.LblCategorie.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblCategorie.Name = "LblCategorie";
-            this.LblCategorie.Size = new System.Drawing.Size(52, 13);
+            this.LblCategorie.Size = new System.Drawing.Size(78, 20);
             this.LblCategorie.TabIndex = 10;
             this.LblCategorie.Text = "Catégorie";
             // 
@@ -352,10 +379,11 @@
             // 
             this.TxtAbandon.BackColor = System.Drawing.Color.LightCoral;
             this.TxtAbandon.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtAbandon.Location = new System.Drawing.Point(468, 309);
+            this.TxtAbandon.Location = new System.Drawing.Point(702, 475);
+            this.TxtAbandon.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtAbandon.Name = "TxtAbandon";
             this.TxtAbandon.ReadOnly = true;
-            this.TxtAbandon.Size = new System.Drawing.Size(81, 20);
+            this.TxtAbandon.Size = new System.Drawing.Size(120, 26);
             this.TxtAbandon.TabIndex = 45;
             this.TxtAbandon.TabStop = false;
             this.TxtAbandon.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -364,10 +392,11 @@
             // 
             this.TxtConversion.BackColor = System.Drawing.Color.Gold;
             this.TxtConversion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtConversion.Location = new System.Drawing.Point(468, 286);
+            this.TxtConversion.Location = new System.Drawing.Point(702, 440);
+            this.TxtConversion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtConversion.Name = "TxtConversion";
             this.TxtConversion.ReadOnly = true;
-            this.TxtConversion.Size = new System.Drawing.Size(81, 20);
+            this.TxtConversion.Size = new System.Drawing.Size(120, 26);
             this.TxtConversion.TabIndex = 44;
             this.TxtConversion.TabStop = false;
             this.TxtConversion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -376,19 +405,21 @@
             // 
             this.TxtPremierContact.BackColor = System.Drawing.Color.PaleGreen;
             this.TxtPremierContact.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtPremierContact.Location = new System.Drawing.Point(468, 263);
+            this.TxtPremierContact.Location = new System.Drawing.Point(702, 405);
+            this.TxtPremierContact.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtPremierContact.Name = "TxtPremierContact";
             this.TxtPremierContact.ReadOnly = true;
-            this.TxtPremierContact.Size = new System.Drawing.Size(81, 20);
+            this.TxtPremierContact.Size = new System.Drawing.Size(120, 26);
             this.TxtPremierContact.TabIndex = 43;
             this.TxtPremierContact.TabStop = false;
             this.TxtPremierContact.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // BtnAbandon
             // 
-            this.BtnAbandon.Location = new System.Drawing.Point(551, 308);
+            this.BtnAbandon.Location = new System.Drawing.Point(826, 474);
+            this.BtnAbandon.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BtnAbandon.Name = "BtnAbandon";
-            this.BtnAbandon.Size = new System.Drawing.Size(24, 22);
+            this.BtnAbandon.Size = new System.Drawing.Size(36, 34);
             this.BtnAbandon.TabIndex = 42;
             this.BtnAbandon.TabStop = false;
             this.BtnAbandon.Text = "...";
@@ -397,9 +428,10 @@
             // 
             // BtnConversion
             // 
-            this.BtnConversion.Location = new System.Drawing.Point(551, 285);
+            this.BtnConversion.Location = new System.Drawing.Point(826, 438);
+            this.BtnConversion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BtnConversion.Name = "BtnConversion";
-            this.BtnConversion.Size = new System.Drawing.Size(24, 22);
+            this.BtnConversion.Size = new System.Drawing.Size(36, 34);
             this.BtnConversion.TabIndex = 41;
             this.BtnConversion.TabStop = false;
             this.BtnConversion.Text = "...";
@@ -408,9 +440,10 @@
             // 
             // BtnPremierContact
             // 
-            this.BtnPremierContact.Location = new System.Drawing.Point(551, 262);
+            this.BtnPremierContact.Location = new System.Drawing.Point(826, 403);
+            this.BtnPremierContact.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BtnPremierContact.Name = "BtnPremierContact";
-            this.BtnPremierContact.Size = new System.Drawing.Size(24, 22);
+            this.BtnPremierContact.Size = new System.Drawing.Size(36, 34);
             this.BtnPremierContact.TabIndex = 40;
             this.BtnPremierContact.TabStop = false;
             this.BtnPremierContact.Text = "...";
@@ -419,9 +452,10 @@
             // 
             // BtnAddLog
             // 
-            this.BtnAddLog.Location = new System.Drawing.Point(27, 339);
+            this.BtnAddLog.Location = new System.Drawing.Point(40, 522);
+            this.BtnAddLog.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BtnAddLog.Name = "BtnAddLog";
-            this.BtnAddLog.Size = new System.Drawing.Size(132, 23);
+            this.BtnAddLog.Size = new System.Drawing.Size(198, 35);
             this.BtnAddLog.TabIndex = 36;
             this.BtnAddLog.TabStop = false;
             this.BtnAddLog.Text = "Ajouter une annotation";
@@ -436,7 +470,8 @@
             this.DgvLog.AllowUserToResizeRows = false;
             this.DgvLog.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvLog.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.DgvLog.Location = new System.Drawing.Point(27, 368);
+            this.DgvLog.Location = new System.Drawing.Point(40, 566);
+            this.DgvLog.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.DgvLog.Name = "DgvLog";
             this.DgvLog.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.DgvLog.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -444,42 +479,46 @@
             this.DgvLog.ShowCellToolTips = false;
             this.DgvLog.ShowEditingIcon = false;
             this.DgvLog.ShowRowErrors = false;
-            this.DgvLog.Size = new System.Drawing.Size(661, 130);
+            this.DgvLog.Size = new System.Drawing.Size(992, 200);
             this.DgvLog.TabIndex = 34;
             this.DgvLog.TabStop = false;
             // 
             // LblDatePremierContact
             // 
             this.LblDatePremierContact.AutoSize = true;
-            this.LblDatePremierContact.Location = new System.Drawing.Point(375, 266);
+            this.LblDatePremierContact.Location = new System.Drawing.Point(562, 409);
+            this.LblDatePremierContact.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblDatePremierContact.Name = "LblDatePremierContact";
-            this.LblDatePremierContact.Size = new System.Drawing.Size(90, 13);
+            this.LblDatePremierContact.Size = new System.Drawing.Size(131, 20);
             this.LblDatePremierContact.TabIndex = 35;
             this.LblDatePremierContact.Text = "Prise de contact :";
             // 
             // LblDateAbandon
             // 
             this.LblDateAbandon.AutoSize = true;
-            this.LblDateAbandon.Location = new System.Drawing.Point(409, 312);
+            this.LblDateAbandon.Location = new System.Drawing.Point(614, 480);
+            this.LblDateAbandon.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblDateAbandon.Name = "LblDateAbandon";
-            this.LblDateAbandon.Size = new System.Drawing.Size(56, 13);
+            this.LblDateAbandon.Size = new System.Drawing.Size(82, 20);
             this.LblDateAbandon.TabIndex = 38;
             this.LblDateAbandon.Text = "Abandon :";
             // 
             // LblDateConversion
             // 
             this.LblDateConversion.AutoSize = true;
-            this.LblDateConversion.Location = new System.Drawing.Point(399, 289);
+            this.LblDateConversion.Location = new System.Drawing.Point(598, 445);
+            this.LblDateConversion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblDateConversion.Name = "LblDateConversion";
-            this.LblDateConversion.Size = new System.Drawing.Size(66, 13);
+            this.LblDateConversion.Size = new System.Drawing.Size(96, 20);
             this.LblDateConversion.TabIndex = 37;
             this.LblDateConversion.Text = "Conversion :";
             // 
             // BtnSave
             // 
-            this.BtnSave.Location = new System.Drawing.Point(613, 504);
+            this.BtnSave.Location = new System.Drawing.Point(920, 775);
+            this.BtnSave.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BtnSave.Name = "BtnSave";
-            this.BtnSave.Size = new System.Drawing.Size(75, 26);
+            this.BtnSave.Size = new System.Drawing.Size(112, 40);
             this.BtnSave.TabIndex = 36;
             this.BtnSave.TabStop = false;
             this.BtnSave.Text = "Enregistrer";
@@ -488,9 +527,10 @@
             // 
             // BtnCancel
             // 
-            this.BtnCancel.Location = new System.Drawing.Point(532, 504);
+            this.BtnCancel.Location = new System.Drawing.Point(798, 775);
+            this.BtnCancel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BtnCancel.Name = "BtnCancel";
-            this.BtnCancel.Size = new System.Drawing.Size(75, 26);
+            this.BtnCancel.Size = new System.Drawing.Size(112, 40);
             this.BtnCancel.TabIndex = 37;
             this.BtnCancel.TabStop = false;
             this.BtnCancel.Text = "Annuler";
@@ -500,9 +540,10 @@
             // BtnClose
             // 
             this.BtnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.BtnClose.Location = new System.Drawing.Point(613, 504);
+            this.BtnClose.Location = new System.Drawing.Point(920, 775);
+            this.BtnClose.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BtnClose.Name = "BtnClose";
-            this.BtnClose.Size = new System.Drawing.Size(75, 26);
+            this.BtnClose.Size = new System.Drawing.Size(112, 40);
             this.BtnClose.TabIndex = 38;
             this.BtnClose.TabStop = false;
             this.BtnClose.Text = "Fermer";
@@ -513,19 +554,20 @@
             // ChkClientPro
             // 
             this.ChkClientPro.AutoSize = true;
-            this.ChkClientPro.Location = new System.Drawing.Point(149, 135);
+            this.ChkClientPro.Location = new System.Drawing.Point(224, 208);
+            this.ChkClientPro.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ChkClientPro.Name = "ChkClientPro";
-            this.ChkClientPro.Size = new System.Drawing.Size(170, 17);
+            this.ChkClientPro.Size = new System.Drawing.Size(253, 24);
             this.ChkClientPro.TabIndex = 3;
             this.ChkClientPro.Text = "Client en compte professionnel";
             this.ChkClientPro.UseVisualStyleBackColor = true;
             // 
             // ProspectEditForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.BtnClose;
-            this.ClientSize = new System.Drawing.Size(722, 542);
+            this.ClientSize = new System.Drawing.Size(1057, 829);
             this.Controls.Add(this.ChkClientPro);
             this.Controls.Add(this.BtnAddLog);
             this.Controls.Add(this.TxtAbandon);
@@ -570,6 +612,7 @@
             this.Controls.Add(this.LblVille);
             this.Controls.Add(this.TxtVille);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ProspectEditForm";

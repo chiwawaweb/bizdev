@@ -19,6 +19,8 @@ namespace BizDev.Forms
 
             ProspectProvider prospectProvider = new ProspectProvider();
             prospectProvider.CountAll();
+
+            OuvreListeProspects();
         }
 
         private void OuvreListeProspects()

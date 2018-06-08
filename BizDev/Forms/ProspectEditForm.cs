@@ -75,6 +75,9 @@ namespace BizDev.Forms
                     ViewMode();
                     break;
             }
+
+            /* Redimensionne la page */
+            this.Size = new Size(730, 590);
         }
 
         private void NewMode()

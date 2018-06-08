@@ -45,7 +45,7 @@
             this.ToolStrip.Location = new System.Drawing.Point(0, 0);
             this.ToolStrip.Name = "ToolStrip";
             this.ToolStrip.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
-            this.ToolStrip.Size = new System.Drawing.Size(1905, 32);
+            this.ToolStrip.Size = new System.Drawing.Size(1168, 32);
             this.ToolStrip.TabIndex = 0;
             this.ToolStrip.Text = "toolStrip1";
             // 
@@ -87,7 +87,7 @@
             this.DgvProspects.ShowCellToolTips = false;
             this.DgvProspects.ShowEditingIcon = false;
             this.DgvProspects.ShowRowErrors = false;
-            this.DgvProspects.Size = new System.Drawing.Size(1905, 701);
+            this.DgvProspects.Size = new System.Drawing.Size(1168, 901);
             this.DgvProspects.TabIndex = 1;
             this.DgvProspects.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DgvProspects_CellMouseDoubleClick);
             // 
@@ -95,10 +95,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1905, 744);
+            this.ClientSize = new System.Drawing.Size(1168, 944);
             this.Controls.Add(this.DgvProspects);
             this.Controls.Add(this.ToolStrip);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ProspectsListForm";
             this.ShowIcon = false;

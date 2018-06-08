@@ -90,7 +90,7 @@ namespace BizDev.Forms
             {
                 Name = "TEL",
                 HeaderText = "Téléphone du prospect",
-                Width = 100
+                Width = 160
             };
             telephoneCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
