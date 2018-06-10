@@ -25,11 +25,8 @@ namespace BizDev.Forms
 
         ProspectLogProvider prospectLogProvider = new ProspectLogProvider();
 
-        
-
         Utils utils = new Utils();
         ProspectProvider prospectProvider = new ProspectProvider();
-
         
         public ProspectEditForm(ProspectsListForm _owner, bool _view, int _idProspect=0)
         {
@@ -42,6 +39,19 @@ namespace BizDev.Forms
             InitializeComponent();
 
             /* Combobox catégories */
+            ProspectCategorieProvider prospectCategorieProvider = new ProspectCategorieProvider();
+            var dsCategorie = new List<string>();
+            dsCategorie.Add("");
+            foreach (string categorie in prospectCategorieProvider.RetrieveCategories())
+            {
+                if (categorie+""!="")
+                {
+                    dsCategorie.Add(categorie + "");
+                }
+            }
+            CbxCategorie.DataSource = dsCategorie;
+            CbxCategorie.DisplayMember = "Categorie";
+            /*
             ProspectCategorie prospectCategorie = new ProspectCategorie();
             prospectCategorie.Nom = string.Empty;
             var dsCat = new List<ProspectCategorie>();
@@ -52,6 +62,7 @@ namespace BizDev.Forms
             }
             CbxCategorie.DataSource = dsCat;
             CbxCategorie.DisplayMember = "Fullname";
+            */
 
             /* Combobox pays */
             Pays country = new Pays();
@@ -231,7 +242,7 @@ namespace BizDev.Forms
         private void Save()
         {
             /* Récuperation des données */
-            categorie = CbxCategorie.Text;
+            categorie = CbxCategorie.Text.Trim();
             nom = utils.RemoveDiacritics(TxtNom.Text.ToUpper().Trim());
             adresse = utils.RemoveDiacritics(TxtAdresse.Text.ToUpper().Trim());
             complement = utils.RemoveDiacritics(TxtComplement.Text.ToUpper().Trim());
@@ -250,12 +261,6 @@ namespace BizDev.Forms
             bool erreurs = false;
             
             ErrorProvider.Clear();
-
-            if (categorie.Length<2)
-            {
-                erreurs = true;
-                ErrorProvider.SetError(CbxCategorie, "Catégorie non renseignée");
-            }
 
             if (nom.Length<2)
             {

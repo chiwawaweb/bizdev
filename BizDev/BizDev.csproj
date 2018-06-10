@@ -79,6 +79,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL\Context.cs" />
+    <Compile Include="DAL\ProspectCategorieProvider.cs" />
     <Compile Include="DAL\ProspectLogProvider.cs" />
     <Compile Include="DAL\ProspectProvider.cs" />
     <Compile Include="DTO\Prospect_Categorie.cs" />
