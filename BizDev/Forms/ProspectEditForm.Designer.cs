@@ -98,11 +98,11 @@
             this.TxtNom.BackColor = System.Drawing.Color.Beige;
             this.TxtNom.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TxtNom.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.TxtNom.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtNom.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ErrorProvider.SetIconAlignment(this.TxtNom, System.Windows.Forms.ErrorIconAlignment.MiddleLeft);
             this.TxtNom.Location = new System.Drawing.Point(31, 45);
             this.TxtNom.Name = "TxtNom";
-            this.TxtNom.Size = new System.Drawing.Size(340, 23);
+            this.TxtNom.Size = new System.Drawing.Size(340, 25);
             this.TxtNom.TabIndex = 0;
             // 
             // CbxCategorie
@@ -287,9 +287,9 @@
             this.LblCodePostal.AutoSize = true;
             this.LblCodePostal.Location = new System.Drawing.Point(28, 280);
             this.LblCodePostal.Name = "LblCodePostal";
-            this.LblCodePostal.Size = new System.Drawing.Size(84, 15);
+            this.LblCodePostal.Size = new System.Drawing.Size(35, 15);
             this.LblCodePostal.TabIndex = 23;
-            this.LblCodePostal.Text = "Code postal";
+            this.LblCodePostal.Text = "C.P.";
             // 
             // TxtCodePostal
             // 
