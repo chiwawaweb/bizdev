@@ -225,12 +225,10 @@ namespace BizDev.Forms
             }
         }
 
-        
-
         private void Save()
         {
             /* Récuperation des données */
-            categorie = CbxCategorie.Text.Trim();
+            categorie = utils.RemoveDiacritics(CbxCategorie.Text.ToUpper().Trim());
             nom = utils.RemoveDiacritics(TxtNom.Text.ToUpper().Trim());
             adresse = utils.RemoveDiacritics(TxtAdresse.Text.ToUpper().Trim());
             complement = utils.RemoveDiacritics(TxtComplement.Text.ToUpper().Trim());

@@ -107,6 +107,8 @@
             // 
             // CbxCategorie
             // 
+            this.CbxCategorie.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.CbxCategorie.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.CbxCategorie.BackColor = System.Drawing.Color.Beige;
             this.CbxCategorie.FormattingEnabled = true;
             this.ErrorProvider.SetIconAlignment(this.CbxCategorie, System.Windows.Forms.ErrorIconAlignment.MiddleLeft);
@@ -503,7 +505,7 @@
             // ChkClientPro
             // 
             this.ChkClientPro.AutoSize = true;
-            this.ChkClientPro.Location = new System.Drawing.Point(174, 156);
+            this.ChkClientPro.Location = new System.Drawing.Point(135, 157);
             this.ChkClientPro.Name = "ChkClientPro";
             this.ChkClientPro.Size = new System.Drawing.Size(236, 19);
             this.ChkClientPro.TabIndex = 3;
