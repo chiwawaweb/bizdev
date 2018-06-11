@@ -41,7 +41,7 @@ namespace BizDev.Forms
             }
 
             List<Prospect> list;
-            list = prospectProvider.Search(utils.RemoveDiacritics(TxtSearch.Text.Trim()));
+            list = prospectProvider.Search(utils.RemoveDiacritics(TxtSearch.Text.Trim()),ChkContacts.Checked,ChkConversions.Checked,ChkAbandons.Checked);
 
             if (firstLine == true)
             {
@@ -240,6 +240,21 @@ namespace BizDev.Forms
         }
 
         private void TxtSearch_KeyUp(object sender, KeyEventArgs e)
+        {
+            SearchProspect();
+        }
+
+        private void ChkContacts_CheckedChanged(object sender, EventArgs e)
+        {
+            SearchProspect();
+        }
+
+        private void ChkConversions_CheckedChanged(object sender, EventArgs e)
+        {
+            SearchProspect();
+        }
+
+        private void ChkAbandons_CheckedChanged(object sender, EventArgs e)
         {
             SearchProspect();
         }

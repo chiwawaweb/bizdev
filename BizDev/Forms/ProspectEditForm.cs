@@ -1,22 +1,20 @@
-﻿using System;
+﻿using BizDev.DAL;
+using BizDev.DTO;
+using BizDev.Library;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using BizDev.DTO;
-using BizDev.DAL;
-using BizDev.Library;
 
 namespace BizDev.Forms
 {
     public partial class ProspectEditForm : Form
     {
         int idProspect, idRetourSuivi;
-        string categorie, nom, adresse, complement, codePostal, ville, pays, tel, gsm, fax, email, web, nbEmployes, notes;
+        string categorie, nom, adresse, complement, codePostal, ville, pays, tel, gsm, fax, email, 
+            web, nbEmployes, notes;
         bool view, premierContact, conversion, abandon, clientPro;
         DateTime dateConversion, datePremierContact, dateAbandon, createdAt, updatedAt;
 
@@ -191,8 +189,6 @@ namespace BizDev.Forms
             AfficheDates();
 
             Text = "Visualisation du prospect : " + nom;
-
-            
         }
 
         private void AfficheDates()
@@ -305,7 +301,6 @@ namespace BizDev.Forms
                 ClientPro=clientPro,
                 Notes = notes,
                 CreatedAt = DateTime.Now
-
             };
 
             prospectProvider.Create(prospect);

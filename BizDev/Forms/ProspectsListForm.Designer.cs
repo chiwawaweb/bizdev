@@ -150,7 +150,10 @@
             this.ChkContacts.Size = new System.Drawing.Size(91, 21);
             this.ChkContacts.TabIndex = 6;
             this.ChkContacts.Text = "Contacts";
+            this.ChkContacts.ThreeState = true;
             this.ChkContacts.UseVisualStyleBackColor = true;
+            this.ChkContacts.Visible = false;
+            this.ChkContacts.CheckedChanged += new System.EventHandler(this.ChkContacts_CheckedChanged);
             // 
             // ChkConversions
             // 
@@ -160,7 +163,10 @@
             this.ChkConversions.Size = new System.Drawing.Size(115, 21);
             this.ChkConversions.TabIndex = 7;
             this.ChkConversions.Text = "Conversions";
+            this.ChkConversions.ThreeState = true;
             this.ChkConversions.UseVisualStyleBackColor = true;
+            this.ChkConversions.Visible = false;
+            this.ChkConversions.CheckedChanged += new System.EventHandler(this.ChkConversions_CheckedChanged);
             // 
             // ChkAbandons
             // 
@@ -170,7 +176,10 @@
             this.ChkAbandons.Size = new System.Drawing.Size(91, 21);
             this.ChkAbandons.TabIndex = 8;
             this.ChkAbandons.Text = "Abandons";
+            this.ChkAbandons.ThreeState = true;
             this.ChkAbandons.UseVisualStyleBackColor = true;
+            this.ChkAbandons.Visible = false;
+            this.ChkAbandons.CheckedChanged += new System.EventHandler(this.ChkAbandons_CheckedChanged);
             // 
             // ProspectsListForm
             // 
