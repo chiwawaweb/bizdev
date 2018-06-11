@@ -42,16 +42,15 @@ namespace BizDev.Forms
             }
 
             List<Prospect> list;
-            list = prospectProvider.Search(utils.RemoveDiacritics(string.Empty));
+            list = prospectProvider.Search(utils.RemoveDiacritics(TxtSearch.Text.Trim()));
 
             if (firstLine == true)
             {
                 idRetour = 0;
             }
 
-            
-
             CreateTable(list);
+            TxtSearch.Focus();
         }
 
         private void CreateTable(List<Prospect> list)
@@ -194,6 +193,11 @@ namespace BizDev.Forms
             
         }
 
+        private void SearchProspect()
+        {
+            RefreshData();
+        }
+
         #region Gestion des événements
 
         private void TbnNew_Click(object sender, EventArgs e)
@@ -216,8 +220,29 @@ namespace BizDev.Forms
             ViewProspect();
         }
 
+        private void BtnSearch_Click(object sender, EventArgs e)
+        {
+            SearchProspect();
+        }
+
+        private void ResetSearch()
+        {
+            TxtSearch.Text = string.Empty;
+            SearchProspect();
+            TxtSearch.Focus();
+        }
+
+
         #endregion
 
+        private void BtnReset_Click(object sender, EventArgs e)
+        {
+            ResetSearch();
+        }
 
+        private void TxtSearch_KeyUp(object sender, KeyEventArgs e)
+        {
+            SearchProspect();
+        }
     }
 }

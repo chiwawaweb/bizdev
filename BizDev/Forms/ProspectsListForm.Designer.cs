@@ -35,6 +35,7 @@
             this.TxtSearch = new System.Windows.Forms.TextBox();
             this.LblSearch = new System.Windows.Forms.Label();
             this.BtnSearch = new System.Windows.Forms.Button();
+            this.BtnReset = new System.Windows.Forms.Button();
             this.ToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvProspects)).BeginInit();
             this.SuspendLayout();
@@ -99,8 +100,9 @@
             this.TxtSearch.Location = new System.Drawing.Point(154, 53);
             this.TxtSearch.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.TxtSearch.Name = "TxtSearch";
-            this.TxtSearch.Size = new System.Drawing.Size(605, 23);
+            this.TxtSearch.Size = new System.Drawing.Size(539, 23);
             this.TxtSearch.TabIndex = 2;
+            this.TxtSearch.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TxtSearch_KeyUp);
             // 
             // LblSearch
             // 
@@ -114,19 +116,32 @@
             // 
             // BtnSearch
             // 
-            this.BtnSearch.Location = new System.Drawing.Point(768, 53);
+            this.BtnSearch.Location = new System.Drawing.Point(701, 53);
             this.BtnSearch.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.BtnSearch.Name = "BtnSearch";
-            this.BtnSearch.Size = new System.Drawing.Size(199, 31);
+            this.BtnSearch.Size = new System.Drawing.Size(112, 23);
             this.BtnSearch.TabIndex = 4;
             this.BtnSearch.Text = "Chercher";
             this.BtnSearch.UseVisualStyleBackColor = true;
+            this.BtnSearch.Click += new System.EventHandler(this.BtnSearch_Click);
+            // 
+            // BtnReset
+            // 
+            this.BtnReset.Location = new System.Drawing.Point(821, 53);
+            this.BtnReset.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.BtnReset.Name = "BtnReset";
+            this.BtnReset.Size = new System.Drawing.Size(112, 23);
+            this.BtnReset.TabIndex = 5;
+            this.BtnReset.Text = "Reset";
+            this.BtnReset.UseVisualStyleBackColor = true;
+            this.BtnReset.Click += new System.EventHandler(this.BtnReset_Click);
             // 
             // ProspectsListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1428, 564);
+            this.Controls.Add(this.BtnReset);
             this.Controls.Add(this.BtnSearch);
             this.Controls.Add(this.LblSearch);
             this.Controls.Add(this.TxtSearch);
@@ -156,5 +171,6 @@
         private System.Windows.Forms.TextBox TxtSearch;
         private System.Windows.Forms.Label LblSearch;
         private System.Windows.Forms.Button BtnSearch;
+        private System.Windows.Forms.Button BtnReset;
     }
 }
