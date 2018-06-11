@@ -36,6 +36,9 @@
             this.LblSearch = new System.Windows.Forms.Label();
             this.BtnSearch = new System.Windows.Forms.Button();
             this.BtnReset = new System.Windows.Forms.Button();
+            this.ChkContacts = new System.Windows.Forms.CheckBox();
+            this.ChkConversions = new System.Windows.Forms.CheckBox();
+            this.ChkAbandons = new System.Windows.Forms.CheckBox();
             this.ToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvProspects)).BeginInit();
             this.SuspendLayout();
@@ -97,10 +100,12 @@
             // 
             // TxtSearch
             // 
-            this.TxtSearch.Location = new System.Drawing.Point(154, 53);
+            this.TxtSearch.BackColor = System.Drawing.Color.Beige;
+            this.TxtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TxtSearch.Location = new System.Drawing.Point(127, 54);
             this.TxtSearch.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.TxtSearch.Name = "TxtSearch";
-            this.TxtSearch.Size = new System.Drawing.Size(539, 23);
+            this.TxtSearch.Size = new System.Drawing.Size(269, 23);
             this.TxtSearch.TabIndex = 2;
             this.TxtSearch.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TxtSearch_KeyUp);
             // 
@@ -116,7 +121,7 @@
             // 
             // BtnSearch
             // 
-            this.BtnSearch.Location = new System.Drawing.Point(701, 53);
+            this.BtnSearch.Location = new System.Drawing.Point(788, 54);
             this.BtnSearch.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.BtnSearch.Name = "BtnSearch";
             this.BtnSearch.Size = new System.Drawing.Size(112, 23);
@@ -127,7 +132,7 @@
             // 
             // BtnReset
             // 
-            this.BtnReset.Location = new System.Drawing.Point(821, 53);
+            this.BtnReset.Location = new System.Drawing.Point(908, 54);
             this.BtnReset.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.BtnReset.Name = "BtnReset";
             this.BtnReset.Size = new System.Drawing.Size(112, 23);
@@ -136,11 +141,45 @@
             this.BtnReset.UseVisualStyleBackColor = true;
             this.BtnReset.Click += new System.EventHandler(this.BtnReset_Click);
             // 
+            // ChkContacts
+            // 
+            this.ChkContacts.AutoSize = true;
+            this.ChkContacts.Location = new System.Drawing.Point(404, 56);
+            this.ChkContacts.Name = "ChkContacts";
+            this.ChkContacts.Size = new System.Drawing.Size(91, 21);
+            this.ChkContacts.TabIndex = 6;
+            this.ChkContacts.Text = "Contacts";
+            this.ChkContacts.UseVisualStyleBackColor = true;
+            // 
+            // ChkConversions
+            // 
+            this.ChkConversions.AutoSize = true;
+            this.ChkConversions.Location = new System.Drawing.Point(501, 56);
+            this.ChkConversions.Name = "ChkConversions";
+            this.ChkConversions.Size = new System.Drawing.Size(115, 21);
+            this.ChkConversions.TabIndex = 7;
+            this.ChkConversions.Text = "Conversions";
+            this.ChkConversions.UseVisualStyleBackColor = true;
+            // 
+            // ChkAbandons
+            // 
+            this.ChkAbandons.AutoSize = true;
+            this.ChkAbandons.Location = new System.Drawing.Point(622, 56);
+            this.ChkAbandons.Name = "ChkAbandons";
+            this.ChkAbandons.Size = new System.Drawing.Size(91, 21);
+            this.ChkAbandons.TabIndex = 8;
+            this.ChkAbandons.Text = "Abandons";
+            this.ChkAbandons.UseVisualStyleBackColor = true;
+            // 
             // ProspectsListForm
             // 
+            this.AcceptButton = this.BtnSearch;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1428, 564);
+            this.Controls.Add(this.ChkAbandons);
+            this.Controls.Add(this.ChkConversions);
+            this.Controls.Add(this.ChkContacts);
             this.Controls.Add(this.BtnReset);
             this.Controls.Add(this.BtnSearch);
             this.Controls.Add(this.LblSearch);
@@ -172,5 +211,8 @@
         private System.Windows.Forms.Label LblSearch;
         private System.Windows.Forms.Button BtnSearch;
         private System.Windows.Forms.Button BtnReset;
+        private System.Windows.Forms.CheckBox ChkContacts;
+        private System.Windows.Forms.CheckBox ChkConversions;
+        private System.Windows.Forms.CheckBox ChkAbandons;
     }
 }

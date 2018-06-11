@@ -88,7 +88,7 @@ namespace BizDev.Forms
             }
 
             /* Redimensionne la page */
-            this.Size = new Size(730, 590);
+            this.Size = new Size(850, 670);
         }
 
         private void NewMode()
