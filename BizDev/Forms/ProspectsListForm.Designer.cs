@@ -102,6 +102,7 @@
             // 
             this.TxtSearch.BackColor = System.Drawing.Color.Beige;
             this.TxtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TxtSearch.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TxtSearch.Location = new System.Drawing.Point(127, 54);
             this.TxtSearch.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.TxtSearch.Name = "TxtSearch";
@@ -144,7 +145,7 @@
             // ChkContacts
             // 
             this.ChkContacts.AutoSize = true;
-            this.ChkContacts.Location = new System.Drawing.Point(404, 56);
+            this.ChkContacts.Location = new System.Drawing.Point(421, 56);
             this.ChkContacts.Name = "ChkContacts";
             this.ChkContacts.Size = new System.Drawing.Size(91, 21);
             this.ChkContacts.TabIndex = 6;
@@ -154,7 +155,7 @@
             // ChkConversions
             // 
             this.ChkConversions.AutoSize = true;
-            this.ChkConversions.Location = new System.Drawing.Point(501, 56);
+            this.ChkConversions.Location = new System.Drawing.Point(518, 56);
             this.ChkConversions.Name = "ChkConversions";
             this.ChkConversions.Size = new System.Drawing.Size(115, 21);
             this.ChkConversions.TabIndex = 7;
@@ -164,7 +165,7 @@
             // ChkAbandons
             // 
             this.ChkAbandons.AutoSize = true;
-            this.ChkAbandons.Location = new System.Drawing.Point(622, 56);
+            this.ChkAbandons.Location = new System.Drawing.Point(639, 56);
             this.ChkAbandons.Name = "ChkAbandons";
             this.ChkAbandons.Size = new System.Drawing.Size(91, 21);
             this.ChkAbandons.TabIndex = 8;

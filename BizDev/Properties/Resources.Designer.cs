@@ -73,6 +73,16 @@ namespace BizDev.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_calendar_16 {
+            get {
+                object obj = ResourceManager.GetObject("icon_calendar_16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_clients_128 {
             get {
                 object obj = ResourceManager.GetObject("icon_clients_128", resourceCulture);

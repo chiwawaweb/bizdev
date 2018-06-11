@@ -51,18 +51,6 @@ namespace BizDev.Forms
             }
             CbxCategorie.DataSource = dsCategorie;
             CbxCategorie.DisplayMember = "Categorie";
-            /*
-            ProspectCategorie prospectCategorie = new ProspectCategorie();
-            prospectCategorie.Nom = string.Empty;
-            var dsCat = new List<ProspectCategorie>();
-            dsCat.Add(prospectCategorie);
-            foreach (ProspectCategorie categorie in prospectCategorie.GetAllProspectCategories().OrderBy(o => o.Nom))
-            {
-                dsCat.Add(categorie);
-            }
-            CbxCategorie.DataSource = dsCat;
-            CbxCategorie.DisplayMember = "Fullname";
-            */
 
             /* Combobox pays */
             Pays country = new Pays();
@@ -413,7 +401,7 @@ namespace BizDev.Forms
             {
                 Name = "NOTE",
                 HeaderText = "Annotation",
-                Width = 520,
+                Width = 620,
                 Visible = true
             };
             noteCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;

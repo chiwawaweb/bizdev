@@ -37,7 +37,6 @@
             this.TxtNbEmployes = new System.Windows.Forms.TextBox();
             this.LblCommentaires = new System.Windows.Forms.Label();
             this.TxtNotes = new System.Windows.Forms.TextBox();
-            this.BtnEdit = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.TxtFax = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -63,7 +62,6 @@
             this.TxtPremierContact = new System.Windows.Forms.TextBox();
             this.BtnAbandon = new System.Windows.Forms.Button();
             this.BtnConversion = new System.Windows.Forms.Button();
-            this.BtnPremierContact = new System.Windows.Forms.Button();
             this.BtnAddLog = new System.Windows.Forms.Button();
             this.DgvLog = new System.Windows.Forms.DataGridView();
             this.LblDatePremierContact = new System.Windows.Forms.Label();
@@ -73,6 +71,8 @@
             this.BtnCancel = new System.Windows.Forms.Button();
             this.BtnClose = new System.Windows.Forms.Button();
             this.ChkClientPro = new System.Windows.Forms.CheckBox();
+            this.BtnEdit = new System.Windows.Forms.Button();
+            this.BtnPremierContact = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvLog)).BeginInit();
             this.SuspendLayout();
@@ -156,19 +156,6 @@
             this.TxtNotes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.TxtNotes.Size = new System.Drawing.Size(363, 79);
             this.TxtNotes.TabIndex = 14;
-            // 
-            // BtnEdit
-            // 
-            this.BtnEdit.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.BtnEdit.Image = global::BizDev.Properties.Resources.icon_cadenas_16;
-            this.BtnEdit.Location = new System.Drawing.Point(646, 582);
-            this.BtnEdit.Name = "BtnEdit";
-            this.BtnEdit.Size = new System.Drawing.Size(30, 30);
-            this.BtnEdit.TabIndex = 39;
-            this.BtnEdit.TabStop = false;
-            this.BtnEdit.UseVisualStyleBackColor = false;
-            this.BtnEdit.Visible = false;
-            this.BtnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
             // 
             // label9
             // 
@@ -400,36 +387,25 @@
             // 
             // BtnAbandon
             // 
-            this.BtnAbandon.Location = new System.Drawing.Point(672, 356);
+            this.BtnAbandon.Image = global::BizDev.Properties.Resources.icon_calendar_16;
+            this.BtnAbandon.Location = new System.Drawing.Point(672, 357);
             this.BtnAbandon.Name = "BtnAbandon";
-            this.BtnAbandon.Size = new System.Drawing.Size(39, 21);
+            this.BtnAbandon.Size = new System.Drawing.Size(22, 22);
             this.BtnAbandon.TabIndex = 42;
             this.BtnAbandon.TabStop = false;
-            this.BtnAbandon.Text = "...";
             this.BtnAbandon.UseVisualStyleBackColor = true;
             this.BtnAbandon.Click += new System.EventHandler(this.BtnAbandon_Click);
             // 
             // BtnConversion
             // 
-            this.BtnConversion.Location = new System.Drawing.Point(672, 329);
+            this.BtnConversion.Image = global::BizDev.Properties.Resources.icon_calendar_16;
+            this.BtnConversion.Location = new System.Drawing.Point(672, 330);
             this.BtnConversion.Name = "BtnConversion";
-            this.BtnConversion.Size = new System.Drawing.Size(39, 21);
+            this.BtnConversion.Size = new System.Drawing.Size(22, 22);
             this.BtnConversion.TabIndex = 41;
             this.BtnConversion.TabStop = false;
-            this.BtnConversion.Text = "...";
             this.BtnConversion.UseVisualStyleBackColor = true;
             this.BtnConversion.Click += new System.EventHandler(this.BtnConversion_Click);
-            // 
-            // BtnPremierContact
-            // 
-            this.BtnPremierContact.Location = new System.Drawing.Point(672, 303);
-            this.BtnPremierContact.Name = "BtnPremierContact";
-            this.BtnPremierContact.Size = new System.Drawing.Size(39, 20);
-            this.BtnPremierContact.TabIndex = 40;
-            this.BtnPremierContact.TabStop = false;
-            this.BtnPremierContact.Text = "...";
-            this.BtnPremierContact.UseVisualStyleBackColor = true;
-            this.BtnPremierContact.Click += new System.EventHandler(this.BtnPremierContact_Click);
             // 
             // BtnAddLog
             // 
@@ -533,6 +509,30 @@
             this.ChkClientPro.TabIndex = 3;
             this.ChkClientPro.Text = "Client en compte professionnel";
             this.ChkClientPro.UseVisualStyleBackColor = true;
+            // 
+            // BtnEdit
+            // 
+            this.BtnEdit.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.BtnEdit.Image = global::BizDev.Properties.Resources.icon_cadenas_16;
+            this.BtnEdit.Location = new System.Drawing.Point(646, 582);
+            this.BtnEdit.Name = "BtnEdit";
+            this.BtnEdit.Size = new System.Drawing.Size(30, 30);
+            this.BtnEdit.TabIndex = 39;
+            this.BtnEdit.TabStop = false;
+            this.BtnEdit.UseVisualStyleBackColor = false;
+            this.BtnEdit.Visible = false;
+            this.BtnEdit.Click += new System.EventHandler(this.BtnEdit_Click);
+            // 
+            // BtnPremierContact
+            // 
+            this.BtnPremierContact.Image = global::BizDev.Properties.Resources.icon_calendar_16;
+            this.BtnPremierContact.Location = new System.Drawing.Point(672, 303);
+            this.BtnPremierContact.Name = "BtnPremierContact";
+            this.BtnPremierContact.Size = new System.Drawing.Size(22, 22);
+            this.BtnPremierContact.TabIndex = 40;
+            this.BtnPremierContact.TabStop = false;
+            this.BtnPremierContact.UseVisualStyleBackColor = true;
+            this.BtnPremierContact.Click += new System.EventHandler(this.BtnPremierContact_Click);
             // 
             // ProspectEditForm
             // 
