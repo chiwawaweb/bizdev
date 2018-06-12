@@ -229,16 +229,6 @@ namespace BizDev.Forms
             SearchProspect();
         }
 
-        private void ResetSearch()
-        {
-            TxtSearch.Text = string.Empty;
-            SearchProspect();
-            TxtSearch.Focus();
-        }
-
-
-        #endregion
-
         private void BtnReset_Click(object sender, EventArgs e)
         {
             ResetSearch();
@@ -263,5 +253,17 @@ namespace BizDev.Forms
         {
             SearchProspect();
         }
+
+
+        #endregion
+
+        private void ResetSearch()
+        {
+            TxtSearch.Text = string.Empty;
+            SearchProspect();
+            TxtSearch.Focus();
+        }
+
+        
     }
 }
