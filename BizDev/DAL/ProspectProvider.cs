@@ -97,34 +97,18 @@ namespace BizDev.DAL
             }
         }
 
-        public List<Prospect> Search(string keywords, bool contact=true, bool conversion=false, bool abandon=false)
+        public List<Prospect> Search(string keywords)
         {
             using (Context context = new Context())
             {
                 try
                 {
-                    if (contact==false && conversion==false && abandon==false)
-                    {
-                        /* On montre tout */
-                        var prospects = from b in context.Prospects
-                                        orderby (b.Nom) ascending
-                                        where (b.Nom.Contains(keywords))
-                                        select b;
+                    var prospects = from b in context.Prospects
+                                    orderby (b.Nom) ascending
+                                    where (b.Nom.Contains(keywords))
+                                    select b;
 
-                        return prospects.ToList();
-                    }
-                    else
-                    {
-                        var prospects = from b in context.Prospects
-                                        orderby (b.Nom) ascending
-                                        where (b.Nom.Contains(keywords))
-                                        && b.PremierContact == contact
-                                        && b.Conversion == conversion
-                                        && b.Abandon == abandon
-                                        select b;
-
-                        return prospects.ToList();
-                    }
+                    return prospects.ToList();
                 }
                 catch
                 {

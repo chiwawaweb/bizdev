@@ -41,7 +41,7 @@ namespace BizDev.Forms
             }
 
             List<Prospect> list;
-            list = prospectProvider.Search(utils.RemoveDiacritics(TxtSearch.Text.Trim()),ChkContacts.Checked,ChkConversions.Checked,ChkAbandons.Checked);
+            list = prospectProvider.Search(utils.RemoveDiacritics(TxtSearch.Text.Trim()));
 
             if (firstLine == true)
             {

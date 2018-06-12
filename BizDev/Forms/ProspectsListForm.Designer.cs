@@ -36,9 +36,6 @@
             this.LblSearch = new System.Windows.Forms.Label();
             this.BtnSearch = new System.Windows.Forms.Button();
             this.BtnReset = new System.Windows.Forms.Button();
-            this.ChkContacts = new System.Windows.Forms.CheckBox();
-            this.ChkConversions = new System.Windows.Forms.CheckBox();
-            this.ChkAbandons = new System.Windows.Forms.CheckBox();
             this.LblNbResults = new System.Windows.Forms.Label();
             this.ToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvProspects)).BeginInit();
@@ -123,7 +120,7 @@
             // 
             // BtnSearch
             // 
-            this.BtnSearch.Location = new System.Drawing.Point(788, 44);
+            this.BtnSearch.Location = new System.Drawing.Point(404, 44);
             this.BtnSearch.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.BtnSearch.Name = "BtnSearch";
             this.BtnSearch.Size = new System.Drawing.Size(112, 23);
@@ -134,7 +131,8 @@
             // 
             // BtnReset
             // 
-            this.BtnReset.Location = new System.Drawing.Point(908, 44);
+            this.BtnReset.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.BtnReset.Location = new System.Drawing.Point(524, 44);
             this.BtnReset.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.BtnReset.Name = "BtnReset";
             this.BtnReset.Size = new System.Drawing.Size(112, 23);
@@ -142,45 +140,6 @@
             this.BtnReset.Text = "Reset";
             this.BtnReset.UseVisualStyleBackColor = true;
             this.BtnReset.Click += new System.EventHandler(this.BtnReset_Click);
-            // 
-            // ChkContacts
-            // 
-            this.ChkContacts.AutoSize = true;
-            this.ChkContacts.Enabled = false;
-            this.ChkContacts.Location = new System.Drawing.Point(421, 46);
-            this.ChkContacts.Name = "ChkContacts";
-            this.ChkContacts.Size = new System.Drawing.Size(91, 21);
-            this.ChkContacts.TabIndex = 6;
-            this.ChkContacts.Text = "Contacts";
-            this.ChkContacts.ThreeState = true;
-            this.ChkContacts.UseVisualStyleBackColor = true;
-            this.ChkContacts.CheckedChanged += new System.EventHandler(this.ChkContacts_CheckedChanged);
-            // 
-            // ChkConversions
-            // 
-            this.ChkConversions.AutoSize = true;
-            this.ChkConversions.Enabled = false;
-            this.ChkConversions.Location = new System.Drawing.Point(518, 46);
-            this.ChkConversions.Name = "ChkConversions";
-            this.ChkConversions.Size = new System.Drawing.Size(115, 21);
-            this.ChkConversions.TabIndex = 7;
-            this.ChkConversions.Text = "Conversions";
-            this.ChkConversions.ThreeState = true;
-            this.ChkConversions.UseVisualStyleBackColor = true;
-            this.ChkConversions.CheckedChanged += new System.EventHandler(this.ChkConversions_CheckedChanged);
-            // 
-            // ChkAbandons
-            // 
-            this.ChkAbandons.AutoSize = true;
-            this.ChkAbandons.Enabled = false;
-            this.ChkAbandons.Location = new System.Drawing.Point(639, 46);
-            this.ChkAbandons.Name = "ChkAbandons";
-            this.ChkAbandons.Size = new System.Drawing.Size(91, 21);
-            this.ChkAbandons.TabIndex = 8;
-            this.ChkAbandons.Text = "Abandons";
-            this.ChkAbandons.ThreeState = true;
-            this.ChkAbandons.UseVisualStyleBackColor = true;
-            this.ChkAbandons.CheckedChanged += new System.EventHandler(this.ChkAbandons_CheckedChanged);
             // 
             // LblNbResults
             // 
@@ -199,9 +158,6 @@
             this.CancelButton = this.BtnReset;
             this.ClientSize = new System.Drawing.Size(1428, 564);
             this.Controls.Add(this.LblNbResults);
-            this.Controls.Add(this.ChkAbandons);
-            this.Controls.Add(this.ChkConversions);
-            this.Controls.Add(this.ChkContacts);
             this.Controls.Add(this.BtnReset);
             this.Controls.Add(this.BtnSearch);
             this.Controls.Add(this.LblSearch);
@@ -233,9 +189,6 @@
         private System.Windows.Forms.Label LblSearch;
         private System.Windows.Forms.Button BtnSearch;
         private System.Windows.Forms.Button BtnReset;
-        private System.Windows.Forms.CheckBox ChkContacts;
-        private System.Windows.Forms.CheckBox ChkConversions;
-        private System.Windows.Forms.CheckBox ChkAbandons;
         private System.Windows.Forms.Label LblNbResults;
     }
 }
