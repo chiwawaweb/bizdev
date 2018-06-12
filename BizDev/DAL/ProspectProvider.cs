@@ -12,7 +12,6 @@ namespace BizDev.DAL
     {
         DateTime dateDebut, dateFin;
 
-
         public int CountAll()
         {
             using (Context context = new Context())
@@ -106,6 +105,26 @@ namespace BizDev.DAL
                     var prospects = from b in context.Prospects
                                     orderby (b.Nom) ascending
                                     where (b.Nom.Contains(keywords))
+                                    select b;
+
+                    return prospects.ToList();
+                }
+                catch
+                {
+                    throw;
+                }
+            }
+        }
+
+        public List<Prospect> SearchNonContactes()
+        {
+            using (Context context = new Context())
+            {
+                try
+                {
+                    var prospects = from b in context.Prospects
+                                    orderby (b.Nom) ascending
+                                    where (b.PremierContact==false && b.Abandon==false)
                                     select b;
 
                     return prospects.ToList();

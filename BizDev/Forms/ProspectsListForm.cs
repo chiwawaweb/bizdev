@@ -202,6 +202,20 @@ namespace BizDev.Forms
             RefreshData();
         }
 
+        private void ResetSearch()
+        {
+            TxtSearch.Text = string.Empty;
+            SearchProspect();
+            TxtSearch.Focus();
+        }
+
+        private void FiltreProspectsNonContactes()
+        {
+            TxtSearch.Enabled = false;
+            BtnSearch.Enabled = false;
+            BtnReset.Enabled = false;
+        }
+
         #region Gestion des événements
 
         private void TbnNew_Click(object sender, EventArgs e)
@@ -254,16 +268,11 @@ namespace BizDev.Forms
             SearchProspect();
         }
 
-
-        #endregion
-
-        private void ResetSearch()
+        private void prospectsNonContactésToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            TxtSearch.Text = string.Empty;
-            SearchProspect();
-            TxtSearch.Focus();
+            FiltreProspectsNonContactes();
         }
 
-        
+        #endregion
     }
 }

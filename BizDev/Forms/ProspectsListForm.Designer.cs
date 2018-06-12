@@ -187,6 +187,7 @@
             this.prospectsNonContactésToolStripMenuItem.Name = "prospectsNonContactésToolStripMenuItem";
             this.prospectsNonContactésToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
             this.prospectsNonContactésToolStripMenuItem.Text = "Prospects non contactés";
+            this.prospectsNonContactésToolStripMenuItem.Click += new System.EventHandler(this.prospectsNonContactésToolStripMenuItem_Click);
             // 
             // prospectsNonConvertisToolStripMenuItem
             // 
