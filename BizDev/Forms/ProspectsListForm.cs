@@ -48,6 +48,11 @@ namespace BizDev.Forms
                 idRetour = 0;
             }
 
+            /* Compte le nombre de résultats */
+            int nbResults = list.Count();
+
+            LblNbResults.Text = "Nombre de prospects : " + nbResults.ToString();
+
             CreateTable(list);
             TxtSearch.Focus();
         }
