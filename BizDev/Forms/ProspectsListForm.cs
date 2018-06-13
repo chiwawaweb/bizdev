@@ -230,6 +230,7 @@ namespace BizDev.Forms
 
         private void ProspectsListForm_Load(object sender, EventArgs e)
         {
+            this.Icon = new Icon(this.Icon, this.Icon.Size);
             RefreshData();
         }
 

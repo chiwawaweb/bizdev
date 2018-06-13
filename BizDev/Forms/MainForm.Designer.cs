@@ -37,8 +37,8 @@
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.StatusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.TooProspects = new System.Windows.Forms.ToolStripButton();
             this.aProposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.TooProspects = new System.Windows.Forms.ToolStripButton();
             this.MenuStrip.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -67,7 +67,7 @@
             // TooQuitter
             // 
             this.TooQuitter.Name = "TooQuitter";
-            this.TooQuitter.Size = new System.Drawing.Size(180, 22);
+            this.TooQuitter.Size = new System.Drawing.Size(111, 22);
             this.TooQuitter.Text = "Quitter";
             this.TooQuitter.Click += new System.EventHandler(this.TooQuitter_Click);
             // 
@@ -82,7 +82,7 @@
             // TooListeProspects
             // 
             this.TooListeProspects.Name = "TooListeProspects";
-            this.TooListeProspects.Size = new System.Drawing.Size(180, 22);
+            this.TooListeProspects.Size = new System.Drawing.Size(168, 22);
             this.TooListeProspects.Text = "Liste de prospects";
             this.TooListeProspects.Click += new System.EventHandler(this.TooListeProspects_Click);
             // 
@@ -114,6 +114,12 @@
             this.toolStrip1.TabIndex = 4;
             this.toolStrip1.Text = "toolStrip1";
             // 
+            // aProposToolStripMenuItem
+            // 
+            this.aProposToolStripMenuItem.Name = "aProposToolStripMenuItem";
+            this.aProposToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.aProposToolStripMenuItem.Text = "A propos...";
+            // 
             // TooProspects
             // 
             this.TooProspects.Image = global::BizDev.Properties.Resources.icon_clients_24;
@@ -122,12 +128,6 @@
             this.TooProspects.Size = new System.Drawing.Size(86, 28);
             this.TooProspects.Text = "Prospects";
             this.TooProspects.Click += new System.EventHandler(this.TooProspects_Click);
-            // 
-            // aProposToolStripMenuItem
-            // 
-            this.aProposToolStripMenuItem.Name = "aProposToolStripMenuItem";
-            this.aProposToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.aProposToolStripMenuItem.Text = "A propos...";
             // 
             // MainForm
             // 

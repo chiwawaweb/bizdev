@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProspectsListForm));
             this.ToolStrip = new System.Windows.Forms.ToolStrip();
             this.TbnNew = new System.Windows.Forms.ToolStripButton();
             this.TbnView = new System.Windows.Forms.ToolStripButton();
@@ -165,6 +166,7 @@
             this.Controls.Add(this.DgvProspects);
             this.Controls.Add(this.ToolStrip);
             this.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Name = "ProspectsListForm";
             this.ShowIcon = false;
