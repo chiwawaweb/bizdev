@@ -88,6 +88,7 @@
             this.DgvProspects.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.DgvProspects.MultiSelect = false;
             this.DgvProspects.Name = "DgvProspects";
+            this.DgvProspects.RowHeadersVisible = false;
             this.DgvProspects.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvProspects.ShowCellErrors = false;
             this.DgvProspects.ShowCellToolTips = false;

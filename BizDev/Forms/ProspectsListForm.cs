@@ -21,7 +21,7 @@ namespace BizDev.Forms
         ProspectProvider prospectProvider = new ProspectProvider();
         //Form owner;
 
-        public ProspectsListForm(int _idRetour=0)
+        public ProspectsListForm(int largeur, int hauteur, int _idRetour=0)
         {
             //owner = _owner;
             idRetour = _idRetour;
@@ -31,6 +31,10 @@ namespace BizDev.Forms
             // placement du form dans le coin sup/gauche
             this.StartPosition = FormStartPosition.Manual;
             this.Location = new Point(0, 0);
+
+            this.Size = new Size(1275, 890);
+            
+
         }
 
         public void RefreshData(int _idRetour = 0, bool firstLine = false)

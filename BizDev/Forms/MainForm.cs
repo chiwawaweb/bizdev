@@ -13,6 +13,8 @@ namespace BizDev.Forms
 {
     public partial class MainForm : Form
     {
+        int largeurPage, hauteurPage;
+
         public MainForm()
         {
             InitializeComponent();
@@ -20,14 +22,19 @@ namespace BizDev.Forms
             ProspectProvider prospectProvider = new ProspectProvider();
             prospectProvider.CountAll();
 
+            largeurPage = this.Size.Width;
+            hauteurPage = this.Size.Height;
+
             OuvreListeProspects();
+
+            Text = largeurPage.ToString()+" x "+hauteurPage.ToString();
         }
 
         private void OuvreListeProspects()
         {
             if (Application.OpenForms["ProspectsListForm"] == null)
             {
-                ProspectsListForm prospectsListForm = new ProspectsListForm()
+                ProspectsListForm prospectsListForm = new ProspectsListForm(largeurPage, hauteurPage)
                 {
                     MdiParent = this
                 };
