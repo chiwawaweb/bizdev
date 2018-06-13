@@ -96,6 +96,22 @@ namespace BizDev.Forms
             };
             adresseCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
+            DataGridViewTextBoxColumn cpCol = new DataGridViewTextBoxColumn
+            {
+                Name = "CP",
+                HeaderText = "C.P.",
+                Width = 60
+            };
+            cpCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            DataGridViewTextBoxColumn villeCol = new DataGridViewTextBoxColumn
+            {
+                Name = "VILLE",
+                HeaderText = "Ville",
+                Width = 190
+            };
+            villeCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
             DataGridViewTextBoxColumn telephoneCol = new DataGridViewTextBoxColumn
             {
                 Name = "TEL",
@@ -136,6 +152,8 @@ namespace BizDev.Forms
             DgvProspects.Columns.Add(idCol);
             DgvProspects.Columns.Add(nomCol);
             DgvProspects.Columns.Add(adresseCol);
+            DgvProspects.Columns.Add(cpCol);
+            DgvProspects.Columns.Add(villeCol);
             DgvProspects.Columns.Add(telephoneCol);
             DgvProspects.Columns.Add(datePremierContactCol);
             DgvProspects.Columns.Add(dateConversionCol);
@@ -148,7 +166,9 @@ namespace BizDev.Forms
 
                 int id = list[i].Id;
                 string nom = list[i].Nom.Trim();
-                string adresse = list[i].Adresse + " " + list[i].Complement + list[i].CodePostal + " " + list[i].Ville.Trim();
+                string adresse = list[i].Adresse + " " + list[i].Complement + " " + list[i].Ville.Trim();
+                string codePostal = list[i].CodePostal;
+                string ville = list[i].Ville;
                 string telephone = list[i].Tel;
                 DateTime datePremierContact = list[i].DatePremierContact;
                 string strDatePremierContact = string.Empty;
@@ -174,10 +194,12 @@ namespace BizDev.Forms
                 DgvProspects.Rows[number].Cells[0].Value = id.ToString("00000");
                 DgvProspects.Rows[number].Cells[1].Value = nom;
                 DgvProspects.Rows[number].Cells[2].Value = adresse;
-                DgvProspects.Rows[number].Cells[3].Value = telephone;
-                DgvProspects.Rows[number].Cells[4].Value = strDatePremierContact;
-                DgvProspects.Rows[number].Cells[5].Value = strDateConversion;
-                DgvProspects.Rows[number].Cells[6].Value = strDateAbandon;
+                DgvProspects.Rows[number].Cells[3].Value = codePostal;
+                DgvProspects.Rows[number].Cells[4].Value = ville;
+                DgvProspects.Rows[number].Cells[5].Value = telephone;
+                DgvProspects.Rows[number].Cells[6].Value = strDatePremierContact;
+                DgvProspects.Rows[number].Cells[7].Value = strDateConversion;
+                DgvProspects.Rows[number].Cells[8].Value = strDateAbandon;
 
                 /* Sélection du client par idRetour */
                 if (list[i].Id == idRetour)
