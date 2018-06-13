@@ -35,9 +35,9 @@
             this.prospectsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TooListeProspects = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.aProposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.StatusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.aProposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TooProspects = new System.Windows.Forms.ToolStripButton();
             this.MenuStrip.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -94,6 +94,12 @@
             this.toolStripMenuItem1.Size = new System.Drawing.Size(24, 20);
             this.toolStripMenuItem1.Text = "?";
             // 
+            // aProposToolStripMenuItem
+            // 
+            this.aProposToolStripMenuItem.Name = "aProposToolStripMenuItem";
+            this.aProposToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.aProposToolStripMenuItem.Text = "A propos...";
+            // 
             // StatusStrip
             // 
             this.StatusStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
@@ -113,12 +119,6 @@
             this.toolStrip1.Size = new System.Drawing.Size(799, 31);
             this.toolStrip1.TabIndex = 4;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // aProposToolStripMenuItem
-            // 
-            this.aProposToolStripMenuItem.Name = "aProposToolStripMenuItem";
-            this.aProposToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
-            this.aProposToolStripMenuItem.Text = "A propos...";
             // 
             // TooProspects
             // 
@@ -143,7 +143,7 @@
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BizDev";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.MenuStrip.ResumeLayout(false);
             this.MenuStrip.PerformLayout();
             this.toolStrip1.ResumeLayout(false);

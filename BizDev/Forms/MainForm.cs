@@ -22,12 +22,7 @@ namespace BizDev.Forms
             ProspectProvider prospectProvider = new ProspectProvider();
             prospectProvider.CountAll();
 
-            largeurPage = this.Size.Width;
-            hauteurPage = this.Size.Height;
-
-            OuvreListeProspects();
-
-            Text = largeurPage.ToString()+" x "+hauteurPage.ToString();
+            
         }
 
         private void OuvreListeProspects()
@@ -46,22 +41,6 @@ namespace BizDev.Forms
             }
         }
 
-        private void OuvreStatistiques()
-        {
-            if (Application.OpenForms["StatistiquesForm"] == null)
-            {
-                StatistiquesForm statistiquesForm = new StatistiquesForm(DateTime.Now.Year)
-                {
-                    MdiParent = this
-                };
-                statistiquesForm.Show();
-            }
-            else
-            {
-                Application.OpenForms["StatistiquesForm"].Activate();
-            }
-        }
-
         #region Gestion des événements
 
         private void TooQuitter_Click(object sender, EventArgs e)
@@ -74,19 +53,17 @@ namespace BizDev.Forms
             OuvreListeProspects();
         }
 
-        private void TooStatistiquesProspects_Click(object sender, EventArgs e)
+        private void MainForm_Load(object sender, EventArgs e)
         {
-            OuvreStatistiques();
+            WindowState = FormWindowState.Maximized;
+            largeurPage = this.Size.Width;
+            hauteurPage = this.Size.Height;
+            OuvreListeProspects();
         }
 
         private void TooProspects_Click(object sender, EventArgs e)
         {
             OuvreListeProspects();
-        }
-
-        private void TooProspectsStatistiques_Click(object sender, EventArgs e)
-        {
-            OuvreStatistiques();
         }
 
         #endregion

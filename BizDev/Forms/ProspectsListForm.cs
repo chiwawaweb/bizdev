@@ -15,7 +15,7 @@ namespace BizDev.Forms
 {
     public partial class ProspectsListForm : Form
     {
-        int idRetour;
+        int idRetour, hauteurPage, largeurPage;
 
         Utils utils = new Utils();
         ProspectProvider prospectProvider = new ProspectProvider();
@@ -25,6 +25,8 @@ namespace BizDev.Forms
         {
             //owner = _owner;
             idRetour = _idRetour;
+            hauteurPage = hauteur;
+            largeurPage = largeur;
 
             InitializeComponent();
 
@@ -32,7 +34,7 @@ namespace BizDev.Forms
             this.StartPosition = FormStartPosition.Manual;
             this.Location = new Point(0, 0);
 
-            this.Size = new Size(1275, 890);
+            
             
 
         }
@@ -266,6 +268,11 @@ namespace BizDev.Forms
         private void ChkConversions_CheckedChanged(object sender, EventArgs e)
         {
             SearchProspect();
+        }
+
+        private void ProspectsListForm_Shown(object sender, EventArgs e)
+        {
+            this.Size = new Size(largeurPage - 20, hauteurPage - 120);
         }
 
         private void ChkAbandons_CheckedChanged(object sender, EventArgs e)

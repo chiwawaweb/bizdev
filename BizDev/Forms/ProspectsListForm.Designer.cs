@@ -82,6 +82,7 @@
             this.DgvProspects.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.DgvProspects.BackgroundColor = System.Drawing.SystemColors.Control;
             this.DgvProspects.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvProspects.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.DgvProspects.Location = new System.Drawing.Point(0, 95);
@@ -169,11 +170,14 @@
             this.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ProspectsListForm";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Text = "Liste de prospects";
             this.Load += new System.EventHandler(this.ProspectsListForm_Load);
+            this.Shown += new System.EventHandler(this.ProspectsListForm_Shown);
             this.ToolStrip.ResumeLayout(false);
             this.ToolStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvProspects)).EndInit();
