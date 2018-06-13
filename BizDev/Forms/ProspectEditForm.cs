@@ -4,6 +4,7 @@ using BizDev.Library;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
@@ -25,7 +26,22 @@ namespace BizDev.Forms
 
         Utils utils = new Utils();
         ProspectProvider prospectProvider = new ProspectProvider();
-        
+
+        private void BtnLink_Click(object sender, EventArgs e)
+        {
+            ViewWebPage();
+        }
+
+        private void ViewWebPage()
+        {
+            if (!string.IsNullOrWhiteSpace(TxtWeb.Text))
+            {
+                string url = TxtWeb.Text.Trim().ToLower();
+                Process.Start("http://" + url);
+            }
+            
+        }
+
         public ProspectEditForm(ProspectsListForm _owner, bool _view, int _idProspect=0)
         {
             idProspect = _idProspect;

@@ -29,20 +29,14 @@
         private void InitializeComponent()
         {
             this.ToolStrip = new System.Windows.Forms.ToolStrip();
+            this.TbnNew = new System.Windows.Forms.ToolStripButton();
+            this.TbnView = new System.Windows.Forms.ToolStripButton();
             this.DgvProspects = new System.Windows.Forms.DataGridView();
             this.TxtSearch = new System.Windows.Forms.TextBox();
             this.LblSearch = new System.Windows.Forms.Label();
             this.BtnSearch = new System.Windows.Forms.Button();
             this.BtnReset = new System.Windows.Forms.Button();
             this.LblNbResults = new System.Windows.Forms.Label();
-            this.TbnNew = new System.Windows.Forms.ToolStripButton();
-            this.TbnView = new System.Windows.Forms.ToolStripButton();
-            this.TbnFiltres = new System.Windows.Forms.ToolStripDropDownButton();
-            this.tousLesProspectsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
-            this.prospectsNonContactésToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.prospectsNonConvertisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.prospectsAbandonnésToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvProspects)).BeginInit();
             this.SuspendLayout();
@@ -52,14 +46,31 @@
             this.ToolStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.ToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TbnNew,
-            this.TbnView,
-            this.TbnFiltres});
+            this.TbnView});
             this.ToolStrip.Location = new System.Drawing.Point(0, 0);
             this.ToolStrip.Name = "ToolStrip";
             this.ToolStrip.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
             this.ToolStrip.Size = new System.Drawing.Size(1428, 31);
             this.ToolStrip.TabIndex = 0;
             this.ToolStrip.Text = "toolStrip1";
+            // 
+            // TbnNew
+            // 
+            this.TbnNew.Image = global::BizDev.Properties.Resources.icon_new_24;
+            this.TbnNew.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.TbnNew.Name = "TbnNew";
+            this.TbnNew.Size = new System.Drawing.Size(132, 28);
+            this.TbnNew.Text = "Nouveau prospect";
+            this.TbnNew.Click += new System.EventHandler(this.TbnNew_Click);
+            // 
+            // TbnView
+            // 
+            this.TbnView.Image = global::BizDev.Properties.Resources.icon_view_24;
+            this.TbnView.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.TbnView.Name = "TbnView";
+            this.TbnView.Size = new System.Drawing.Size(101, 28);
+            this.TbnView.Text = "Visualisation";
+            this.TbnView.Click += new System.EventHandler(this.TbnView_Click);
             // 
             // DgvProspects
             // 
@@ -139,68 +150,6 @@
             this.LblNbResults.TabIndex = 9;
             this.LblNbResults.Text = "-";
             // 
-            // TbnNew
-            // 
-            this.TbnNew.Image = global::BizDev.Properties.Resources.icon_new_24;
-            this.TbnNew.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.TbnNew.Name = "TbnNew";
-            this.TbnNew.Size = new System.Drawing.Size(132, 28);
-            this.TbnNew.Text = "Nouveau prospect";
-            this.TbnNew.Click += new System.EventHandler(this.TbnNew_Click);
-            // 
-            // TbnView
-            // 
-            this.TbnView.Image = global::BizDev.Properties.Resources.icon_view_24;
-            this.TbnView.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.TbnView.Name = "TbnView";
-            this.TbnView.Size = new System.Drawing.Size(101, 28);
-            this.TbnView.Text = "Visualisation";
-            this.TbnView.Click += new System.EventHandler(this.TbnView_Click);
-            // 
-            // TbnFiltres
-            // 
-            this.TbnFiltres.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tousLesProspectsToolStripMenuItem,
-            this.toolStripMenuItem1,
-            this.prospectsNonContactésToolStripMenuItem,
-            this.prospectsNonConvertisToolStripMenuItem,
-            this.prospectsAbandonnésToolStripMenuItem});
-            this.TbnFiltres.Image = global::BizDev.Properties.Resources.icon_filter_24;
-            this.TbnFiltres.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.TbnFiltres.Name = "TbnFiltres";
-            this.TbnFiltres.Size = new System.Drawing.Size(75, 28);
-            this.TbnFiltres.Text = "Filtres";
-            // 
-            // tousLesProspectsToolStripMenuItem
-            // 
-            this.tousLesProspectsToolStripMenuItem.Name = "tousLesProspectsToolStripMenuItem";
-            this.tousLesProspectsToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
-            this.tousLesProspectsToolStripMenuItem.Text = "Tous les prospects";
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(200, 6);
-            // 
-            // prospectsNonContactésToolStripMenuItem
-            // 
-            this.prospectsNonContactésToolStripMenuItem.Name = "prospectsNonContactésToolStripMenuItem";
-            this.prospectsNonContactésToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
-            this.prospectsNonContactésToolStripMenuItem.Text = "Prospects non contactés";
-            this.prospectsNonContactésToolStripMenuItem.Click += new System.EventHandler(this.prospectsNonContactésToolStripMenuItem_Click);
-            // 
-            // prospectsNonConvertisToolStripMenuItem
-            // 
-            this.prospectsNonConvertisToolStripMenuItem.Name = "prospectsNonConvertisToolStripMenuItem";
-            this.prospectsNonConvertisToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
-            this.prospectsNonConvertisToolStripMenuItem.Text = "Prospects non convertis";
-            // 
-            // prospectsAbandonnésToolStripMenuItem
-            // 
-            this.prospectsAbandonnésToolStripMenuItem.Name = "prospectsAbandonnésToolStripMenuItem";
-            this.prospectsAbandonnésToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
-            this.prospectsAbandonnésToolStripMenuItem.Text = "Prospects abandonnés";
-            // 
             // ProspectsListForm
             // 
             this.AcceptButton = this.BtnSearch;
@@ -241,11 +190,5 @@
         private System.Windows.Forms.Button BtnSearch;
         private System.Windows.Forms.Button BtnReset;
         private System.Windows.Forms.Label LblNbResults;
-        private System.Windows.Forms.ToolStripDropDownButton TbnFiltres;
-        private System.Windows.Forms.ToolStripMenuItem tousLesProspectsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem prospectsNonContactésToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem prospectsNonConvertisToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem prospectsAbandonnésToolStripMenuItem;
     }
 }
