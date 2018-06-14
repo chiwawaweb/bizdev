@@ -104,7 +104,10 @@ namespace BizDev.DAL
                 {
                     var prospects = from b in context.Prospects
                                     orderby (b.Nom) ascending
-                                    where (b.Nom.Contains(keywords))
+                                    where (b.Nom.Contains(keywords)
+                                    || b.Adresse.Contains(keywords)
+                                    || b.CodePostal.Contains(keywords)
+                                    || b.Ville.Contains(keywords))
                                     select b;
 
                     return prospects.ToList();
@@ -116,26 +119,7 @@ namespace BizDev.DAL
             }
         }
 
-        public List<Prospect> SearchNonContactes()
-        {
-            using (Context context = new Context())
-            {
-                try
-                {
-                    var prospects = from b in context.Prospects
-                                    orderby (b.Nom) ascending
-                                    where (b.PremierContact==false && b.Abandon==false)
-                                    select b;
-
-                    return prospects.ToList();
-                }
-                catch
-                {
-                    throw;
-                }
-            }
-        }
-
+        
         #region Statistiques
 
         DateTime noDate = new DateTime(1899, 12, 30);
