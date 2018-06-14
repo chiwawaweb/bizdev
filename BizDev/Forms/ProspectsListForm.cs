@@ -166,7 +166,7 @@ namespace BizDev.Forms
 
                 int id = list[i].Id;
                 string nom = list[i].Nom.Trim();
-                string adresse = list[i].Adresse + " " + list[i].Complement + " " + list[i].Ville.Trim();
+                string adresse = list[i].Adresse + " " + list[i].Complement + " " ;
                 string codePostal = list[i].CodePostal;
                 string ville = list[i].Ville;
                 string telephone = list[i].Tel;
