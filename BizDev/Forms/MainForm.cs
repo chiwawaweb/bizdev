@@ -21,8 +21,6 @@ namespace BizDev.Forms
 
             ProspectProvider prospectProvider = new ProspectProvider();
             prospectProvider.CountAll();
-
-            
         }
 
         private void OuvreListeProspects()
@@ -39,6 +37,11 @@ namespace BizDev.Forms
             {
                 Application.OpenForms["ProspectsListForm"].Activate();
             }
+        }
+
+        private void ExportProspects()
+        {
+
         }
 
         #region Gestion des événements
@@ -61,13 +64,17 @@ namespace BizDev.Forms
             OuvreListeProspects();
         }
 
+        private void exporterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ExportProspects();
+        }
+
         private void TooProspects_Click(object sender, EventArgs e)
         {
             OuvreListeProspects();
         }
 
         #endregion
-
 
     }
 }

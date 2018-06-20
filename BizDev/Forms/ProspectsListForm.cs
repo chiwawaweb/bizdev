@@ -33,10 +33,6 @@ namespace BizDev.Forms
             // placement du form dans le coin sup/gauche
             this.StartPosition = FormStartPosition.Manual;
             this.Location = new Point(0, 0);
-
-            
-            
-
         }
 
         public void RefreshData(int _idRetour = 0, bool firstLine = false)
@@ -230,9 +226,7 @@ namespace BizDev.Forms
             {
                 idRetour = int.Parse(DgvProspects.CurrentRow.Cells[0].Value.ToString());
                 new ProspectEditForm(this, true, idRetour).ShowDialog();
-                
             }
-            
         }
 
         private void SearchProspect()

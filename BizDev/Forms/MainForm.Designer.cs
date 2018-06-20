@@ -39,6 +39,7 @@
             this.StatusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.TooProspects = new System.Windows.Forms.ToolStripButton();
+            this.exporterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuStrip.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -74,7 +75,8 @@
             // prospectsToolStripMenuItem
             // 
             this.prospectsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.TooListeProspects});
+            this.TooListeProspects,
+            this.exporterToolStripMenuItem});
             this.prospectsToolStripMenuItem.Name = "prospectsToolStripMenuItem";
             this.prospectsToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
             this.prospectsToolStripMenuItem.Text = "Prospects";
@@ -82,7 +84,7 @@
             // TooListeProspects
             // 
             this.TooListeProspects.Name = "TooListeProspects";
-            this.TooListeProspects.Size = new System.Drawing.Size(168, 22);
+            this.TooListeProspects.Size = new System.Drawing.Size(180, 22);
             this.TooListeProspects.Text = "Liste de prospects";
             this.TooListeProspects.Click += new System.EventHandler(this.TooListeProspects_Click);
             // 
@@ -129,6 +131,13 @@
             this.TooProspects.Text = "Prospects";
             this.TooProspects.Click += new System.EventHandler(this.TooProspects_Click);
             // 
+            // exporterToolStripMenuItem
+            // 
+            this.exporterToolStripMenuItem.Name = "exporterToolStripMenuItem";
+            this.exporterToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exporterToolStripMenuItem.Text = "Exporter...";
+            this.exporterToolStripMenuItem.Click += new System.EventHandler(this.exporterToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -165,5 +174,6 @@
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton TooProspects;
         private System.Windows.Forms.ToolStripMenuItem aProposToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exporterToolStripMenuItem;
     }
 }
