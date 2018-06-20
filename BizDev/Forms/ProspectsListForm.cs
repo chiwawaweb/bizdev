@@ -4,12 +4,14 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BizDev.DAL;
 using BizDev.DTO;
 using BizDev.Library;
+using System.IO;
 
 namespace BizDev.Forms
 {
@@ -248,6 +250,112 @@ namespace BizDev.Forms
             BtnReset.Enabled = false;
         }
 
+        protected void createCSV(DataTable dtTemp)
+        {
+            string contenu = "";
+
+            foreach (DataColumn dc in dtTemp.Columns)
+            {
+                contenu += dc.ColumnName + "; ";
+            }
+
+            // On passe à la ligne et on saute une ligne
+            contenu += Environment.NewLine;
+            contenu += Environment.NewLine;
+
+            foreach (DataRow dr in dtTemp.Rows)
+            {
+                foreach (DataColumn dc in dtTemp.Columns)
+                {
+                    contenu += dr[dc.ColumnName] + "; ";
+                }
+                // On passe à la ligne après avoir parcouru la ligne entière
+                contenu += Environment.NewLine;
+            }
+
+            /*
+            HttpContext.Current.Response.Clear();
+            HttpContext.Current.Response.ClearHeaders();
+            HttpContext.Current.Response.ClearContent();
+            HttpContext.Current.Response.AddHeader("content-disposition", "attachment; filename=Resultat_Recherche.csv");
+            HttpContext.Current.Response.ContentType = "text/csv";
+            HttpContext.Current.Response.Write(contenu);
+            HttpContext.Current.Response.End();
+            */
+
+        }
+
+        private void ExportProspects()
+        {
+            List<Prospect> list;
+            list = prospectProvider.GetAll();
+
+            string exportFileName = "cbc.csv";
+            string exportPath = "";
+
+            using (StreamWriter sw = new StreamWriter
+                (@"c:\"+ exportFileName, false, System.Text.Encoding.GetEncoding("utf-32")))
+            {
+                /* Ente du fichier */
+                string entete = "Id\tCatégorie\tNom\tAdresse\tComplément\tCP\tVille\tPays\tNb\tContact\tConversion\tAbandon";
+                sw.WriteLine(entete);
+
+                /* Ajoute les lignes */
+                for (int i = 0; i < list.Count; i++)
+                {
+                    
+                    string id = list[i].Id.ToString("00000");
+                    string categorie = list[i].Categorie.ToString();
+                    string nom = list[i].Nom;
+                    string adresse = list[i].Adresse;
+                    string complement = list[i].Complement;
+                    string codePostal = list[i].CodePostal;
+                    string ville = list[i].Ville;
+                    string pays = list[i].Pays;
+                    string nbEmployes = list[i].NbEmployes.ToString();
+                    string contact = list[i].DatePremierContact.ToString();
+                    string conversion = list[i].DateConversion.ToString();
+                    string abandon = list[i].DateAbandon.ToString();
+
+
+                    sw.Write(id);
+                    sw.Write("\t");
+                    sw.Write(categorie);
+                    sw.Write("\t");
+                    sw.Write(nom);
+                    sw.Write("\t");
+                    sw.Write(adresse);
+                    sw.Write("\t");
+                    sw.Write(complement);
+                    sw.Write("\t");
+                    sw.Write(codePostal);
+                    sw.Write("\t");
+                    sw.Write(ville);
+                    sw.Write("\t");
+                    sw.Write(pays);
+                    sw.Write("\t");
+                    sw.Write(nbEmployes);
+                    sw.Write("\t");
+                    sw.Write(contact);
+                    sw.Write("\t");
+                    sw.Write(conversion);
+                    sw.Write("\t");
+                    sw.WriteLine(abandon);
+                }
+
+                    /*
+                    DataSet1TableAdapters.binsTA ta = new DataSet1TableAdapters.binsTA();
+                    DataSet1.binsDataTable dt = ta.GetData();
+                    foreach (DataSet1.binsRow row in dt.Rows)
+                    {
+                        sw.Write(row.ID.ToString());
+                        sw.Write("|");
+                        sw.WriteLine(row.description);
+                    }
+                    */
+            }
+        }
+
         #region Gestion des événements
 
         private void TbnNew_Click(object sender, EventArgs e)
@@ -299,6 +407,11 @@ namespace BizDev.Forms
         private void ProspectsListForm_Shown(object sender, EventArgs e)
         {
             this.Size = new Size(largeurPage - 20, hauteurPage - 120);
+        }
+
+        private void TbnExport_Click(object sender, EventArgs e)
+        {
+            ExportProspects();
         }
 
         private void ChkAbandons_CheckedChanged(object sender, EventArgs e)

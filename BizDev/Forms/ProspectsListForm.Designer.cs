@@ -38,6 +38,7 @@
             this.BtnSearch = new System.Windows.Forms.Button();
             this.BtnReset = new System.Windows.Forms.Button();
             this.LblNbResults = new System.Windows.Forms.Label();
+            this.TbnExport = new System.Windows.Forms.ToolStripButton();
             this.ToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvProspects)).BeginInit();
             this.SuspendLayout();
@@ -47,7 +48,8 @@
             this.ToolStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.ToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TbnNew,
-            this.TbnView});
+            this.TbnView,
+            this.TbnExport});
             this.ToolStrip.Location = new System.Drawing.Point(0, 0);
             this.ToolStrip.Name = "ToolStrip";
             this.ToolStrip.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
@@ -153,6 +155,15 @@
             this.LblNbResults.TabIndex = 9;
             this.LblNbResults.Text = "-";
             // 
+            // TbnExport
+            // 
+            this.TbnExport.Image = ((System.Drawing.Image)(resources.GetObject("TbnExport.Image")));
+            this.TbnExport.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.TbnExport.Name = "TbnExport";
+            this.TbnExport.Size = new System.Drawing.Size(78, 28);
+            this.TbnExport.Text = "Exporter";
+            this.TbnExport.Click += new System.EventHandler(this.TbnExport_Click);
+            // 
             // ProspectsListForm
             // 
             this.AcceptButton = this.BtnSearch;
@@ -197,5 +208,6 @@
         private System.Windows.Forms.Button BtnSearch;
         private System.Windows.Forms.Button BtnReset;
         private System.Windows.Forms.Label LblNbResults;
+        private System.Windows.Forms.ToolStripButton TbnExport;
     }
 }

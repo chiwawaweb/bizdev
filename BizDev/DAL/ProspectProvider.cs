@@ -119,7 +119,26 @@ namespace BizDev.DAL
             }
         }
 
-        
+        public List<Prospect> GetAll()
+        {
+            using (Context context = new Context())
+            {
+                try
+                {
+                    var prospects = from b in context.Prospects
+                                    orderby (b.Id) ascending
+                                    select b;
+
+                    return prospects.ToList();
+                }
+                catch
+                {
+                    throw;
+                }
+            }
+        }
+
+
         #region Statistiques
 
         DateTime noDate = new DateTime(1899, 12, 30);

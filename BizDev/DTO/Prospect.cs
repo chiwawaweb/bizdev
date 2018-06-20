@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 
 namespace BizDev.DTO
 {
@@ -24,6 +25,7 @@ namespace BizDev.DTO
         public string Web { get; set; }
         public string NbEmployes { get; set; }
 
+        
         public bool PremierContact { get; set; }
         public DateTime DatePremierContact { get; set; }
         public bool Conversion { get; set; }
