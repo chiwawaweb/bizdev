@@ -176,12 +176,12 @@ namespace BizDev.Forms
                 string codePostal = list[i].CodePostal;
                 string ville = list[i].Ville;
                 string telephone = list[i].Tel;
-                DateTime datePremierContact = list[i].DatePremierContact;
+                DateTime? datePremierContact = list[i].DatePremierContact;
                 string strDatePremierContact = string.Empty;
                 if (datePremierContact == DateTime.Parse("30/12/1899"))
                     strDatePremierContact = string.Empty;
                 else
-                    strDatePremierContact = datePremierContact.ToShortDateString();
+                    strDatePremierContact = datePremierContact.ToString();
 
                 DateTime dateConversion = list[i].DateConversion;
                 string strDateConversion = string.Empty;
@@ -250,41 +250,6 @@ namespace BizDev.Forms
             BtnReset.Enabled = false;
         }
 
-        protected void createCSV(DataTable dtTemp)
-        {
-            string contenu = "";
-
-            foreach (DataColumn dc in dtTemp.Columns)
-            {
-                contenu += dc.ColumnName + "; ";
-            }
-
-            // On passe à la ligne et on saute une ligne
-            contenu += Environment.NewLine;
-            contenu += Environment.NewLine;
-
-            foreach (DataRow dr in dtTemp.Rows)
-            {
-                foreach (DataColumn dc in dtTemp.Columns)
-                {
-                    contenu += dr[dc.ColumnName] + "; ";
-                }
-                // On passe à la ligne après avoir parcouru la ligne entière
-                contenu += Environment.NewLine;
-            }
-
-            /*
-            HttpContext.Current.Response.Clear();
-            HttpContext.Current.Response.ClearHeaders();
-            HttpContext.Current.Response.ClearContent();
-            HttpContext.Current.Response.AddHeader("content-disposition", "attachment; filename=Resultat_Recherche.csv");
-            HttpContext.Current.Response.ContentType = "text/csv";
-            HttpContext.Current.Response.Write(contenu);
-            HttpContext.Current.Response.End();
-            */
-
-        }
-
         private void ExportProspects()
         {
             List<Prospect> list;
@@ -294,7 +259,7 @@ namespace BizDev.Forms
             string exportPath = "";
 
             using (StreamWriter sw = new StreamWriter
-                (@"c:\"+ exportFileName, false, System.Text.Encoding.GetEncoding("utf-32")))
+                (@"c:\cbc\"+ exportFileName, false, System.Text.Encoding.GetEncoding("utf-32")))
             {
                 /* Ente du fichier */
                 string entete = "Id\tCatégorie\tNom\tAdresse\tComplément\tCP\tVille\tPays\tNb\tContact\tConversion\tAbandon";

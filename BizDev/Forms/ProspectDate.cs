@@ -17,7 +17,8 @@ namespace BizDev.Forms
         int idProspect;
         string type, nom;
         bool newState, premierContact, conversion, abandon;
-        DateTime newDate, datePremierContact, dateConversion, dateAbandon;
+        DateTime newDate, dateConversion, dateAbandon;
+        DateTime? datePremierContact;
 
         Prospect prospect;
         ProspectEditForm owner;
@@ -63,7 +64,7 @@ namespace BizDev.Forms
                     LblLegende.Text = "Date de prise de contact";
                     if (premierContact == true)
                     {
-                        DtpDate.Value = datePremierContact;
+                        DtpDate.Value = datePremierContact.Value;
                         ChkDelDate.Visible = true;
                     }
                     else
@@ -109,12 +110,12 @@ namespace BizDev.Forms
             /* Récupération des données */
             if (ChkDelDate.Checked != true)
             {
-                newDate = DtpDate.Value;
+                newDate = Convert.ToDateTime(DtpDate.Value.ToShortDateString());
                 newState = true;
             }
             else
             {
-                newDate = DateTime.Parse("30/12/1899");
+                newDate = Convert.ToDateTime(string.Empty);
                 newState = false;
             }
 
@@ -146,15 +147,13 @@ namespace BizDev.Forms
             Prospect prospect = prospectProvider.GetProspectById(idProspect);
 
             prospect.PremierContact = premierContact;
-            prospect.DatePremierContact = Convert.ToDateTime(datePremierContact.ToShortDateString());
+            prospect.DatePremierContact = Convert.ToDateTime(datePremierContact.Value);
             prospect.Conversion = conversion;
             prospect.DateConversion = Convert.ToDateTime(dateConversion.ToShortDateString());
             prospect.Abandon = abandon;
             prospect.DateAbandon = Convert.ToDateTime(dateAbandon.ToShortDateString());
 
             prospectProvider.Update(prospect);
-
-            
         }
 
         #region Gestion des événements

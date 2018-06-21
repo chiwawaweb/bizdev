@@ -65,6 +65,7 @@
             this.DtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.DtpDate.Location = new System.Drawing.Point(51, 33);
             this.DtpDate.Margin = new System.Windows.Forms.Padding(2);
+            this.DtpDate.MinDate = new System.DateTime(2017, 1, 1, 0, 0, 0, 0);
             this.DtpDate.Name = "DtpDate";
             this.DtpDate.Size = new System.Drawing.Size(128, 26);
             this.DtpDate.TabIndex = 2;

@@ -17,7 +17,8 @@ namespace BizDev.Forms
         string categorie, nom, adresse, complement, codePostal, ville, pays, tel, gsm, fax, email, 
             web, nbEmployes, notes;
         bool view, premierContact, conversion, abandon, clientPro;
-        DateTime dateConversion, datePremierContact, dateAbandon, createdAt, updatedAt;
+        DateTime dateConversion, dateAbandon, createdAt, updatedAt;
+        DateTime? datePremierContact;
 
         ProspectsListForm owner;
         Prospect prospect;
@@ -39,7 +40,6 @@ namespace BizDev.Forms
                 string url = TxtWeb.Text.Trim().ToLower();
                 Process.Start("http://" + url);
             }
-            
         }
 
         public ProspectEditForm(ProspectsListForm _owner, bool _view, int _idProspect=0)
@@ -211,7 +211,7 @@ namespace BizDev.Forms
         {
             if (premierContact == true)
             {
-                TxtPremierContact.Text = datePremierContact.ToShortDateString();
+                TxtPremierContact.Text = datePremierContact.ToString().Substring(0,10);
             }
             else
             {
@@ -314,7 +314,7 @@ namespace BizDev.Forms
                 Email = email,
                 Web = web,
                 NbEmployes = nbEmployes,
-                ClientPro=clientPro,
+                ClientPro = clientPro,
                 Notes = notes,
                 CreatedAt = DateTime.Now
             };
