@@ -176,26 +176,26 @@ namespace BizDev.Forms
                 string codePostal = list[i].CodePostal;
                 string ville = list[i].Ville;
                 string telephone = list[i].Tel;
-                DateTime? datePremierContact = list[i].DatePremierContact;
+                string datePremierContact = list[i].DatePremierContact;
                 string strDatePremierContact = string.Empty;
-                if (datePremierContact == DateTime.Parse("30/12/1899"))
+                if (datePremierContact == "")
                     strDatePremierContact = string.Empty;
                 else
-                    strDatePremierContact = datePremierContact.ToString();
+                    strDatePremierContact = datePremierContact;
 
-                DateTime dateConversion = list[i].DateConversion;
+                string dateConversion = list[i].DateConversion;
                 string strDateConversion = string.Empty;
-                if (dateConversion == DateTime.Parse("30/12/1899"))
+                if (dateConversion == "")
                     strDateConversion = string.Empty;
                 else
-                    strDateConversion = dateConversion.ToShortDateString();
+                    strDateConversion = dateConversion;
 
-                DateTime dateAbandon = list[i].DateAbandon;
+                string dateAbandon = list[i].DateAbandon;
                 string strDateAbandon = string.Empty;
-                if (dateAbandon == DateTime.Parse("30/12/1899"))
+                if (dateAbandon == "")
                     strDateAbandon = string.Empty;
                 else
-                    strDateAbandon = dateAbandon.ToShortDateString();
+                    strDateAbandon = dateAbandon;
                 string categorie = list[i].Categorie;
 
                 DgvProspects.Rows[number].Cells[0].Value = id.ToString("00000");

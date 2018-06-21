@@ -17,8 +17,8 @@ namespace BizDev.Forms
         string categorie, nom, adresse, complement, codePostal, ville, pays, tel, gsm, fax, email, 
             web, nbEmployes, notes;
         bool view, premierContact, conversion, abandon, clientPro;
-        DateTime dateConversion, dateAbandon, createdAt, updatedAt;
-        DateTime? datePremierContact;
+        DateTime createdAt, updatedAt;
+        string datePremierContact, dateConversion, dateAbandon;
 
         ProspectsListForm owner;
         Prospect prospect;
@@ -220,7 +220,7 @@ namespace BizDev.Forms
 
             if (conversion == true)
             {
-                TxtConversion.Text = dateConversion.ToShortDateString();
+                TxtConversion.Text = dateConversion;
             }
             else
             {
@@ -229,7 +229,7 @@ namespace BizDev.Forms
 
             if (abandon == true)
             {
-                TxtAbandon.Text = dateAbandon.ToShortDateString();
+                TxtAbandon.Text = dateAbandon.ToString().Substring(0, 10);
             }
             else
             {

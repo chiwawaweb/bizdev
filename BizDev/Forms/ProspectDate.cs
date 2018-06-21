@@ -17,8 +17,7 @@ namespace BizDev.Forms
         int idProspect;
         string type, nom;
         bool newState, premierContact, conversion, abandon;
-        DateTime dateConversion, dateAbandon;
-        DateTime? datePremierContact;
+        string datePremierContact, dateConversion, dateAbandon;
         Nullable<DateTime> newDate = null;
 
         Prospect prospect;
@@ -65,7 +64,7 @@ namespace BizDev.Forms
                     LblLegende.Text = "Date de prise de contact";
                     if (premierContact == true)
                     {
-                        DtpDate.Value = datePremierContact.Value;
+                        DtpDate.Value = Convert.ToDateTime(datePremierContact);
                         ChkDelDate.Visible = true;
                     }
                     else
@@ -80,7 +79,7 @@ namespace BizDev.Forms
                     LblLegende.Text = "Date de conversion";
                     if (conversion == true)
                     {
-                        DtpDate.Value = dateConversion;
+                        DtpDate.Value = Convert.ToDateTime(dateConversion);
                         ChkDelDate.Visible = true;
                     }
                     else
@@ -94,7 +93,7 @@ namespace BizDev.Forms
                     LblLegende.Text = "Date d'abandon";
                     if (abandon == true)
                     {
-                        DtpDate.Value = dateAbandon;
+                        DtpDate.Value = Convert.ToDateTime(dateAbandon);
                         ChkDelDate.Visible = true;
                     }
                     else
@@ -123,17 +122,17 @@ namespace BizDev.Forms
             switch (type)
             {
                 case "P":
-                    datePremierContact = newDate;
+                    datePremierContact = newDate.ToString().Substring(0,10);
                     premierContact = newState;
                     break;
 
                 case "C":
-                    //dateConversion = newDate;
+                    dateConversion = newDate.ToString().Substring(0, 10);
                     conversion = newState;
                     break;
 
                 case "A":
-                    //dateAbandon = newDate;
+                    dateAbandon = newDate.ToString().Substring(0, 10);
                     abandon = newState;
                     break;
             }
@@ -150,9 +149,9 @@ namespace BizDev.Forms
             prospect.PremierContact = premierContact;
             prospect.DatePremierContact = datePremierContact;
             prospect.Conversion = conversion;
-            prospect.DateConversion = Convert.ToDateTime(dateConversion.ToShortDateString());
+            prospect.DateConversion = dateConversion;
             prospect.Abandon = abandon;
-            prospect.DateAbandon = Convert.ToDateTime(dateAbandon.ToShortDateString());
+            prospect.DateAbandon = dateAbandon;
 
             prospectProvider.Update(prospect);
         }
