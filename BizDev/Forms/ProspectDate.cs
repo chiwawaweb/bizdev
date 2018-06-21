@@ -17,8 +17,9 @@ namespace BizDev.Forms
         int idProspect;
         string type, nom;
         bool newState, premierContact, conversion, abandon;
-        DateTime newDate, dateConversion, dateAbandon;
+        DateTime dateConversion, dateAbandon;
         DateTime? datePremierContact;
+        Nullable<DateTime> newDate = null;
 
         Prospect prospect;
         ProspectEditForm owner;
@@ -115,7 +116,7 @@ namespace BizDev.Forms
             }
             else
             {
-                newDate = Convert.ToDateTime(string.Empty);
+                newDate = null;
                 newState = false;
             }
 
@@ -127,12 +128,12 @@ namespace BizDev.Forms
                     break;
 
                 case "C":
-                    dateConversion = newDate;
+                    //dateConversion = newDate;
                     conversion = newState;
                     break;
 
                 case "A":
-                    dateAbandon = newDate;
+                    //dateAbandon = newDate;
                     abandon = newState;
                     break;
             }
@@ -147,7 +148,7 @@ namespace BizDev.Forms
             Prospect prospect = prospectProvider.GetProspectById(idProspect);
 
             prospect.PremierContact = premierContact;
-            prospect.DatePremierContact = Convert.ToDateTime(datePremierContact.Value);
+            prospect.DatePremierContact = datePremierContact;
             prospect.Conversion = conversion;
             prospect.DateConversion = Convert.ToDateTime(dateConversion.ToShortDateString());
             prospect.Abandon = abandon;

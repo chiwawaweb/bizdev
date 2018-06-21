@@ -27,8 +27,9 @@ namespace BizDev.DTO
 
         
         public bool PremierContact { get; set; }
-        [DataType(DataType.Date)]
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
+        //[DataType(DataType.Date)]
+        //[DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
+        
         public DateTime? DatePremierContact { get; set; }
         public bool Conversion { get; set; }
         public DateTime DateConversion { get; set; }
