@@ -34,14 +34,16 @@
             this.TooQuitter = new System.Windows.Forms.ToolStripMenuItem();
             this.prospectsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TooListeProspects = new System.Windows.Forms.ToolStripMenuItem();
+            this.exporterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.aProposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.StatusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.TooProspects = new System.Windows.Forms.ToolStripButton();
-            this.exporterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.DgvProspects = new System.Windows.Forms.DataGridView();
             this.MenuStrip.SuspendLayout();
             this.toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvProspects)).BeginInit();
             this.SuspendLayout();
             // 
             // MenuStrip
@@ -84,9 +86,16 @@
             // TooListeProspects
             // 
             this.TooListeProspects.Name = "TooListeProspects";
-            this.TooListeProspects.Size = new System.Drawing.Size(180, 22);
+            this.TooListeProspects.Size = new System.Drawing.Size(168, 22);
             this.TooListeProspects.Text = "Liste de prospects";
             this.TooListeProspects.Click += new System.EventHandler(this.TooListeProspects_Click);
+            // 
+            // exporterToolStripMenuItem
+            // 
+            this.exporterToolStripMenuItem.Name = "exporterToolStripMenuItem";
+            this.exporterToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.exporterToolStripMenuItem.Text = "Exporter...";
+            this.exporterToolStripMenuItem.Click += new System.EventHandler(this.exporterToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
@@ -131,12 +140,17 @@
             this.TooProspects.Text = "Prospects";
             this.TooProspects.Click += new System.EventHandler(this.TooProspects_Click);
             // 
-            // exporterToolStripMenuItem
+            // DgvProspects
             // 
-            this.exporterToolStripMenuItem.Name = "exporterToolStripMenuItem";
-            this.exporterToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.exporterToolStripMenuItem.Text = "Exporter...";
-            this.exporterToolStripMenuItem.Click += new System.EventHandler(this.exporterToolStripMenuItem_Click);
+            this.DgvProspects.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DgvProspects.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvProspects.Location = new System.Drawing.Point(0, 58);
+            this.DgvProspects.Name = "DgvProspects";
+            this.DgvProspects.Size = new System.Drawing.Size(799, 463);
+            this.DgvProspects.TabIndex = 6;
+            this.DgvProspects.Visible = false;
             // 
             // MainForm
             // 
@@ -146,6 +160,7 @@
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.StatusStrip);
             this.Controls.Add(this.MenuStrip);
+            this.Controls.Add(this.DgvProspects);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.MenuStrip;
@@ -157,6 +172,7 @@
             this.MenuStrip.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvProspects)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -175,5 +191,6 @@
         private System.Windows.Forms.ToolStripButton TooProspects;
         private System.Windows.Forms.ToolStripMenuItem aProposToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exporterToolStripMenuItem;
+        private System.Windows.Forms.DataGridView DgvProspects;
     }
 }

@@ -17,11 +17,9 @@ namespace BizDev.Forms
 
         Utils utils = new Utils();
         ProspectProvider prospectProvider = new ProspectProvider();
-        //Form owner;
 
         public ProspectsListForm(int largeur, int hauteur, int _idRetour=0)
         {
-            //owner = _owner;
             idRetour = _idRetour;
             hauteurPage = hauteur;
             largeurPage = largeur;
