@@ -97,9 +97,7 @@ namespace BizDev.Forms
         {
             BtnAddLog.Enabled = false;
             DgvLog.Enabled = false;
-            TxtPremierContact.Visible = false;
-            TxtConversion.Visible = false;
-            TxtAbandon.Visible = false;
+            GrpDates.Visible = false;
             BtnPremierContact.Visible = false;
             BtnConversion.Visible = false;
             BtnAbandon.Visible = false;

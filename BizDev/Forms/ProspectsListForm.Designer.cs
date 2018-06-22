@@ -32,13 +32,13 @@
             this.ToolStrip = new System.Windows.Forms.ToolStrip();
             this.TbnNew = new System.Windows.Forms.ToolStripButton();
             this.TbnView = new System.Windows.Forms.ToolStripButton();
+            this.TbnExport = new System.Windows.Forms.ToolStripButton();
             this.DgvProspects = new System.Windows.Forms.DataGridView();
             this.TxtSearch = new System.Windows.Forms.TextBox();
             this.LblSearch = new System.Windows.Forms.Label();
             this.BtnSearch = new System.Windows.Forms.Button();
             this.BtnReset = new System.Windows.Forms.Button();
             this.LblNbResults = new System.Windows.Forms.Label();
-            this.TbnExport = new System.Windows.Forms.ToolStripButton();
             this.ToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvProspects)).BeginInit();
             this.SuspendLayout();
@@ -74,6 +74,15 @@
             this.TbnView.Size = new System.Drawing.Size(101, 28);
             this.TbnView.Text = "Visualisation";
             this.TbnView.Click += new System.EventHandler(this.TbnView_Click);
+            // 
+            // TbnExport
+            // 
+            this.TbnExport.Image = global::BizDev.Properties.Resources.icon_export_24;
+            this.TbnExport.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.TbnExport.Name = "TbnExport";
+            this.TbnExport.Size = new System.Drawing.Size(149, 28);
+            this.TbnExport.Text = "Exporter les prospects";
+            this.TbnExport.Click += new System.EventHandler(this.TbnExport_Click);
             // 
             // DgvProspects
             // 
@@ -154,15 +163,6 @@
             this.LblNbResults.Size = new System.Drawing.Size(16, 17);
             this.LblNbResults.TabIndex = 9;
             this.LblNbResults.Text = "-";
-            // 
-            // TbnExport
-            // 
-            this.TbnExport.Image = ((System.Drawing.Image)(resources.GetObject("TbnExport.Image")));
-            this.TbnExport.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.TbnExport.Name = "TbnExport";
-            this.TbnExport.Size = new System.Drawing.Size(78, 28);
-            this.TbnExport.Text = "Exporter";
-            this.TbnExport.Click += new System.EventHandler(this.TbnExport_Click);
             // 
             // ProspectsListForm
             // 

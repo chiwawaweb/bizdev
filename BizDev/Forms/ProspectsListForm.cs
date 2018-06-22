@@ -265,10 +265,7 @@ namespace BizDev.Forms
                     string conversion = list[i].DateConversion.ToString();
                     string abandon = list[i].DateAbandon.ToString();
 
-
                     sw.Write(id);
-                    sw.Write("\t");
-                    sw.Write(categorie);
                     sw.Write("\t");
                     sw.Write(nom);
                     sw.Write("\t");
@@ -289,18 +286,9 @@ namespace BizDev.Forms
                     sw.Write(conversion);
                     sw.Write("\t");
                     sw.WriteLine(abandon);
+                    sw.Write("\t");
+                    sw.Write(categorie);
                 }
-
-                    /*
-                    DataSet1TableAdapters.binsTA ta = new DataSet1TableAdapters.binsTA();
-                    DataSet1.binsDataTable dt = ta.GetData();
-                    foreach (DataSet1.binsRow row in dt.Rows)
-                    {
-                        sw.Write(row.ID.ToString());
-                        sw.Write("|");
-                        sw.WriteLine(row.description);
-                    }
-                    */
             }
         }
 

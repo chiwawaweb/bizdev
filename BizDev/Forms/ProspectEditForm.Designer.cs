@@ -75,8 +75,10 @@
             this.BtnEdit = new System.Windows.Forms.Button();
             this.BtnPremierContact = new System.Windows.Forms.Button();
             this.BtnLink = new System.Windows.Forms.Button();
+            this.GrpDates = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvLog)).BeginInit();
+            this.GrpDates.SuspendLayout();
             this.SuspendLayout();
             // 
             // ErrorProvider
@@ -154,12 +156,12 @@
             this.TxtNotes.AcceptsReturn = true;
             this.TxtNotes.BackColor = System.Drawing.Color.Beige;
             this.TxtNotes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TxtNotes.Location = new System.Drawing.Point(439, 216);
+            this.TxtNotes.Location = new System.Drawing.Point(438, 216);
             this.TxtNotes.MaxLength = 20000;
             this.TxtNotes.Multiline = true;
             this.TxtNotes.Name = "TxtNotes";
             this.TxtNotes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.TxtNotes.Size = new System.Drawing.Size(363, 79);
+            this.TxtNotes.Size = new System.Drawing.Size(364, 79);
             this.TxtNotes.TabIndex = 14;
             // 
             // label9
@@ -195,9 +197,9 @@
             this.TxtWeb.BackColor = System.Drawing.Color.Beige;
             this.TxtWeb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TxtWeb.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
-            this.TxtWeb.Location = new System.Drawing.Point(439, 159);
+            this.TxtWeb.Location = new System.Drawing.Point(438, 159);
             this.TxtWeb.Name = "TxtWeb";
-            this.TxtWeb.Size = new System.Drawing.Size(323, 23);
+            this.TxtWeb.Size = new System.Drawing.Size(324, 23);
             this.TxtWeb.TabIndex = 13;
             // 
             // LblEmail
@@ -214,9 +216,9 @@
             this.TxtEmail.BackColor = System.Drawing.Color.Beige;
             this.TxtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TxtEmail.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
-            this.TxtEmail.Location = new System.Drawing.Point(439, 99);
+            this.TxtEmail.Location = new System.Drawing.Point(438, 99);
             this.TxtEmail.Name = "TxtEmail";
-            this.TxtEmail.Size = new System.Drawing.Size(363, 23);
+            this.TxtEmail.Size = new System.Drawing.Size(364, 23);
             this.TxtEmail.TabIndex = 12;
             // 
             // label8
@@ -252,9 +254,9 @@
             this.TxtTel.BackColor = System.Drawing.Color.Beige;
             this.TxtTel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TxtTel.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.TxtTel.Location = new System.Drawing.Point(439, 45);
+            this.TxtTel.Location = new System.Drawing.Point(438, 45);
             this.TxtTel.Name = "TxtTel";
-            this.TxtTel.Size = new System.Drawing.Size(116, 23);
+            this.TxtTel.Size = new System.Drawing.Size(117, 23);
             this.TxtTel.TabIndex = 9;
             // 
             // LblPays
@@ -356,7 +358,7 @@
             this.TxtAbandon.BackColor = System.Drawing.Color.LightCoral;
             this.TxtAbandon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TxtAbandon.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtAbandon.Location = new System.Drawing.Point(575, 357);
+            this.TxtAbandon.Location = new System.Drawing.Point(178, 79);
             this.TxtAbandon.Name = "TxtAbandon";
             this.TxtAbandon.ReadOnly = true;
             this.TxtAbandon.Size = new System.Drawing.Size(94, 23);
@@ -369,7 +371,7 @@
             this.TxtConversion.BackColor = System.Drawing.Color.Gold;
             this.TxtConversion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TxtConversion.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtConversion.Location = new System.Drawing.Point(575, 330);
+            this.TxtConversion.Location = new System.Drawing.Point(178, 52);
             this.TxtConversion.Name = "TxtConversion";
             this.TxtConversion.ReadOnly = true;
             this.TxtConversion.Size = new System.Drawing.Size(94, 23);
@@ -382,7 +384,7 @@
             this.TxtPremierContact.BackColor = System.Drawing.Color.PaleGreen;
             this.TxtPremierContact.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.TxtPremierContact.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtPremierContact.Location = new System.Drawing.Point(575, 303);
+            this.TxtPremierContact.Location = new System.Drawing.Point(178, 25);
             this.TxtPremierContact.Name = "TxtPremierContact";
             this.TxtPremierContact.ReadOnly = true;
             this.TxtPremierContact.Size = new System.Drawing.Size(94, 23);
@@ -393,7 +395,7 @@
             // BtnAbandon
             // 
             this.BtnAbandon.Image = global::BizDev.Properties.Resources.icon_calendar_16;
-            this.BtnAbandon.Location = new System.Drawing.Point(672, 357);
+            this.BtnAbandon.Location = new System.Drawing.Point(275, 79);
             this.BtnAbandon.Name = "BtnAbandon";
             this.BtnAbandon.Size = new System.Drawing.Size(22, 22);
             this.BtnAbandon.TabIndex = 42;
@@ -404,7 +406,7 @@
             // BtnConversion
             // 
             this.BtnConversion.Image = global::BizDev.Properties.Resources.icon_calendar_16;
-            this.BtnConversion.Location = new System.Drawing.Point(672, 330);
+            this.BtnConversion.Location = new System.Drawing.Point(275, 52);
             this.BtnConversion.Name = "BtnConversion";
             this.BtnConversion.Size = new System.Drawing.Size(22, 22);
             this.BtnConversion.TabIndex = 41;
@@ -446,7 +448,7 @@
             // LblDatePremierContact
             // 
             this.LblDatePremierContact.AutoSize = true;
-            this.LblDatePremierContact.Location = new System.Drawing.Point(437, 307);
+            this.LblDatePremierContact.Location = new System.Drawing.Point(40, 29);
             this.LblDatePremierContact.Name = "LblDatePremierContact";
             this.LblDatePremierContact.Size = new System.Drawing.Size(133, 15);
             this.LblDatePremierContact.TabIndex = 35;
@@ -455,7 +457,7 @@
             // LblDateAbandon
             // 
             this.LblDateAbandon.AutoSize = true;
-            this.LblDateAbandon.Location = new System.Drawing.Point(500, 360);
+            this.LblDateAbandon.Location = new System.Drawing.Point(103, 82);
             this.LblDateAbandon.Name = "LblDateAbandon";
             this.LblDateAbandon.Size = new System.Drawing.Size(70, 15);
             this.LblDateAbandon.TabIndex = 38;
@@ -464,7 +466,7 @@
             // LblDateConversion
             // 
             this.LblDateConversion.AutoSize = true;
-            this.LblDateConversion.Location = new System.Drawing.Point(479, 333);
+            this.LblDateConversion.Location = new System.Drawing.Point(82, 55);
             this.LblDateConversion.Name = "LblDateConversion";
             this.LblDateConversion.Size = new System.Drawing.Size(91, 15);
             this.LblDateConversion.TabIndex = 37;
@@ -531,7 +533,7 @@
             // BtnPremierContact
             // 
             this.BtnPremierContact.Image = global::BizDev.Properties.Resources.icon_calendar_16;
-            this.BtnPremierContact.Location = new System.Drawing.Point(672, 303);
+            this.BtnPremierContact.Location = new System.Drawing.Point(275, 25);
             this.BtnPremierContact.Name = "BtnPremierContact";
             this.BtnPremierContact.Size = new System.Drawing.Size(22, 22);
             this.BtnPremierContact.TabIndex = 40;
@@ -549,6 +551,24 @@
             this.BtnLink.UseVisualStyleBackColor = true;
             this.BtnLink.Click += new System.EventHandler(this.BtnLink_Click);
             // 
+            // GrpDates
+            // 
+            this.GrpDates.Controls.Add(this.TxtPremierContact);
+            this.GrpDates.Controls.Add(this.LblDateConversion);
+            this.GrpDates.Controls.Add(this.LblDateAbandon);
+            this.GrpDates.Controls.Add(this.LblDatePremierContact);
+            this.GrpDates.Controls.Add(this.TxtAbandon);
+            this.GrpDates.Controls.Add(this.BtnPremierContact);
+            this.GrpDates.Controls.Add(this.BtnConversion);
+            this.GrpDates.Controls.Add(this.BtnAbandon);
+            this.GrpDates.Controls.Add(this.TxtConversion);
+            this.GrpDates.Location = new System.Drawing.Point(438, 304);
+            this.GrpDates.Name = "GrpDates";
+            this.GrpDates.Size = new System.Drawing.Size(362, 114);
+            this.GrpDates.TabIndex = 47;
+            this.GrpDates.TabStop = false;
+            this.GrpDates.Text = "Dates";
+            // 
             // ProspectEditForm
             // 
             this.AcceptButton = this.BtnSave;
@@ -556,27 +576,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.BtnClose;
             this.ClientSize = new System.Drawing.Size(822, 622);
+            this.Controls.Add(this.GrpDates);
             this.Controls.Add(this.BtnLink);
             this.Controls.Add(this.ChkClientPro);
             this.Controls.Add(this.BtnAddLog);
-            this.Controls.Add(this.TxtAbandon);
             this.Controls.Add(this.DgvLog);
             this.Controls.Add(this.BtnEdit);
-            this.Controls.Add(this.TxtConversion);
             this.Controls.Add(this.BtnClose);
-            this.Controls.Add(this.TxtPremierContact);
-            this.Controls.Add(this.BtnAbandon);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.BtnConversion);
             this.Controls.Add(this.BtnCancel);
-            this.Controls.Add(this.BtnPremierContact);
             this.Controls.Add(this.TxtFax);
             this.Controls.Add(this.BtnSave);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.LblDatePremierContact);
-            this.Controls.Add(this.LblDateAbandon);
             this.Controls.Add(this.TxtWeb);
-            this.Controls.Add(this.LblDateConversion);
             this.Controls.Add(this.TxtNom);
             this.Controls.Add(this.LblEmail);
             this.Controls.Add(this.CbxCategorie);
@@ -613,6 +625,8 @@
             this.Load += new System.EventHandler(this.ProspectEditForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvLog)).EndInit();
+            this.GrpDates.ResumeLayout(false);
+            this.GrpDates.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -664,5 +678,6 @@
         private System.Windows.Forms.Button BtnConversion;
         private System.Windows.Forms.CheckBox ChkClientPro;
         private System.Windows.Forms.Button BtnLink;
+        private System.Windows.Forms.GroupBox GrpDates;
     }
 }

@@ -206,6 +206,8 @@
     <Content Include="Resources\Data\bizdev.mdb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\icon_export_24.png" />
+    <None Include="Resources\icon_export_128.png" />
     <Content Include="Resources\Logos\logo-cbc.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
