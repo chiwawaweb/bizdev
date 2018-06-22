@@ -53,30 +53,30 @@ namespace BizDev.Forms
             InitializeComponent();
 
             /* Combobox catégories */
-            ProspectCategorieProvider prospectCategorieProvider = new ProspectCategorieProvider();
             var dsCategorie = new List<string>();
             dsCategorie.Add("");
-            foreach (string categorie in prospectCategorieProvider.RetrieveCategories())
+            foreach (string categorie in prospectProvider.RetrieveCategories())
             {
                 if (categorie+""!="")
                 {
-                    dsCategorie.Add(categorie + "");
+                    dsCategorie.Add(categorie);
                 }
             }
             CbxCategorie.DataSource = dsCategorie;
             CbxCategorie.DisplayMember = "Categorie";
 
             /* Combobox pays */
-            Pays country = new Pays();
-            country.Nom = string.Empty;
-            var dsPays = new List<Pays>();
-            dsPays.Add(country);
-            foreach (Pays pays in country.GetAllPays().OrderBy(o => o.Nom))
+            var dsPays = new List<string>();
+            dsPays.Add("");
+            foreach (string pays in prospectProvider.RetrievePays())
             {
-                dsPays.Add(pays);
+                if (pays+""!="")
+                {
+                    dsPays.Add(pays);
+                }
             }
             CbxPays.DataSource = dsPays;
-            CbxPays.DisplayMember = "Fullname";
+            CbxPays.DisplayMember = "Pays";
 
             switch (view)
             {
@@ -205,8 +205,6 @@ namespace BizDev.Forms
             TxtConversion.Text = dateConversion;
             TxtAbandon.Text = dateAbandon;
 
-            //AfficheDates();
-
             Text = "Visualisation du prospect : " + nom;
         }
 
@@ -243,12 +241,6 @@ namespace BizDev.Forms
             {
                 erreurs = true;
                 ErrorProvider.SetError(TxtEmail, "Email incorrect");
-            }
-
-            if (pays.Length<2)
-            {
-                erreurs = true;
-                ErrorProvider.SetError(CbxPays, "Pays obligatoire");
             }
 
             /* Contrôle si erreurs */

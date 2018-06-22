@@ -137,6 +137,40 @@ namespace BizDev.DAL
                 }
             }
         }
+
+        public List<String> RetrieveCategories()
+        {
+            using (Context context = new Context())
+            {
+                try
+                {
+                    var result = context.Prospects.Select(v => v.Categorie).Distinct();
+
+                    return result.ToList();
+                }
+                catch
+                {
+                    throw;
+                }
+            }
+        }
+
+        public List<String> RetrievePays()
+        {
+            using (Context context = new Context())
+            {
+                try
+                {
+                    var result = context.Prospects.Select(v => v.Pays).Distinct();
+
+                    return result.ToList();
+                }
+                catch
+                {
+                    throw;
+                }
+            }
+        }
     }
 }
 

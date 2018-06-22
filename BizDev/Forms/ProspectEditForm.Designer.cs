@@ -86,8 +86,9 @@
             // 
             // CbxPays
             // 
+            this.CbxPays.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.CbxPays.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.CbxPays.BackColor = System.Drawing.Color.Beige;
-            this.CbxPays.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CbxPays.FormattingEnabled = true;
             this.ErrorProvider.SetIconAlignment(this.CbxPays, System.Windows.Forms.ErrorIconAlignment.MiddleLeft);
             this.CbxPays.Location = new System.Drawing.Point(31, 350);
