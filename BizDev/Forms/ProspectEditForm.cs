@@ -211,7 +211,7 @@ namespace BizDev.Forms
         {
             if (premierContact == true)
             {
-                TxtPremierContact.Text = datePremierContact.ToString().Substring(0,10);
+                TxtPremierContact.Text = datePremierContact;
             }
             else
             {
@@ -229,7 +229,7 @@ namespace BizDev.Forms
 
             if (abandon == true)
             {
-                TxtAbandon.Text = dateAbandon.ToString().Substring(0, 10);
+                TxtAbandon.Text = dateAbandon;
             }
             else
             {
@@ -315,6 +315,9 @@ namespace BizDev.Forms
                 Web = web,
                 NbEmployes = nbEmployes,
                 ClientPro = clientPro,
+                DatePremierContact = string.Empty,
+                DateConversion = string.Empty,
+                DateAbandon = string.Empty,
                 Notes = notes,
                 CreatedAt = DateTime.Now
             };

@@ -18,7 +18,8 @@ namespace BizDev.Forms
         string type, nom;
         bool newState, premierContact, conversion, abandon;
         string datePremierContact, dateConversion, dateAbandon;
-        Nullable<DateTime> newDate = null;
+        //Nullable<DateTime> newDate = null;
+        string newDate="";
 
         Prospect prospect;
         ProspectEditForm owner;
@@ -110,29 +111,40 @@ namespace BizDev.Forms
             /* Récupération des données */
             if (ChkDelDate.Checked != true)
             {
-                newDate = Convert.ToDateTime(DtpDate.Value.ToShortDateString());
+                newDate = DtpDate.Value.ToShortDateString();
                 newState = true;
             }
             else
             {
-                newDate = null;
+                newDate = string.Empty;
                 newState = false;
+            }
+
+            int newDateL;
+
+            if (newDate.ToString().Length>10)
+            {
+                newDateL = 10;
+            }
+            else
+            {
+                newDateL = 0;
             }
 
             switch (type)
             {
                 case "P":
-                    datePremierContact = newDate.ToString().Substring(0,10);
+                    datePremierContact = newDate;
                     premierContact = newState;
                     break;
 
                 case "C":
-                    dateConversion = newDate.ToString().Substring(0, 10);
+                    dateConversion = newDate;
                     conversion = newState;
                     break;
 
                 case "A":
-                    dateAbandon = newDate.ToString().Substring(0, 10);
+                    dateAbandon = newDate;
                     abandon = newState;
                     break;
             }
