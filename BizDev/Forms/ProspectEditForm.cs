@@ -176,11 +176,8 @@ namespace BizDev.Forms
             nbEmployes = prospect.NbEmployes;
             clientPro = prospect.ClientPro;
             notes = prospect.Notes;
-            premierContact = prospect.PremierContact;
             datePremierContact = prospect.DatePremierContact;
-            conversion = prospect.Conversion;
             dateConversion = prospect.DateConversion;
-            abandon = prospect.Abandon;
             dateAbandon = prospect.DateAbandon;
             createdAt = prospect.CreatedAt;
             updatedAt = prospect.UpdatedAt;
@@ -310,11 +307,8 @@ namespace BizDev.Forms
             prospect.NbEmployes = nbEmployes;
             prospect.ClientPro = clientPro;
             prospect.Notes = notes;
-            prospect.PremierContact = premierContact;
             prospect.DatePremierContact = datePremierContact;
-            prospect.Conversion = conversion;
             prospect.DateConversion = dateConversion;
-            prospect.Abandon = abandon;
             prospect.DateAbandon = dateAbandon;
             prospect.UpdatedAt = DateTime.Now;
 
@@ -325,11 +319,8 @@ namespace BizDev.Forms
         {
             prospect = prospectProvider.GetProspectById(idProspect);
 
-            premierContact = prospect.PremierContact;
             datePremierContact = prospect.DatePremierContact;
-            conversion = prospect.Conversion;
             dateConversion = prospect.DateConversion;
-            abandon = prospect.Abandon;
             dateAbandon = prospect.DateAbandon;
 
             /* Mise à jour de l'affichage des dates */

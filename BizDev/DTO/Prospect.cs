@@ -24,15 +24,9 @@ namespace BizDev.DTO
         public string Email { get; set; }
         public string Web { get; set; }
         public string NbEmployes { get; set; }
-
-        
-        public bool PremierContact { get; set; }
         public string DatePremierContact { get; set; }
-        public bool Conversion { get; set; }
         public string DateConversion { get; set; }
-        public bool Abandon { get; set; }
         public string DateAbandon { get; set; }
-
         public string Notes { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }

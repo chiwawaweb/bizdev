@@ -51,11 +51,8 @@ namespace BizDev.Forms
             prospect = prospectProvider.GetProspectById(idProspect);
 
             nom = prospect.Nom;
-            premierContact = prospect.PremierContact;
             datePremierContact = prospect.DatePremierContact;
-            conversion = prospect.Conversion;
             dateConversion = prospect.DateConversion;
-            abandon = prospect.Abandon;
             dateAbandon = prospect.DateAbandon;
 
             /* Affiche les données */
@@ -147,11 +144,8 @@ namespace BizDev.Forms
         {
             Prospect prospect = prospectProvider.GetProspectById(idProspect);
 
-            prospect.PremierContact = premierContact;
             prospect.DatePremierContact = datePremierContact;
-            prospect.Conversion = conversion;
             prospect.DateConversion = dateConversion;
-            prospect.Abandon = abandon;
             prospect.DateAbandon = dateAbandon;
 
             prospectProvider.Update(prospect);
