@@ -1,17 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Net.Http;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using BizDev.DAL;
+﻿using BizDev.DAL;
 using BizDev.DTO;
 using BizDev.Library;
+using System;
+using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
 
 namespace BizDev.Forms
 {
@@ -248,11 +244,8 @@ namespace BizDev.Forms
                 List<Prospect> list;
                 list = prospectProvider.GetAll();
 
-                //string exportFileName = "cbc.csv";
-                //string exportPath = "";
-
                 using (StreamWriter sw = new StreamWriter
-                    (@exportFileName, false, System.Text.Encoding.GetEncoding("utf-32")))
+                    (@exportFileName, false, Encoding.GetEncoding("utf-32")))
                 {
                     /* Ente du fichier */
                     string entete = "Id\tCatégorie\tNom\tAdresse\tComplément\tCP\tVille\tPays\tNb\tContact\tConversion\tAbandon";
@@ -261,7 +254,6 @@ namespace BizDev.Forms
                     /* Ajoute les lignes */
                     for (int i = 0; i < list.Count; i++)
                     {
-
                         string id = list[i].Id.ToString("00000");
                         string categorie = list[i].Categorie.ToString();
                         string nom = list[i].Nom;

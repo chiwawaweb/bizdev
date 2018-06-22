@@ -3,10 +3,8 @@ using BizDev.DTO;
 using BizDev.Library;
 using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Diagnostics;
 using System.Drawing;
-using System.Linq;
 using System.Windows.Forms;
 
 namespace BizDev.Forms
@@ -459,7 +457,6 @@ namespace BizDev.Forms
             TxtNotes.ReadOnly = false;
             TxtNotes.TabStop = true;
             TxtNotes.BackColor = Color.Beige;
-
         }
 
         #region Gestion des événements
