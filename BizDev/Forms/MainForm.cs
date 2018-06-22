@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using BizDev.DAL;
+﻿using BizDev.DAL;
 using BizDev.DTO;
 using BizDev.Library;
+using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace BizDev.Forms
 {
@@ -26,6 +21,30 @@ namespace BizDev.Forms
             InitializeComponent();
 
             prospectProvider.CountAll(); // * à supprimer 
+        }
+
+        public void RefreshData(int _idRetour = 0, bool firstLine = false)
+        {
+            if (_idRetour != 0)
+            {
+                idRetour = _idRetour;
+            }
+
+            List<Prospect> list;
+            list = prospectProvider.Search(utils.RemoveDiacritics(TxtSearch.Text.Trim()));
+
+            if (firstLine == true)
+            {
+                idRetour = 0;
+            }
+
+            /* Compte le nombre de résultats */
+            //int nbResults = list.Count();
+
+            TssNbProspect.Text = "Nombre de prospects : ";// + nbResults.ToString();
+
+            CreateTable(list);
+            TxtSearch.Focus();
         }
 
         private void CreateTable(List<Prospect> list)
@@ -206,6 +225,7 @@ namespace BizDev.Forms
             largeurPage = this.Size.Width;
             hauteurPage = this.Size.Height;
             OuvreListeProspects();
+            RefreshData();
         }
 
         private void exporterToolStripMenuItem_Click(object sender, EventArgs e)

@@ -41,7 +41,10 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.TooProspects = new System.Windows.Forms.ToolStripButton();
             this.DgvProspects = new System.Windows.Forms.DataGridView();
+            this.TssNbProspect = new System.Windows.Forms.ToolStripStatusLabel();
+            this.TxtSearch = new System.Windows.Forms.TextBox();
             this.MenuStrip.SuspendLayout();
+            this.StatusStrip.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvProspects)).BeginInit();
             this.SuspendLayout();
@@ -114,6 +117,8 @@
             // StatusStrip
             // 
             this.StatusStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.StatusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TssNbProspect});
             this.StatusStrip.Location = new System.Drawing.Point(0, 524);
             this.StatusStrip.Name = "StatusStrip";
             this.StatusStrip.Size = new System.Drawing.Size(799, 22);
@@ -146,17 +151,30 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DgvProspects.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvProspects.Location = new System.Drawing.Point(0, 58);
+            this.DgvProspects.Location = new System.Drawing.Point(0, 91);
             this.DgvProspects.Name = "DgvProspects";
-            this.DgvProspects.Size = new System.Drawing.Size(799, 463);
+            this.DgvProspects.Size = new System.Drawing.Size(799, 430);
             this.DgvProspects.TabIndex = 6;
-            this.DgvProspects.Visible = false;
+            // 
+            // TssNbProspect
+            // 
+            this.TssNbProspect.Name = "TssNbProspect";
+            this.TssNbProspect.Size = new System.Drawing.Size(12, 17);
+            this.TssNbProspect.Text = "-";
+            // 
+            // TxtSearch
+            // 
+            this.TxtSearch.Location = new System.Drawing.Point(61, 65);
+            this.TxtSearch.Name = "TxtSearch";
+            this.TxtSearch.Size = new System.Drawing.Size(100, 20);
+            this.TxtSearch.TabIndex = 8;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(799, 546);
+            this.Controls.Add(this.TxtSearch);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.StatusStrip);
             this.Controls.Add(this.MenuStrip);
@@ -170,6 +188,8 @@
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.MenuStrip.ResumeLayout(false);
             this.MenuStrip.PerformLayout();
+            this.StatusStrip.ResumeLayout(false);
+            this.StatusStrip.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvProspects)).EndInit();
@@ -192,5 +212,7 @@
         private System.Windows.Forms.ToolStripMenuItem aProposToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exporterToolStripMenuItem;
         private System.Windows.Forms.DataGridView DgvProspects;
+        private System.Windows.Forms.ToolStripStatusLabel TssNbProspect;
+        private System.Windows.Forms.TextBox TxtSearch;
     }
 }
