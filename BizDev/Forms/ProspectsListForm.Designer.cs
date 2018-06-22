@@ -39,6 +39,8 @@
             this.BtnSearch = new System.Windows.Forms.Button();
             this.BtnReset = new System.Windows.Forms.Button();
             this.LblNbResults = new System.Windows.Forms.Label();
+            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.ToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvProspects)).BeginInit();
             this.SuspendLayout();
@@ -164,6 +166,10 @@
             this.LblNbResults.TabIndex = 9;
             this.LblNbResults.Text = "-";
             // 
+            // openFileDialog
+            // 
+            this.openFileDialog.FileName = "openFileDialog";
+            // 
             // ProspectsListForm
             // 
             this.AcceptButton = this.BtnSearch;
@@ -209,5 +215,7 @@
         private System.Windows.Forms.Button BtnReset;
         private System.Windows.Forms.Label LblNbResults;
         private System.Windows.Forms.ToolStripButton TbnExport;
+        private System.Windows.Forms.OpenFileDialog openFileDialog;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog;
     }
 }
