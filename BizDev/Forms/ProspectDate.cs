@@ -120,17 +120,6 @@ namespace BizDev.Forms
                 newState = false;
             }
 
-            int newDateL;
-
-            if (newDate.ToString().Length>10)
-            {
-                newDateL = 10;
-            }
-            else
-            {
-                newDateL = 0;
-            }
-
             switch (type)
             {
                 case "P":

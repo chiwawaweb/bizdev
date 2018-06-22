@@ -201,40 +201,13 @@ namespace BizDev.Forms
             TxtNbEmployes.Text = nbEmployes;
             ChkClientPro.Checked = clientPro;
             TxtNotes.Text = notes;
+            TxtPremierContact.Text = datePremierContact;
+            TxtConversion.Text = dateConversion;
+            TxtAbandon.Text = dateAbandon;
 
-            AfficheDates();
+            //AfficheDates();
 
             Text = "Visualisation du prospect : " + nom;
-        }
-
-        private void AfficheDates()
-        {
-            if (premierContact == true)
-            {
-                TxtPremierContact.Text = datePremierContact;
-            }
-            else
-            {
-                TxtPremierContact.Text = "n.c.";
-            }
-
-            if (conversion == true)
-            {
-                TxtConversion.Text = dateConversion;
-            }
-            else
-            {
-                TxtConversion.Text = "n.c.";
-            }
-
-            if (abandon == true)
-            {
-                TxtAbandon.Text = dateAbandon;
-            }
-            else
-            {
-                TxtAbandon.Text = "n.c.";
-            }
         }
 
         private void Save()
@@ -365,9 +338,12 @@ namespace BizDev.Forms
             conversion = prospect.Conversion;
             dateConversion = prospect.DateConversion;
             abandon = prospect.Abandon;
-            dateAbandon = prospect.DateAbandon; 
+            dateAbandon = prospect.DateAbandon;
 
-            AfficheDates();
+            /* Mise à jour de l'affichage des dates */
+            TxtPremierContact.Text = datePremierContact;
+            TxtConversion.Text = dateConversion;
+            TxtAbandon.Text = dateAbandon;
         }
 
         public void RefreshData(int _idRetourSuivi=0)

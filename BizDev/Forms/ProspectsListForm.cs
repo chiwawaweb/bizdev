@@ -177,25 +177,8 @@ namespace BizDev.Forms
                 string ville = list[i].Ville;
                 string telephone = list[i].Tel;
                 string datePremierContact = list[i].DatePremierContact;
-                string strDatePremierContact = string.Empty;
-                if (datePremierContact == "")
-                    strDatePremierContact = string.Empty;
-                else
-                    strDatePremierContact = datePremierContact;
-
                 string dateConversion = list[i].DateConversion;
-                string strDateConversion = string.Empty;
-                if (dateConversion == "")
-                    strDateConversion = string.Empty;
-                else
-                    strDateConversion = dateConversion;
-
                 string dateAbandon = list[i].DateAbandon;
-                string strDateAbandon = string.Empty;
-                if (dateAbandon == "")
-                    strDateAbandon = string.Empty;
-                else
-                    strDateAbandon = dateAbandon;
                 string categorie = list[i].Categorie;
 
                 DgvProspects.Rows[number].Cells[0].Value = id.ToString("00000");
@@ -204,9 +187,9 @@ namespace BizDev.Forms
                 DgvProspects.Rows[number].Cells[3].Value = codePostal;
                 DgvProspects.Rows[number].Cells[4].Value = ville;
                 DgvProspects.Rows[number].Cells[5].Value = telephone;
-                DgvProspects.Rows[number].Cells[6].Value = strDatePremierContact;
-                DgvProspects.Rows[number].Cells[7].Value = strDateConversion;
-                DgvProspects.Rows[number].Cells[8].Value = strDateAbandon;
+                DgvProspects.Rows[number].Cells[6].Value = datePremierContact;
+                DgvProspects.Rows[number].Cells[7].Value = dateConversion;
+                DgvProspects.Rows[number].Cells[8].Value = dateAbandon;
                 DgvProspects.Rows[number].Cells[9].Value = categorie;
 
                 /* Sélection du client par idRetour */
