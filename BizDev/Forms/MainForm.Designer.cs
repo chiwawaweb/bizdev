@@ -38,11 +38,14 @@
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.aProposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.StatusStrip = new System.Windows.Forms.StatusStrip();
+            this.TssNbProspect = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.TooProspects = new System.Windows.Forms.ToolStripButton();
             this.DgvProspects = new System.Windows.Forms.DataGridView();
-            this.TssNbProspect = new System.Windows.Forms.ToolStripStatusLabel();
             this.TxtSearch = new System.Windows.Forms.TextBox();
+            this.LblSearch = new System.Windows.Forms.Label();
+            this.BtnSearch = new System.Windows.Forms.Button();
+            this.BtnReset = new System.Windows.Forms.Button();
             this.MenuStrip.SuspendLayout();
             this.StatusStrip.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -58,7 +61,8 @@
             this.toolStripMenuItem1});
             this.MenuStrip.Location = new System.Drawing.Point(0, 0);
             this.MenuStrip.Name = "MenuStrip";
-            this.MenuStrip.Size = new System.Drawing.Size(799, 24);
+            this.MenuStrip.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
+            this.MenuStrip.Size = new System.Drawing.Size(1198, 35);
             this.MenuStrip.TabIndex = 0;
             this.MenuStrip.Text = "menuStrip1";
             // 
@@ -67,13 +71,13 @@
             this.fichierToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TooQuitter});
             this.fichierToolStripMenuItem.Name = "fichierToolStripMenuItem";
-            this.fichierToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+            this.fichierToolStripMenuItem.Size = new System.Drawing.Size(74, 29);
             this.fichierToolStripMenuItem.Text = "Fichier";
             // 
             // TooQuitter
             // 
             this.TooQuitter.Name = "TooQuitter";
-            this.TooQuitter.Size = new System.Drawing.Size(111, 22);
+            this.TooQuitter.Size = new System.Drawing.Size(151, 30);
             this.TooQuitter.Text = "Quitter";
             this.TooQuitter.Click += new System.EventHandler(this.TooQuitter_Click);
             // 
@@ -83,20 +87,20 @@
             this.TooListeProspects,
             this.exporterToolStripMenuItem});
             this.prospectsToolStripMenuItem.Name = "prospectsToolStripMenuItem";
-            this.prospectsToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
+            this.prospectsToolStripMenuItem.Size = new System.Drawing.Size(101, 29);
             this.prospectsToolStripMenuItem.Text = "Prospects";
             // 
             // TooListeProspects
             // 
             this.TooListeProspects.Name = "TooListeProspects";
-            this.TooListeProspects.Size = new System.Drawing.Size(168, 22);
+            this.TooListeProspects.Size = new System.Drawing.Size(239, 30);
             this.TooListeProspects.Text = "Liste de prospects";
             this.TooListeProspects.Click += new System.EventHandler(this.TooListeProspects_Click);
             // 
             // exporterToolStripMenuItem
             // 
             this.exporterToolStripMenuItem.Name = "exporterToolStripMenuItem";
-            this.exporterToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.exporterToolStripMenuItem.Size = new System.Drawing.Size(239, 30);
             this.exporterToolStripMenuItem.Text = "Exporter...";
             this.exporterToolStripMenuItem.Click += new System.EventHandler(this.exporterToolStripMenuItem_Click);
             // 
@@ -105,13 +109,13 @@
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aProposToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(24, 20);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(32, 29);
             this.toolStripMenuItem1.Text = "?";
             // 
             // aProposToolStripMenuItem
             // 
             this.aProposToolStripMenuItem.Name = "aProposToolStripMenuItem";
-            this.aProposToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.aProposToolStripMenuItem.Size = new System.Drawing.Size(183, 30);
             this.aProposToolStripMenuItem.Text = "A propos...";
             // 
             // StatusStrip
@@ -119,20 +123,28 @@
             this.StatusStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.StatusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TssNbProspect});
-            this.StatusStrip.Location = new System.Drawing.Point(0, 524);
+            this.StatusStrip.Location = new System.Drawing.Point(0, 810);
             this.StatusStrip.Name = "StatusStrip";
-            this.StatusStrip.Size = new System.Drawing.Size(799, 22);
+            this.StatusStrip.Padding = new System.Windows.Forms.Padding(2, 0, 21, 0);
+            this.StatusStrip.Size = new System.Drawing.Size(1198, 30);
             this.StatusStrip.TabIndex = 2;
             this.StatusStrip.Text = "statusStrip1";
+            // 
+            // TssNbProspect
+            // 
+            this.TssNbProspect.Name = "TssNbProspect";
+            this.TssNbProspect.Size = new System.Drawing.Size(19, 25);
+            this.TssNbProspect.Text = "-";
             // 
             // toolStrip1
             // 
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TooProspects});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 24);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 35);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(799, 31);
+            this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
+            this.toolStrip1.Size = new System.Drawing.Size(1198, 32);
             this.toolStrip1.TabIndex = 4;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -141,47 +153,94 @@
             this.TooProspects.Image = global::BizDev.Properties.Resources.icon_clients_24;
             this.TooProspects.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.TooProspects.Name = "TooProspects";
-            this.TooProspects.Size = new System.Drawing.Size(86, 28);
+            this.TooProspects.Size = new System.Drawing.Size(117, 29);
             this.TooProspects.Text = "Prospects";
             this.TooProspects.Click += new System.EventHandler(this.TooProspects_Click);
             // 
             // DgvProspects
             // 
+            this.DgvProspects.AllowUserToAddRows = false;
+            this.DgvProspects.AllowUserToDeleteRows = false;
+            this.DgvProspects.AllowUserToResizeColumns = false;
+            this.DgvProspects.AllowUserToResizeRows = false;
             this.DgvProspects.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.DgvProspects.BackgroundColor = System.Drawing.SystemColors.Control;
             this.DgvProspects.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvProspects.Location = new System.Drawing.Point(0, 91);
+            this.DgvProspects.Location = new System.Drawing.Point(0, 140);
+            this.DgvProspects.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.DgvProspects.Name = "DgvProspects";
-            this.DgvProspects.Size = new System.Drawing.Size(799, 430);
+            this.DgvProspects.RowHeadersVisible = false;
+            this.DgvProspects.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DgvProspects.ShowCellErrors = false;
+            this.DgvProspects.ShowCellToolTips = false;
+            this.DgvProspects.ShowEditingIcon = false;
+            this.DgvProspects.ShowRowErrors = false;
+            this.DgvProspects.Size = new System.Drawing.Size(1198, 662);
             this.DgvProspects.TabIndex = 6;
-            // 
-            // TssNbProspect
-            // 
-            this.TssNbProspect.Name = "TssNbProspect";
-            this.TssNbProspect.Size = new System.Drawing.Size(12, 17);
-            this.TssNbProspect.Text = "-";
+            this.DgvProspects.TabStop = false;
             // 
             // TxtSearch
             // 
-            this.TxtSearch.Location = new System.Drawing.Point(61, 65);
+            this.TxtSearch.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.TxtSearch.Location = new System.Drawing.Point(140, 94);
+            this.TxtSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtSearch.Name = "TxtSearch";
-            this.TxtSearch.Size = new System.Drawing.Size(100, 20);
-            this.TxtSearch.TabIndex = 8;
+            this.TxtSearch.Size = new System.Drawing.Size(342, 26);
+            this.TxtSearch.TabIndex = 0;
+            this.TxtSearch.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TxtSearch_KeyUp);
+            // 
+            // LblSearch
+            // 
+            this.LblSearch.AutoSize = true;
+            this.LblSearch.Location = new System.Drawing.Point(36, 97);
+            this.LblSearch.Name = "LblSearch";
+            this.LblSearch.Size = new System.Drawing.Size(95, 20);
+            this.LblSearch.TabIndex = 9;
+            this.LblSearch.Text = "Recherche :";
+            // 
+            // BtnSearch
+            // 
+            this.BtnSearch.Location = new System.Drawing.Point(490, 93);
+            this.BtnSearch.Name = "BtnSearch";
+            this.BtnSearch.Size = new System.Drawing.Size(142, 27);
+            this.BtnSearch.TabIndex = 10;
+            this.BtnSearch.TabStop = false;
+            this.BtnSearch.Text = "Chercher";
+            this.BtnSearch.UseVisualStyleBackColor = true;
+            this.BtnSearch.Click += new System.EventHandler(this.BtnSearch_Click);
+            // 
+            // BtnReset
+            // 
+            this.BtnReset.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.BtnReset.Location = new System.Drawing.Point(638, 93);
+            this.BtnReset.Name = "BtnReset";
+            this.BtnReset.Size = new System.Drawing.Size(142, 27);
+            this.BtnReset.TabIndex = 11;
+            this.BtnReset.TabStop = false;
+            this.BtnReset.Text = "Reset";
+            this.BtnReset.UseVisualStyleBackColor = true;
+            this.BtnReset.Click += new System.EventHandler(this.BtnReset_Click);
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AcceptButton = this.BtnSearch;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(799, 546);
+            this.CancelButton = this.BtnReset;
+            this.ClientSize = new System.Drawing.Size(1198, 840);
+            this.Controls.Add(this.BtnReset);
+            this.Controls.Add(this.BtnSearch);
+            this.Controls.Add(this.LblSearch);
             this.Controls.Add(this.TxtSearch);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.StatusStrip);
             this.Controls.Add(this.MenuStrip);
             this.Controls.Add(this.DgvProspects);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.IsMdiContainer = true;
             this.MainMenuStrip = this.MenuStrip;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BizDev";
@@ -214,5 +273,8 @@
         private System.Windows.Forms.DataGridView DgvProspects;
         private System.Windows.Forms.ToolStripStatusLabel TssNbProspect;
         private System.Windows.Forms.TextBox TxtSearch;
+        private System.Windows.Forms.Label LblSearch;
+        private System.Windows.Forms.Button BtnSearch;
+        private System.Windows.Forms.Button BtnReset;
     }
 }

@@ -10,8 +10,6 @@ namespace BizDev.DAL
 {
     public class ProspectProvider
     {
-        DateTime dateDebut, dateFin;
-
         public int CountAll()
         {
             using (Context context = new Context())
@@ -108,6 +106,7 @@ namespace BizDev.DAL
                                     || b.Adresse.Contains(keywords)
                                     || b.CodePostal.Contains(keywords)
                                     || b.Ville.Contains(keywords))
+                                    || b.Categorie.Contains(keywords)
                                     select b;
 
                     return prospects.ToList();

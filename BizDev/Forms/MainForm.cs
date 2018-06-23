@@ -4,6 +4,7 @@ using BizDev.Library;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace BizDev.Forms
@@ -39,9 +40,9 @@ namespace BizDev.Forms
             }
 
             /* Compte le nombre de résultats */
-            //int nbResults = list.Count();
+            int nbResults = list.Count();
 
-            TssNbProspect.Text = "Nombre de prospects : ";// + nbResults.ToString();
+            TssNbProspect.Text = "Nombre de prospects : " + nbResults.ToString();
 
             CreateTable(list);
             TxtSearch.Focus();
@@ -135,7 +136,7 @@ namespace BizDev.Forms
             {
                 Name = "CATEGORIE",
                 HeaderText = "Catégorie",
-                Width = 300
+                Width = 350
             };
             categorieCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
@@ -207,6 +208,13 @@ namespace BizDev.Forms
 
         }
 
+        private void ResetSearch()
+        {
+            TxtSearch.Text = string.Empty;
+            RefreshData();
+            TxtSearch.Focus();
+        }
+
         #region Gestion des événements
 
         private void TooQuitter_Click(object sender, EventArgs e)
@@ -222,9 +230,24 @@ namespace BizDev.Forms
         private void MainForm_Load(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Maximized;
-            largeurPage = this.Size.Width;
-            hauteurPage = this.Size.Height;
-            OuvreListeProspects();
+            //largeurPage = this.Size.Width;
+            //hauteurPage = this.Size.Height;
+            
+            RefreshData();
+        }
+
+        private void BtnSearch_Click(object sender, EventArgs e)
+        {
+            RefreshData();
+        }
+
+        private void BtnReset_Click(object sender, EventArgs e)
+        {
+            ResetSearch();
+        }
+
+        private void TxtSearch_KeyUp(object sender, KeyEventArgs e)
+        {
             RefreshData();
         }
 
