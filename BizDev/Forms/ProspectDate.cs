@@ -41,8 +41,6 @@ namespace BizDev.Forms
 
             RecupereInfos();
 
-            
-
             Text = nom;
         }
 
@@ -60,7 +58,7 @@ namespace BizDev.Forms
             {
                 case "P":
                     LblLegende.Text = "Date de prise de contact";
-                    if (premierContact == true)
+                    if (datePremierContact != string.Empty)
                     {
                         DtpDate.Value = Convert.ToDateTime(datePremierContact);
                         ChkDelDate.Visible = true;
@@ -75,7 +73,7 @@ namespace BizDev.Forms
 
                 case "C":
                     LblLegende.Text = "Date de conversion";
-                    if (conversion == true)
+                    if (dateConversion != string.Empty)
                     {
                         DtpDate.Value = Convert.ToDateTime(dateConversion);
                         ChkDelDate.Visible = true;
@@ -89,7 +87,7 @@ namespace BizDev.Forms
 
                 case "A":
                     LblLegende.Text = "Date d'abandon";
-                    if (abandon == true)
+                    if (dateAbandon != string.Empty)
                     {
                         DtpDate.Value = Convert.ToDateTime(dateAbandon);
                         ChkDelDate.Visible = true;

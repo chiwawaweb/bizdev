@@ -14,11 +14,11 @@ namespace BizDev.Forms
         int idProspect, idRetourSuivi;
         string categorie, nom, adresse, complement, codePostal, ville, pays, tel, gsm, fax, email, 
             web, nbEmployes, notes;
-        bool view, premierContact, conversion, abandon, clientPro;
+        bool view, clientPro;
         DateTime createdAt, updatedAt;
         string datePremierContact, dateConversion, dateAbandon;
 
-        ProspectsListForm owner;
+        MainForm owner;
         Prospect prospect;
 
         ProspectLogProvider prospectLogProvider = new ProspectLogProvider();
@@ -40,7 +40,7 @@ namespace BizDev.Forms
             }
         }
 
-        public ProspectEditForm(ProspectsListForm _owner, bool _view, int _idProspect=0)
+        public ProspectEditForm(MainForm _owner, bool _view, int _idProspect=0)
         {
             idProspect = _idProspect;
             view = _view;

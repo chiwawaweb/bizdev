@@ -40,12 +40,15 @@
             this.StatusStrip = new System.Windows.Forms.StatusStrip();
             this.TssNbProspect = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.TooProspects = new System.Windows.Forms.ToolStripButton();
             this.DgvProspects = new System.Windows.Forms.DataGridView();
             this.TxtSearch = new System.Windows.Forms.TextBox();
             this.LblSearch = new System.Windows.Forms.Label();
             this.BtnSearch = new System.Windows.Forms.Button();
             this.BtnReset = new System.Windows.Forms.Button();
+            this.TsbNew = new System.Windows.Forms.ToolStripButton();
+            this.TsbView = new System.Windows.Forms.ToolStripButton();
+            this.TxbExport = new System.Windows.Forms.ToolStripButton();
+            this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.MenuStrip.SuspendLayout();
             this.StatusStrip.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -93,14 +96,14 @@
             // TooListeProspects
             // 
             this.TooListeProspects.Name = "TooListeProspects";
-            this.TooListeProspects.Size = new System.Drawing.Size(239, 30);
+            this.TooListeProspects.Size = new System.Drawing.Size(252, 30);
             this.TooListeProspects.Text = "Liste de prospects";
             this.TooListeProspects.Click += new System.EventHandler(this.TooListeProspects_Click);
             // 
             // exporterToolStripMenuItem
             // 
             this.exporterToolStripMenuItem.Name = "exporterToolStripMenuItem";
-            this.exporterToolStripMenuItem.Size = new System.Drawing.Size(239, 30);
+            this.exporterToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
             this.exporterToolStripMenuItem.Text = "Exporter...";
             this.exporterToolStripMenuItem.Click += new System.EventHandler(this.exporterToolStripMenuItem_Click);
             // 
@@ -140,22 +143,15 @@
             // 
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.TooProspects});
+            this.TsbNew,
+            this.TsbView,
+            this.TxbExport});
             this.toolStrip1.Location = new System.Drawing.Point(0, 35);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
             this.toolStrip1.Size = new System.Drawing.Size(1198, 32);
             this.toolStrip1.TabIndex = 4;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // TooProspects
-            // 
-            this.TooProspects.Image = global::BizDev.Properties.Resources.icon_clients_24;
-            this.TooProspects.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.TooProspects.Name = "TooProspects";
-            this.TooProspects.Size = new System.Drawing.Size(117, 29);
-            this.TooProspects.Text = "Prospects";
-            this.TooProspects.Click += new System.EventHandler(this.TooProspects_Click);
             // 
             // DgvProspects
             // 
@@ -170,6 +166,7 @@
             this.DgvProspects.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvProspects.Location = new System.Drawing.Point(0, 140);
             this.DgvProspects.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.DgvProspects.MultiSelect = false;
             this.DgvProspects.Name = "DgvProspects";
             this.DgvProspects.RowHeadersVisible = false;
             this.DgvProspects.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -180,11 +177,12 @@
             this.DgvProspects.Size = new System.Drawing.Size(1198, 662);
             this.DgvProspects.TabIndex = 6;
             this.DgvProspects.TabStop = false;
+            this.DgvProspects.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DgvProspects_CellMouseDoubleClick);
             // 
             // TxtSearch
             // 
             this.TxtSearch.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.TxtSearch.Location = new System.Drawing.Point(140, 94);
+            this.TxtSearch.Location = new System.Drawing.Point(128, 94);
             this.TxtSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtSearch.Name = "TxtSearch";
             this.TxtSearch.Size = new System.Drawing.Size(342, 26);
@@ -194,7 +192,7 @@
             // LblSearch
             // 
             this.LblSearch.AutoSize = true;
-            this.LblSearch.Location = new System.Drawing.Point(36, 97);
+            this.LblSearch.Location = new System.Drawing.Point(24, 97);
             this.LblSearch.Name = "LblSearch";
             this.LblSearch.Size = new System.Drawing.Size(95, 20);
             this.LblSearch.TabIndex = 9;
@@ -202,7 +200,7 @@
             // 
             // BtnSearch
             // 
-            this.BtnSearch.Location = new System.Drawing.Point(490, 93);
+            this.BtnSearch.Location = new System.Drawing.Point(478, 93);
             this.BtnSearch.Name = "BtnSearch";
             this.BtnSearch.Size = new System.Drawing.Size(142, 27);
             this.BtnSearch.TabIndex = 10;
@@ -214,7 +212,7 @@
             // BtnReset
             // 
             this.BtnReset.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.BtnReset.Location = new System.Drawing.Point(638, 93);
+            this.BtnReset.Location = new System.Drawing.Point(626, 93);
             this.BtnReset.Name = "BtnReset";
             this.BtnReset.Size = new System.Drawing.Size(142, 27);
             this.BtnReset.TabIndex = 11;
@@ -222,6 +220,33 @@
             this.BtnReset.Text = "Reset";
             this.BtnReset.UseVisualStyleBackColor = true;
             this.BtnReset.Click += new System.EventHandler(this.BtnReset_Click);
+            // 
+            // TsbNew
+            // 
+            this.TsbNew.Image = global::BizDev.Properties.Resources.icon_new_24;
+            this.TsbNew.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.TsbNew.Name = "TsbNew";
+            this.TsbNew.Size = new System.Drawing.Size(111, 29);
+            this.TsbNew.Text = "Nouveau";
+            this.TsbNew.Click += new System.EventHandler(this.TsbNew_Click);
+            // 
+            // TsbView
+            // 
+            this.TsbView.Image = global::BizDev.Properties.Resources.icon_view_24;
+            this.TsbView.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.TsbView.Name = "TsbView";
+            this.TsbView.Size = new System.Drawing.Size(113, 29);
+            this.TsbView.Text = "Visualiser";
+            this.TsbView.Click += new System.EventHandler(this.TsbView_Click);
+            // 
+            // TxbExport
+            // 
+            this.TxbExport.Image = global::BizDev.Properties.Resources.icon_export_24;
+            this.TxbExport.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.TxbExport.Name = "TxbExport";
+            this.TxbExport.Size = new System.Drawing.Size(106, 29);
+            this.TxbExport.Text = "Exporter";
+            this.TxbExport.Click += new System.EventHandler(this.TxbExport_Click);
             // 
             // MainForm
             // 
@@ -267,7 +292,6 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.StatusStrip StatusStrip;
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton TooProspects;
         private System.Windows.Forms.ToolStripMenuItem aProposToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exporterToolStripMenuItem;
         private System.Windows.Forms.DataGridView DgvProspects;
@@ -276,5 +300,9 @@
         private System.Windows.Forms.Label LblSearch;
         private System.Windows.Forms.Button BtnSearch;
         private System.Windows.Forms.Button BtnReset;
+        private System.Windows.Forms.ToolStripButton TsbNew;
+        private System.Windows.Forms.ToolStripButton TsbView;
+        private System.Windows.Forms.ToolStripButton TxbExport;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog;
     }
 }

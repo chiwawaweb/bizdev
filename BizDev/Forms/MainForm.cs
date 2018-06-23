@@ -4,7 +4,9 @@ using BizDev.Library;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Text;
 using System.Windows.Forms;
 
 namespace BizDev.Forms
@@ -203,9 +205,18 @@ namespace BizDev.Forms
             }
         }
 
-        private void ExportProspects()
+        private void NewProspect()
         {
+            new ProspectEditForm(this, false).ShowDialog();
+        }
 
+        private void ViewProspect()
+        {
+            if (DgvProspects.RowCount > 0)
+            {
+                idRetour = int.Parse(DgvProspects.CurrentRow.Cells[0].Value.ToString());
+                new ProspectEditForm(this, true, idRetour).ShowDialog();
+            }
         }
 
         private void ResetSearch()
@@ -251,7 +262,27 @@ namespace BizDev.Forms
             RefreshData();
         }
 
+        private void TsbView_Click(object sender, EventArgs e)
+        {
+            ViewProspect();
+        }
+
+        private void DgvProspects_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            ViewProspect();
+        }
+
+        private void TsbNew_Click(object sender, EventArgs e)
+        {
+            NewProspect();
+        }
+
         private void exporterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ExportProspects();
+        }
+
+        private void TxbExport_Click(object sender, EventArgs e)
         {
             ExportProspects();
         }
@@ -259,6 +290,77 @@ namespace BizDev.Forms
         private void TooProspects_Click(object sender, EventArgs e)
         {
             OuvreListeProspects();
+        }
+
+        private void ExportProspects()
+        {
+            string exportFileName;
+
+            saveFileDialog.DefaultExt = "csv";
+            saveFileDialog.Filter = "Fichiers CSV (*.csv)|*.csv";
+            saveFileDialog.FileName = "cbc.csv";
+            saveFileDialog.InitialDirectory = AppDomain.CurrentDomain.BaseDirectory;
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                exportFileName = saveFileDialog.FileName;
+
+                List<Prospect> list;
+                list = prospectProvider.GetAll();
+
+                using (StreamWriter sw = new StreamWriter
+                    (@exportFileName, false, Encoding.GetEncoding("utf-32")))
+                {
+                    /* Ente du fichier */
+                    string entete = "Id\tCatégorie\tNom\tAdresse\tComplément\tCP\tVille\tPays\tNb\tContact\tConversion\tAbandon";
+                    sw.WriteLine(entete);
+
+                    /* Ajoute les lignes */
+                    for (int i = 0; i < list.Count; i++)
+                    {
+                        string id = list[i].Id.ToString("00000");
+                        string categorie = list[i].Categorie.ToString();
+                        string nom = list[i].Nom;
+                        string adresse = list[i].Adresse;
+                        string complement = list[i].Complement;
+                        string codePostal = list[i].CodePostal;
+                        string ville = list[i].Ville;
+                        string pays = list[i].Pays;
+                        string nbEmployes = list[i].NbEmployes.ToString();
+                        string contact = list[i].DatePremierContact.ToString();
+                        string conversion = list[i].DateConversion.ToString();
+                        string abandon = list[i].DateAbandon.ToString();
+
+                        sw.Write(id);
+                        sw.Write("\t");
+                        sw.Write(nom);
+                        sw.Write("\t");
+                        sw.Write(adresse);
+                        sw.Write("\t");
+                        sw.Write(complement);
+                        sw.Write("\t");
+                        sw.Write(codePostal);
+                        sw.Write("\t");
+                        sw.Write(ville);
+                        sw.Write("\t");
+                        sw.Write(pays);
+                        sw.Write("\t");
+                        sw.Write(nbEmployes);
+                        sw.Write("\t");
+                        sw.Write(contact);
+                        sw.Write("\t");
+                        sw.Write(conversion);
+                        sw.Write("\t");
+                        sw.WriteLine(abandon);
+                        sw.Write("\t");
+                        sw.Write(categorie);
+                    }
+                }
+
+                MessageBox.Show("L'exportation a été réalisée avec succès !", "Exportation terminée", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+
+
         }
 
         #endregion

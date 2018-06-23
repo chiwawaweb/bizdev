@@ -196,7 +196,7 @@ namespace BizDev.Forms
 
         private void NewProspect()
         {
-            new ProspectEditForm(this, false).ShowDialog();
+            //new ProspectEditForm(this, false).ShowDialog();
         }
 
         private void ViewProspect()
@@ -204,7 +204,7 @@ namespace BizDev.Forms
             if (DgvProspects.RowCount > 0)
             {
                 idRetour = int.Parse(DgvProspects.CurrentRow.Cells[0].Value.ToString());
-                new ProspectEditForm(this, true, idRetour).ShowDialog();
+                //new ProspectEditForm(this, true, idRetour).ShowDialog();
             }
         }
 
