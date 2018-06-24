@@ -349,9 +349,9 @@ namespace BizDev.Forms
                         sw.Write("\t");
                         sw.Write(conversion);
                         sw.Write("\t");
-                        sw.WriteLine(abandon);
+                        sw.Write(abandon);
                         sw.Write("\t");
-                        sw.Write(categorie);
+                        sw.WriteLine(categorie);
                     }
                 }
 
