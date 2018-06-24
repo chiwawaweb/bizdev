@@ -64,7 +64,8 @@
             this.toolStripMenuItem1});
             this.MenuStrip.Location = new System.Drawing.Point(0, 0);
             this.MenuStrip.Name = "MenuStrip";
-            this.MenuStrip.Size = new System.Drawing.Size(799, 24);
+            this.MenuStrip.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
+            this.MenuStrip.Size = new System.Drawing.Size(932, 24);
             this.MenuStrip.TabIndex = 0;
             this.MenuStrip.Text = "menuStrip1";
             // 
@@ -125,9 +126,10 @@
             this.StatusStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.StatusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TssNbProspect});
-            this.StatusStrip.Location = new System.Drawing.Point(0, 524);
+            this.StatusStrip.Location = new System.Drawing.Point(0, 608);
             this.StatusStrip.Name = "StatusStrip";
-            this.StatusStrip.Size = new System.Drawing.Size(799, 22);
+            this.StatusStrip.Padding = new System.Windows.Forms.Padding(1, 0, 16, 0);
+            this.StatusStrip.Size = new System.Drawing.Size(932, 22);
             this.StatusStrip.TabIndex = 2;
             this.StatusStrip.Text = "statusStrip1";
             // 
@@ -146,7 +148,7 @@
             this.TxbExport});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(799, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(932, 31);
             this.toolStrip1.TabIndex = 4;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -190,7 +192,7 @@
             this.DgvProspects.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvProspects.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.DgvProspects.GridColor = System.Drawing.Color.Black;
-            this.DgvProspects.Location = new System.Drawing.Point(0, 91);
+            this.DgvProspects.Location = new System.Drawing.Point(0, 99);
             this.DgvProspects.MultiSelect = false;
             this.DgvProspects.Name = "DgvProspects";
             this.DgvProspects.RowHeadersVisible = false;
@@ -199,7 +201,7 @@
             this.DgvProspects.ShowCellToolTips = false;
             this.DgvProspects.ShowEditingIcon = false;
             this.DgvProspects.ShowRowErrors = false;
-            this.DgvProspects.Size = new System.Drawing.Size(799, 430);
+            this.DgvProspects.Size = new System.Drawing.Size(932, 502);
             this.DgvProspects.TabIndex = 6;
             this.DgvProspects.TabStop = false;
             this.DgvProspects.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DgvProspects_CellMouseDoubleClick);
@@ -207,28 +209,28 @@
             // TxtSearch
             // 
             this.TxtSearch.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.TxtSearch.Location = new System.Drawing.Point(85, 61);
+            this.TxtSearch.Location = new System.Drawing.Point(91, 62);
             this.TxtSearch.Name = "TxtSearch";
-            this.TxtSearch.Size = new System.Drawing.Size(229, 20);
+            this.TxtSearch.Size = new System.Drawing.Size(266, 21);
             this.TxtSearch.TabIndex = 0;
             this.TxtSearch.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TxtSearch_KeyUp);
             // 
             // LblSearch
             // 
             this.LblSearch.AutoSize = true;
-            this.LblSearch.Location = new System.Drawing.Point(16, 63);
+            this.LblSearch.Location = new System.Drawing.Point(11, 65);
             this.LblSearch.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblSearch.Name = "LblSearch";
-            this.LblSearch.Size = new System.Drawing.Size(66, 13);
+            this.LblSearch.Size = new System.Drawing.Size(73, 15);
             this.LblSearch.TabIndex = 9;
             this.LblSearch.Text = "Recherche :";
             // 
             // BtnSearch
             // 
-            this.BtnSearch.Location = new System.Drawing.Point(319, 60);
-            this.BtnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnSearch.Location = new System.Drawing.Point(364, 61);
+            this.BtnSearch.Margin = new System.Windows.Forms.Padding(2);
             this.BtnSearch.Name = "BtnSearch";
-            this.BtnSearch.Size = new System.Drawing.Size(95, 18);
+            this.BtnSearch.Size = new System.Drawing.Size(111, 24);
             this.BtnSearch.TabIndex = 10;
             this.BtnSearch.TabStop = false;
             this.BtnSearch.Text = "Chercher";
@@ -238,10 +240,10 @@
             // BtnReset
             // 
             this.BtnReset.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.BtnReset.Location = new System.Drawing.Point(417, 60);
-            this.BtnReset.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnReset.Location = new System.Drawing.Point(478, 61);
+            this.BtnReset.Margin = new System.Windows.Forms.Padding(2);
             this.BtnReset.Name = "BtnReset";
-            this.BtnReset.Size = new System.Drawing.Size(95, 18);
+            this.BtnReset.Size = new System.Drawing.Size(111, 24);
             this.BtnReset.TabIndex = 11;
             this.BtnReset.TabStop = false;
             this.BtnReset.Text = "Reset";
@@ -251,10 +253,10 @@
             // MainForm
             // 
             this.AcceptButton = this.BtnSearch;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.BtnReset;
-            this.ClientSize = new System.Drawing.Size(799, 546);
+            this.ClientSize = new System.Drawing.Size(932, 630);
             this.Controls.Add(this.BtnReset);
             this.Controls.Add(this.BtnSearch);
             this.Controls.Add(this.LblSearch);
@@ -263,6 +265,7 @@
             this.Controls.Add(this.StatusStrip);
             this.Controls.Add(this.MenuStrip);
             this.Controls.Add(this.DgvProspects);
+            this.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.MenuStrip;
             this.Name = "MainForm";

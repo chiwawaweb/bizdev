@@ -514,6 +514,7 @@
             this.ChkClientPro.Name = "ChkClientPro";
             this.ChkClientPro.Size = new System.Drawing.Size(236, 19);
             this.ChkClientPro.TabIndex = 3;
+            this.ChkClientPro.TabStop = false;
             this.ChkClientPro.Text = "Client en compte professionnel";
             this.ChkClientPro.UseVisualStyleBackColor = true;
             // 

@@ -22,8 +22,6 @@ namespace BizDev.Forms
         public MainForm()
         {
             InitializeComponent();
-
-            prospectProvider.CountAll(); // * à supprimer 
         }
 
         public void RefreshData(int _idRetour = 0, bool firstLine = false)
@@ -43,8 +41,9 @@ namespace BizDev.Forms
 
             /* Compte le nombre de résultats */
             int nbResults = list.Count();
+            int totalProspects = prospectProvider.CountAll();
 
-            TssNbProspect.Text = "Nombre de prospects : " + nbResults.ToString();
+            TssNbProspect.Text = "Résultats : " + nbResults.ToString() +  " / " + totalProspects;
 
             CreateTable(list);
             TxtSearch.Focus();
