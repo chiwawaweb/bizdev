@@ -310,7 +310,7 @@ namespace BizDev.Forms
                     (@exportFileName, false, Encoding.GetEncoding("utf-32")))
                 {
                     /* Ente du fichier */
-                    string entete = "Id\tCatégorie\tNom\tAdresse\tComplément\tCP\tVille\tPays\tNb\tContact\tConversion\tAbandon";
+                    string entete = "Id\tNom\tAdresse\tComplément\tCP\tVille\tPays\tNb\tContact\tConversion\tAbandon\tCatégorie";
                     sw.WriteLine(entete);
 
                     /* Ajoute les lignes */
