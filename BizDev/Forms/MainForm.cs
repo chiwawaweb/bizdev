@@ -55,6 +55,8 @@ namespace BizDev.Forms
             DgvProspects.Columns.Clear();
             DgvProspects.DefaultCellStyle.Font = new Font("Consolas", 10);
 
+            DgvProspects.DoubleBuffered(true);
+
             /* Mise en forme */
             DataGridViewTextBoxColumn idCol = new DataGridViewTextBoxColumn
             {

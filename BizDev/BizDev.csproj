@@ -119,6 +119,7 @@
     <Compile Include="Forms\ProspectsListForm.Designer.cs">
       <DependentUpon>ProspectsListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Library\ExtensionMethods.cs" />
     <Compile Include="Library\ProspectCategorie.cs" />
     <Compile Include="Library\Utils.cs" />
     <Compile Include="Migrations\Configuration.cs" />
