@@ -40,14 +40,14 @@
             this.StatusStrip = new System.Windows.Forms.StatusStrip();
             this.TssNbProspect = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.TsbNew = new System.Windows.Forms.ToolStripButton();
+            this.TsbView = new System.Windows.Forms.ToolStripButton();
+            this.TxbExport = new System.Windows.Forms.ToolStripButton();
             this.DgvProspects = new System.Windows.Forms.DataGridView();
             this.TxtSearch = new System.Windows.Forms.TextBox();
             this.LblSearch = new System.Windows.Forms.Label();
             this.BtnSearch = new System.Windows.Forms.Button();
             this.BtnReset = new System.Windows.Forms.Button();
-            this.TsbNew = new System.Windows.Forms.ToolStripButton();
-            this.TsbView = new System.Windows.Forms.ToolStripButton();
-            this.TxbExport = new System.Windows.Forms.ToolStripButton();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.MenuStrip.SuspendLayout();
             this.StatusStrip.SuspendLayout();
@@ -64,8 +64,7 @@
             this.toolStripMenuItem1});
             this.MenuStrip.Location = new System.Drawing.Point(0, 0);
             this.MenuStrip.Name = "MenuStrip";
-            this.MenuStrip.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
-            this.MenuStrip.Size = new System.Drawing.Size(1198, 35);
+            this.MenuStrip.Size = new System.Drawing.Size(799, 24);
             this.MenuStrip.TabIndex = 0;
             this.MenuStrip.Text = "menuStrip1";
             // 
@@ -74,13 +73,13 @@
             this.fichierToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TooQuitter});
             this.fichierToolStripMenuItem.Name = "fichierToolStripMenuItem";
-            this.fichierToolStripMenuItem.Size = new System.Drawing.Size(74, 29);
+            this.fichierToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
             this.fichierToolStripMenuItem.Text = "Fichier";
             // 
             // TooQuitter
             // 
             this.TooQuitter.Name = "TooQuitter";
-            this.TooQuitter.Size = new System.Drawing.Size(151, 30);
+            this.TooQuitter.Size = new System.Drawing.Size(111, 22);
             this.TooQuitter.Text = "Quitter";
             this.TooQuitter.Click += new System.EventHandler(this.TooQuitter_Click);
             // 
@@ -90,20 +89,20 @@
             this.TooListeProspects,
             this.exporterToolStripMenuItem});
             this.prospectsToolStripMenuItem.Name = "prospectsToolStripMenuItem";
-            this.prospectsToolStripMenuItem.Size = new System.Drawing.Size(101, 29);
+            this.prospectsToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
             this.prospectsToolStripMenuItem.Text = "Prospects";
             // 
             // TooListeProspects
             // 
             this.TooListeProspects.Name = "TooListeProspects";
-            this.TooListeProspects.Size = new System.Drawing.Size(252, 30);
+            this.TooListeProspects.Size = new System.Drawing.Size(168, 22);
             this.TooListeProspects.Text = "Liste de prospects";
             this.TooListeProspects.Click += new System.EventHandler(this.TooListeProspects_Click);
             // 
             // exporterToolStripMenuItem
             // 
             this.exporterToolStripMenuItem.Name = "exporterToolStripMenuItem";
-            this.exporterToolStripMenuItem.Size = new System.Drawing.Size(252, 30);
+            this.exporterToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.exporterToolStripMenuItem.Text = "Exporter...";
             this.exporterToolStripMenuItem.Click += new System.EventHandler(this.exporterToolStripMenuItem_Click);
             // 
@@ -112,13 +111,13 @@
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aProposToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(32, 29);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(24, 20);
             this.toolStripMenuItem1.Text = "?";
             // 
             // aProposToolStripMenuItem
             // 
             this.aProposToolStripMenuItem.Name = "aProposToolStripMenuItem";
-            this.aProposToolStripMenuItem.Size = new System.Drawing.Size(183, 30);
+            this.aProposToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.aProposToolStripMenuItem.Text = "A propos...";
             // 
             // StatusStrip
@@ -126,17 +125,16 @@
             this.StatusStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.StatusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TssNbProspect});
-            this.StatusStrip.Location = new System.Drawing.Point(0, 810);
+            this.StatusStrip.Location = new System.Drawing.Point(0, 524);
             this.StatusStrip.Name = "StatusStrip";
-            this.StatusStrip.Padding = new System.Windows.Forms.Padding(2, 0, 21, 0);
-            this.StatusStrip.Size = new System.Drawing.Size(1198, 30);
+            this.StatusStrip.Size = new System.Drawing.Size(799, 22);
             this.StatusStrip.TabIndex = 2;
             this.StatusStrip.Text = "statusStrip1";
             // 
             // TssNbProspect
             // 
             this.TssNbProspect.Name = "TssNbProspect";
-            this.TssNbProspect.Size = new System.Drawing.Size(19, 25);
+            this.TssNbProspect.Size = new System.Drawing.Size(12, 17);
             this.TssNbProspect.Text = "-";
             // 
             // toolStrip1
@@ -146,12 +144,38 @@
             this.TsbNew,
             this.TsbView,
             this.TxbExport});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 35);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
-            this.toolStrip1.Size = new System.Drawing.Size(1198, 32);
+            this.toolStrip1.Size = new System.Drawing.Size(799, 31);
             this.toolStrip1.TabIndex = 4;
             this.toolStrip1.Text = "toolStrip1";
+            // 
+            // TsbNew
+            // 
+            this.TsbNew.Image = global::BizDev.Properties.Resources.icon_new_24;
+            this.TsbNew.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.TsbNew.Name = "TsbNew";
+            this.TsbNew.Size = new System.Drawing.Size(83, 28);
+            this.TsbNew.Text = "Nouveau";
+            this.TsbNew.Click += new System.EventHandler(this.TsbNew_Click);
+            // 
+            // TsbView
+            // 
+            this.TsbView.Image = global::BizDev.Properties.Resources.icon_view_24;
+            this.TsbView.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.TsbView.Name = "TsbView";
+            this.TsbView.Size = new System.Drawing.Size(84, 28);
+            this.TsbView.Text = "Visualiser";
+            this.TsbView.Click += new System.EventHandler(this.TsbView_Click);
+            // 
+            // TxbExport
+            // 
+            this.TxbExport.Image = global::BizDev.Properties.Resources.icon_export_24;
+            this.TxbExport.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.TxbExport.Name = "TxbExport";
+            this.TxbExport.Size = new System.Drawing.Size(78, 28);
+            this.TxbExport.Text = "Exporter";
+            this.TxbExport.Click += new System.EventHandler(this.TxbExport_Click);
             // 
             // DgvProspects
             // 
@@ -164,8 +188,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DgvProspects.BackgroundColor = System.Drawing.SystemColors.Control;
             this.DgvProspects.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvProspects.Location = new System.Drawing.Point(0, 140);
-            this.DgvProspects.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.DgvProspects.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.DgvProspects.GridColor = System.Drawing.Color.Black;
+            this.DgvProspects.Location = new System.Drawing.Point(0, 91);
             this.DgvProspects.MultiSelect = false;
             this.DgvProspects.Name = "DgvProspects";
             this.DgvProspects.RowHeadersVisible = false;
@@ -174,7 +199,7 @@
             this.DgvProspects.ShowCellToolTips = false;
             this.DgvProspects.ShowEditingIcon = false;
             this.DgvProspects.ShowRowErrors = false;
-            this.DgvProspects.Size = new System.Drawing.Size(1198, 662);
+            this.DgvProspects.Size = new System.Drawing.Size(799, 430);
             this.DgvProspects.TabIndex = 6;
             this.DgvProspects.TabStop = false;
             this.DgvProspects.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.DgvProspects_CellMouseDoubleClick);
@@ -182,27 +207,28 @@
             // TxtSearch
             // 
             this.TxtSearch.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.TxtSearch.Location = new System.Drawing.Point(128, 94);
-            this.TxtSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TxtSearch.Location = new System.Drawing.Point(85, 61);
             this.TxtSearch.Name = "TxtSearch";
-            this.TxtSearch.Size = new System.Drawing.Size(342, 26);
+            this.TxtSearch.Size = new System.Drawing.Size(229, 20);
             this.TxtSearch.TabIndex = 0;
             this.TxtSearch.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TxtSearch_KeyUp);
             // 
             // LblSearch
             // 
             this.LblSearch.AutoSize = true;
-            this.LblSearch.Location = new System.Drawing.Point(24, 97);
+            this.LblSearch.Location = new System.Drawing.Point(16, 63);
+            this.LblSearch.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblSearch.Name = "LblSearch";
-            this.LblSearch.Size = new System.Drawing.Size(95, 20);
+            this.LblSearch.Size = new System.Drawing.Size(66, 13);
             this.LblSearch.TabIndex = 9;
             this.LblSearch.Text = "Recherche :";
             // 
             // BtnSearch
             // 
-            this.BtnSearch.Location = new System.Drawing.Point(478, 93);
+            this.BtnSearch.Location = new System.Drawing.Point(319, 60);
+            this.BtnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnSearch.Name = "BtnSearch";
-            this.BtnSearch.Size = new System.Drawing.Size(142, 27);
+            this.BtnSearch.Size = new System.Drawing.Size(95, 18);
             this.BtnSearch.TabIndex = 10;
             this.BtnSearch.TabStop = false;
             this.BtnSearch.Text = "Chercher";
@@ -212,49 +238,23 @@
             // BtnReset
             // 
             this.BtnReset.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.BtnReset.Location = new System.Drawing.Point(626, 93);
+            this.BtnReset.Location = new System.Drawing.Point(417, 60);
+            this.BtnReset.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BtnReset.Name = "BtnReset";
-            this.BtnReset.Size = new System.Drawing.Size(142, 27);
+            this.BtnReset.Size = new System.Drawing.Size(95, 18);
             this.BtnReset.TabIndex = 11;
             this.BtnReset.TabStop = false;
             this.BtnReset.Text = "Reset";
             this.BtnReset.UseVisualStyleBackColor = true;
             this.BtnReset.Click += new System.EventHandler(this.BtnReset_Click);
             // 
-            // TsbNew
-            // 
-            this.TsbNew.Image = global::BizDev.Properties.Resources.icon_new_24;
-            this.TsbNew.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.TsbNew.Name = "TsbNew";
-            this.TsbNew.Size = new System.Drawing.Size(111, 29);
-            this.TsbNew.Text = "Nouveau";
-            this.TsbNew.Click += new System.EventHandler(this.TsbNew_Click);
-            // 
-            // TsbView
-            // 
-            this.TsbView.Image = global::BizDev.Properties.Resources.icon_view_24;
-            this.TsbView.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.TsbView.Name = "TsbView";
-            this.TsbView.Size = new System.Drawing.Size(113, 29);
-            this.TsbView.Text = "Visualiser";
-            this.TsbView.Click += new System.EventHandler(this.TsbView_Click);
-            // 
-            // TxbExport
-            // 
-            this.TxbExport.Image = global::BizDev.Properties.Resources.icon_export_24;
-            this.TxbExport.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.TxbExport.Name = "TxbExport";
-            this.TxbExport.Size = new System.Drawing.Size(106, 29);
-            this.TxbExport.Text = "Exporter";
-            this.TxbExport.Click += new System.EventHandler(this.TxbExport_Click);
-            // 
             // MainForm
             // 
             this.AcceptButton = this.BtnSearch;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.BtnReset;
-            this.ClientSize = new System.Drawing.Size(1198, 840);
+            this.ClientSize = new System.Drawing.Size(799, 546);
             this.Controls.Add(this.BtnReset);
             this.Controls.Add(this.BtnSearch);
             this.Controls.Add(this.LblSearch);
@@ -265,7 +265,6 @@
             this.Controls.Add(this.DgvProspects);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.MenuStrip;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BizDev";
