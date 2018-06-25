@@ -93,6 +93,7 @@ namespace BizDev.Forms
 
         private void NewMode()
         {
+            this.CancelButton = BtnCancel;
             BtnAddLog.Enabled = false;
             DgvLog.Enabled = false;
             GrpDates.Visible = false;
