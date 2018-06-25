@@ -33,7 +33,6 @@
             this.fichierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TooQuitter = new System.Windows.Forms.ToolStripMenuItem();
             this.prospectsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.TooListeProspects = new System.Windows.Forms.ToolStripMenuItem();
             this.exporterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.aProposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -87,23 +86,15 @@
             // prospectsToolStripMenuItem
             // 
             this.prospectsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.TooListeProspects,
             this.exporterToolStripMenuItem});
             this.prospectsToolStripMenuItem.Name = "prospectsToolStripMenuItem";
             this.prospectsToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
             this.prospectsToolStripMenuItem.Text = "Prospects";
             // 
-            // TooListeProspects
-            // 
-            this.TooListeProspects.Name = "TooListeProspects";
-            this.TooListeProspects.Size = new System.Drawing.Size(168, 22);
-            this.TooListeProspects.Text = "Liste de prospects";
-            this.TooListeProspects.Click += new System.EventHandler(this.TooListeProspects_Click);
-            // 
             // exporterToolStripMenuItem
             // 
             this.exporterToolStripMenuItem.Name = "exporterToolStripMenuItem";
-            this.exporterToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
+            this.exporterToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exporterToolStripMenuItem.Text = "Exporter...";
             this.exporterToolStripMenuItem.Click += new System.EventHandler(this.exporterToolStripMenuItem_Click);
             // 
@@ -118,8 +109,9 @@
             // aProposToolStripMenuItem
             // 
             this.aProposToolStripMenuItem.Name = "aProposToolStripMenuItem";
-            this.aProposToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+            this.aProposToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aProposToolStripMenuItem.Text = "A propos...";
+            this.aProposToolStripMenuItem.Click += new System.EventHandler(this.aProposToolStripMenuItem_Click);
             // 
             // StatusStrip
             // 
@@ -290,7 +282,6 @@
         private System.Windows.Forms.ToolStripMenuItem fichierToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem prospectsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem TooQuitter;
-        private System.Windows.Forms.ToolStripMenuItem TooListeProspects;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.StatusStrip StatusStrip;
         private System.Windows.Forms.ToolStrip toolStrip1;

@@ -190,22 +190,6 @@ namespace BizDev.Forms
             }
         }
 
-        private void OuvreListeProspects()
-        {
-            if (Application.OpenForms["ProspectsListForm"] == null)
-            {
-                ProspectsListForm prospectsListForm = new ProspectsListForm(largeurPage, hauteurPage)
-                {
-                    MdiParent = this
-                };
-                prospectsListForm.Show();
-            }
-            else
-            {
-                Application.OpenForms["ProspectsListForm"].Activate();
-            }
-        }
-
         private void NewProspect()
         {
             new ProspectEditForm(this, false).ShowDialog();
@@ -232,11 +216,6 @@ namespace BizDev.Forms
         private void TooQuitter_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void TooListeProspects_Click(object sender, EventArgs e)
-        {
-            OuvreListeProspects();
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -283,14 +262,20 @@ namespace BizDev.Forms
             ExportProspects();
         }
 
+        private void aProposToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenAboutBox();
+        }
+        
+        private void OpenAboutBox()
+        {
+            AboutBoxForm frm = new AboutBoxForm();
+            frm.ShowDialog();
+        }
+
         private void TxbExport_Click(object sender, EventArgs e)
         {
             ExportProspects();
-        }
-
-        private void TooProspects_Click(object sender, EventArgs e)
-        {
-            OuvreListeProspects();
         }
 
         private void ExportProspects()
