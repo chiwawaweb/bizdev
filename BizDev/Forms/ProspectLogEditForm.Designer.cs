@@ -35,11 +35,15 @@
             // 
             // TxtNote
             // 
-            this.TxtNote.Dock = System.Windows.Forms.DockStyle.Top;
+            this.TxtNote.AcceptsReturn = true;
+            this.TxtNote.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TxtNote.BackColor = System.Drawing.Color.Beige;
             this.TxtNote.Location = new System.Drawing.Point(0, 0);
             this.TxtNote.Multiline = true;
             this.TxtNote.Name = "TxtNote";
-            this.TxtNote.Size = new System.Drawing.Size(505, 214);
+            this.TxtNote.Size = new System.Drawing.Size(506, 218);
             this.TxtNote.TabIndex = 0;
             // 
             // BtnSave
@@ -48,6 +52,7 @@
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Size = new System.Drawing.Size(75, 23);
             this.BtnSave.TabIndex = 1;
+            this.BtnSave.TabStop = false;
             this.BtnSave.Text = "Enregistrer";
             this.BtnSave.UseVisualStyleBackColor = true;
             this.BtnSave.Click += new System.EventHandler(this.BtnSave_Click);
@@ -59,6 +64,7 @@
             this.BtnCancel.Name = "BtnCancel";
             this.BtnCancel.Size = new System.Drawing.Size(75, 23);
             this.BtnCancel.TabIndex = 2;
+            this.BtnCancel.TabStop = false;
             this.BtnCancel.Text = "Annuler";
             this.BtnCancel.UseVisualStyleBackColor = true;
             this.BtnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
@@ -68,7 +74,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.BtnCancel;
-            this.ClientSize = new System.Drawing.Size(505, 260);
+            this.ClientSize = new System.Drawing.Size(505, 254);
             this.Controls.Add(this.BtnCancel);
             this.Controls.Add(this.BtnSave);
             this.Controls.Add(this.TxtNote);
