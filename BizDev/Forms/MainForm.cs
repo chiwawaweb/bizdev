@@ -13,11 +13,10 @@ namespace BizDev.Forms
 {
     public partial class MainForm : Form
     {
-        int idRetour, largeurPage, hauteurPage;
+        int idRetour;
 
         Utils utils = new Utils();
         ProspectProvider prospectProvider = new ProspectProvider();
-        
 
         public MainForm()
         {
@@ -57,6 +56,17 @@ namespace BizDev.Forms
 
             DgvProspects.DoubleBuffered(true);
 
+            /* Alternance des couleurs de lignes */
+            DgvProspects.RowsDefaultCellStyle.BackColor = Color.Bisque;
+            DgvProspects.AlternatingRowsDefaultCellStyle.BackColor = Color.Beige;
+
+            /* Hauteur de l'entête */
+            DgvProspects.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            DgvProspects.EnableHeadersVisualStyles = false;
+            DgvProspects.ColumnHeadersHeight = 30;
+
+            DgvProspects.ColumnHeadersDefaultCellStyle.Font = new Font("Consolas",11, FontStyle.Bold);
+
             /* Mise en forme */
             DataGridViewTextBoxColumn idCol = new DataGridViewTextBoxColumn
             {
@@ -79,7 +89,7 @@ namespace BizDev.Forms
             DataGridViewTextBoxColumn adresseCol = new DataGridViewTextBoxColumn
             {
                 Name = "ADRESSE",
-                HeaderText = "Adresse du prospect",
+                HeaderText = "Adresse",
                 Width = 350
             };
             adresseCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -91,6 +101,7 @@ namespace BizDev.Forms
                 Width = 60
             };
             cpCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            cpCol.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
 
             DataGridViewTextBoxColumn villeCol = new DataGridViewTextBoxColumn
             {
@@ -103,7 +114,7 @@ namespace BizDev.Forms
             DataGridViewTextBoxColumn telephoneCol = new DataGridViewTextBoxColumn
             {
                 Name = "TEL",
-                HeaderText = "Téléphone du prospect",
+                HeaderText = "Téléphone",
                 Width = 160
             };
             telephoneCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -159,7 +170,6 @@ namespace BizDev.Forms
             for (int i = 0; i < list.Count; i++)
             {
                 int number = DgvProspects.Rows.Add();
-
                 int id = list[i].Id;
                 string nom = list[i].Nom.Trim();
                 string adresse = (list[i].Adresse + " " + list[i].Complement).Trim();
