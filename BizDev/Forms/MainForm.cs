@@ -57,7 +57,7 @@ namespace BizDev.Forms
             DgvProspects.DoubleBuffered(true);
 
             /* Alternance des couleurs de lignes */
-            DgvProspects.RowsDefaultCellStyle.BackColor = Color.Bisque;
+            DgvProspects.RowsDefaultCellStyle.BackColor = Color.LightGreen;
             DgvProspects.AlternatingRowsDefaultCellStyle.BackColor = Color.Beige;
 
             /* Hauteur de l'entête */
