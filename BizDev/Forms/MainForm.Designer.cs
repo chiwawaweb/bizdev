@@ -79,7 +79,7 @@
             // TooQuitter
             // 
             this.TooQuitter.Name = "TooQuitter";
-            this.TooQuitter.Size = new System.Drawing.Size(111, 22);
+            this.TooQuitter.Size = new System.Drawing.Size(180, 22);
             this.TooQuitter.Text = "Quitter";
             this.TooQuitter.Click += new System.EventHandler(this.TooQuitter_Click);
             // 
@@ -264,6 +264,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BizDev";
             this.Load += new System.EventHandler(this.MainForm_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyDown);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MainForm_KeyPress);
             this.MenuStrip.ResumeLayout(false);
             this.MenuStrip.PerformLayout();
             this.StatusStrip.ResumeLayout(false);

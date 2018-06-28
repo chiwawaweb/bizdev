@@ -231,9 +231,6 @@ namespace BizDev.Forms
         private void MainForm_Load(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Maximized;
-            //largeurPage = this.Size.Width;
-            //hauteurPage = this.Size.Height;
-            
             RefreshData();
         }
 
@@ -351,15 +348,20 @@ namespace BizDev.Forms
                         sw.WriteLine(categorie);
                     }
                 }
-
                 MessageBox.Show("L'exportation a été réalisée avec succès !", "Exportation terminée", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
             }
+        }
 
-
+        private void MainForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F8)
+            {
+                NewProspect();
+            }
         }
 
         #endregion
+
 
     }
 }
