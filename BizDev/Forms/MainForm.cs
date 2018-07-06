@@ -81,7 +81,7 @@ namespace BizDev.Forms
             DataGridViewTextBoxColumn nomCol = new DataGridViewTextBoxColumn
             {
                 Name = "NOM",
-                HeaderText = "Nom du prospect",
+                HeaderText = "NOM",
                 Width = 400
             };
             nomCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -89,7 +89,7 @@ namespace BizDev.Forms
             DataGridViewTextBoxColumn adresseCol = new DataGridViewTextBoxColumn
             {
                 Name = "ADRESSE",
-                HeaderText = "Adresse",
+                HeaderText = "ADRESSE",
                 Width = 350
             };
             adresseCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -106,7 +106,7 @@ namespace BizDev.Forms
             DataGridViewTextBoxColumn villeCol = new DataGridViewTextBoxColumn
             {
                 Name = "VILLE",
-                HeaderText = "Ville",
+                HeaderText = "VILLE",
                 Width = 190
             };
             villeCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -114,7 +114,7 @@ namespace BizDev.Forms
             DataGridViewTextBoxColumn telephoneCol = new DataGridViewTextBoxColumn
             {
                 Name = "TEL",
-                HeaderText = "Téléphone",
+                HeaderText = "TEL",
                 Width = 160
             };
             telephoneCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -122,7 +122,7 @@ namespace BizDev.Forms
             DataGridViewTextBoxColumn datePremierContactCol = new DataGridViewTextBoxColumn
             {
                 Name = "DATE_PREMIERCONTACT",
-                HeaderText = "Contact",
+                HeaderText = "CONTACT",
                 Width = 100
             };
             datePremierContactCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -131,7 +131,7 @@ namespace BizDev.Forms
             DataGridViewTextBoxColumn dateConversionCol = new DataGridViewTextBoxColumn
             {
                 Name = "DATE_CONVERSION",
-                HeaderText = "Conversion",
+                HeaderText = "CONVERSION",
                 Width = 100
             };
             dateConversionCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -140,7 +140,7 @@ namespace BizDev.Forms
             DataGridViewTextBoxColumn dateAbandonCol = new DataGridViewTextBoxColumn
             {
                 Name = "DATE_ABANDON",
-                HeaderText = "Abandon",
+                HeaderText = "ABANDON",
                 Width = 100
             };
             dateAbandonCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -149,7 +149,7 @@ namespace BizDev.Forms
             DataGridViewTextBoxColumn categorieCol = new DataGridViewTextBoxColumn
             {
                 Name = "CATEGORIE",
-                HeaderText = "Catégorie",
+                HeaderText = "CATEGORIE",
                 Width = 350
             };
             categorieCol.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;

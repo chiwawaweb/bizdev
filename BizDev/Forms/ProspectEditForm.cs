@@ -131,7 +131,6 @@ namespace BizDev.Forms
             TxtVille.TabStop = false;
             CbxPays.Enabled = false;
             CbxPays.BackColor = Color.LightGray;
-            CbxPays.TabStop = false;
             TxtTel.ReadOnly = true;
             TxtTel.BackColor = Color.LightGray;
             TxtTel.TabStop = false;
@@ -402,11 +401,15 @@ namespace BizDev.Forms
 
         private void Edit()
         {
+            /*
             DialogResult result = MessageBox.Show("Etes-vous certain de vouloir modifier cette fiche ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (result == DialogResult.Yes)
             {
+            */
                 UpdateMode();
+            /*
             }
+            */
         }
 
         private void UpdateMode()
@@ -438,7 +441,6 @@ namespace BizDev.Forms
             TxtVille.TabStop = true;
             TxtVille.BackColor = Color.Beige;
             CbxPays.Enabled = true;
-            CbxPays.TabStop = true;
             CbxPays.BackColor = Color.Beige;
             TxtTel.ReadOnly = false;
             TxtTel.TabStop = true;
@@ -458,6 +460,9 @@ namespace BizDev.Forms
             TxtNotes.ReadOnly = false;
             TxtNotes.TabStop = true;
             TxtNotes.BackColor = Color.Beige;
+            TxtNom.Focus();
+            TxtNom.Select(0, 0);
+            this.CancelButton = BtnCancel;
         }
 
         #region Gestion des événements
