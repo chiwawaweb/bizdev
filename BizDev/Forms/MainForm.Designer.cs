@@ -79,7 +79,7 @@
             // TooQuitter
             // 
             this.TooQuitter.Name = "TooQuitter";
-            this.TooQuitter.Size = new System.Drawing.Size(180, 22);
+            this.TooQuitter.Size = new System.Drawing.Size(111, 22);
             this.TooQuitter.Text = "Quitter";
             this.TooQuitter.Click += new System.EventHandler(this.TooQuitter_Click);
             // 
@@ -94,7 +94,7 @@
             // exporterToolStripMenuItem
             // 
             this.exporterToolStripMenuItem.Name = "exporterToolStripMenuItem";
-            this.exporterToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exporterToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.exporterToolStripMenuItem.Text = "Exporter...";
             this.exporterToolStripMenuItem.Click += new System.EventHandler(this.exporterToolStripMenuItem_Click);
             // 
@@ -109,7 +109,7 @@
             // aProposToolStripMenuItem
             // 
             this.aProposToolStripMenuItem.Name = "aProposToolStripMenuItem";
-            this.aProposToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aProposToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.aProposToolStripMenuItem.Text = "A propos...";
             this.aProposToolStripMenuItem.Click += new System.EventHandler(this.aProposToolStripMenuItem_Click);
             // 

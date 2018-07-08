@@ -47,7 +47,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>icon_logo.ico</ApplicationIcon>
+    <ApplicationIcon>cbc_128.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -179,6 +179,7 @@
     <None Include="Resources\icon_cadenas_16.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="cbc_128.ico" />
     <Content Include="icon_logo.ico" />
     <None Include="Resources\icon_statistiques_24.png" />
     <None Include="Resources\icon_clients_24.png" />
