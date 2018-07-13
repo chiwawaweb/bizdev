@@ -76,9 +76,11 @@
             this.BtnPremierContact = new System.Windows.Forms.Button();
             this.BtnLink = new System.Windows.Forms.Button();
             this.GrpDates = new System.Windows.Forms.GroupBox();
+            this.Logo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvLog)).BeginInit();
             this.GrpDates.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.SuspendLayout();
             // 
             // ErrorProvider
@@ -570,6 +572,16 @@
             this.GrpDates.TabStop = false;
             this.GrpDates.Text = "Dates";
             // 
+            // Logo
+            // 
+            this.Logo.Image = global::BizDev.Properties.Resources.logo_cbc_noir_300dpi;
+            this.Logo.Location = new System.Drawing.Point(31, 582);
+            this.Logo.Name = "Logo";
+            this.Logo.Size = new System.Drawing.Size(90, 30);
+            this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Logo.TabIndex = 48;
+            this.Logo.TabStop = false;
+            // 
             // ProspectEditForm
             // 
             this.AcceptButton = this.BtnSave;
@@ -577,6 +589,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.BtnClose;
             this.ClientSize = new System.Drawing.Size(822, 622);
+            this.Controls.Add(this.Logo);
             this.Controls.Add(this.GrpDates);
             this.Controls.Add(this.BtnLink);
             this.Controls.Add(this.ChkClientPro);
@@ -628,6 +641,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.DgvLog)).EndInit();
             this.GrpDates.ResumeLayout(false);
             this.GrpDates.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -680,5 +694,6 @@
         private System.Windows.Forms.CheckBox ChkClientPro;
         private System.Windows.Forms.Button BtnLink;
         private System.Windows.Forms.GroupBox GrpDates;
+        private System.Windows.Forms.PictureBox Logo;
     }
 }

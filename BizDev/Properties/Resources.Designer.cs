@@ -229,5 +229,15 @@ namespace BizDev.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logo_cbc_noir_300dpi {
+            get {
+                object obj = ResourceManager.GetObject("logo_cbc_noir_300dpi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

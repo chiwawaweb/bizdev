@@ -48,10 +48,12 @@
             this.BtnSearch = new System.Windows.Forms.Button();
             this.BtnReset = new System.Windows.Forms.Button();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
+            this.Logo = new System.Windows.Forms.PictureBox();
             this.MenuStrip.SuspendLayout();
             this.StatusStrip.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvProspects)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             this.SuspendLayout();
             // 
             // MenuStrip
@@ -242,6 +244,17 @@
             this.BtnReset.UseVisualStyleBackColor = true;
             this.BtnReset.Click += new System.EventHandler(this.BtnReset_Click);
             // 
+            // Logo
+            // 
+            this.Logo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Logo.Image = global::BizDev.Properties.Resources.logo_cbc_noir_300dpi;
+            this.Logo.Location = new System.Drawing.Point(837, 54);
+            this.Logo.Name = "Logo";
+            this.Logo.Size = new System.Drawing.Size(90, 30);
+            this.Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Logo.TabIndex = 49;
+            this.Logo.TabStop = false;
+            // 
             // MainForm
             // 
             this.AcceptButton = this.BtnSearch;
@@ -249,6 +262,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.BtnReset;
             this.ClientSize = new System.Drawing.Size(932, 630);
+            this.Controls.Add(this.Logo);
             this.Controls.Add(this.BtnReset);
             this.Controls.Add(this.BtnSearch);
             this.Controls.Add(this.LblSearch);
@@ -261,8 +275,9 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.MenuStrip;
             this.Name = "MainForm";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "BizDev";
+            this.Text = "CBC Shop";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyDown);
             this.MenuStrip.ResumeLayout(false);
@@ -272,6 +287,7 @@
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvProspects)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -298,5 +314,6 @@
         private System.Windows.Forms.ToolStripButton TsbView;
         private System.Windows.Forms.ToolStripButton TxbExport;
         private System.Windows.Forms.SaveFileDialog saveFileDialog;
+        private System.Windows.Forms.PictureBox Logo;
     }
 }

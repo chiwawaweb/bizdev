@@ -118,6 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="icon_new_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_new_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icon_statistiques_128" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_statistiques_128.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -127,8 +130,8 @@
   <data name="icon_clients_128" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_clients_128.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_new_128" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_new_128.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon_clients_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_clients_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon_statistiques_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_statistiques_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -136,11 +139,14 @@
   <data name="icon_clients_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_clients_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icon_cadenas_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_cadenas_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icon_calendar_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_calendar_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_view_128" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_view_128.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon_export_128" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_export_128.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon_statistiques_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_statistiques_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -151,22 +157,19 @@
   <data name="icon_filter_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_filter_241.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_cadenas_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_cadenas_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_clients_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_clients_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon_view_128" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_view_128.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon_logo_128" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_logo_128.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_new_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_new_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="icon_export_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_export_24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_export_128" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon_export_128.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon_new_128" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_new_128.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo_cbc_noir_300dpi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo_cbc_noir_300dpi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

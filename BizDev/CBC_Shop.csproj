@@ -181,6 +181,7 @@
   <ItemGroup>
     <Content Include="cbc_128.ico" />
     <Content Include="icon_logo.ico" />
+    <None Include="Resources\logo_cbc_noir_300dpi.png" />
     <None Include="Resources\icon_statistiques_24.png" />
     <None Include="Resources\icon_clients_24.png" />
     <None Include="Resources\icon_clients_16.png" />

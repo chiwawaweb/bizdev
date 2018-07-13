@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Les informations générales relatives à un assembly dépendent de
 // l'ensemble d'attributs suivant. Changez les valeurs de ces attributs pour modifier les informations
 // associées à un assembly.
-[assembly: AssemblyTitle("BizDev")]
+[assembly: AssemblyTitle("CBC Shop")]
 [assembly: AssemblyDescription("Gestion de prospects")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Frédéric Schwartz")]
-[assembly: AssemblyProduct("BizDev")]
+[assembly: AssemblyProduct("")]
 [assembly: AssemblyCopyright("Copyright © Frédéric Schwartz 2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
