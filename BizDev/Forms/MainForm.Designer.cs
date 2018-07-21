@@ -49,6 +49,8 @@
             this.BtnReset = new System.Windows.Forms.Button();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.Logo = new System.Windows.Forms.PictureBox();
+            this.compteFidélitéToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nouveauClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuStrip.SuspendLayout();
             this.StatusStrip.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -62,6 +64,7 @@
             this.MenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fichierToolStripMenuItem,
             this.prospectsToolStripMenuItem,
+            this.compteFidélitéToolStripMenuItem,
             this.toolStripMenuItem1});
             this.MenuStrip.Location = new System.Drawing.Point(0, 0);
             this.MenuStrip.Name = "MenuStrip";
@@ -81,7 +84,7 @@
             // TooQuitter
             // 
             this.TooQuitter.Name = "TooQuitter";
-            this.TooQuitter.Size = new System.Drawing.Size(111, 22);
+            this.TooQuitter.Size = new System.Drawing.Size(180, 22);
             this.TooQuitter.Text = "Quitter";
             this.TooQuitter.Click += new System.EventHandler(this.TooQuitter_Click);
             // 
@@ -96,7 +99,7 @@
             // exporterToolStripMenuItem
             // 
             this.exporterToolStripMenuItem.Name = "exporterToolStripMenuItem";
-            this.exporterToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
+            this.exporterToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exporterToolStripMenuItem.Text = "Exporter...";
             this.exporterToolStripMenuItem.Click += new System.EventHandler(this.exporterToolStripMenuItem_Click);
             // 
@@ -255,6 +258,21 @@
             this.Logo.TabIndex = 49;
             this.Logo.TabStop = false;
             // 
+            // compteFidélitéToolStripMenuItem
+            // 
+            this.compteFidélitéToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nouveauClientToolStripMenuItem});
+            this.compteFidélitéToolStripMenuItem.Name = "compteFidélitéToolStripMenuItem";
+            this.compteFidélitéToolStripMenuItem.Size = new System.Drawing.Size(101, 20);
+            this.compteFidélitéToolStripMenuItem.Text = "Compte fidélité";
+            // 
+            // nouveauClientToolStripMenuItem
+            // 
+            this.nouveauClientToolStripMenuItem.Name = "nouveauClientToolStripMenuItem";
+            this.nouveauClientToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nouveauClientToolStripMenuItem.Text = "Nouveau client";
+            this.nouveauClientToolStripMenuItem.Click += new System.EventHandler(this.nouveauClientToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AcceptButton = this.BtnSearch;
@@ -315,5 +333,7 @@
         private System.Windows.Forms.ToolStripButton TxbExport;
         private System.Windows.Forms.SaveFileDialog saveFileDialog;
         private System.Windows.Forms.PictureBox Logo;
+        private System.Windows.Forms.ToolStripMenuItem compteFidélitéToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nouveauClientToolStripMenuItem;
     }
 }

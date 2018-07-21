@@ -221,70 +221,6 @@ namespace BizDev.Forms
             TxtSearch.Focus();
         }
 
-        #region Gestion des événements
-
-        private void TooQuitter_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Maximized;
-            RefreshData();
-        }
-
-        private void BtnSearch_Click(object sender, EventArgs e)
-        {
-            RefreshData();
-        }
-
-        private void BtnReset_Click(object sender, EventArgs e)
-        {
-            ResetSearch();
-        }
-
-        private void TxtSearch_KeyUp(object sender, KeyEventArgs e)
-        {
-            RefreshData();
-        }
-
-        private void TsbView_Click(object sender, EventArgs e)
-        {
-            ViewProspect();
-        }
-
-        private void DgvProspects_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            ViewProspect();
-        }
-
-        private void TsbNew_Click(object sender, EventArgs e)
-        {
-            NewProspect();
-        }
-
-        private void exporterToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ExportProspects();
-        }
-
-        private void aProposToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            OpenAboutBox();
-        }
-        
-        private void OpenAboutBox()
-        {
-            AboutBoxForm frm = new AboutBoxForm();
-            frm.ShowDialog();
-        }
-
-        private void TxbExport_Click(object sender, EventArgs e)
-        {
-            ExportProspects();
-        }
-
         private void ExportProspects()
         {
             string exportFileName;
@@ -352,12 +288,89 @@ namespace BizDev.Forms
             }
         }
 
+        private void OpenNewClient()
+        {
+            ClientEditForm clientEditForm = new ClientEditForm();
+            clientEditForm.ShowDialog();
+        }
+
+        #region Gestion des événements
+
+        private void TooQuitter_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Maximized;
+            RefreshData();
+        }
+
+        private void BtnSearch_Click(object sender, EventArgs e)
+        {
+            RefreshData();
+        }
+
+        private void BtnReset_Click(object sender, EventArgs e)
+        {
+            ResetSearch();
+        }
+
+        private void TxtSearch_KeyUp(object sender, KeyEventArgs e)
+        {
+            RefreshData();
+        }
+
+        private void TsbView_Click(object sender, EventArgs e)
+        {
+            ViewProspect();
+        }
+
+        private void DgvProspects_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            ViewProspect();
+        }
+
+        private void TsbNew_Click(object sender, EventArgs e)
+        {
+            NewProspect();
+        }
+
+        private void exporterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ExportProspects();
+        }
+
+        private void aProposToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenAboutBox();
+        }
+        
+        private void OpenAboutBox()
+        {
+            AboutBoxForm frm = new AboutBoxForm();
+            frm.ShowDialog();
+        }
+
+        private void TxbExport_Click(object sender, EventArgs e)
+        {
+            ExportProspects();
+        }
+
+        
+
         private void MainForm_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.F8)
             {
                 NewProspect();
             }
+        }
+
+        private void nouveauClientToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenNewClient();
         }
 
         #endregion
