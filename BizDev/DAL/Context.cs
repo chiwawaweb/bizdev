@@ -19,6 +19,7 @@ namespace BizDev.DAL
         public DbSet<Prospect> Prospects { get; set; }
         public DbSet<ProspectLog> ProspectsLogs { get; set; }
         public DbSet<Client> Clients { get; set; }
+        public DbSet<ClientPoint> ClientsPoints { get; set; }
 
         public class ContextInitializer : DropCreateDatabaseIfModelChanges<Context>
         {

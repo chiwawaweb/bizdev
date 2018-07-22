@@ -16,5 +16,37 @@ namespace BizDev.Forms
         {
             InitializeComponent();
         }
+
+        private void VerifPartners()
+        {
+            if (RbtStandard.Checked == true)
+            {
+                CbxEntreprise.Text = string.Empty;
+                CbxEntreprise.Enabled = false;
+            }
+            else
+            {
+                CbxEntreprise.Enabled = true;
+            }
+        }
+
+        #region Gestion des événements
+
+        private void RbtStandard_CheckedChanged(object sender, EventArgs e)
+        {
+            VerifPartners();
+        }
+
+        private void RbtPartners_CheckedChanged(object sender, EventArgs e)
+        {
+            VerifPartners();
+        }
+
+        #endregion
+
+        private void BtnCancel_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
